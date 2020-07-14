@@ -64,8 +64,9 @@ const maxWidths = ['1200px', '1800px']
 
 // Colors
 const colors = {
+  ivory: '#F0E9E2',
   accent: '#FF5353',
-  black: '#191c1f',
+  black: '#2D2926',
   blackBlue: '#222529',
   black70: 'rgba(0,0,0,.7)',
   darkGrey: '#4e4e4e',

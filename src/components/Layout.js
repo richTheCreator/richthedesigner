@@ -13,7 +13,7 @@ const TemplateWrapper = ({ children }) => {
     <div>
       <SEO />
       <Navbar menuLinks={menuLinks} />
-      <div style={{ paddingTop: '99px' }}>{children}</div>
+      <div style={{ paddingTop: '119px' }}>{children}</div>
       {/* <Footer /> */}
     </div>
   )

@@ -1,9 +1,10 @@
 var proxy = require('http-proxy-middleware')
 var website = require('./src/components/SEO/config')
+
 const pathPrefix = website.pathPrefix === '/' ? '' : website.pathPrefix
 const {
   NODE_ENV,
-  URL: NETLIFY_SITE_URL = 'https://gatsby-starterkit.netlify.app/',
+  URL: NETLIFY_SITE_URL = 'https://elevated-trading.netlify.app/',
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
   CONTEXT: NETLIFY_ENV = NODE_ENV
 } = process.env
@@ -23,13 +24,17 @@ module.exports = {
     // twitter: website.twitter,
     // facebook: website.facebook,
     menuLinks: [{
-      name: 'HOME',
+      name: 'PRODUCTS',
+      link: '/'
+    },
+    {
+      name: 'HEMP STARTER KIT',
+      link: '/'
+    },
+    {
+      name: 'READ COA"S',
       link: '/'
     }
-    // {
-    //   name: 'Products',
-    //   link: '/training/online-training'
-    // },
     ]
   },
   plugins: [

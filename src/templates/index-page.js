@@ -11,7 +11,6 @@ const IndexPage = ({ data }) => {
   return (
     <>
       <Hero hero={frontmatter.hero}/>
-      <Footer/>
     </>
   )
 }
