@@ -25,8 +25,7 @@ const PriceItem = ({ price, strikeout, program }) => {
     <Container>
       <Label m={0}> {program} </Label>
       <Row>
-        <Price color='teal' m={0} mr={2}> ${price}</Price>
-        <Strikeout m={0} color='mdGrey'> ${strikeout} </Strikeout>
+        <Price color='teal' m={0} mr={2}> {price}</Price>
       </Row>
     </Container>
   )
