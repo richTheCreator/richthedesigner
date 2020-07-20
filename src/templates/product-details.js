@@ -4,18 +4,20 @@ import {
   graphql
 } from 'gatsby'
 import Hero from './ProductDetails/Hero'
+import Description from './ProductDetails/Description'
 import Footer from '../components/Footer'
 import SEO from '../components/SEO/SEO'
 
 const ProductPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter, html } = data.markdownRemark
   return (
     <>
       <SEO
-        title={'Placeholder Page'}
-        desc={'Placeholder description'}
+        title={frontmatter.name}
+        desc={frontmatter.meta_description}
       />
       <Hero hero={frontmatter.hero} />
+      <Description content={html} />
       <Footer/>
     </>
   )
@@ -28,6 +30,14 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "product-details" } }) {
       html
       frontmatter {
+        name
+        meta_description
+        category
+        weight
+        coa_link
+        strain
+        THC
+        CBD
         hero {
           title
           button_text
