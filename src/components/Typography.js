@@ -81,10 +81,12 @@ export const H6 = system(
     fontWeight: 2,
     color: 'black',
     lineHeight: 3,
-    letterSpacing: 5,
-    fontStyle: 'italic'
+    letterSpacing: 5
   },
-  ...textStyles
+  ...textStyles,
+  {
+    textTransform: 'uppercase'
+  }
 )
 
 export const Body1 = system(
@@ -170,13 +172,16 @@ export const Caption = system(
 export const Overline = system(
   {
     is: 'p',
-    fontSize: 4,
+    fontSize: 1,
     fontWeight: 2,
-    color: 'accent',
+    color: 'lightGrey',
     lineHeight: 0,
     letterSpacing: 9
   },
-  ...textStyles
+  ...textStyles,
+  {
+    textTransform: 'uppercase'
+  }
 )
 
 // VARIANTS
@@ -213,6 +218,5 @@ ${color}
 font-weight: ${props => props.theme.fontWeights[3]};
 font-size: ${props => props.fontSize ? `calc(${props.fontSize}px + (40 - 18) * ((100vw - 300px) / (1600 - 300)));` : 'auto'}
 line-height: ${props => props.fontSize ? `calc(${props.fontSize}px + (40 - 18) * ((100vw - 300px) / (1600 - 300)))!important;` : 'auto'}
-font-style: italic;
 display:inline-block;
 `

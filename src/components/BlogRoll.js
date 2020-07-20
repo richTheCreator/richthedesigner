@@ -18,7 +18,7 @@ class BlogRoll extends React.Component {
                     className='title has-text-primary is-size-4'
                     to={post.fields.slug}
                   >
-                    {post.frontmatter.name}
+                    {post.frontmatter.title}
                   </Link>
                   <span> &bull; </span>
                   <span className='subtitle is-size-5 is-block'>
@@ -65,7 +65,6 @@ export default () => (
                 slug
               }
               frontmatter {
-                name
                 title
                 templateKey
                 date(formatString: "MMMM DD, YYYY")

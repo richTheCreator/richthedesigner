@@ -24,16 +24,16 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-details"}
-      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Title", name: "title", widget: "string", required: true}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Meta Description", name: "meta_description", widget: "text"}
-      - {label: "COA Link", name: "coa_link", widget: "text"}
-      - {label: "THC", name: "THC", widget: "text"}
-      - {label: "CBD", name: "CBD", widget: "text"}
+      - {label: "Meta Description", name: "meta_description", widget: "text", required: true}
+      - {label: "COA Link", name: "coa_link", widget: "string", required: true}
+      - {label: "THC", name: "thc", widget: "number", valueType: "float", required: true}
+      - {label: "CBD", name: "cbd", widget: "number", valueType: "float", required: true}
+      - {label: "Strain", name: "strain", widget: "select", multiple: false, options: ["OG Kush", "Purple Haze", "AK47"], required: true}
+      - {label: "Category", name: "category", widget: "select", multiple: false, options: ["Flower", "Concentrate"], required: true}
+      - {label: "Weights", name: "weights", widget: "select", options: ["1lb"], required: true}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Strain", name: "strain", widget: "select", multiple: false, options: ["OG Kush", "Purple Haze", "AK47"]}
-      - {label: "Category", name: "category", widget: "select", multiple: false, options: ["Flower", "Concentrate"]}
-      - {label: "Weights", name: "weights", widget: "select", options: ["1lb"]}
   - name: "pages"
     label: "Pages"
     files:

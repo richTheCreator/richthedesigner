@@ -10,8 +10,8 @@ const Description = ({ program, content, contentComponent }) => {
 
   return (
     <SectionWrapper>
-      <SectionMax style={{ justifyContent: 'center' }}>
-        <Col>
+      <SectionMax style={{ justifyContent: 'center', margin: 'auto' }}>
+        <Col xs={8}>
           <Col sm={12} lg={4}>
             <H3 mt={0} mr={3}>
             Description
