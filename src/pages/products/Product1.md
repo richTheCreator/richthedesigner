@@ -1,5 +1,14 @@
 ---
 templateKey: product-details
+name: Hemp starter kit
+meta_description: Something short and concise about the product for the google bots
+category: Flower
+weight: Minimum 1lb orders
+coa_link: /
+image: /img/program-nutrition.padding
+strain: OG Kush
+THC: ">.05%"
+CBD: "20%"
 title: Online Training Program
 pricing:
   title: Simple plans and pricing
@@ -23,4 +32,5 @@ hero:
   button_text: Start Training
   button_url: /
 ---
-HTML Examples
+
+Description Text
