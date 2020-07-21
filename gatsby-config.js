@@ -5,7 +5,7 @@ const pathPrefix = website.pathPrefix === '/' ? '' : website.pathPrefix
 const {
   NODE_ENV,
   GOOGLE_ANALYTICS_TRACKING_ID,
-  URL: NETLIFY_SITE_URL = 'https://elevated-trading.netlify.app/',
+  URL: NETLIFY_SITE_URL = 'https://www.elevatedtrading.com/',
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
   CONTEXT: NETLIFY_ENV = NODE_ENV
 } = process.env
@@ -33,7 +33,7 @@ module.exports = {
       link: '/'
     },
     {
-      name: 'READ COA"S',
+      name: 'LAB RESULTS',
       link: '/'
     }
     ]

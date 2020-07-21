@@ -8,21 +8,57 @@ import Description from './ProductDetails/Description'
 import Footer from '../components/Footer'
 import SEO from '../components/SEO/SEO'
 
-const ProductPageTemplate = ({ data }) => {
-  const { frontmatter, html } = data.markdownRemark
+export const ProductPageTemplate = ({
+  title,
+  metaDescription,
+  productImage,
+  category,
+  strain,
+  cbd,
+  thc,
+  html,
+  weight
+}) => {
   return (
     <>
       <SEO
-        title={frontmatter.title}
-        desc={frontmatter.meta_description}
+        title={title}
+        desc={metaDescription}
+        banner={productImage.childImageSharp.fluid.src}
       />
-      <Hero frontmatter={frontmatter} />
+      <Hero
+        title={title}
+        productImage={productImage.childImageSharp.fluid}
+        category={category}
+        strain={strain}
+        cbd={cbd}
+        thc={thc}
+        weight={weight}
+      />
       <Description content={html} />
     </>
   )
 }
 
-export default ProductPageTemplate
+const ProductPage = ({ data }) => {
+  const { frontmatter, html } = data.markdownRemark
+
+  return (
+    <ProductPageTemplate
+      title={frontmatter.title}
+      metaDescription={frontmatter.meta_description}
+      productImage={frontmatter.product_image}
+      category={frontmatter.category}
+      strain={frontmatter.strain}
+      cbd={frontmatter.cbd}
+      thc={frontmatter.thc}
+      weight={frontmatter.weight}
+      html={html}
+    />
+  )
+}
+
+export default ProductPage
 
 export const pageQuery = graphql`
   query ProductPageTemplate {

@@ -67,11 +67,20 @@ const Callout = ({ title, text }) =>
     </H6>
   </Col>
 
-const Hero = ({ frontmatter }) => {
+const Hero = ({
+  title,
+  productImage,
+  category,
+  strain,
+  cbd,
+  thc,
+  weight
+}) => {
   const options = [
-    { value: 'SKU_3MONTH', label: <PriceItem program='1lb' price='minimum order' /> }
+    { value: 'SKU_3MONTH', label: <PriceItem program={weight} price='minimum order' /> }
   ]
 
+  console.log('Weight---', weight)
   // const [discountAmount, setDiscount] = useState(options[0].label.props.strikeout - options[0].label.props.price)
   // const [sku, setSku] = useState(options[0].value)
 
@@ -82,15 +91,15 @@ const Hero = ({ frontmatter }) => {
     <HeroContainer pb={4} pt={4}>
       <SectionMax m='auto!important' p={[2, 4]}>
         <ImageWrapper lg={6} md={6} sm={12}>
-          <ProductImg fluid={frontmatter.product_image.childImageSharp.fluid} height={['250px', '460px']} lg={12} />
+          <ProductImg fluid={productImage} height={['250px', '460px']} lg={12} />
         </ImageWrapper>
         <TextContainer lg={6} md={6} sm={12} >
-          <Outlined is='H1' fontSize={['24px', '32px']} outlineColor={'white'} fontSize='50' mb={1} mt={2}> {frontmatter.title} </Outlined>
+          <Outlined is='H1' fontSize={['24px', '32px']} outlineColor={'white'} fontSize='50' mb={1} mt={2}> {title} </Outlined>
           <Row between='xs'>
-            <Callout title='Category' text={frontmatter.category} />
-            <Callout title='Strain' text={frontmatter.strain} />
-            <Callout title='CBD' text={frontmatter.cbd} />
-            <Callout title='THC' text={frontmatter.thc} />
+            <Callout title='Category' text={category} />
+            <Callout title='Strain' text={strain} />
+            <Callout title='CBD' text={`${cbd}%`} />
+            <Callout title='THC' text={`${thc}%`} />
           </Row>
           <Row between='xs'>
             <Overline>

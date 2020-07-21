@@ -24,13 +24,6 @@ export const pageQuery = graphql`
         hero {
           subtitle
           title
-          dots__image {
-            childImageSharp {
-              fixed(width: 200, height: 200) {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
         }
       }
     }
