@@ -22,7 +22,7 @@ collections:
       - {label: "Category", name: "category", widget: "select", multiple: false, options: ["Flower", "Concentrate"], required: true}
       - {label: "THC", name: "thc", widget: "number", valueType: "float", required: true}
       - {label: "CBD", name: "cbd", widget: "number", valueType: "float", required: true}
-      - {label: "Weights", name: weights, widget: object, collapsed: true, fields: [ { label: "Weight", name: weight, widget: object, fields: [ {label: "Value", name: value, widget: "string" },{label: "Metric", name: "metric", widget: "select", multiple: false, options: ["lb", "kg"], default: "lb", required: true}]} ]}
+      - {label: "Weights", name: weights, widget: list, collapsed: true, fields: [{ label: "Weight", name: weight, widget: object, collapsed: true, fields: [ {label: "Value", name: value, widget: "number" },{label: "Metric", name: metric, widget: "select", multiple: false, options: ["lb", "kg"], default: "lb", required: true}]} ]}
       - {label: "COA Link", name: "coa_link", widget: "string", required: true}
       - {label: "Featured", name: featured, widget: object, collapsed: true, fields: [ {label: "Is Featured", name: isFeatured, widget: boolean, default: false},{ label: "Text", name: text, widget: "string", default: false, }]}
       - {label: "Body", name: "body", widget: "markdown"}
