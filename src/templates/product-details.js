@@ -16,11 +16,13 @@ export const ProductPageTemplate = ({
   cbd,
   thc,
   html,
-  weights
+  weights,
+  pathname
 }) => {
   return (
     <>
       <SEO
+        pathname={pathname}
         title={title}
         desc={metaDescription}
         banner={productImage.childImageSharp.fluid.src}
@@ -38,11 +40,12 @@ export const ProductPageTemplate = ({
   )
 }
 
-const ProductPage = ({ data }) => {
+const ProductPage = ({ data, location }) => {
   const { frontmatter, html } = data.markdownRemark
-  console.log('data----', data)
+
   return (
     <ProductPageTemplate
+      pathname={location.pathname}
       title={frontmatter.title}
       metaDescription={frontmatter.meta_description}
       productImage={frontmatter.product_image}

@@ -26,7 +26,7 @@ const SEO = ({ title, desc, banner, pathname, node }) => {
     url: `${siteUrl}${pathname || ''}`
   }
 
-  console.log('SEO-config', seo)
+  console.log('SEO-config', seo.image)
   return (
     <>
       <Helmet title={seo.title}>
