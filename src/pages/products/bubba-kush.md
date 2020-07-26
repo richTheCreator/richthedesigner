@@ -8,9 +8,6 @@ category: Flower
 thc: 40
 cbd: 0
 weights:
-  - weight:
-      metric: lb
-      value: 1
     value: 1
     metric: lb
 coa_link: /
