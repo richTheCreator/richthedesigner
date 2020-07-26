@@ -11,6 +11,8 @@ weights:
   - weight:
       metric: lb
       value: 1
+    value: 1
+    metric: lb
 coa_link: /
 featured:
   isFeatured: true
