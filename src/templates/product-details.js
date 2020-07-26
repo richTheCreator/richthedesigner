@@ -66,10 +66,8 @@ export const pageQuery = graphql`
         meta_description
         category
         weights {
-          weight {
-            value
-            metric
-          }
+          value
+          metric
         }
         coa_link
         thc

@@ -103,12 +103,10 @@ const Hero = ({
             </Overline>
           </Row>
           <Row>
-            {weights.map((w) =>
-              <>
-                <H6 color='white'> {w.weight.value} </H6>
-                <H6 color='white'> {w.weight.metric} </H6>
-              </>
-            )}
+            <>
+              <H6 color='white'> {weights.value} </H6>
+              <H6 color='white'> {weights.metric} </H6>
+            </>
           </Row>
           <Checkout bg='#F0E9E2' color='black' width='100%' mb={0} sku={'sku'}>
             REQUEST PRICE
