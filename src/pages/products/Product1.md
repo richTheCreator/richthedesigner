@@ -7,10 +7,14 @@ meta_description: Something short and concise about the product for the google b
 coa_link: /
 thc: 10
 cbd: 20
-strain: AK47
-weight: 1lb
 category: Flower
-weights: 1lb
+weights:
+  - weight:
+      value: 1
+      metric: lb
+featured:
+  isFeatured: false
+  text: Placeholder text for a featured product
 ---
 
 

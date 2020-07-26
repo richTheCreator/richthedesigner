@@ -71,19 +71,16 @@ const Hero = ({
   title,
   productImage,
   category,
-  strain,
   cbd,
   thc,
-  weight
+  weights
 }) => {
-  const options = [
-    { value: 'SKU_3MONTH', label: <PriceItem program={weight} price='minimum order' /> }
-  ]
-
-  console.log('Weight---', weight)
+  console.log('All Weights---', weights)
+  // const options = [
+  //   { value: 'SKU_3MONTH', label: <PriceItem program={weight} price='minimum order' /> }
+  // ]
   // const [discountAmount, setDiscount] = useState(options[0].label.props.strikeout - options[0].label.props.price)
   // const [sku, setSku] = useState(options[0].value)
-
   // useEffect(() => {
   //   setDiscount()
   // }, [enabled])
@@ -97,7 +94,6 @@ const Hero = ({
           <Outlined is='H1' fontSize={['24px', '32px']} outlineColor={'white'} fontSize='50' mb={1} mt={2}> {title} </Outlined>
           <Row between='xs'>
             <Callout title='Category' text={category} />
-            <Callout title='Strain' text={strain} />
             <Callout title='CBD' text={`${cbd}%`} />
             <Callout title='THC' text={`${thc}%`} />
           </Row>
@@ -106,43 +102,14 @@ const Hero = ({
               Weights
             </Overline>
           </Row>
-          <SelectWrapper
-            onChange={option => {
-              console.log('Weight', option)
-              // setDiscount(option.label.props.strikeout - option.label.props.price)
-              // setSku(option.value)
-            }}
-            mb={2}
-            options={options}
-            defaultValue={options[0]}
-            styles={{
-              control: base => ({
-                ...base,
-                height: 50,
-                minHeight: 50,
-                cursor: 'pointer'
-              }),
-              singleValue: (provided, state) => {
-                const width = '100%'
-                const paddingRight = 8
-                return { ...provided, width, paddingRight }
-              },
-              option: (provided, state) => ({
-                ...provided,
-                cursor: 'pointer'
-              })
-            }}
-            isSearchable={false}
-            theme={theme => ({
-              ...theme,
-              borderRadius: 0,
-              colors: {
-                ...theme.colors,
-                primary25: '#F5F7F9',
-                primary: '#DBEBF6'
-              }
-            })}
-          />
+          <Row>
+            {weights.map((w) =>
+              <>
+                <H6 color='white'> {w.weight.value} </H6>
+                <H6 color='white'> {w.weight.metric} </H6>
+              </>
+            )}
+          </Row>
           <Checkout bg='#F0E9E2' color='black' width='100%' mb={0} sku={'sku'}>
             REQUEST PRICE
           </Checkout>
