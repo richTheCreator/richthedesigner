@@ -10,6 +10,8 @@ cbd: 2
 weights:
   - value: 1
     metric: lb
+  - metric: lb
+    value: 2
 coa_link: /
 featured:
   isFeatured: false
