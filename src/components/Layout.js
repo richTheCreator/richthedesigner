@@ -11,7 +11,6 @@ const TemplateWrapper = ({ children }) => {
   const { menuLinks } = useSiteMetadata()
   return (
     <div>
-      <SEO />
       <Navbar menuLinks={menuLinks} />
       <div style={{ paddingTop: '119px' }}>{children}</div>
       {/* <Footer /> */}

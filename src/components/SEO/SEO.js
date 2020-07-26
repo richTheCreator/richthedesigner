@@ -1,5 +1,5 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import Facebook from './Facebook'
@@ -26,13 +26,14 @@ const SEO = ({ title, desc, banner, pathname, node }) => {
     url: `${siteUrl}${pathname || ''}`
   }
 
+  console.log('SEO-config', seo)
   return (
     <>
       <Helmet title={seo.title}>
         <html lang={siteLanguage} />
         <meta name="description" content={seo.description} />
         <meta name="image" content={seo.image} />
-        <meta name="V3-Training-Systems" content="V3 Fitness Training Programs" />
+        <meta name="Elevated Trading LLC" content="Better wholesale hemp." />
         <link
           rel='apple-touch-icon'
           sizes='180x180'

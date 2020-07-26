@@ -26,7 +26,7 @@ module.exports = {
     // facebook: website.facebook,
     menuLinks: [{
       name: 'PRODUCTS',
-      link: '/'
+      link: '/products'
     },
     {
       name: 'HEMP STARTER KIT',
@@ -78,7 +78,7 @@ module.exports = {
         ]
       }
     },
-    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-react-helmet-async',
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-robots-txt',

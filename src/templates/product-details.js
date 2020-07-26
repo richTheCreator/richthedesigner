@@ -13,11 +13,10 @@ export const ProductPageTemplate = ({
   metaDescription,
   productImage,
   category,
-  strain,
   cbd,
   thc,
   html,
-  weight
+  weights
 }) => {
   return (
     <>
@@ -30,10 +29,9 @@ export const ProductPageTemplate = ({
         title={title}
         productImage={productImage.childImageSharp.fluid}
         category={category}
-        strain={strain}
         cbd={cbd}
         thc={thc}
-        weight={weight}
+        weights={weights}
       />
       <Description content={html} />
     </>
@@ -42,17 +40,16 @@ export const ProductPageTemplate = ({
 
 const ProductPage = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark
-
+  console.log('data----', data)
   return (
     <ProductPageTemplate
       title={frontmatter.title}
       metaDescription={frontmatter.meta_description}
       productImage={frontmatter.product_image}
       category={frontmatter.category}
-      strain={frontmatter.strain}
       cbd={frontmatter.cbd}
       thc={frontmatter.thc}
-      weight={frontmatter.weight}
+      weights={frontmatter.weights}
       html={html}
     />
   )
@@ -61,16 +58,20 @@ const ProductPage = ({ data }) => {
 export default ProductPage
 
 export const pageQuery = graphql`
-  query ProductPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "product-details" } }) {
+  query ProductPageTemplate ($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         title
         meta_description
         category
-        weight
+        weights {
+          weight {
+            value
+            metric
+          }
+        }
         coa_link
-        strain
         thc
         cbd
         product_image {

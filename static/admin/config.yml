@@ -14,17 +14,17 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Meta Description", name: "meta_description", widget: "text", required: true}
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-details"}
       - {label: "Product Image", name: product_image, widget: "image"}
       - {label: "Title", name: "title", widget: "string", required: true}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Meta Description", name: "meta_description", widget: "text", required: true}
-      - {label: "COA Link", name: "coa_link", widget: "string", required: true}
+      - {label: "Category", name: "category", widget: "select", multiple: false, options: ["Flower", "Concentrate"], required: true}
       - {label: "THC", name: "thc", widget: "number", valueType: "float", required: true}
       - {label: "CBD", name: "cbd", widget: "number", valueType: "float", required: true}
-      - {label: "Strain", name: "strain", widget: "select", multiple: false, options: ["OG Kush", "Purple Haze", "AK47"], required: true}
-      - {label: "Category", name: "category", widget: "select", multiple: false, options: ["Flower", "Concentrate"], required: true}
-      - {label: "Weights", name: "weights", widget: "select", options: ["1lb"], required: true}
+      - {label: "Weights", name: weights, widget: object, collapsed: true, fields: [ { label: "Weight", name: weight, widget: object, fields: [ {label: "Value", name: value, widget: "string" },{label: "Metric", name: "metric", widget: "select", multiple: false, options: ["lb", "kg"], default: "lb", required: true}]} ]}
+      - {label: "COA Link", name: "coa_link", widget: "string", required: true}
+      - {label: "Featured", name: featured, widget: object, collapsed: true, fields: [ {label: "Is Featured", name: isFeatured, widget: boolean, default: false},{ label: "Text", name: text, widget: "string", default: false, }]}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "blog"
     label: "Blog"

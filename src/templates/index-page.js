@@ -4,12 +4,13 @@ import {
 } from 'gatsby'
 import Footer from '../components/Footer'
 import Hero from './Homepage/Hero'
-
+import SEO from '../components/SEO/SEO'
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
     <>
+      <SEO />
       <Hero hero={frontmatter.hero}/>
     </>
   )
