@@ -23,9 +23,9 @@ collections:
       - {label: "Category", name: "category", widget: "select", multiple: false, options: ["Flower", "Concentrate"], required: true, default: "Flower"}
       - {label: "THC %", name: "thc", widget: "number", valueType: "float", required: true}
       - {label: "CBD %", name: "cbd", widget: "number", valueType: "float", required: true}
-      - {label: "Weights", name: weights, widget: list, collapsed: true, fields: [{ label: "Weight", name: weight, widget: object, collapsed: true, fields: [ {label: "Value", name: value, widget: "number", required: true },{label: "Metric", name: metric, widget: "select", multiple: false, options: ["lb", "kg"], default: "lb", required: true}]} ]}
+      - {label: "Weights", name: weights, widget: list, collapsed: true, fields: [ {label: "Value", name: value, widget: "number", required: true },{label: "Metric", name: metric, widget: "select", multiple: false, options: ["lb", "kg"], default: "lb", required: true}]}
       - {label: "COA Link", name: "coa_link", widget: "string", required: true}
-      - {label: "Featured", name: featured, widget: object, collapsed: true, fields: [ {label: "Is Featured", name: isFeatured, widget: boolean, default: false},{ label: "Text", name: text, widget: "string", default: false, }]}
+      - {label: "Featured", name: featured, widget: object, collapsed: true, fields: [ {label: "Is Featured", name: isFeatured, widget: boolean, default: false},{ label: "Text", name: text, widget: "string", default: "None", }]}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "blog"
     label: "Blog"

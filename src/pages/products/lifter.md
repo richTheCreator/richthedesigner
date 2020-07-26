@@ -14,6 +14,6 @@ weights:
 coa_link: /
 featured:
   isFeatured: false
-  text: false
+  text: none
 ---
 Placeholder content for the body of the description.
