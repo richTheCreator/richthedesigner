@@ -16,7 +16,7 @@ featured:
   isFeatured: true
   text: Lifter gets you lifted.
 ---
-**Something** *about* the [product](www.elevatedtrading.com)
+**Something** *about* the [product](https://www.elevatedtrading.com)
 
 > Better wholesale hemp
 

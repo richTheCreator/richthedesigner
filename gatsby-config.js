@@ -1,7 +1,7 @@
 var proxy = require('http-proxy-middleware')
 var website = require('./src/components/SEO/config')
 
-const pathPrefix = website.pathPrefix === '/' ? '' : website.pathPrefix
+// const pathPrefix = website.pathPrefix === '/' ? '' : website.pathPrefix
 const {
   NODE_ENV,
   GOOGLE_ANALYTICS_TRACKING_ID,
@@ -13,8 +13,8 @@ const isNetlifyProduction = NETLIFY_ENV === 'production'
 const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 module.exports = {
   siteMetadata: {
-    siteUrl: website.url + pathPrefix, // For gatsby-plugin-sitemap
-    pathPrefix,
+    siteUrl: website.url, // For gatsby-plugin-sitemap
+    // pathPrefix,
     title: website.title,
     description: website.description,
     banner: website.banner,
