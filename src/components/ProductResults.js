@@ -1,17 +1,56 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 
-class ProductResults extends React.Component {
-  render () {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+const ProductResults = ({ data }) => {
+  const { edges: posts } = data.allMarkdownRemark
 
-    console.log('posts-----', posts)
+  // array of unique categories in current products & an All option
+  const defaultCat = 'all'
+  const uniqueCategories = [defaultCat, ...new Set(posts.map(({ node: post }) => post.frontmatter.category.toLowerCase()))]
+  console.log('unique', uniqueCategories)
 
-    return (
-      <div className='columns is-multiline'>
-        {posts &&
+  // filter state
+  const [state, setState] = useState({
+    filteredData: posts,
+    appliedFilter: defaultCat,
+    categories: uniqueCategories
+  })
+
+  const applyCategoryFilter = (cat) => {
+    // checking for default
+    if (cat === defaultCat) {
+      console.log('isDefault-----')
+      return (
+        setState({
+          filteredData: posts,
+          appliedFitler: cat,
+          categories: uniqueCategories
+        })
+      )
+    }
+    // fitlering based on cat
+    const filtered = posts.filter(post => {
+      const { category } = post.node.frontmatter
+      return (
+        category.toLowerCase().includes(cat)
+      )
+    })
+
+    setState({
+      filteredData: filtered,
+      appliedFilter: cat,
+      categories: uniqueCategories
+
+    })
+  }
+  const { filteredData, appliedFilter, categories } = state
+
+  console.log('filteredData------state', filteredData)
+
+  return (
+    <div className='columns is-multiline'>
+      {posts &&
           posts.map(({ node: post }) => {
             if (post.frontmatter.featured.isFeatured) {
               return (
@@ -42,8 +81,14 @@ class ProductResults extends React.Component {
               )
             }
           })}
-        {posts &&
-          posts.map(({ node: post }) => (
+      {
+        categories.map(cat =>
+          <button onClick={() => applyCategoryFilter(cat)}> {cat} </button>
+        )
+      }
+
+      {filteredData &&
+          filteredData.map(({ node: post }) => (
             <div className='is-parent column is-6' key={post.id}>
               <article className='tile is-child box notification'>
                 <p>
@@ -69,9 +114,8 @@ class ProductResults extends React.Component {
               </article>
             </div>
           ))}
-      </div>
-    )
-  }
+    </div>
+  )
 }
 
 ProductResults.propTypes = {
@@ -99,6 +143,7 @@ export default () => (
               }
               frontmatter {
                 title
+                category
                 templateKey
                 featured {
                   isFeatured

@@ -4,12 +4,12 @@ meta_description: Something about this product
 templateKey: product-details
 product_image: /img/flower_p1.jpg
 title: Lifter
-category: Flower
+category: Concentrate
 thc: 20
 cbd: 2
 weights:
-  - value: 1
-    metric: lb
+  - metric: lb
+    value: 1
   - metric: lb
     value: 2
 coa_link: /
