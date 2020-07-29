@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Helmet from 'react-helmet'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
@@ -9,6 +9,22 @@ import useSiteMetadata from './SiteMetadata'
 
 const TemplateWrapper = ({ children }) => {
   const { menuLinks } = useSiteMetadata()
+  const [key, setKey] = useState(undefined)
+
+  useEffect(() => {
+    const checkVerify = localStorage.getItem('age_verified')
+
+    if (!checkVerify) {
+      if (confirm('Are you over 21 years old?')) {
+        localStorage.setItem('age_verified', true)
+      } else {
+        console.log('not over 21 years old')
+      }
+    } else {
+      console.log('is_verified')
+    }
+  }, [])
+
   return (
     <div>
       <Navbar menuLinks={menuLinks} />
