@@ -19,7 +19,7 @@ const Container = styled.button`
 
 const Button = (props) =>
   <Link style={{ margin: 'auto' }} to={props.url}>
-    <Container {...props}>
+    <Container {...props} href='www.google.com'>
       <ButtonText color={props.disabled ? 'mdGrey' : props.color}>
         {props.children}
       </ButtonText>
