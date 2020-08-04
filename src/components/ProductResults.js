@@ -8,7 +8,6 @@ const ProductResults = ({ data }) => {
   // array of unique categories in current products & an All option
   const defaultCat = 'all'
   const uniqueCategories = [defaultCat, ...new Set(posts.map(({ node: post }) => post.frontmatter.category.toLowerCase()))]
-  console.log('unique', uniqueCategories)
 
   // filter state
   const [state, setState] = useState({
@@ -20,7 +19,6 @@ const ProductResults = ({ data }) => {
   const applyCategoryFilter = (cat) => {
     // checking for default
     if (cat === defaultCat) {
-      console.log('isDefault-----')
       return (
         setState({
           filteredData: posts,
@@ -45,8 +43,6 @@ const ProductResults = ({ data }) => {
     })
   }
   const { filteredData, appliedFilter, categories } = state
-
-  console.log('filteredData------state', filteredData)
 
   return (
     <div className='columns is-multiline'>

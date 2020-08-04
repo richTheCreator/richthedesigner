@@ -5,7 +5,7 @@ module.exports = {
   url: 'https://www.elevatedtrading.com/', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   ogLanguage: 'en_US', // Facebook Language
-  banner: '/img/og-image.jpg' // Used for SEO
+  banner: '/media/og-image.jpg' // Used for SEO
   // titleAlt: 'Gatsby Prismic.io', // Title for JSONLD
   // headline: 'Writing and publishing content for LekoArts', // Headline for schema.org JSONLD
 
