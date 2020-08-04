@@ -14,6 +14,8 @@ collections:
     create: true
     slug: "{{slug}}"
     preview_path: "products/{{slug}}"
+    media_folder: ''
+    public_folder: ''
     fields:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Meta Description", name: "meta_description", widget: "string", required: true}
@@ -24,7 +26,7 @@ collections:
       - {label: "THC %", name: "thc", widget: "number", valueType: "float", required: true}
       - {label: "CBD %", name: "cbd", widget: "number", valueType: "float", required: true}
       - {label: Weight, name: weights, widget: list, fields: [{label: Value, name: value, widget: number},{label: Metric, name: metric, widget: select, multiple: false, options: ["lb", "kg"], default: lb, required: true}]}
-      - {label: "COA Link", name: "coa_link", widget: "string", required: true}
+      - {label: "COA Upload", name: "coa_link", widget: "file"}
       - {label: "Featured", name: featured, widget: object, collapsed: true, fields: [ {label: "Is Featured", name: isFeatured, widget: boolean, default: false},{ label: "Text", name: text, widget: "string", default: "None", }]}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "blog"
