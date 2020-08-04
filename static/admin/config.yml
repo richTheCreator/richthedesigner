@@ -13,8 +13,8 @@ collections:
     folder: "src/pages/products"
     label_singular: "Product"
     create: true
-    slug: "{{slug}}"
-    preview_path: "products/{{slug}}"
+    slug: "{{slug}}/index"
+    preview_path: "products/{{slug}}/index"
     media_folder: ''
     public_folder: ''
     fields:
