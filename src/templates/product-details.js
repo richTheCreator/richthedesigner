@@ -42,7 +42,7 @@ export const ProductPageTemplate = ({
 
 const ProductPage = ({ data, location }) => {
   const { frontmatter, html } = data.markdownRemark
-
+  console.log('coa------', frontmatter.coa_link)
   return (
     <ProductPageTemplate
       pathname={location.pathname}
@@ -53,6 +53,7 @@ const ProductPage = ({ data, location }) => {
       cbd={frontmatter.cbd}
       thc={frontmatter.thc}
       weights={frontmatter.weights}
+      coaLink={frontmatter.coa_link}
       html={html}
     />
   )
@@ -72,7 +73,11 @@ export const pageQuery = graphql`
           value
           metric
         }
-        coa_link
+        coa_link {
+          name
+          extension
+          publicURL
+        }
         thc
         cbd
         product_image {
