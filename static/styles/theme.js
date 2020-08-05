@@ -1,6 +1,7 @@
 // Typography
 const fonts = {
-  sans: `-apple-system, BlinkMacSystemFont,
+  heading: 'Fortika',
+  sans: `Poppins, -apple-system, BlinkMacSystemFont,
     "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif`
@@ -64,6 +65,10 @@ const maxWidths = ['1200px', '1800px']
 
 // Colors
 const colors = {
+  sage: '#727A68',
+  beige: '#DCDFC5',
+  slateGray: '#DCDFC5',
+  burntSienna: '#E76F51',
   ivory: '#F0E9E2',
   accent: '#FF5353',
   black: '#2D2926',

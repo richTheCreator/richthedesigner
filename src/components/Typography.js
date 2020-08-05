@@ -10,7 +10,8 @@ const textStyles = [
   'color',
   'lineHeight',
   'letterSpacing',
-  'space'
+  'space',
+  'fontFamily'
 ]
 
 export const H1 = system(
@@ -18,9 +19,10 @@ export const H1 = system(
     is: 'h1',
     fontSize: [10, 11, 12],
     fontWeight: 2,
-    color: 'white',
+    color: 'black',
     lineHeight: [7, 8],
-    letterSpacing: 0
+    letterSpacing: 8,
+    fontFamily: 'heading'
   },
   ...textStyles
 )
@@ -32,8 +34,9 @@ export const H2 = system(
     fontWeight: 2,
     color: 'black',
     lineHeight: [7, 8],
-    letterSpacing: 1,
-    marginBottom: 4
+    letterSpacing: 9,
+    marginBottom: 4,
+    fontFamily: 'heading'
   },
   ...textStyles
 )
@@ -45,7 +48,8 @@ export const H3 = system(
     fontWeight: 2,
     color: 'black',
     lineHeight: [6, 7],
-    letterSpacing: 0
+    letterSpacing: 9,
+    fontFamily: 'heading'
   },
   ...textStyles
 )
@@ -57,7 +61,8 @@ export const H4 = system(
     fontWeight: 2,
     color: 'black',
     lineHeight: 6,
-    letterSpacing: 5
+    letterSpacing: 5,
+    fontFamily: 'heading'
   },
   ...textStyles
 )
@@ -146,7 +151,7 @@ export const Button = system(
     is: 'p',
     fontSize: 6,
     fontWeight: 2,
-    color: 'accent',
+    color: 'blackU',
     lineHeight: 0,
     letterSpacing: 8
   },
@@ -219,4 +224,5 @@ font-weight: ${props => props.theme.fontWeights[3]};
 font-size: ${props => props.fontSize ? `calc(${props.fontSize}px + (40 - 18) * ((100vw - 300px) / (1600 - 300)));` : 'auto'}
 line-height: ${props => props.fontSize ? `calc(${props.fontSize}px + (40 - 18) * ((100vw - 300px) / (1600 - 300)))!important;` : 'auto'}
 display:inline-block;
+font-family: ${props => props.theme.fonts.heading}
 `

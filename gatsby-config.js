@@ -124,6 +124,18 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        custom: {
+          families: ['Fortika'],
+          urls: ['/fonts/fonts.css']
+        },
+        google: {
+          families: ['Poppins:400,400i,700,700i']
+        }
+      }
+    },
+    {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`

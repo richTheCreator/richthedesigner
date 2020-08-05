@@ -2,9 +2,10 @@ import { createGlobalStyle } from 'styled-components'
 import theme from '../../static/styles/theme'
 
 export const GlobalStyle = createGlobalStyle`
+
   body,
   .article {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    font-family: Poppins, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
     margin: auto;
@@ -28,6 +29,7 @@ export const GlobalStyle = createGlobalStyle`
     color: ${theme.colors.black};
     line-height: ${theme.lineHeights[9]};
     letter-spacing: ${theme.letterSpacings[0]};
+    font-family: ${theme.fonts.accent}
   }
   h2 {
     font-size: ${theme.fontSizes[11]};
@@ -35,6 +37,7 @@ export const GlobalStyle = createGlobalStyle`
     color: ${theme.colors.black};
     line-height: ${theme.lineHeights[8]};
     letter-spacing: ${theme.letterSpacings[1]};
+    font-family: ${theme.fonts.accent}
   }
   h3 {
     font-size: ${theme.fontSizes[10]};
@@ -42,6 +45,7 @@ export const GlobalStyle = createGlobalStyle`
     color: ${theme.colors.black};
     line-height: ${theme.lineHeights[7]};
     letter-spacing: ${theme.letterSpacings[0]};
+    font-family: ${theme.fonts.accent}
   }
   h4 {
     font-size: ${theme.fontSizes[9]};
@@ -49,6 +53,7 @@ export const GlobalStyle = createGlobalStyle`
     color: ${theme.colors.black};
     line-height: ${theme.lineHeights[6]};
     letter-spacing: ${theme.letterSpacings[5]};
+    font-family: ${theme.fonts.accent}
   }
   h5 {
     font-size: ${theme.fontSizes[8]};
