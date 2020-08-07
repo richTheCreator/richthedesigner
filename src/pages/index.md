@@ -1,9 +1,11 @@
 ---
 templateKey: index-page
 hero:
-  subtitle: For any lifestyle, any environment, any goal, and anyone.
+  heading: For any lifestyle, any environment, any goal, and anyone.
   title: Train like a pro.
-  bg__img: /img/kg_usa.jpg
+  backgroundImg:
+    alt: 'Testing alt'
+    image: img/kg_pose_flag.jpeg
   dots__image: /img/dots.png
 banner:
   title: Train like a pro, with a pro.

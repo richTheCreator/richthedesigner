@@ -1,7 +1,5 @@
 import React from 'react'
-import {
-  graphql
-} from 'gatsby'
+import { graphql } from 'gatsby'
 import Footer from '../components/Footer'
 import Hero from './Homepage/Hero'
 import SEO from '../components/SEO/SEO'
@@ -11,7 +9,7 @@ const IndexPage = ({ data }) => {
   return (
     <>
       <SEO />
-      <Hero hero={frontmatter.hero}/>
+      <Hero hero={frontmatter.hero} />
     </>
   )
 }
@@ -23,8 +21,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         hero {
-          subtitle
-          title
+          heading
         }
       }
     }

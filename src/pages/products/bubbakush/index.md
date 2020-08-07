@@ -1,6 +1,6 @@
 ---
 date: 2020-07-26T04:26:21.081Z
-meta_description: "Something concise that describes the product. "
+meta_description: Something concise that describes the product.
 templateKey: product-details
 product_image: bubbakushhand.jpg
 title: Bubba Kush
@@ -15,11 +15,12 @@ featured:
   isFeatured: true
   text: Lifter gets you lifted.
 ---
-**Something** *about* the [product](https://www.elevatedtrading.com)
+
+**Something** _about_ the [product](https://www.elevatedtrading.com)
 
 > Better wholesale hemp
 
-* first
-* second
-* third
-* fourth
+- first
+- second
+- third
+- fourth

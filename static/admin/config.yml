@@ -13,35 +13,111 @@ collections:
     folder: "src/pages/products"
     label_singular: "Product"
     create: true
-    slug: "{{slug}}/index"
+    slug: "{{slug}}"
+    path: "{{slug}}/{{slug}}"
     preview_path: "products/{{slug}}/index"
-    media_folder: ''
-    public_folder: ''
     fields:
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Meta Description", name: "meta_description", widget: "string", required: true}
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-details"}
-      - {label: "Product Image", name: product_image, widget: "image", required: true}
-      - {label: "Title", name: "title", widget: "string", required: true}
-      - {label: "Category", name: "category", widget: "select", multiple: false, options: ["Flower", "Concentrate"], required: true, default: "Flower"}
-      - {label: "THC %", name: "thc", widget: "number", valueType: "float", required: true}
-      - {label: "CBD %", name: "cbd", widget: "number", valueType: "float", required: true}
-      - {label: Weight, name: weights, widget: list, fields: [{label: Value, name: value, widget: number},{label: Metric, name: metric, widget: select, multiple: false, options: ["lb", "kg"], default: lb, required: true}]}
-      - {label: "COA Upload", name: "coa_link", widget: "file"}
-      - {label: "Featured", name: featured, widget: object, collapsed: true, fields: [ {label: "Is Featured", name: isFeatured, widget: boolean, default: false},{ label: "Text", name: text, widget: "string", default: "None", }]}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - {
+          label: "Meta Description",
+          name: "meta_description",
+          widget: "string",
+          required: true,
+        }
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "product-details",
+        }
+      - {
+          label: "Product Image",
+          name: "product_image",
+          widget: "image",
+          required: true,
+        }
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "select",
+          multiple: false,
+          options: ["Flower", "Concentrate"],
+          required: true,
+          default: "Flower",
+        }
+      - {
+          label: "THC %",
+          name: "thc",
+          widget: "number",
+          valueType: "float",
+          required: true,
+        }
+      - {
+          label: "CBD %",
+          name: "cbd",
+          widget: "number",
+          valueType: "float",
+          required: true,
+        }
+      - {
+          label: "Weight",
+          name: "weights",
+          widget: "list",
+          fields:
+            [
+              { label: "Value", name: "value", widget: "number" },
+              {
+                label: "Metric",
+                name: "metric",
+                widget: "select",
+                multiple: false,
+                options: ["lb", "kg"],
+                default: "lb",
+                required: true,
+              },
+            ],
+        }
+      - { label: "COA Upload", name: "coa_link", widget: "file" }
+      - {
+          label: "Featured",
+          name: "featured",
+          widget: "object",
+          collapsed: true,
+          fields:
+            [
+              {
+                label: "Is Featured",
+                name: "isFeatured",
+                widget: "boolean",
+                default: false,
+              },
+              {
+                label: "Text",
+                name: "text",
+                widget: "string",
+                default: "None",
+              },
+            ],
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "blog-post",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list" }
   - name: "pages"
     label: "Pages"
     files:
@@ -49,12 +125,72 @@ collections:
         label: "Landing Page"
         name: "index"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Subheading, name: subheading, widget: string}
-          - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
-          - {label: Description, name: description, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "index-page",
+            }
+          - {
+              label: "Hero",
+              name: "hero",
+              widget: "object",
+              fields:
+                [
+                  { label: "Heading", name: "heading", widget: "string" },
+                  {
+                    label: "Background Image",
+                    name: "backgroundImg",
+                    widget: "object",
+                    fields:
+                      [
+                        { label: "Image", name: "image", widget: "image" },
+                        { label: "Alt", name: "alt", widget: "string" },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: "Product Section",
+              name: "products",
+              widget: "object",
+              fields:
+                [
+                  { label: "Heading", name: "heading", widget: "string" },
+                  { label: "Description", name: "description", widget: "text" },
+                ],
+            }
+          - {
+              label: "Rogue Valley Section",
+              name: "rogueValley",
+              widget: "object",
+              fields:
+                [
+                  { label: "Heading", name: "heading", widget: "string" },
+                  { label: "Description", name: "description", widget: "text" },
+                ],
+            }
+          - {
+              label: "ETC Values Section",
+              name: "etcValues",
+              widget: "object",
+              fields:
+                [
+                  { label: "Heading", name: "heading", widget: "string" },
+                  { label: "Description", name: "description", widget: "text" },
+                  {
+                    label: "Values",
+                    name: "values",
+                    widget: "list",
+                    fields:
+                      [
+                        { label: "Value", name: "value", widget: "string" },
+                        {
+                          label: "Description",
+                          name: "description",
+                          widget: "string",
+                        },
+                      ],
+                  },
+                ],
+            }
