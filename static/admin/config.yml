@@ -204,7 +204,7 @@ collections:
                   { label: "Heading", name: "heading", widget: "string" },
                   {
                     label: "Description",
-                    name: "descrption",
+                    name: "description",
                     widget: "string",
                   },
                   {
