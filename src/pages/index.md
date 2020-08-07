@@ -21,4 +21,13 @@ etcValues:
       description: Testing description
     - value: Value 3
       description: Testing description
+farming:
+  heading: Farming section
+  description: description 
+  backgroundImg:
+    alt: 'Testing alt'
+    image: img/kg_pose_flag.jpeg
+supplyChain:
+  heading: Supply chain section
+  description: description 
 ---
