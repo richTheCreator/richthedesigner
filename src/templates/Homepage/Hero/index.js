@@ -34,7 +34,9 @@ const Hero = ({
             </HeroText>
           )
         )}
-        <Button bg={'ivory'}> VIEW PRODUCTS </Button>
+        <Button bg={'ivory'} mt={4}>
+          VIEW PRODUCTS
+        </Button>
       </HeroTextContainer>
       <HeroImage gridArea={ImageGridArea} fluid={image.childImageSharp.fluid} />
     </GridParent>

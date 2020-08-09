@@ -1,13 +1,15 @@
 import React, { Component, useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { Row, Col } from 'react-flexbox-grid'
-import {
-  space,
-  borderRadius,
-  height
-} from 'styled-system'
+import { space, borderRadius, height } from 'styled-system'
 import BackgroundImage from 'gatsby-background-image'
-import { Body2, Outlined, Caption, Overline, H6 } from '../../components/Typography'
+import {
+  Body2,
+  Outlined,
+  Caption,
+  Overline,
+  Heading6
+} from '../../components/Typography'
 import { Checkout, PriceItem } from '../../components'
 import Select from 'react-select'
 import { SectionMax } from '../../components/Containers'
@@ -21,35 +23,35 @@ const HeroContainer = styled(Row)`
   background-position: center center;
   background-size: cover;
   justify-content: space-between;
-  background-color: ${props => props.theme.colors.black}
+  background-color: ${(props) => props.theme.colors.black};
 `
 const ProductImg = styled(BackgroundImage)`
   ${borderRadius}
   ${height}
   background-size:cover;
-  width:100%;
-  box-shadow: ${props => props.theme.shadows.md}
+  width: 100%;
+  box-shadow: ${(props) => props.theme.shadows.md};
 `
 
 const StyledCalendar = styled(Calendar)`
   path {
-    stroke: ${props => props.theme.colors.lightGrey}
+    stroke: ${(props) => props.theme.colors.lightGrey};
   }
 `
 const StyledHome = styled(HomeIcon)`
   path {
-    stroke: ${props => props.theme.colors.lightGrey}
+    stroke: ${(props) => props.theme.colors.lightGrey};
   }
 `
 const StyledSkill = styled(Skill)`
   path {
-    stroke: ${props => props.theme.colors.lightGrey}
+    stroke: ${(props) => props.theme.colors.lightGrey};
   }
 `
 const TextContainer = styled(Col)`
   ${space}
   align-self: center;
-  z-index:1;
+  z-index: 1;
 `
 const ImageWrapper = styled(Col)`
   ${space}
@@ -57,24 +59,14 @@ const ImageWrapper = styled(Col)`
 const SelectWrapper = styled(Select)`
   ${space}
 `
-const Callout = ({ title, text }) =>
+const Callout = ({ title, text }) => (
   <Col>
-    <Overline>
-      {title}
-    </Overline>
-    <H6 color='white'>
-      {text}
-    </H6>
+    <Overline>{title}</Overline>
+    <Heading6 color='white'>{text}</Heading6>
   </Col>
+)
 
-const Hero = ({
-  title,
-  productImage,
-  category,
-  cbd,
-  thc,
-  weights
-}) => {
+const Hero = ({ title, productImage, category, cbd, thc, weights }) => {
   console.log('All Weights---', weights)
   // const options = [
   //   { value: 'SKU_3MONTH', label: <PriceItem program={weight} price='minimum order' /> }
@@ -88,27 +80,39 @@ const Hero = ({
     <HeroContainer pb={4} pt={4}>
       <SectionMax m='auto!important' p={[2, 4]}>
         <ImageWrapper lg={6} md={6} sm={12}>
-          <ProductImg fluid={productImage} height={['250px', '460px']} lg={12} />
+          <ProductImg
+            fluid={productImage}
+            height={['250px', '460px']}
+            lg={12}
+          />
         </ImageWrapper>
-        <TextContainer lg={6} md={6} sm={12} >
-          <Outlined is='H1' fontSize={['24px', '32px']} outlineColor={'white'} fontSize='50' mb={1} mt={2}> {title} </Outlined>
+        <TextContainer lg={6} md={6} sm={12}>
+          <Outlined
+            is='H1'
+            fontSize={['24px', '32px']}
+            outlineColor={'white'}
+            fontSize='50'
+            mb={1}
+            mt={2}
+          >
+            {' '}
+            {title}{' '}
+          </Outlined>
           <Row between='xs'>
             <Callout title='Category' text={category} />
             <Callout title='CBD' text={`${cbd}%`} />
             <Callout title='THC' text={`${thc}%`} />
           </Row>
           <Row between='xs'>
-            <Overline>
-              Weights
-            </Overline>
+            <Overline>Weights</Overline>
           </Row>
           <Row>
-            {weights.map((w) =>
+            {weights.map((w) => (
               <>
-                <H6 color='white'> {w.value} </H6>
-                <H6 color='white'> {w.metric} </H6>
+                <Heading6 color='white'> {w.value} </Heading6>
+                <Heading6 color='white'> {w.metric} </Heading6>
               </>
-            )}
+            ))}
           </Row>
           <Checkout bg='#F0E9E2' color='black' width='100%' mb={0} sku={'sku'}>
             REQUEST PRICE
