@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => {
   return (
     <>
       <SEO />
-      <Hero hero={frontmatter.productImages} />
+      <Hero hero={frontmatter.hero} />
     </>
   )
 }

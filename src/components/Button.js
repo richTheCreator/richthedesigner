@@ -8,22 +8,18 @@ const Container = styled.button`
   ${space}
   ${color}
   ${width}
-  background-color: ${props => props.disabled ? props.theme.colors.disabled : props.backgroundColor};
-  box-shadow: ${props => props.disabled ? 'none' : props.theme.shadows.md};
+  box-shadow: ${(props) => props.theme.shadows.md};
   align-self: center;
   border: 0px;
   padding:0px 16px;
-  cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'};
-  border-radius: ${props => props.theme.borderRadius.sm}px;
 `
 
-const Button = (props) =>
+const Button = (props) => (
   <Link style={{ margin: 'auto' }} to={props.url}>
-    <Container {...props} href='www.google.com'>
-      <ButtonText color={props.disabled ? 'mdGrey' : props.color}>
-        {props.children}
-      </ButtonText>
+    <Container {...props}>
+      <ButtonText color={props.color || 'black'}>{props.children}</ButtonText>
     </Container>
   </Link>
+)
 
 export { Button }

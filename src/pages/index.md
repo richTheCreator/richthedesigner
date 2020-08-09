@@ -1,10 +1,10 @@
 ---
 templateKey: index-page
 hero:
-  heading: Better wholesale hemp
+  heading: Better Wholesale Hemp
   backgroundImg:
     alt: 'Testing alt'
-    image: /media/bubbakushhand.jpg
+    image: /media/FlowerBG.jpg
 products:
   heading: Testing heading
   description: test description

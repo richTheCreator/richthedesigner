@@ -2,16 +2,44 @@ import system from '@rebass/components'
 import styled from 'styled-components'
 import { Row } from 'react-flexbox-grid'
 
-const containerStyles = ['color', 'space', 'height', 'justifyContent', 'maxWidth', 'width', 'minHeight']
+const containerStyles = [
+  'color',
+  'space',
+  'height',
+  'justifyContent',
+  'maxWidth',
+  'maxHeight',
+  'width',
+  'minHeight',
+  'gridTemplateColumns',
+  'gridTemplateRows',
+  'gridColumnGap',
+  'gridRowGap',
+  'display'
+]
 
-const FlexRow = styled(Row)`
-`
+const FlexRow = styled(Row)``
 
-export const SectionWrapper = system({
-  extend: FlexRow,
-  p: [3, 4, 5, 6],
-  height: 0
-}, ...containerStyles)
+export const GridParent = system(
+  {
+    display: 'grid',
+    gridTemplateColumns: ['repeat(4, 1fr)', 'repeat(12, 1fr)'],
+    gridTemplateRows: ['repeat(7, 1fr)', 'repeat(8,1fr)'],
+    gridColumnGap: '0px',
+    gridRowGap: '0px',
+    maxHeight: '700px'
+  },
+  ...containerStyles
+)
+
+export const SectionWrapper = system(
+  {
+    extend: FlexRow,
+    p: [3, 4, 5, 6],
+    height: 0
+  },
+  ...containerStyles
+)
 
 export const SectionMax = system(
   {
@@ -26,12 +54,15 @@ export const SectionMax = system(
   }
 )
 
-export const Overlay = system({
-  extend: FlexRow,
-  minHeight: 0,
-  width: '100%',
-  bg: 'black70'
-}, ...containerStyles)
+export const Overlay = system(
+  {
+    extend: FlexRow,
+    minHeight: 0,
+    width: '100%',
+    bg: 'black70'
+  },
+  ...containerStyles
+)
 
 // const fontSizes = [
 //   '11.61', // 0
