@@ -6,6 +6,8 @@ import SEO from '../components/SEO/SEO'
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
+  console.log(frontmatter.supplyChain)
+
   return (
     <>
       <SEO />
@@ -22,6 +24,90 @@ export const pageQuery = graphql`
       frontmatter {
         hero {
           heading
+          backgroundImg {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 800, quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+          }
+        }
+        products {
+          heading
+          description
+          productImages {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 800, quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+            alt
+          }
+        }
+        rogueValley {
+          heading
+          description
+          backgroundImg {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 800, quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+          }
+        }
+        etcValues {
+          heading
+          description
+          values {
+            value
+            description
+          }
+        }
+        farming {
+          heading
+          description
+          backgroundImg {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 800, quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+          }
+        }
+        supplyChain {
+          heading
+          description
+          backgroundImg {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 800, quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+          }
+          supplyImages {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 800, quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+            alt
+          }
         }
       }
     }

@@ -1,17 +1,25 @@
 ---
 templateKey: index-page
 hero:
-  heading: Better wholesale hemp
+  heading: Better Wholesale Hemp
   backgroundImg:
     alt: 'Testing alt'
-    image: img/kg_pose_flag.jpeg
-products: 
+    image: /media/FlowerBG.jpg
+products:
   heading: Testing heading
   description: test description
-rogueValley: 
+  productImages:
+    - image: /media/bubbakushhand.jpg
+      alt: test
+    - image: /media/bubbakushhand.jpg
+      alt: test
+rogueValley:
   heading: Testing heading
   description: test description
-etcValues: 
+  backgroundImg:
+    alt: Test
+    image: /media/bubbakushhand.jpg
+etcValues:
   heading: Testing heading
   description: test description
   values:
@@ -23,11 +31,21 @@ etcValues:
       description: Testing description
 farming:
   heading: Farming section
-  description: description 
+  description: description
   backgroundImg:
     alt: 'Testing alt'
-    image: img/kg_pose_flag.jpeg
+    image: /media/bubbakushhand.jpg
 supplyChain:
   heading: Supply chain section
-  description: description 
+  description: description
+  backgroundImg:
+    alt: 'Testing alt'
+    image: /media/bubbakushhand.jpg
+  supplyImages:
+    - image: /media/bubbakushhand.jpg
+      alt: test
+    - image: /media/bubbakushhand.jpg
+      alt: test
+    - image: /media/bubbakushhand.jpg
+      alt: test
 ---

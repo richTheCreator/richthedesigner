@@ -14,20 +14,20 @@ const textStyles = [
   'fontFamily'
 ]
 
-export const H1 = system(
+export const Heading1 = system(
   {
     is: 'h1',
-    fontSize: [10, 11, 12],
+    fontSize: [12],
     fontWeight: 2,
     color: 'black',
-    lineHeight: [7, 8],
+    lineHeight: [8],
     letterSpacing: 8,
     fontFamily: 'heading'
   },
   ...textStyles
 )
 
-export const H2 = system(
+export const Heading2 = system(
   {
     is: 'H2',
     fontSize: [10, 11],
@@ -41,7 +41,7 @@ export const H2 = system(
   ...textStyles
 )
 
-export const H3 = system(
+export const Heading3 = system(
   {
     is: 'H3',
     fontSize: [9, 10],
@@ -54,7 +54,7 @@ export const H3 = system(
   ...textStyles
 )
 
-export const H4 = system(
+export const Heading4 = system(
   {
     is: 'H4',
     fontSize: 9,
@@ -67,7 +67,7 @@ export const H4 = system(
   ...textStyles
 )
 
-export const H5 = system(
+export const Heading5 = system(
   {
     is: 'H5',
     fontSize: 8,
@@ -79,7 +79,7 @@ export const H5 = system(
   ...textStyles
 )
 
-export const H6 = system(
+export const Heading6 = system(
   {
     is: 'H6',
     fontSize: 7,
@@ -210,19 +210,28 @@ const ListItemSquare = styled.li`
 `
 export const WithDecorator = ({ bodyText, bodyColor, decoratorColor }) => (
   <ListItemSquare borderColor={decoratorColor}>
-    <Body2 m={0} color={bodyColor}> {bodyText} </Body2>
+    <Body2 m={0} color={bodyColor}>
+      {' '}
+      {bodyText}{' '}
+    </Body2>
   </ListItemSquare>
 )
 
-export const Outlined = styled(H3)`
+export const Outlined = styled(Heading3)`
 ${space}
 ${fontWeight}
 ${color}
 -webkit-text-stroke-width: 1px;
--webkit-text-stroke-color: ${props => props.outlineColor};
-font-weight: ${props => props.theme.fontWeights[3]};
-font-size: ${props => props.fontSize ? `calc(${props.fontSize}px + (40 - 18) * ((100vw - 300px) / (1600 - 300)));` : 'auto'}
-line-height: ${props => props.fontSize ? `calc(${props.fontSize}px + (40 - 18) * ((100vw - 300px) / (1600 - 300)))!important;` : 'auto'}
+-webkit-text-stroke-color: ${(props) => props.outlineColor};
+font-weight: ${(props) => props.theme.fontWeights[3]};
+font-size: ${(props) =>
+  props.fontSize
+    ? `calc(${props.fontSize}px + (40 - 18) * ((100vw - 300px) / (1600 - 300)));`
+    : 'auto'}
+line-height: ${(props) =>
+  props.fontSize
+    ? `calc(${props.fontSize}px + (40 - 18) * ((100vw - 300px) / (1600 - 300)))!important;`
+    : 'auto'}
 display:inline-block;
-font-family: ${props => props.theme.fonts.heading}
+font-family: ${(props) => props.theme.fonts.heading}
 `

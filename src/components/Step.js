@@ -2,16 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 import { Row, Col } from 'react-flexbox-grid'
 import { color, space } from 'styled-system'
-import { H4, H5, Body2 } from '../components/Typography'
+import { Heading4, H5, Body2 } from '../components/Typography'
 
 const Container = styled(Col)`
   ${color}
   justify-content:center;
 `
-const Number = styled(H4)`
+const Number = styled(Heading4)`
   ${color}
   font-size:60px;
-  font-weight:900;
+  font-weight: 900;
 `
 
 const Step = ({ number, title, desc }) => {
