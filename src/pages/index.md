@@ -9,9 +9,9 @@ products:
   heading: Testing heading
   description: test description
   productImages:
-    - image: /media/bubbakushhand.jpg
+    - image: /media/hemp_concentrate.jpg
       alt: test
-    - image: /media/bubbakushhand.jpg
+    - image: /media/hemp_flower.jpg
       alt: test
 rogueValley:
   heading: Testing heading

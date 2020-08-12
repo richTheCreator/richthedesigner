@@ -35,7 +35,6 @@ export const Heading2 = system(
     color: 'black',
     lineHeight: [7, 8],
     letterSpacing: 9,
-    marginBottom: 4,
     fontFamily: 'heading'
   },
   ...textStyles

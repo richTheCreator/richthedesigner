@@ -1,17 +1,18 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Footer from '../components/Footer'
-import Hero from './Homepage/Hero'
+import { Hero, Products } from './Homepage'
 import SEO from '../components/SEO/SEO'
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
-  console.log(frontmatter.supplyChain)
+  console.log(frontmatter.products)
 
   return (
     <>
       <SEO />
       <Hero hero={frontmatter.hero} />
+      <Products products={frontmatter.products} />
     </>
   )
 }
