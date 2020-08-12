@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Row, Col } from 'react-flexbox-grid'
-import { space, typography, gridArea } from 'styled-system'
+import { space, gridArea, flexbox } from 'styled-system'
 import BackgroundImage from 'gatsby-background-image'
 import { Heading1, Outlined } from '../../../components/Typography'
 
@@ -9,12 +9,14 @@ export const HeroImage = styled(BackgroundImage)`
   ${gridArea}
   background-size: cover;
   overflow: hidden;
+  align-self: normal;
 `
 export const ImageGridArea = ['1 / 1 / 8 / 5', '1 / 6 / 9 / 13;']
 
 export const HeroTextContainer = styled.div`
   ${gridArea}
   ${space}
+  align-self: center;
   z-index: 2;
 `
 export const TextGridArea = ['1 / 1 / 8 / 5', '2 / 4 / 8 / 9']

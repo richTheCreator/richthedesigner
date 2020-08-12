@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import { Body1, Heading1 } from '../../../components/Typography'
 import { SectionMax, GridParent } from '../../../components/Containers'
 import { Button } from '../../../components'
+import useSiteMetadata from '../../../components/SiteMetadata'
 import ETLogo from '../../../img/svg/ElevatedTradingLogo.svg'
 import {
   HeroImage,
@@ -20,6 +21,8 @@ const Hero = ({
     backgroundImg: { alt, image }
   }
 }) => {
+  const { menuLinks } = useSiteMetadata()
+
   return (
     <GridParent bg='black' height='70vh'>
       <HeroTextContainer m={4} bg={'black'} gridArea={TextGridArea}>
@@ -34,7 +37,7 @@ const Hero = ({
             </HeroText>
           )
         )}
-        <Button bg={'ivory'} mt={4}>
+        <Button bg={'ivory'} mt={4} url={menuLinks[0].link}>
           VIEW PRODUCTS
         </Button>
       </HeroTextContainer>
