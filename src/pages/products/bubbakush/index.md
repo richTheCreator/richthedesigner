@@ -15,12 +15,11 @@ featured:
   isFeatured: true
   text: Lifter gets you lifted.
 ---
+Testing the editorial workflow
 
-**Something** _about_ the [product](https://www.elevatedtrading.com)
+Better wholesale hemp
 
-> Better wholesale hemp
-
-- first
-- second
-- third
-- fourth
+* first
+* second
+* third
+* fourth
