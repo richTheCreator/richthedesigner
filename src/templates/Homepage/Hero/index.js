@@ -11,7 +11,7 @@ import {
   ImageGridArea
 } from './styles'
 
-export const Hero = ({
+const Hero = ({
   hero: {
     heading,
     backgroundImg: { alt, image }
@@ -41,3 +41,5 @@ export const Hero = ({
     </GridParent>
   )
 }
+
+export default Hero

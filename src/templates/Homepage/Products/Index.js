@@ -6,9 +6,7 @@ import useSiteMetadata from '../../../components/SiteMetadata'
 import { Row, Col } from 'react-flexbox-grid'
 import { CategoryImage } from './styles'
 
-export const Products = ({
-  products: { heading, description, productImages }
-}) => {
+const Products = ({ products: { heading, description, productImages } }) => {
   const { menuLinks } = useSiteMetadata()
 
   return (
@@ -44,3 +42,5 @@ export const Products = ({
     </SectionWrapper>
   )
 }
+
+export default Products
