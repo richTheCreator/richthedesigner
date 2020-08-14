@@ -37,7 +37,10 @@ export const Heading2 = system(
     letterSpacing: 7,
     fontFamily: 'heading'
   },
-  ...textStyles
+  ...textStyles,
+  {
+    textTransform: 'uppercase'
+  }
 )
 
 export const Heading3 = system(
