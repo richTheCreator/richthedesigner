@@ -29,7 +29,7 @@ rogueValley:
     The region’s unique microclimate, superior soil quality and responsible farming practices all unite to deliver a CBD product that simply outperforms other regions in the United States.
   backgroundImg:
     alt: Test
-    image: /media/bubbakushhand.jpg
+    image: /media/Rouge_Valley_Hemp.jpg
 etcValues:
   heading: Elevating The Hemp Market
   description: >

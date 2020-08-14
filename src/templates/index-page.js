@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Footer from '../components/Footer'
 import Hero from './Homepage/Hero'
 import Products from './Homepage/Products'
+import RogueValley from './Homepage/RogueValley'
 import SEO from '../components/SEO/SEO'
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
@@ -14,6 +15,7 @@ const IndexPage = ({ data }) => {
       <SEO />
       <Hero hero={frontmatter.hero} />
       <Products products={frontmatter.products} />
+      <RogueValley rogueValley={frontmatter.rogueValley} />
     </>
   )
 }
