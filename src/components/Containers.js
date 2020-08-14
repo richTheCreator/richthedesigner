@@ -35,7 +35,10 @@ export const GridParent = system(
 export const SectionWrapper = system(
   {
     extend: FlexRow,
-    p: [3, 4, 5, 6],
+    pl: [3, 4, 5, 6],
+    pr: [3, 4, 5, 6],
+    pt: [5, 6],
+    pb: [5, 6],
     height: 0
   },
   ...containerStyles

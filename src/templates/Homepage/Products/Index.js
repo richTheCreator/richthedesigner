@@ -13,10 +13,10 @@ const Products = ({ products: { heading, description, productImages } }) => {
     <SectionWrapper bg='ivory'>
       <SectionMax center='xs' style={{ margin: 'auto' }}>
         <Col xs={12}>
-          <Heading2 mt={0} mb={3}>
+          <Heading2 mt={0} mb={3} textAlign={['left', 'center']}>
             {heading}
           </Heading2>
-          <Body1>{description}</Body1>
+          <Body1 textAlign={['left', 'center']}>{description}</Body1>
           <Button
             bg={'transparent'}
             hasBorder
