@@ -17,10 +17,10 @@ const textStyles = [
 export const Heading1 = system(
   {
     is: 'h1',
-    fontSize: [12],
+    fontSize: [11, 12],
     fontWeight: 2,
     color: 'black',
-    lineHeight: [8],
+    lineHeight: [7, 8],
     letterSpacing: 8,
     fontFamily: 'heading'
   },
@@ -35,7 +35,6 @@ export const Heading2 = system(
     color: 'black',
     lineHeight: [7, 8],
     letterSpacing: 9,
-    marginBottom: 4,
     fontFamily: 'heading'
   },
   ...textStyles

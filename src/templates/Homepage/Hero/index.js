@@ -1,10 +1,7 @@
-import React, { Component, useRef } from 'react'
-import { Row, Col } from 'react-flexbox-grid'
-import { Link } from 'gatsby'
-import { Body1, Heading1 } from '../../../components/Typography'
-import { SectionMax, GridParent } from '../../../components/Containers'
+import React from 'react'
+import { GridParent } from '../../../components/Containers'
 import { Button } from '../../../components'
-import ETLogo from '../../../img/svg/ElevatedTradingLogo.svg'
+import useSiteMetadata from '../../../components/SiteMetadata'
 import {
   HeroImage,
   HeroText,
@@ -14,12 +11,14 @@ import {
   ImageGridArea
 } from './styles'
 
-const Hero = ({
+export const Hero = ({
   hero: {
     heading,
     backgroundImg: { alt, image }
   }
 }) => {
+  const { menuLinks } = useSiteMetadata()
+
   return (
     <GridParent bg='black' height='70vh'>
       <HeroTextContainer m={4} bg={'black'} gridArea={TextGridArea}>
@@ -34,7 +33,7 @@ const Hero = ({
             </HeroText>
           )
         )}
-        <Button bg={'ivory'} mt={4}>
+        <Button bg={'ivory'} mt={4} url={menuLinks[0].link}>
           VIEW PRODUCTS
         </Button>
       </HeroTextContainer>
@@ -42,5 +41,3 @@ const Hero = ({
     </GridParent>
   )
 }
-
-export default Hero

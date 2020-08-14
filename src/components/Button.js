@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { space, width, color } from 'styled-system'
+import { space, width, color, border } from 'styled-system'
 import { Link } from 'gatsby'
 import { Button as ButtonText } from '../components/Typography'
 
@@ -8,16 +8,21 @@ const Container = styled.button`
   ${space}
   ${color}
   ${width}
-  box-shadow: ${(props) => props.theme.shadows.md};
+  ${border}
   align-self: center;
-  border: 0px;
   padding:0px 16px;
 `
 
 const Button = (props) => (
   <Link style={{ margin: 'auto' }} to={props.url}>
     <Container {...props}>
-      <ButtonText color={props.color || 'black'}>{props.children}</ButtonText>
+      <ButtonText
+        color={props.color || 'black'}
+        borderColor={props.borderColor || 'black'}
+        border={props.hasBorder ? '1px solid' : '0px'}
+      >
+        {props.children}
+      </ButtonText>
     </Container>
   </Link>
 )

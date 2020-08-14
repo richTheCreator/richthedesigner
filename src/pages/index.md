@@ -13,9 +13,9 @@ products:
     are the key to future success as the hemp/CBD industry matures. We look
     forward to demonstrating how we can bring value to your business. "
   productImages:
-    - image: /media/bubbakushhand.jpg
+    - image: /media/hemp_flower.jpg
       alt: test
-    - image: /media/bubbakushhand.jpg
+    - image: /media/hemp_concentrate.jpg
       alt: test
 rogueValley:
   heading: Rogue Valley Grown & Made
