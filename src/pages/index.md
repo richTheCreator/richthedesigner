@@ -83,7 +83,7 @@ supplyChain:
   supplyImages:
     - image: /media/bubbakushhand.jpg
       alt: test
-    - image: /media/bubbakushhand.jpg
+    - image: /media/hemp_concentrate.jpg
       alt: test
     - image: /media/bubbakushhand.jpg
       alt: test
