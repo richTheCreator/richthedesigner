@@ -7,11 +7,11 @@ hero:
     image: /media/FlowerBG.jpg
 products:
   heading: High Value, Fair Price
-  description: "Elevated Trading is focused on delivering the highest quality,
+  description: Elevated Trading is focused on delivering the highest quality,
     Oregon-grown hemp products at a fair price to our customers, and we firmly
     believe that strong, strategic partnerships with like-minded business owners
     are the key to future success as the hemp/CBD industry matures. We look
-    forward to demonstrating how we can bring value to your business. "
+    forward to demonstrating how we can bring value to your business. 
   productImages:
     - image: /media/hemp_flower.jpg
       alt: test
@@ -45,11 +45,11 @@ etcValues:
       description: All of our products are 3rd party tested multiple times throughout
         the supply chain, and we supply documentation with every order.
     - value: Reliability
-      description: "Orders are shipped within 24-48 hours of payment, and we stand
-        behind every product that we sell. If you’re not happy, we fix it. "
+      description: Orders are shipped within 24-48 hours of payment, and we stand
+        behind every product that we sell. If you’re not happy, we fix it
     - value: Integrity
-      description: "If we tell you that we can deliver a product or service for your
-        business, we will make it happen. Period. "
+      description: If we tell you that we can deliver a product or service for your
+        business, we will make it happen. Period.
 farming:
   heading: Equity Driven Farms
   description: Let’s face it, without the cultivators putting in the hard work

@@ -1,4 +1,4 @@
 import { Hero } from './Hero'
-import { Products } from './Products'
+// import { Products } from './Products'
 
-export { Hero, Products }
+export { Hero }
