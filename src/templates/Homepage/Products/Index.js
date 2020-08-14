@@ -26,17 +26,7 @@ const Products = ({ products: { heading, description, productImages } }) => {
           >
             VIEW PRODUCTS
           </Button>
-          <Row center={'xs'}>
-            {productImages.map((images) => (
-              <Col lg={5} xs={12}>
-                <CategoryImage
-                  mb={3}
-                  fluid={images.image.childImageSharp.fluid}
-                  height={['360px', '460px']}
-                />
-              </Col>
-            ))}
-          </Row>
+          <Row center={'xs'}></Row>
         </Col>
       </SectionMax>
     </SectionWrapper>
