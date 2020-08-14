@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Footer from '../components/Footer'
-import { Hero } from './Homepage'
+import { Hero, Products } from './Homepage'
 import SEO from '../components/SEO/SEO'
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
@@ -12,6 +12,7 @@ const IndexPage = ({ data }) => {
     <>
       <SEO />
       <Hero hero={frontmatter.hero} />
+      <Products products={frontmatter.products} />
     </>
   )
 }

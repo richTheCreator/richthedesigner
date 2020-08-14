@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Row, Col } from 'react-flexbox-grid'
 import { color, space } from 'styled-system'
-import { Heading4, H5, Body2 } from '../components/Typography'
+import { Heading4, Heading5, Body2 } from '../components/Typography'
 
 const Container = styled(Col)`
   ${color}
@@ -23,9 +23,9 @@ const Step = ({ number, title, desc }) => {
         </Number>
       </Col>
       <Col xs>
-        <H5 textAlign={'center'} m={0} mt={3}>
+        <Heading5 textAlign={'center'} m={0} mt={3}>
           {title}
-        </H5>
+        </Heading5>
         <Body2 textAlign={'center'} mt={0}>
           {desc}
         </Body2>
