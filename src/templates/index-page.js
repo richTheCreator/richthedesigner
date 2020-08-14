@@ -1,7 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Footer from '../components/Footer'
-import { Hero, Products } from './Homepage'
+import Hero from './Homepage/Hero'
+import Products from './Homepage/Products'
 import SEO from '../components/SEO/SEO'
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
