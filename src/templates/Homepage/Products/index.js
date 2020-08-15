@@ -16,7 +16,9 @@ const Products = ({ products: { heading, description, productImages } }) => {
           <Heading2 mt={0} mb={3} textAlign={['left', 'center']}>
             {heading}
           </Heading2>
-          <Body1 textAlign={['left', 'center']}>{description}</Body1>
+          <Body1 textAlign={['left', 'center']} maxWidth={'1000px'} m='auto'>
+            {description}
+          </Body1>
           <Button
             bg={'transparent'}
             hasBorder
@@ -43,4 +45,4 @@ const Products = ({ products: { heading, description, productImages } }) => {
   )
 }
 
-export default Products
+export { Products }

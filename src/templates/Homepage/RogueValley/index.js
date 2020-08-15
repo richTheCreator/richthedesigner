@@ -53,4 +53,4 @@ const RogueValley = ({
   )
 }
 
-export default RogueValley
+export { RogueValley }
