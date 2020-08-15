@@ -1,9 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Footer from '../components/Footer'
-import Hero from './Homepage/Hero'
-import Products from './Homepage/Products'
-import RogueValley from './Homepage/RogueValley'
+import { Hero, Products, RogueValley, Values } from './Homepage'
 import SEO from '../components/SEO/SEO'
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
@@ -16,6 +14,7 @@ const IndexPage = ({ data }) => {
       <Hero hero={frontmatter.hero} />
       <Products products={frontmatter.products} />
       <RogueValley rogueValley={frontmatter.rogueValley} />
+      <Values etcValues={frontmatter.etcValues} />
     </>
   )
 }
@@ -73,6 +72,13 @@ export const pageQuery = graphql`
           values {
             value
             description
+          }
+          peeksImage {
+            childImageSharp {
+              fluid(maxWidth: 600, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
         }
         farming {

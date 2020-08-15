@@ -38,8 +38,8 @@ etcValues:
     chain experience for our customers, and enabling our customers to scale
     their business without friction in the supply chain. 
 
-
     As an Elevated customer, you can focus on growing your customer base knowing we’re hard at work ensuring the highest quality and reliability of every product that we supply for your business.
+  peeksImage: /media/mountain_peeks.png
   values:
     - value: Quality
       description: All of our products are 3rd party tested multiple times throughout

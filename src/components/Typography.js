@@ -11,7 +11,8 @@ const textStyles = [
   'lineHeight',
   'letterSpacing',
   'space',
-  'fontFamily'
+  'fontFamily',
+  'maxWidth'
 ]
 
 export const Heading1 = system(
@@ -59,7 +60,7 @@ export const Heading3 = system(
 export const Heading4 = system(
   {
     is: 'H4',
-    fontSize: 9,
+    fontSize: 8,
     fontWeight: 2,
     color: 'black',
     lineHeight: 6,
@@ -72,7 +73,7 @@ export const Heading4 = system(
 export const Heading5 = system(
   {
     is: 'H5',
-    fontSize: 8,
+    fontSize: 7,
     fontWeight: 2,
     color: 'black',
     lineHeight: 5,
@@ -84,7 +85,7 @@ export const Heading5 = system(
 export const Heading6 = system(
   {
     is: 'H6',
-    fontSize: 7,
+    fontSize: 6,
     fontWeight: 2,
     color: 'black',
     lineHeight: 3,

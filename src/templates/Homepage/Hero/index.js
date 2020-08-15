@@ -24,11 +24,16 @@ const Hero = ({
       <HeroTextContainer m={4} bg={'black'} gridArea={TextGridArea}>
         {heading.split(' ').map((text, i) =>
           i === 1 ? (
-            <HeroTextOutline color='transparent' mt={3} mb={3}>
+            <HeroTextOutline
+              fontSize={['75px', 12]}
+              color='transparent'
+              mt={3}
+              mb={3}
+            >
               {text}
             </HeroTextOutline>
           ) : (
-            <HeroText mt={3} mb={3} color='white'>
+            <HeroText fontSize={['75px', 12]} mt={3} mb={3} color='white'>
               {text}
             </HeroText>
           )
@@ -42,4 +47,4 @@ const Hero = ({
   )
 }
 
-export default Hero
+export { Hero }
