@@ -11,7 +11,7 @@ products:
     Oregon-grown hemp products at a fair price to our customers, and we firmly
     believe that strong, strategic partnerships with like-minded business owners
     are the key to future success as the hemp/CBD industry matures. We look
-    forward to demonstrating how we can bring value to your business. 
+    forward to demonstrating how we can bring value to your business.
   productImages:
     - image: /media/hemp_flower.jpg
       alt: test
@@ -52,16 +52,15 @@ etcValues:
         business, we will make it happen. Period.
 farming:
   heading: Equity Driven Farms
-  description: Let’s face it, without the cultivators putting in the hard work
-    during the grow season and choosing to grow hemp on their farms, the CBD
-    industry would not be possible. We’re passionate about delivering the
-    highest value for our customers while ensuring that Rogue Valley hemp
-    cultivators are profitable and able to reinvest for future harvests.
-    Elevated Trading has done the “leg work” and vetted farms extensively to
-    form strategic partnerships with the premier grow operations and extraction
-    facilities in Southern Oregon. Our customers are welcome to visit our farms
-    and extraction facilities to see how much care and effort goes into
-    maintaining a premium, compliant, and consistent portfolio of products.
+  description: >-
+    Let’s face it, without the cultivators putting in the hard work during the
+    grow season and choosing to grow hemp on their farms, the CBD industry would
+    not be possible. We’re passionate about delivering the highest value for our
+    customers while ensuring that Rogue Valley hemp cultivators are profitable
+    and able to reinvest for future harvests. 
+
+
+    Elevated Trading has done the “leg work” and vetted farms extensively to form strategic partnerships with the premier grow operations and extraction facilities in Southern Oregon. Our customers are welcome to visit our farms and extraction facilities to see how much care and effort goes into maintaining a premium, compliant, and consistent portfolio of products.
   backgroundImg:
     alt: Testing alt
     image: /media/rogue_valley_hempfarm.jpg
