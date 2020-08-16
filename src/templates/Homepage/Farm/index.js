@@ -23,7 +23,10 @@ const Farm = ({
     backgroundImg: { alt, image }
   }
 }) => {
-  const { menuLinks } = useSiteMetadata()
+  const formattedDescription = description
+    .split(`\n\n`)
+    .map((paragraph) => `${paragraph.replace(/\n/g, `<br> <br>`)}`)
+    .join(``)
 
   return (
     <GridParent
@@ -52,10 +55,11 @@ const Farm = ({
           </TitleBot>
         </GridParent>
       </ImageContainer>
-      <Description gridArea={DescriptionGridArea}>
-        <Body1 m={[0, 4]} mt={0} color='ivory'>
-          {description}
-        </Body1>
+      <Description m={[0, 4]} mt={0} gridArea={DescriptionGridArea}>
+        <Body1
+          color='ivory'
+          dangerouslySetInnerHTML={{ __html: formattedDescription }}
+        ></Body1>
       </Description>
     </GridParent>
   )

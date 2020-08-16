@@ -57,9 +57,8 @@ farming:
     grow season and choosing to grow hemp on their farms, the CBD industry would
     not be possible. We’re passionate about delivering the highest value for our
     customers while ensuring that Rogue Valley hemp cultivators are profitable
-    and able to reinvest for future harvests. 
-
-
+    and able to reinvest for future harvests.
+    
     Elevated Trading has done the “leg work” and vetted farms extensively to form strategic partnerships with the premier grow operations and extraction facilities in Southern Oregon. Our customers are welcome to visit our farms and extraction facilities to see how much care and effort goes into maintaining a premium, compliant, and consistent portfolio of products.
   backgroundImg:
     alt: Testing alt
@@ -69,7 +68,7 @@ supplyChain:
   description: >
     With direct industry experience across all aspects of the supply chain, from
     farming, distribution and retail, we’re uniquely positioned to offer a
-    world-class buying experience for our customers. 
+    world-class buying experience for our customers.  
 
 
     We’re removing the friction from the buying process for our customers that want high value products but don’t have the time and/or staff to form strategic partnerships directly at the source.

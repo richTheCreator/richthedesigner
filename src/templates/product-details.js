@@ -42,7 +42,7 @@ export const ProductPageTemplate = ({
 
 const ProductPage = ({ data, location }) => {
   const { frontmatter, html } = data.markdownRemark
-  console.log('coa------', frontmatter.coa_link)
+  console.log('html------', html)
   return (
     <ProductPageTemplate
       pathname={location.pathname}
@@ -62,7 +62,7 @@ const ProductPage = ({ data, location }) => {
 export default ProductPage
 
 export const pageQuery = graphql`
-  query ProductPageTemplate ($id: String!) {
+  query ProductPageTemplate($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

@@ -50,9 +50,9 @@ export const TitleBot = styled(Heading2)`
   z-index: 2;
 `
 export const TitleBotGridArea = [
-  '9 / 2 / 7 / 5',
-  '9 / 2 / 7 / 5',
-  '9 / 2 / 7 / 5',
+  '9 / 1 / 7 / 5',
+  '9 / 1 / 7 / 5',
+  '9 / 1 / 7 / 5',
   '7 / 1 / 9 / 13'
 ]
 
