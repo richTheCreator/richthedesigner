@@ -20,7 +20,7 @@ const Hero = ({
   const { menuLinks } = useSiteMetadata()
 
   return (
-    <GridParent bg='black' height='70vh'>
+    <GridParent bg='black' height='70vh' maxHeight='700px'>
       <HeroTextContainer m={4} bg={'black'} gridArea={TextGridArea}>
         {heading.split(' ').map((text, i) =>
           i === 1 ? (
