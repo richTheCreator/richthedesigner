@@ -211,6 +211,14 @@ const ListItemSquare = styled.li`
     border-image: initial;
   }
 `
+
+export const formattedDescription = (description) => {
+  return description
+    .split(`\n\n`)
+    .map((paragraph) => `${paragraph.replace(/\n/g, `<br> <br>`)}`)
+    .join(``)
+}
+
 export const WithDecorator = ({ bodyText, bodyColor, decoratorColor }) => (
   <ListItemSquare borderColor={decoratorColor}>
     <Body2 m={0} color={bodyColor}>

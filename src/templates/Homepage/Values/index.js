@@ -1,6 +1,11 @@
 import React from 'react'
 import { SectionWrapper, SectionMax } from '../../../components/Containers'
-import { Heading2, Body1, Body2 } from '../../../components/Typography'
+import {
+  Heading2,
+  Body1,
+  Body2,
+  formattedDescription
+} from '../../../components/Typography'
 import { Col } from 'react-flexbox-grid'
 import { ValueText, ValueContainer, peekStyles } from './styles'
 import PreviewCompatibleImage from '../../../components/PreviewCompatibleImage'
@@ -15,9 +20,13 @@ const Values = ({
           <Heading2 mt={0} mb={3} textAlign={'left'}>
             {heading}
           </Heading2>
-          <Body1 color='black' textAlign={'left'}>
-            {description}
-          </Body1>
+          <Body1
+            color='black'
+            textAlign={'left'}
+            dangerouslySetInnerHTML={{
+              __html: formattedDescription(description)
+            }}
+          />
         </Col>
         <Col lg={6} xs={12}>
           {values.map((value) => (

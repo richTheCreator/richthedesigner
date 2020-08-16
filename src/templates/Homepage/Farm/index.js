@@ -14,7 +14,7 @@ import {
   ImageContainer,
   ImageContainerGridArea
 } from './styles'
-import { Body1 } from '../../../components/Typography'
+import { Body1, formattedDescription } from '../../../components/Typography'
 
 const Farm = ({
   farm: {
@@ -23,11 +23,6 @@ const Farm = ({
     backgroundImg: { alt, image }
   }
 }) => {
-  const formattedDescription = description
-    .split(`\n\n`)
-    .map((paragraph) => `${paragraph.replace(/\n/g, `<br> <br>`)}`)
-    .join(``)
-
   return (
     <GridParent
       pl={[3, 4, 5, 6]}
@@ -58,8 +53,10 @@ const Farm = ({
       <Description m={[0, 4]} mt={0} gridArea={DescriptionGridArea}>
         <Body1
           color='ivory'
-          dangerouslySetInnerHTML={{ __html: formattedDescription }}
-        ></Body1>
+          dangerouslySetInnerHTML={{
+            __html: formattedDescription(description)
+          }}
+        />
       </Description>
     </GridParent>
   )

@@ -2,7 +2,12 @@ import React from 'react'
 import { Row, Col } from 'react-flexbox-grid'
 import { SectionWrapper, SectionMax } from '../../../components/Containers'
 import { Button } from '../../../components'
-import { Heading2, Body1, Overline } from '../../../components/Typography'
+import {
+  Heading2,
+  Body1,
+  Overline,
+  formattedDescription
+} from '../../../components/Typography'
 import { BackgroundContainer } from './style'
 import useSiteMetadata from '../../../components/SiteMetadata'
 import HempSVG from '../../../img/svg/hemp_flower.svg'
@@ -42,9 +47,14 @@ const RogueValley = ({
               </Row>
             </Col>
             <Col lg={7} md={6} sm={12}>
-              <Body1 textAlign='left' color={'ivory'} pb={['140px', '200px']}>
-                {description}
-              </Body1>
+              <Body1
+                dangerouslySetInnerHTML={{
+                  __html: formattedDescription(description)
+                }}
+                textAlign='left'
+                color={'ivory'}
+                pb={['140px', '200px']}
+              />
             </Col>
           </Row>
         </SectionMax>

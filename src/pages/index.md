@@ -25,7 +25,6 @@ rogueValley:
     of Hemp” due to the premium quality, sun-grown hemp consistently delivered
     year after year. 
 
-
     The region’s unique microclimate, superior soil quality and responsible farming practices all unite to deliver a CBD product that simply outperforms other regions in the United States.
   backgroundImg:
     alt: Test
