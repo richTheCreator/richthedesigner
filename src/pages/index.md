@@ -64,7 +64,7 @@ farming:
     maintaining a premium, compliant, and consistent portfolio of products.
   backgroundImg:
     alt: Testing alt
-    image: /media/bubbakushhand.jpg
+    image: /media/rogue_valley_hempfarm.jpg
 supplyChain:
   heading: Integrated In Your Supply Chain
   description: >

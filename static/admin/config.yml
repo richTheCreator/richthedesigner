@@ -205,7 +205,7 @@ collections:
                   {
                     label: "Description",
                     name: "description",
-                    widget: "string",
+                    widget: "markdown",
                   },
                   {
                     label: "Background Image",

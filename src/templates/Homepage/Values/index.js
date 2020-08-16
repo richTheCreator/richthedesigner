@@ -1,8 +1,7 @@
 import React from 'react'
 import { SectionWrapper, SectionMax } from '../../../components/Containers'
-import { Button } from '../../../components'
 import { Heading2, Body1, Body2 } from '../../../components/Typography'
-import { Row, Col } from 'react-flexbox-grid'
+import { Col } from 'react-flexbox-grid'
 import { ValueText, ValueContainer, peekStyles } from './styles'
 import PreviewCompatibleImage from '../../../components/PreviewCompatibleImage'
 
@@ -16,7 +15,7 @@ const Values = ({
           <Heading2 mt={0} mb={3} textAlign={'left'}>
             {heading}
           </Heading2>
-          <Body1 color='black' textAlign={'left'} mb={6}>
+          <Body1 color='black' textAlign={'left'}>
             {description}
           </Body1>
         </Col>

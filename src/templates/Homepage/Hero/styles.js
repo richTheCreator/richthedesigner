@@ -11,7 +11,7 @@ export const HeroImage = styled(BackgroundImage)`
   overflow: hidden;
   align-self: normal;
 `
-export const ImageGridArea = ['1 / 1 / 8 / 5', '1 / 6 / 9 / 13;']
+export const ImageGridArea = ['1 / 1 / 9 / 5', '1 / 6 / 9 / 13;']
 
 export const HeroTextContainer = styled.div`
   ${gridArea}
@@ -19,7 +19,7 @@ export const HeroTextContainer = styled.div`
   align-self: center;
   z-index: 2;
 `
-export const TextGridArea = ['1 / 1 / 8 / 5', '2 / 4 / 8 / 9']
+export const TextGridArea = ['1 / 1 / 9 / 5', '2 / 4 / 8 / 9']
 
 export const HeroText = styled(Heading1)``
 export const HeroTextOutline = styled(Heading1)`

@@ -34,7 +34,7 @@ export const Heading2 = system(
     fontSize: [10, 11],
     fontWeight: 2,
     color: 'black',
-    lineHeight: [7, 8],
+    lineHeight: 7,
     letterSpacing: 7,
     fontFamily: 'heading'
   },
