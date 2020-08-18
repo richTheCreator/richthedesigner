@@ -139,6 +139,11 @@ collections:
                 [
                   { label: "Heading", name: "heading", widget: "string" },
                   {
+                    label: "Description",
+                    name: "description",
+                    widget: "string",
+                  },
+                  {
                     label: "Background Image",
                     name: "backgroundImg",
                     widget: "object",

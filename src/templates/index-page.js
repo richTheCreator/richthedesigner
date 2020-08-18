@@ -36,6 +36,7 @@ export const pageQuery = graphql`
       frontmatter {
         hero {
           heading
+          description
           backgroundImg {
             alt
             image {

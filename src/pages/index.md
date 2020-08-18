@@ -2,6 +2,7 @@
 templateKey: index-page
 hero:
   heading: Better Wholesale Hemp
+  description: Responsibly grown in the Rogue Valley of Southern Oregon
   backgroundImg:
     alt: Testing alt
     image: /media/hemp_pattern.jpg

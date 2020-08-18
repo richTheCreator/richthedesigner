@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 import theme from '../../static/styles/theme'
 
 export const GlobalStyle = createGlobalStyle`
-  body {
+  #___gatsby {
     overflow-x:hidden;
   }
   body,
