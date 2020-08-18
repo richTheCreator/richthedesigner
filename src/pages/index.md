@@ -4,7 +4,7 @@ hero:
   heading: Better Wholesale Hemp
   backgroundImg:
     alt: Testing alt
-    image: /media/FlowerBG.jpg
+    image: /media/hemp_pattern.jpg
 products:
   heading: High Value, Fair Price
   description: Elevated Trading is focused on delivering the highest quality,
@@ -69,19 +69,17 @@ supplyChain:
     farming, distribution and retail, we’re uniquely positioned to offer a
     world-class buying experience for our customers.  
 
-
     We’re removing the friction from the buying process for our customers that want high value products but don’t have the time and/or staff to form strategic partnerships directly at the source.
-
 
     We also offer full-service consulting at the retail level to find a profitable product mix that will satisfy your customers while maintaining the unique essence of your retail brand. We don’t just sell products, we solve problems.  
   backgroundImg:
     alt: Testing alt
-    image: /media/bubbakushhand.jpg
+    image: /media/hemp_supplychain_cultivation.png
   supplyImages:
-    - image: /media/bubbakushhand.jpg
+    - image: /media/hemp_supplychain_cultivation.png
       alt: test
-    - image: /media/hemp_concentrate.jpg
+    - image: /media/hemp_supplychain_labtesting.png
       alt: test
-    - image: /media/bubbakushhand.jpg
+    - image: /media/hemp_supplychain_retail.png
       alt: test
 ---

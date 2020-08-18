@@ -38,10 +38,7 @@ export const Heading2 = system(
     letterSpacing: 7,
     fontFamily: 'heading'
   },
-  ...textStyles,
-  {
-    textTransform: 'uppercase'
-  }
+  ...textStyles
 )
 
 export const Heading3 = system(
@@ -161,7 +158,8 @@ export const Button = system(
   ...textStyles,
   {
     padding: '16px 0px',
-    margin: '0px'
+    margin: '0px',
+    borderWidth: '5px'
   }
 )
 

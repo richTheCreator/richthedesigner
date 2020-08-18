@@ -11,15 +11,16 @@ const Container = styled.button`
   ${border}
   align-self: center;
   padding:0px 16px;
+  cursor: pointer;
 `
 
 const Button = (props) => (
-  <Link style={{ margin: 'auto' }} to={props.url}>
+  <Link to={props.url}>
     <Container {...props}>
       <ButtonText
         color={props.color || 'black'}
         borderColor={props.borderColor || 'black'}
-        border={props.hasBorder ? '1px solid' : '0px'}
+        border={props.noBorder ? '0px' : '2px solid'}
       >
         {props.children}
       </ButtonText>

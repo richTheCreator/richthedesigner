@@ -2,7 +2,9 @@ import { createGlobalStyle } from 'styled-components'
 import theme from '../../static/styles/theme'
 
 export const GlobalStyle = createGlobalStyle`
-
+  body {
+    overflow-x:hidden;
+  }
   body,
   .article {
     font-family: Poppins, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
