@@ -1,17 +1,27 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { Row, Col } from 'react-flexbox-grid'
-import { space, width } from 'styled-system'
+import { space, width, color } from 'styled-system'
 import styled from 'styled-components'
 import { SectionWrapper, SectionMax } from './Containers'
-import { Heading5, Body1, Button, Overline, Caption } from './Typography'
-import V3_Logo from '../img/svg/v3-logo.svg'
+import { Heading5, Body1, Button, Overline, Caption, Body2 } from './Typography'
 import IG_Logo from '../img/svg/instagram.svg'
 import FB_Logo from '../img/svg/facebook.svg'
 import Phone_Icon from '../img/svg/phone.svg'
 import Mail_Icon from '../img/svg/mail.svg'
 import useSiteMetadata from './SiteMetadata'
+import { ETCTriangleLogo } from './SVG/ETC_TriangleLogo'
 
+const StyledLogo = styled(ETCTriangleLogo)`
+  ${space}
+  height: 80px;
+`
+
+const Legal = styled(Row)`
+  ${color}
+  ${space}
+  ${width}
+`
 const LinkStyle = styled(Link)`
   ${space}
   display:inline-block;
@@ -37,7 +47,12 @@ const ContactCTA = (props) => {
       style={{ width: '100%', height: '100%', cursor: 'pointer' }}
     >
       <CTAcontaienr {...props} middle='xs' borderRadius>
-        <IconContainer xs={3}>{props.children}</IconContainer>
+        <IconContainer
+          xs={3}
+          style={{ display: 'flex', justifyContent: 'center' }}
+        >
+          {props.children}
+        </IconContainer>
         <Col xs={9} style={{ borderLeft: '1px solid white' }}>
           <Button textAlign='center' color='white'>
             {props.text}
@@ -52,32 +67,32 @@ const CTAWrapper = styled(Col)`
   ${width}
 `
 
-const Footer = () => {
+const Footer = ({ footer }) => {
   const { menuLinks } = useSiteMetadata()
 
   return (
-    <SectionWrapper justifyContent='center' bg='blackBlue'>
+    <SectionWrapper justifyContent='center' bg='black'>
       <SectionMax>
+        <Legal center='xs' bg='#373434' p={4} mb={4} width='100%'>
+          <Body2 textAlign='center' color='white'>
+            {footer.legal}
+          </Body2>
+        </Legal>
         <Row between='xs' start='xs' style={{ width: '100%' }}>
           <Col xs={12} md={5}>
             <Row middle='xs'>
               <Link to='/' className='navbar-item' title='Logo'>
-                <V3_Logo />
+                <StyledLogo mt={4} mb={4} />
               </Link>
-              <Heading5 pl={2} color='white'>
-                {' '}
-                Training Systems{' '}
-              </Heading5>
             </Row>
             <Body1 color='lightGrey' pb={[3, 0]}>
-              Veni Vidi Vici - You came, you saw, you conquered. Training
-              programs tailored to your unique anatomy, lifestyle, and goals.
+              {footer.blurb}
             </Body1>
           </Col>
           <Col xs={12} md={3}>
             <Overline mb={3} color='mdGrey'>
               {' '}
-              PROGRAMS{' '}
+              LINKS{' '}
             </Overline>
             {menuLinks.map((navItems) =>
               navItems.name !== 'Home' ? (
@@ -97,50 +112,32 @@ const Footer = () => {
                 <ContactCTA
                   mb={3}
                   width={'100%'}
-                  url='tel:+15126302038'
-                  text={'Call V3TS'}
+                  url='https://www.instagram.com/elevatedtradingllc/'
+                  text={'Follow us'}
                 >
-                  <Phone_Icon
+                  <IG_Logo
                     style={{
-                      width: '100%',
-                      fill: 'white',
-                      paddingRight: '8px'
+                      fill: 'white'
                     }}
                   />
                 </ContactCTA>
                 <ContactCTA
-                  url='mailto:conquerfitness01@gmail.com?subject=V3%20Online%20Fitness%20Program%20-%20Customer%20Contact'
+                  url='mailto:cody@elevatedtrading.com?cc=justin@elevatedtrading.com&subject=Contact%20Elevated%20Trading%20Company'
                   mb={4}
-                  text={'Email V3TS'}
+                  text={'Contact us'}
                 >
                   <Mail_Icon
                     style={{
-                      width: '100%',
-                      fill: 'white',
-                      paddingRight: '8px'
+                      fill: 'white'
                     }}
                   />
                 </ContactCTA>
               </CTAWrapper>
             </Row>
-            <Row end='md' start='xs'>
-              <a
-                href='https://www.facebook.com/conquerfitnesstx/'
-                title='instagram'
-              >
-                <FB_Logo style={{ fill: 'white', paddingRight: '12px' }} />
-              </a>
-              <a
-                href='https://www.instagram.com/v3_training_systems/'
-                title='instagram'
-              >
-                <IG_Logo style={{ fill: 'white' }} />
-              </a>
-            </Row>
           </Col>
         </Row>
         <Row>
-          <Caption color='mdGrey'>© 2020 V-3 Training Systems</Caption>
+          <Caption color='mdGrey'>© 2020 Elevated Trading Company LLC</Caption>
         </Row>
       </SectionMax>
     </SectionWrapper>

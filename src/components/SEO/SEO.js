@@ -31,9 +31,9 @@ const SEO = ({ title, desc, banner, pathname, node }) => {
     <>
       <Helmet title={seo.title}>
         <html lang={siteLanguage} />
-        <meta name="description" content={seo.description} />
-        <meta name="image" content={seo.image} />
-        <meta name="Elevated Trading LLC" content="Better wholesale hemp." />
+        <meta name='description' content={seo.description} />
+        <meta name='image' content={seo.image} />
+        <meta name='Elevated Trading LLC' content='Better wholesale hemp.' />
         <link
           rel='apple-touch-icon'
           sizes='180x180'
@@ -60,11 +60,7 @@ const SEO = ({ title, desc, banner, pathname, node }) => {
         url={seo.url}
         locale={ogLanguage}
       />
-      <Twitter
-        title={seo.title}
-        image={seo.image}
-        desc={seo.description}
-      />
+      <Twitter title={seo.title} image={seo.image} desc={seo.description} />
     </>
   )
 }

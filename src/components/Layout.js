@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Helmet from 'react-helmet'
 import 'react-responsive-modal/styles.css'
 import { Modal } from 'react-responsive-modal'
+import { useStaticQuery, graphql } from 'gatsby'
 import Footer from '../components/Footer'
 import { Button } from '../components'
 import Navbar from '../components/Navbar'
@@ -11,6 +12,13 @@ import useSiteMetadata from './SiteMetadata'
 // test
 
 const TemplateWrapper = ({ children }) => {
+  const {
+    markdownRemark: {
+      frontmatter: { footer }
+    }
+  } = useStaticQuery(query)
+
+  console.log('global', footer)
   const { menuLinks } = useSiteMetadata()
   const [open, setOpen] = useState()
   const [verified, setVerify] = useState()
@@ -48,17 +56,44 @@ const TemplateWrapper = ({ children }) => {
           modal: 'customModal'
         }}
       >
-        <p>
-        Are you 21 years of age or older?
-        </p>
-        <Button width={'100%'} bg={'black'} color={'white'} onClick={() => verifiedAge(true)}> Yes </Button>
-        <Button width={'100%'} bg={'white'} color={'black'} onClick={() => verifiedAge(false)}> No </Button>
+        <p>Are you 21 years of age or older?</p>
+        <Button
+          width={'100%'}
+          bg={'black'}
+          color={'white'}
+          onClick={() => verifiedAge(true)}
+        >
+          {' '}
+          Yes{' '}
+        </Button>
+        <Button
+          width={'100%'}
+          bg={'white'}
+          color={'black'}
+          onClick={() => verifiedAge(false)}
+        >
+          {' '}
+          No{' '}
+        </Button>
       </Modal>
       <Navbar menuLinks={menuLinks} />
       <div style={{ paddingTop: '119px' }}>{children}</div>
-      {/* <Footer /> */}
+      <Footer footer={footer} />
     </div>
   )
 }
 
 export default TemplateWrapper
+
+const query = graphql`
+  query global {
+    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+      frontmatter {
+        footer {
+          legal
+          blurb
+        }
+      }
+    }
+  }
+`
