@@ -139,11 +139,6 @@ collections:
                 [
                   { label: "Heading", name: "heading", widget: "string" },
                   {
-                    label: "Description",
-                    name: "description",
-                    widget: "string",
-                  },
-                  {
                     label: "Background Image",
                     name: "backgroundImg",
                     widget: "object",
@@ -194,7 +189,7 @@ collections:
                         {
                           label: "Description",
                           name: "description",
-                          widget: "string",
+                          widget: "text",
                         },
                       ],
                   },
@@ -207,11 +202,7 @@ collections:
               fields:
                 [
                   { label: "Heading", name: "heading", widget: "string" },
-                  {
-                    label: "Description",
-                    name: "description",
-                    widget: "markdown",
-                  },
+                  { label: "Description", name: "description", widget: "text" },
                   {
                     label: "Background Image",
                     name: "backgroundImg",
@@ -232,5 +223,15 @@ collections:
                 [
                   { label: "Heading", name: "heading", widget: "string" },
                   { label: "Description", name: "description", widget: "text" },
+                ],
+            }
+          - {
+              label: "Footer",
+              name: "footer",
+              widget: "object",
+              fields:
+                [
+                  { label: "Blurb", name: "blurb", widget: "text" },
+                  { label: "Legal", name: "legal", widget: "text" },
                 ],
             }

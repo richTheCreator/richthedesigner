@@ -2,7 +2,6 @@
 templateKey: index-page
 hero:
   heading: Better Wholesale Hemp
-  description: Responsibly grown in the Rogue Valley of Southern Oregon
   backgroundImg:
     alt: Testing alt
     image: /media/FlowerBG.jpg
@@ -83,4 +82,7 @@ supplyChain:
       alt: test
     - image: /media/hemp_supplychain_retail.png
       alt: test
+footer: 
+  legal: Any claim on this page has not been reviewed by the FDA. Product is not intended to diagnose, cure, or prevent any disease or illness.
+  blurb: High focus on quality, best sun grown hemp in the world. High focus on quality, best sun grown hemp in the world. High focus on quality, best sun grown hemp in the world
 ---
