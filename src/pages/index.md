@@ -5,7 +5,7 @@ hero:
   description: Responsibly grown in the Rogue Valley of Southern Oregon
   backgroundImg:
     alt: Testing alt
-    image: /media/hemp_pattern.jpg
+    image: /media/FlowerBG.jpg
 products:
   heading: High Value, Fair Price
   description: Elevated Trading is focused on delivering the highest quality,

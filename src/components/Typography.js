@@ -159,7 +159,7 @@ export const Button = system(
   {
     padding: '16px 0px',
     margin: '0px',
-    borderWidth: '5px'
+    borderWidth: '2px'
   }
 )
 

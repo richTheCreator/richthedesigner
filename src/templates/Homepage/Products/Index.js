@@ -34,7 +34,7 @@ const Products = ({ products: { heading, description, productImages } }) => {
                 <CategoryImage
                   mb={3}
                   fluid={images.image.childImageSharp.fluid}
-                  height={['360px', '460px']}
+                  height={'460px'}
                 />
               </Col>
             ))}
