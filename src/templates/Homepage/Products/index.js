@@ -3,8 +3,9 @@ import { SectionWrapper, SectionMax } from '../../../components/Containers'
 import { Button } from '../../../components'
 import { Heading2, Body1 } from '../../../components/Typography'
 import useSiteMetadata from '../../../components/SiteMetadata'
+import { CategoryImage, categoryStyles } from './styles'
+import PreviewCompatibleImage from '../../../components/PreviewCompatibleImage'
 import { Row, Col } from 'react-flexbox-grid'
-import { CategoryImage } from './styles'
 
 const Products = ({ products: { heading, description, productImages } }) => {
   const { menuLinks } = useSiteMetadata()
@@ -31,10 +32,9 @@ const Products = ({ products: { heading, description, productImages } }) => {
           <Row center={'xs'}>
             {productImages.map((images) => (
               <Col lg={5} xs={12}>
-                <CategoryImage
-                  mb={3}
-                  fluid={images.image.childImageSharp.fluid}
-                  height={'460px'}
+                <PreviewCompatibleImage
+                  imageInfo={images}
+                  style={categoryStyles}
                 />
               </Col>
             ))}
