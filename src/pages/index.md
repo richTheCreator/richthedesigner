@@ -18,7 +18,7 @@ products:
     - image: /media/hemp_concentrate.jpg
       alt: test
 rogueValley:
-  heading: Rogue Valley Hemp
+  heading: Rogue Valley Grown & Made
   description: >
     Elevated Trading sources our hemp products exclusively from the Rogue Valley
     of Southern Oregon. Rogue Valley is commonly referred to as the “Napa Valley
