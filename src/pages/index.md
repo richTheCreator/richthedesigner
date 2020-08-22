@@ -57,7 +57,7 @@ farming:
     not be possible. We’re passionate about delivering the highest value for our
     customers while ensuring that Rogue Valley hemp cultivators are profitable
     and able to reinvest for future harvests.
-    
+
     Elevated Trading has done the “leg work” and vetted farms extensively to form strategic partnerships with the premier grow operations and extraction facilities in Southern Oregon. Our customers are welcome to visit our farms and extraction facilities to see how much care and effort goes into maintaining a premium, compliant, and consistent portfolio of products.
   backgroundImg:
     alt: Testing alt
@@ -82,7 +82,10 @@ supplyChain:
       alt: test
     - image: /media/hemp_supplychain_retail.png
       alt: test
-footer: 
-  legal: Any claim on this page has not been reviewed by the FDA. Product is not intended to diagnose, cure, or prevent any disease or illness.
-  blurb: High focus on quality, best sun grown hemp in the world. High focus on quality, best sun grown hemp in the world. High focus on quality, best sun grown hemp in the world
+footer:
+  legal: Any claim on this page has not been reviewed by the FDA. Product is not
+    intended to diagnose, cure, or prevent any disease or illness.
+  blurb: High focus on quality, best sun grown hemp in the world. High focus on
+    quality, best sun grown hemp in the world. High focus on quality, best sun
+    grown hemp in the world
 ---
