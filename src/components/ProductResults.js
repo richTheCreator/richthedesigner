@@ -12,6 +12,9 @@ import { Heading2, Body2 } from './Typography'
 
 const RowWrapper = styled(Row)`
   ${space}
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `
 const ProductResults = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
@@ -59,7 +62,7 @@ const ProductResults = ({ data }) => {
   return (
     <SectionWrapper bg='black'>
       <SectionMax style={{ margin: 'auto' }}>
-        <Col xs={12}>
+        <Col xs={12} style={{ padding: '0px' }}>
           {/* HEMP STARTER KIT */}
           <FeaturedCard />
           {/* PAGE DESC */}
@@ -69,10 +72,20 @@ const ProductResults = ({ data }) => {
             </Heading2>
           </RowWrapper>
           {/* FILTERS */}
-          <RowWrapper mt={4} mb={4} start='xs'>
+          <RowWrapper
+            mt={4}
+            mb={4}
+            start='xs'
+            style={{
+              display: 'inline-block',
+              overflowX: 'scroll',
+              whiteSpace: 'nowrap',
+              width: '100%'
+            }}
+          >
             {categories.map((cat) => (
               <Button
-                textTransform='uppercase'
+                style={{ display: 'inline-block' }}
                 bg={appliedFilter === cat ? 'ivory' : 'transparent'}
                 color={appliedFilter === cat ? 'black' : 'ivory'}
                 onClick={(e) => applyCategoryFilter(e, cat)}

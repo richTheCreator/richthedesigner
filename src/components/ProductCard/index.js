@@ -36,12 +36,29 @@ const ProductCard = ({
               <BaseBorder color='black' borderWidth='0px 2px 2px 0px'>
                 {category}
               </BaseBorder>
-              <BaseBorder color='black' borderWidth='0px 2px 2px 0px'>
-                {thc}% THC
-              </BaseBorder>
-              <BaseBorder color='black' borderWidth='0px 2px 0px 0px'>
-                {cbd}% CBD
-              </BaseBorder>
+              <Row style={{ width: '100%' }}>
+                <Col xs={6} style={{ padding: '0px' }}>
+                  <BaseBorder
+                    color='black'
+                    fontSize={5}
+                    borderWidth='0px 2px 0px 0px'
+                  >
+                    {cbd}% <br />
+                    <span style={{ fontSize: '11.85px' }}>CBD</span>
+                  </BaseBorder>
+                </Col>
+                <Col xs={6} style={{ padding: '0px' }}>
+                  <BaseBorder
+                    color='black'
+                    fontSize={5}
+                    borderWidth='0px 2px 0px 0px'
+                  >
+                    {thc}%
+                    <br />
+                    <span style={{ fontSize: '11.85px' }}>THC</span>
+                  </BaseBorder>
+                </Col>
+              </Row>
             </Col>
             <LogoContainer xs={4}>
               <StyledLogo fillColor='black' />

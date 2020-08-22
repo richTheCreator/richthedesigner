@@ -22,6 +22,7 @@ export const ProductImage = styled(BackgroundImage)`
 
 export const BaseBorder = styled(Overline)`
   ${borderWidth}
+  ${space}
   margin: 0px;
   padding: 8px;
   height: fit-content;
