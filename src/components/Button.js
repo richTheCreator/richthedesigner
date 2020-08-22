@@ -12,6 +12,9 @@ const Container = styled.button`
   align-self: center;
   padding:0px 16px;
   cursor: pointer;
+  &: focus {
+    outline: 0
+  }
 `
 
 const Button = (props) => (

@@ -82,7 +82,7 @@ const Footer = ({ footer }) => {
           <Col xs={12} md={5}>
             <Row middle='xs'>
               <Link to='/' className='navbar-item' title='Logo'>
-                <StyledLogo mt={4} mb={4} />
+                <StyledLogo fillColor='ivory' mt={4} mb={4} />
               </Link>
             </Row>
             <Body1 color='lightGrey' pb={[3, 0]}>

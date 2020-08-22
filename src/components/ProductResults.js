@@ -1,13 +1,29 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
+import styled from 'styled-components'
+import { space } from 'styled-system'
+import { ProductCard } from './ProductCard'
+import FeaturedCard from './FeaturedCard'
+import { Row, Col } from 'react-flexbox-grid'
+import { SectionWrapper, SectionMax } from './Containers'
+import { Button } from './Button'
+import { Heading2, Body2 } from './Typography'
 
+const RowWrapper = styled(Row)`
+  ${space}
+`
 const ProductResults = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
 
   // array of unique categories in current products & an All option
   const defaultCat = 'all'
-  const uniqueCategories = [defaultCat, ...new Set(posts.map(({ node: post }) => post.frontmatter.category.toLowerCase()))]
+  const uniqueCategories = [
+    defaultCat,
+    ...new Set(
+      posts.map(({ node: post }) => post.frontmatter.category.toLowerCase())
+    )
+  ]
 
   // filter state
   const [state, setState] = useState({
@@ -16,101 +32,69 @@ const ProductResults = ({ data }) => {
     categories: uniqueCategories
   })
 
-  const applyCategoryFilter = (cat) => {
+  const applyCategoryFilter = (e, cat) => {
+    e.preventDefault()
     // checking for default
     if (cat === defaultCat) {
-      return (
-        setState({
-          filteredData: posts,
-          appliedFitler: cat,
-          categories: uniqueCategories
-        })
-      )
+      return setState({
+        filteredData: posts,
+        appliedFilter: cat,
+        categories: uniqueCategories
+      })
     }
     // fitlering based on cat
-    const filtered = posts.filter(post => {
+    const filtered = posts.filter((post) => {
       const { category } = post.node.frontmatter
-      return (
-        category.toLowerCase().includes(cat)
-      )
+      return category.toLowerCase().includes(cat)
     })
 
     setState({
       filteredData: filtered,
       appliedFilter: cat,
       categories: uniqueCategories
-
     })
   }
+
   const { filteredData, appliedFilter, categories } = state
-
   return (
-    <div className='columns is-multiline'>
-      {posts &&
-          posts.map(({ node: post }) => {
-            if (post.frontmatter.featured.isFeatured) {
-              return (
-                <div className='is-parent column is-6' key={post.id}>
-                  <article className='tile is-child box notification'>
-                    <p>
-                      <Link
-                        className='title has-text-primary is-size-4'
-                        to={post.fields.slug}
-                      >
-                        {post.frontmatter.title}
-                      </Link>
-                      <span> &bull; </span>
-                      <span className='subtitle is-size-5 is-block'>
-                        is featured
-                      </span>
-                    </p>
-                    <p>
-                      {post.frontmatter.featured.text}
-                      <br />
-                      <br />
-                      <Link className='button' to={post.fields.slug}>
-                          Keep Reading →
-                      </Link>
-                    </p>
-                  </article>
-                </div>
-              )
-            }
-          })}
-      {
-        categories.map(cat =>
-          <button onClick={() => applyCategoryFilter(cat)}> {cat} </button>
-        )
-      }
-
-      {filteredData &&
-          filteredData.map(({ node: post }) => (
-            <div className='is-parent column is-6' key={post.id}>
-              <article className='tile is-child box notification'>
-                <p>
-                  <Link
-                    className='title has-text-primary is-size-4'
-                    to={post.fields.slug}
-                  >
-                    {post.frontmatter.title}
-                  </Link>
-                  <span> &bull; </span>
-                  <span className='subtitle is-size-5 is-block'>
-                    {post.frontmatter.date}
-                  </span>
-                </p>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className='button' to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </article>
-            </div>
-          ))}
-    </div>
+    <SectionWrapper bg='black'>
+      <SectionMax style={{ margin: 'auto' }}>
+        <Col xs={12}>
+          {/* HEMP STARTER KIT */}
+          <FeaturedCard />
+          {/* PAGE DESC */}
+          <RowWrapper middle='xs' mt={6}>
+            <Heading2 mt={0} mb={0} color='ivory'>
+              HEMP PRODUCTS
+            </Heading2>
+          </RowWrapper>
+          {/* FILTERS */}
+          <RowWrapper mt={4} mb={4} start='xs'>
+            {categories.map((cat) => (
+              <Button
+                textTransform='uppercase'
+                bg={appliedFilter === cat ? 'ivory' : 'transparent'}
+                color={appliedFilter === cat ? 'black' : 'ivory'}
+                onClick={(e) => applyCategoryFilter(e, cat)}
+                mr={3}
+              >
+                {' '}
+                {cat}{' '}
+              </Button>
+            ))}
+          </RowWrapper>
+          {/* RESULTS */}
+          <Row>
+            {filteredData &&
+              filteredData.map(({ node: post }) => (
+                <Col xs={12} md={6} lg={4} style={{ marginBottom: '24px' }}>
+                  <ProductCard post={post} />
+                </Col>
+              ))}
+          </Row>
+        </Col>
+      </SectionMax>
+    </SectionWrapper>
   )
 }
 
@@ -140,7 +124,16 @@ export default () => (
               frontmatter {
                 title
                 category
+                cbd
+                thc
                 templateKey
+                product_image {
+                  childImageSharp {
+                    fluid(maxWidth: 800, quality: 100) {
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                }
                 featured {
                   isFeatured
                   text

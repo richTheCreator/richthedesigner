@@ -4,7 +4,7 @@ meta_description: Something concise that describes the product.
 templateKey: product-details
 product_image: bubbakushhand.jpg
 title: Bubba Kush
-category: Flower
+category: Concentrate
 thc: 40
 cbd: 0
 weights:

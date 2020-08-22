@@ -149,7 +149,7 @@ export const Subtitle2 = system(
 export const Button = system(
   {
     is: 'p',
-    fontSize: 6,
+    fontSize: 4,
     fontWeight: 2,
     color: 'blackU',
     lineHeight: 0,
@@ -159,7 +159,8 @@ export const Button = system(
   {
     padding: '16px 0px',
     margin: '0px',
-    borderWidth: '2px'
+    borderWidth: '2px',
+    textTransform: 'uppercase'
   }
 )
 
