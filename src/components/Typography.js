@@ -12,7 +12,9 @@ const textStyles = [
   'letterSpacing',
   'space',
   'fontFamily',
-  'maxWidth'
+  'maxWidth',
+  'alignItems',
+  'display'
 ]
 
 export const Heading1 = system(
@@ -35,7 +37,7 @@ export const Heading2 = system(
     fontWeight: 2,
     color: 'black',
     lineHeight: 7,
-    letterSpacing: 7,
+    letterSpacing: 9,
     fontFamily: 'heading'
   },
   ...textStyles

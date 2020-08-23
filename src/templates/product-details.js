@@ -3,8 +3,7 @@ import {
   // Link,
   graphql
 } from 'gatsby'
-import Hero from './ProductDetails/Hero'
-import Description from './ProductDetails/Description'
+import { Description, Hero } from './ProductDetails/'
 import Footer from '../components/Footer'
 import SEO from '../components/SEO/SEO'
 
@@ -42,7 +41,7 @@ export const ProductPageTemplate = ({
 
 const ProductPage = ({ data, location }) => {
   const { frontmatter, html } = data.markdownRemark
-  console.log('html------', html)
+  console.log('coa------', frontmatter.coa_link)
   return (
     <ProductPageTemplate
       pathname={location.pathname}

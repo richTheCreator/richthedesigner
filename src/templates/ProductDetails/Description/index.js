@@ -1,8 +1,8 @@
 import React from 'react'
 import { Row, Col } from 'react-flexbox-grid'
-import { Heading3 } from '../../components/Typography'
-import { SectionWrapper, SectionMax } from '../../components/Containers'
-import Content, { HTMLContent } from '../../components/Content'
+import { Heading3 } from '../../../components/Typography'
+import { SectionWrapper, SectionMax } from '../../../components/Containers'
+import Content, { HTMLContent } from '../../../components/Content'
 
 const Description = ({ program, content, contentComponent }) => {
   const PostContent = HTMLContent || Content
@@ -25,4 +25,4 @@ const Description = ({ program, content, contentComponent }) => {
   )
 }
 
-export default Description
+export { Description }

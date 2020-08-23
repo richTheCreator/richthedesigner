@@ -22,7 +22,7 @@ const ProductCard = ({
     <Col>
       <Link to={fields.slug} style={{ textDecoration: 'none' }}>
         <ProductImage fluid={product_image.childImageSharp.fluid} />
-        <Wrapper bg='ivory'>
+        <Wrapper bg='ivory' p={2}>
           <Heading5 p={2} m={0}>
             {title}
           </Heading5>

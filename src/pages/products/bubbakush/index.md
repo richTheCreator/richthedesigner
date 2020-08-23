@@ -10,6 +10,8 @@ cbd: 0
 weights:
   - metric: lb
     value: 1
+  - metric: lb
+    value: 5
 coa_link: coa-catalog.pdf
 featured:
   isFeatured: true

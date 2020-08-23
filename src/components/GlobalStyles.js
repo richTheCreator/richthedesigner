@@ -12,6 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     sans-serif;
     margin: auto;
     color:#191c1f
+    -webkit-font-smoothing: antialiased;
   }
   blockquote {
     border-left: 5px solid ${theme.colors.lightGrey};

@@ -31,7 +31,7 @@ export const BaseBorder = styled(Overline)`
 `
 
 export const InfoContainer = styled(Row)`
-  border-width: 2px 0px 2px 0px;
+  border-width: 2px 0px 0px 0px;
   border-style: solid;
   border-color: ${(props) => props.theme.colors.black};
 `
