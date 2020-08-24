@@ -83,9 +83,13 @@ supplyChain:
     - image: /media/hemp_supplychain_retail.png
       alt: test
 footer:
-  legal: Any claim on this page has not been reviewed by the FDA. Product is not
-    intended to diagnose, cure, or prevent any disease or illness.
-  blurb: High focus on quality, best sun grown hemp in the world. High focus on
-    quality, best sun grown hemp in the world. High focus on quality, best sun
-    grown hemp in the world
+  legal: "These products are intended for persons age 21+. All products should be
+    used only as directed on the label, and you should always consult with a
+    physician before use. These statements have not been evaluated by the FDA.
+    These products are not intended to diagnose, treat, cure or prevent any
+    disease. By using this site, you agree to follow the Privacy Policy and all
+    Terms & Conditions printed on this site. Void where prohibited by law. "
+  blurb: "All Elevated Trading products displayed for sale are federally legal and
+    sourced from industrial hemp plants which contain less than 0.3% Delta-9
+    THC. "
 ---
