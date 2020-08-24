@@ -2,7 +2,7 @@
 date: 2020-08-24T19:09:53.505Z
 meta_description: Elevated Trading | CBD Full Spectrum Distillate
 templateKey: product-details
-product_image: et-signature-logo-linkedin.png
+product_image: 57zfhedk.png
 title: CBD | Full Spectrum Distillate
 category: Concentrate
 thc: 0.21
