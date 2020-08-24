@@ -1,5 +1,5 @@
 ---
-date: 2020-07-26T04:26:21.081Z
+date: 2020-08-24T18:25:04.678Z
 meta_description: "Premium Oregon Hemp: Lifter 14.62% CBD"
 templateKey: product-details
 product_image: bubbakushhand.jpg
@@ -14,7 +14,7 @@ weights:
     value: 5
 coa_link: coa-catalog.pdf
 featured:
-  isFeatured: true
+  isFeatured: false
   text: Pine | Mint | Uplift
 ---
 Testing the editorial workflow
