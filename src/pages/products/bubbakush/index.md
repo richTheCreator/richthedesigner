@@ -1,12 +1,12 @@
 ---
 date: 2020-07-26T04:26:21.081Z
-meta_description: Something concise that describes the product.
+meta_description: Premium Oregon Hemp - Lifter 14.62% CBD
 templateKey: product-details
 product_image: bubbakushhand.jpg
-title: Bubba Kush
-category: Concentrate
-thc: 40
-cbd: 0
+title: Lifter
+category: Flower
+thc: 0.023
+cbd: 14.62
 weights:
   - metric: lb
     value: 1
