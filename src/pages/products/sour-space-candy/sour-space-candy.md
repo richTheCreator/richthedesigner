@@ -2,7 +2,7 @@
 date: 2020-08-24T18:33:45.703Z
 meta_description: "Premium Oregon Hemp: Sour Space Candy "
 templateKey: product-details
-product_image: et-signature-logo-linkedin.png
+product_image: img_0474.jpg
 title: Sour Space Candy
 category: Flower
 thc: 0.02
