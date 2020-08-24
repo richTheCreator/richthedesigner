@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 hero:
-  heading: Better Wholesale Hemp
+  heading: "Farm Direct Hemp "
   backgroundImg:
     alt: Testing alt
     image: /media/FlowerBG.jpg
