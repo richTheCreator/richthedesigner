@@ -1,8 +1,8 @@
 ---
 date: 2020-08-24T23:23:59.428Z
-meta_description: "Elevated Trading Hemp: T2"
+meta_description: "Elevated Trading CBD Hemp Flower: T2"
 templateKey: product-details
-product_image: t2bud.jpg
+product_image: et-signature-logo-linkedin.png
 title: T2
 category: Flower
 thc: 0.05
