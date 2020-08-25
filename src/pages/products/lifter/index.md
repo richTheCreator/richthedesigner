@@ -2,7 +2,7 @@
 date: 2020-08-24T18:25:04.678Z
 meta_description: "Elevated Trading CBD Hemp Flower: Lifter"
 templateKey: product-details
-product_image: 14089.jpg
+product_image: et-signature-logo-linkedin.png
 title: Lifter
 category: Flower
 thc: 0.023
