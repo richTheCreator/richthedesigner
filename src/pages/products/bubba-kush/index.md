@@ -1,6 +1,6 @@
 ---
 date: 2020-08-24T23:07:59.226Z
-meta_description: "Elevated Trading Hemp: Bubba Kush"
+meta_description: "Elevated Trading CBD Hemp Flower: Bubba Kush"
 templateKey: product-details
 product_image: bubbakushhand.jpg
 title: Bubba Kush
