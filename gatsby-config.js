@@ -56,13 +56,18 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          'gatsby-remark-images-grid',
           {
-            resolve: 'gatsby-remark-images-medium-zoom', // Important!
+            resolve: 'gatsby-remark-images',
             options: {
-              background: 'rgba(0, 0, 0, 0.90)'
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              // withWebp: true,
+              linkImagesToOriginal: false, // Important!
+              maxWidth: 2048
             }
           },
+          'gatsby-remark-images-grid',
           {
             resolve: 'gatsby-remark-relative-images',
             options: {
@@ -70,20 +75,16 @@ module.exports = {
             }
           },
           {
-            resolve: 'gatsby-remark-images',
-            options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
-              linkImagesToOriginal: false, // Important!
-
-              maxWidth: 2048
-            }
-          },
-          {
             resolve: 'gatsby-remark-copy-linked-files',
             options: {
               destinationDir: 'static'
+            }
+          },
+          {
+            resolve: 'gatsby-remark-images-medium-zoom', // Important!
+            options: {
+              background: 'rgba(0, 0, 0, 0.90)',
+              container: 'body'
             }
           }
         ]

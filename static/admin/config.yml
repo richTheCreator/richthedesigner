@@ -9,229 +9,229 @@ logo_url: https://www.elevatedtrading.com/media/apple-touch-icon.png
 publish_mode: editorial_workflow
 
 collections:
-  - name: "products"
-    label: "Products"
-    folder: "src/pages/products"
-    label_singular: "Product"
+  - name: 'products'
+    label: 'Products'
+    folder: 'src/pages/products'
+    label_singular: 'Product'
     create: true
-    slug: "{{slug}}"
-    path: "{{slug}}/{{slug}}"
-    preview_path: "products/{{slug}}/index"
+    slug: '{{slug}}'
+    path: '{{slug}}/index'
+    preview_path: 'products/{{slug}}/index'
     fields:
-      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - {
-          label: "Meta Description",
-          name: "meta_description",
-          widget: "string",
+          label: 'Meta Description',
+          name: 'meta_description',
+          widget: 'string',
           required: true,
         }
       - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "product-details",
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'product-details',
         }
       - {
-          label: "Product Image",
-          name: "product_image",
-          widget: "image",
+          label: 'Product Image',
+          name: 'product_image',
+          widget: 'image',
           required: true,
         }
-      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
       - {
-          label: "Category",
-          name: "category",
-          widget: "select",
+          label: 'Category',
+          name: 'category',
+          widget: 'select',
           multiple: false,
-          options: ["Flower", "Concentrate"],
+          options: ['Flower', 'Concentrate'],
           required: true,
-          default: "Flower",
+          default: 'Flower',
         }
       - {
-          label: "THC %",
-          name: "thc",
-          widget: "number",
-          valueType: "float",
-          required: true,
-        }
-      - {
-          label: "CBD %",
-          name: "cbd",
-          widget: "number",
-          valueType: "float",
+          label: 'THC %',
+          name: 'thc',
+          widget: 'number',
+          valueType: 'float',
           required: true,
         }
       - {
-          label: "Weight",
-          name: "weights",
-          widget: "list",
+          label: 'CBD %',
+          name: 'cbd',
+          widget: 'number',
+          valueType: 'float',
+          required: true,
+        }
+      - {
+          label: 'Weight',
+          name: 'weights',
+          widget: 'list',
           fields:
             [
-              { label: "Value", name: "value", widget: "number" },
+              { label: 'Value', name: 'value', widget: 'number' },
               {
-                label: "Metric",
-                name: "metric",
-                widget: "select",
+                label: 'Metric',
+                name: 'metric',
+                widget: 'select',
                 multiple: false,
-                options: ["lb", "kg"],
-                default: "lb",
+                options: ['lb', 'kg'],
+                default: 'lb',
                 required: true,
               },
             ],
         }
-      - { label: "COA Upload", name: "coa_link", widget: "file" }
+      - { label: 'COA Upload', name: 'coa_link', widget: 'file' }
       - {
-          label: "Featured",
-          name: "featured",
-          widget: "object",
+          label: 'Featured',
+          name: 'featured',
+          widget: 'object',
           collapsed: true,
           fields:
             [
               {
-                label: "Is Featured",
-                name: "isFeatured",
-                widget: "boolean",
+                label: 'Is Featured',
+                name: 'isFeatured',
+                widget: 'boolean',
                 default: false,
               },
               {
-                label: "Text",
-                name: "text",
-                widget: "string",
-                default: "None",
+                label: 'Text',
+                name: 'text',
+                widget: 'string',
+                default: 'None',
               },
             ],
         }
-      - { label: "Body", name: "body", widget: "markdown" }
-  - name: "blog"
-    label: "Blog"
-    folder: "src/pages/blog"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'src/pages/blog'
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
       - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "blog-post",
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'blog-post',
         }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Tags", name: "tags", widget: "list" }
-  - name: "pages"
-    label: "Pages"
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
+  - name: 'pages'
+    label: 'Pages'
     files:
-      - file: "src/pages/index.md"
-        label: "Landing Page"
-        name: "index"
+      - file: 'src/pages/index.md'
+        label: 'Landing Page'
+        name: 'index'
         fields:
           - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "index-page",
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'index-page',
             }
           - {
-              label: "Hero",
-              name: "hero",
-              widget: "object",
+              label: 'Hero',
+              name: 'hero',
+              widget: 'object',
               fields:
                 [
-                  { label: "Heading", name: "heading", widget: "string" },
+                  { label: 'Heading', name: 'heading', widget: 'string' },
                   {
-                    label: "Background Image",
-                    name: "backgroundImg",
-                    widget: "object",
+                    label: 'Background Image',
+                    name: 'backgroundImg',
+                    widget: 'object',
                     fields:
                       [
-                        { label: "Image", name: "image", widget: "image" },
-                        { label: "Alt", name: "alt", widget: "string" },
+                        { label: 'Image', name: 'image', widget: 'image' },
+                        { label: 'Alt', name: 'alt', widget: 'string' },
                       ],
                   },
                 ],
             }
           - {
-              label: "Product Section",
-              name: "products",
-              widget: "object",
+              label: 'Product Section',
+              name: 'products',
+              widget: 'object',
               fields:
                 [
-                  { label: "Heading", name: "heading", widget: "string" },
-                  { label: "Description", name: "description", widget: "text" },
+                  { label: 'Heading', name: 'heading', widget: 'string' },
+                  { label: 'Description', name: 'description', widget: 'text' },
                 ],
             }
           - {
-              label: "Rogue Valley Section",
-              name: "rogueValley",
-              widget: "object",
+              label: 'Rogue Valley Section',
+              name: 'rogueValley',
+              widget: 'object',
               fields:
                 [
-                  { label: "Heading", name: "heading", widget: "string" },
-                  { label: "Description", name: "description", widget: "text" },
+                  { label: 'Heading', name: 'heading', widget: 'string' },
+                  { label: 'Description', name: 'description', widget: 'text' },
                 ],
             }
           - {
-              label: "ETC Values Section",
-              name: "etcValues",
-              widget: "object",
+              label: 'ETC Values Section',
+              name: 'etcValues',
+              widget: 'object',
               fields:
                 [
-                  { label: "Heading", name: "heading", widget: "string" },
-                  { label: "Description", name: "description", widget: "text" },
+                  { label: 'Heading', name: 'heading', widget: 'string' },
+                  { label: 'Description', name: 'description', widget: 'text' },
                   {
-                    label: "Values",
-                    name: "values",
-                    widget: "list",
-                    allow_add: "false",
+                    label: 'Values',
+                    name: 'values',
+                    widget: 'list',
+                    allow_add: 'false',
                     fields:
                       [
-                        { label: "Value", name: "value", widget: "string" },
+                        { label: 'Value', name: 'value', widget: 'string' },
                         {
-                          label: "Description",
-                          name: "description",
-                          widget: "text",
+                          label: 'Description',
+                          name: 'description',
+                          widget: 'text',
                         },
                       ],
                   },
                 ],
             }
           - {
-              label: "Farm Section",
-              name: "farming",
-              widget: "object",
+              label: 'Farm Section',
+              name: 'farming',
+              widget: 'object',
               fields:
                 [
-                  { label: "Heading", name: "heading", widget: "string" },
-                  { label: "Description", name: "description", widget: "text" },
+                  { label: 'Heading', name: 'heading', widget: 'string' },
+                  { label: 'Description', name: 'description', widget: 'text' },
                   {
-                    label: "Background Image",
-                    name: "backgroundImg",
-                    widget: "object",
+                    label: 'Background Image',
+                    name: 'backgroundImg',
+                    widget: 'object',
                     fields:
                       [
-                        { label: "Image", name: "image", widget: "image" },
-                        { label: "Alt", name: "alt", widget: "string" },
+                        { label: 'Image', name: 'image', widget: 'image' },
+                        { label: 'Alt', name: 'alt', widget: 'string' },
                       ],
                   },
                 ],
             }
           - {
-              label: "Supply Chain Section",
-              name: "supplyChain",
-              widget: "object",
+              label: 'Supply Chain Section',
+              name: 'supplyChain',
+              widget: 'object',
               fields:
                 [
-                  { label: "Heading", name: "heading", widget: "string" },
-                  { label: "Description", name: "description", widget: "text" },
+                  { label: 'Heading', name: 'heading', widget: 'string' },
+                  { label: 'Description', name: 'description', widget: 'text' },
                 ],
             }
           - {
-              label: "Footer",
-              name: "footer",
-              widget: "object",
+              label: 'Footer',
+              name: 'footer',
+              widget: 'object',
               fields:
                 [
-                  { label: "Blurb", name: "blurb", widget: "text" },
-                  { label: "Legal", name: "legal", widget: "text" },
+                  { label: 'Blurb', name: 'blurb', widget: 'text' },
+                  { label: 'Legal', name: 'legal', widget: 'text' },
                 ],
             }
