@@ -14,7 +14,8 @@ const textStyles = [
   'fontFamily',
   'maxWidth',
   'alignItems',
-  'display'
+  'display',
+  'justifyItems'
 ]
 
 export const Heading1 = system(

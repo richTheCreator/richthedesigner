@@ -5,13 +5,13 @@ import { space, borderRadius, height } from 'styled-system'
 import BackgroundImage from 'gatsby-background-image'
 import {
   Body2,
-  Heading2,
+  Heading3,
   Caption,
   Overline,
   Button as ButtonText,
   Heading6
 } from '../../../components/Typography'
-import { Checkout, PriceItem, Button } from '../../../components'
+import { Button, LinkButton } from '../../../components'
 import { SectionMax } from '../../../components/Containers'
 import {
   HeroContainer,
@@ -30,17 +30,26 @@ const formatOptionLabel = ({ value, metric }) => (
   </ButtonText>
 )
 
-const Hero = ({ title, productImage, category, cbd, thc, weights }) => {
-  console.log('weights', weights)
+const Hero = ({
+  title,
+  productImage,
+  category,
+  cbd,
+  thc,
+  weights,
+  coa_link
+}) => {
+  console.log('coa', coa_link)
+  const [weightVal, setWeight] = useState(
+    `${weights[0].value} ${weights[0].metric}`
+  )
 
-  // const options = [
-  //   { value: 'SKU_3MONTH', label: <PriceItem program={weight} price='minimum order' /> }
-  // ]
-  // const [discountAmount, setDiscount] = useState(options[0].label.props.strikeout - options[0].label.props.price)
-  // const [sku, setSku] = useState(options[0].value)
-  // useEffect(() => {
-  //   setDiscount()
-  // }, [enabled])
+  const mailTo = `mailto:cody@elevatedtrading.com?cc=justin@elevatedtrading.com&subject=Price%20request%20for%3A%20${title}%20-%20${weightVal}&body=Testing`
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+    location.href = mailTo
+  }
 
   return (
     <HeroContainer pb={4} pt={4}>
@@ -53,23 +62,23 @@ const Hero = ({ title, productImage, category, cbd, thc, weights }) => {
           />
         </ImageWrapper>
         <TextContainer lg={5} md={6} sm={12}>
-          <Heading2 mb={2} mt={2} textAlign='center' color='ivory'>
+          <Heading3 mb={2} mt={2} textAlign='center' color='black'>
             {title}
-          </Heading2>
+          </Heading3>
           <Row style={{ width: '100%' }}>
             <BaseBorder xs={3} borderWidth='2px 2px 2px 0px'>
-              <ButtonText textAlign='left' fontSize={7} color='ivory'>
+              <ButtonText textAlign='left' fontSize={7} color='black'>
                 {cbd}% <br />
                 <span style={{ fontSize: '11.85px' }}>CBD</span>
               </ButtonText>
             </BaseBorder>
             <BaseBorder xs={6} borderWidth='2px 2px 2px 0px'>
-              <ButtonText fontSize={6} textAlign='center' color='ivory'>
+              <ButtonText fontSize={6} textAlign='center' color='black'>
                 {category}
               </ButtonText>
             </BaseBorder>
             <BaseBorder xs={3} borderWidth='2px 0px 2px 0px'>
-              <ButtonText textAlign='right' fontSize={7} color='ivory'>
+              <ButtonText textAlign='right' fontSize={7} color='black'>
                 {thc}% <br />
                 <span style={{ fontSize: '11.85px' }}>THC</span>
               </ButtonText>
@@ -77,16 +86,14 @@ const Hero = ({ title, productImage, category, cbd, thc, weights }) => {
           </Row>
           <Row style={{ width: '100%' }}>
             <BaseBorder xs={12} borderWidth='0px 0px 2px 0px'>
-              <ButtonText textAlign='center' color='ivory' fontSize={6}>
+              <ButtonText textAlign='center' color='black' fontSize={6}>
                 LAB CERTIFIED HEMP
               </ButtonText>
             </BaseBorder>
           </Row>
           <SelectWrapper
             onChange={(option) => {
-              // setDiscount(option.label.props.strikeout - option.label.props.price)
-              // setSku(option.value)
-              console.log(option.value)
+              setWeight(`${option.value} ${option.metric}`)
             }}
             mb={3}
             mt={3}
@@ -129,22 +136,30 @@ const Hero = ({ title, productImage, category, cbd, thc, weights }) => {
           />
           <Row style={{ padding: '0px' }}>
             <Col xs={8} style={{ paddingLeft: '0px' }}>
-              <Button bg={'sage'} width='100%' color='ivory'>
+              <Button
+                bg={'sage'}
+                width='100%'
+                height='100%'
+                color='ivory'
+                bg='black'
+                onClick={(e) => sendEmail(e)}
+              >
                 REQUEST PRICE
               </Button>
             </Col>
             <Col xs={4} style={{ paddingRight: '0px' }}>
-              <Button
-                height='100%'
-                bg='transparent'
-                width='100%'
-                color='ivory'
+              <LinkButton
+                color='black'
                 display='flex'
+                width='100%'
+                height='100%'
+                justifyItems='center'
                 alignItems='center'
-                textPadding={'0px!important'}
+                borderColor='ivory'
+                href={coa_link.publicURL}
               >
                 <StyledFileIcon pr={2} /> COA
-              </Button>
+              </LinkButton>
             </Col>
           </Row>
         </TextContainer>

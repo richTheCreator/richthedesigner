@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { Heading4 } from '../../../components/Typography'
 
 export const ValueText = styled(Heading4)`
+  line-height: 15px;
   border-bottom: 5px solid ${(props) => props.theme.colors.sage};
 `
 

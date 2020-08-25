@@ -17,7 +17,7 @@ export const HeroContainer = styled(Row)`
   background-position: center center;
   background-size: cover;
   justify-content: space-between;
-  background-color: ${(props) => props.theme.colors.black};
+  background-color: ${(props) => props.theme.colors.ivory};
 `
 export const ProductImg = styled(BackgroundImage)`
   ${borderRadius}
@@ -50,5 +50,5 @@ export const BaseBorder = styled(Col)`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-color: ${(props) => props.theme.colors.ivory};
+  border-color: ${(props) => props.theme.colors.black};
 `

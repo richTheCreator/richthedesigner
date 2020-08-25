@@ -1,9 +1,9 @@
 import React from 'react'
 import { SectionWrapper, SectionMax } from '../../../components/Containers'
 import { Button } from '../../../components'
-import { Heading2, Body1 } from '../../../components/Typography'
+import { Heading2, Body2 } from '../../../components/Typography'
 import useSiteMetadata from '../../../components/SiteMetadata'
-import { CategoryImage, categoryStyles } from './styles'
+import { categoryStyles } from './styles'
 import PreviewCompatibleImage from '../../../components/PreviewCompatibleImage'
 import { Row, Col } from 'react-flexbox-grid'
 
@@ -17,9 +17,9 @@ const Products = ({ products: { heading, description, productImages } }) => {
           <Heading2 mt={0} mb={3} textAlign={['left', 'center']}>
             {heading}
           </Heading2>
-          <Body1 textAlign={['left', 'center']} maxWidth={'1000px'} m='auto'>
+          <Body2 textAlign={['left', 'center']} maxWidth={'1000px'} m='auto'>
             {description}
-          </Body1>
+          </Body2>
           <Button
             bg={'transparent'}
             hasBorder

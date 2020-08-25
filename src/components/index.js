@@ -1,6 +1,6 @@
 import { Badge } from './Badge'
 import { Step } from './Step'
-import { Button } from './Button'
+import { Button, LinkButton } from './Button'
 import { Banner } from './Banner'
 import { InfoItem } from './InfoItem'
 import { PriceItem } from './PriceItem'
@@ -11,6 +11,7 @@ export {
   Badge,
   Step,
   Button,
+  LinkButton,
   Banner,
   InfoItem,
   PriceItem,

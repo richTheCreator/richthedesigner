@@ -16,6 +16,7 @@ export const ProductPageTemplate = ({
   thc,
   html,
   weights,
+  coa_link,
   pathname
 }) => {
   return (
@@ -30,6 +31,7 @@ export const ProductPageTemplate = ({
         title={title}
         productImage={productImage.childImageSharp.fluid}
         category={category}
+        coa_link={coa_link}
         cbd={cbd}
         thc={thc}
         weights={weights}
@@ -41,7 +43,6 @@ export const ProductPageTemplate = ({
 
 const ProductPage = ({ data, location }) => {
   const { frontmatter, html } = data.markdownRemark
-  console.log('coa------', frontmatter.coa_link)
   return (
     <ProductPageTemplate
       pathname={location.pathname}
@@ -52,7 +53,7 @@ const ProductPage = ({ data, location }) => {
       cbd={frontmatter.cbd}
       thc={frontmatter.thc}
       weights={frontmatter.weights}
-      coaLink={frontmatter.coa_link}
+      coa_link={frontmatter.coa_link}
       html={html}
     />
   )
