@@ -1,6 +1,6 @@
 ---
 date: 2020-08-24T18:25:04.678Z
-meta_description: "Premium Oregon Hemp: Lifter 14.62% CBD"
+meta_description: 'Premium Oregon Hemp: Lifter 14.62% CBD'
 templateKey: product-details
 product_image: 14089.jpg
 title: Lifter
@@ -17,7 +17,8 @@ featured:
   isFeatured: false
   text: Pine | Mint | Uplift
 ---
-Testing image grid layout 
+
+Testing image grid layout
 
 ```grid|2
 ![](14089.jpg)

@@ -16,6 +16,8 @@ collections:
     create: true
     slug: '{{slug}}'
     path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
     preview_path: 'products/{{slug}}/index'
     fields:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
