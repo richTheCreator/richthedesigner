@@ -15,4 +15,4 @@ featured:
   isFeatured: false
   text: None
 ---
-Broad-Spectrum Distillate
+CBD | Broad-Spectrum Distillate
