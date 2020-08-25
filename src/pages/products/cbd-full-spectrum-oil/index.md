@@ -15,4 +15,4 @@ featured:
   isFeatured: false
   text: None
 ---
-CBD | Full Spectrum Oil
+CBD | Full-Spectrum Oil
