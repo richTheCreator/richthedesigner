@@ -1,8 +1,8 @@
 ---
 date: 2020-08-24T23:03:58.633Z
-meta_description: "Elevated Trading Hemp: White CBG"
+meta_description: "Elevated Trading CBG Hemp Flower: White CBG"
 templateKey: product-details
-product_image: cbggrinder.jpg
+product_image: et-signature-logo-linkedin.png
 title: White CBG
 category: Flower
 thc: 0.009
