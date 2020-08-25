@@ -17,11 +17,9 @@ featured:
   isFeatured: false
   text: Pine | Mint | Uplift
 ---
-Testing the editorial workflow
+Testing image grid layout 
 
-Better wholesale hemp
-
-* first
-* second
-* third
-* fourth
+```grid|2
+![](14089.jpg)
+![](14089.jpg)
+```
