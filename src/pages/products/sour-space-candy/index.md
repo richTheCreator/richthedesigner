@@ -1,8 +1,8 @@
 ---
 date: 2020-08-24T18:33:45.703Z
-meta_description: "Premium Oregon Hemp: Sour Space Candy "
+meta_description: Elevated Trading CBD Hemp Flower
 templateKey: product-details
-product_image: img_0474.jpg
+product_image: et-signature-logo-linkedin.png
 title: Sour Space Candy
 category: Flower
 thc: 0.02
