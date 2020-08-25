@@ -1,6 +1,6 @@
 ---
 date: 2020-08-24T18:25:04.678Z
-meta_description: 'Premium Oregon Hemp: Lifter 14.62% CBD'
+meta_description: "Elevated Trading CBD Hemp Flower: Lifter"
 templateKey: product-details
 product_image: 14089.jpg
 title: Lifter
