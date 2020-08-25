@@ -155,7 +155,7 @@ const Hero = ({
                 height='100%'
                 justifyItems='center'
                 alignItems='center'
-                borderColor='ivory'
+                borderColor='black'
                 href={coa_link.publicURL}
               >
                 <StyledFileIcon pr={2} /> COA

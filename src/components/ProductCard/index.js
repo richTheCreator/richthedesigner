@@ -23,7 +23,7 @@ const ProductCard = ({
       <Link to={fields.slug} style={{ textDecoration: 'none' }}>
         <ProductImage fluid={product_image.childImageSharp.fluid} />
         <Wrapper bg='ivory' p={2}>
-          <Heading5 p={2} m={0}>
+          <Heading5 pl={0} pr={0} pt={2} pb={2} m={0}>
             {title}
           </Heading5>
           <InfoContainer>

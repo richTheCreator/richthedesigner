@@ -24,18 +24,19 @@ module.exports = {
     // headline: website.headline,
     // twitter: website.twitter,
     // facebook: website.facebook,
-    menuLinks: [{
-      name: 'PRODUCTS',
-      link: '/products'
-    },
-    {
-      name: 'HEMP STARTER KIT',
-      link: '/'
-    },
-    {
-      name: 'LAB RESULTS',
-      link: '/'
-    }
+    menuLinks: [
+      {
+        name: 'PRODUCTS',
+        link: '/products'
+      },
+      {
+        name: 'HEMP STARTER KIT',
+        link: '/'
+      },
+      {
+        name: 'LAB RESULTS',
+        link: '/'
+      }
     ]
   },
   plugins: [
@@ -54,27 +55,37 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [{
-          resolve: 'gatsby-remark-relative-images',
-          options: {
-            name: 'uploads'
+        plugins: [
+          'gatsby-remark-images-grid',
+          {
+            resolve: 'gatsby-remark-images-medium-zoom', // Important!
+            options: {
+              background: 'rgba(0, 0, 0, 0.90)'
+            }
+          },
+          {
+            resolve: 'gatsby-remark-relative-images',
+            options: {
+              name: 'uploads'
+            }
+          },
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              linkImagesToOriginal: false, // Important!
+
+              maxWidth: 2048
+            }
+          },
+          {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {
+              destinationDir: 'static'
+            }
           }
-        },
-        {
-          resolve: 'gatsby-remark-images',
-          options: {
-            // It's important to specify the maxWidth (in pixels) of
-            // the content container as this plugin uses this as the
-            // base for generating different widths of each image.
-            maxWidth: 2048
-          }
-        },
-        {
-          resolve: 'gatsby-remark-copy-linked-files',
-          options: {
-            destinationDir: 'static'
-          }
-        }
         ]
       }
     },
@@ -161,7 +172,7 @@ module.exports = {
   ],
   // for avoiding CORS while developing Netlify Functions locally
   // read more: https://www.gatsbyjs.org/docs/api-proxy/#advanced-proxying
-  developMiddleware: app => {
+  developMiddleware: (app) => {
     app.use(
       '/.netlify/functions/',
       proxy({

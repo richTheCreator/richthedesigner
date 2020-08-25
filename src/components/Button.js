@@ -10,6 +10,7 @@ const Container = styled.button`
   ${width}
   ${height}
   ${border}
+  border-style: solid;
   align-self: center;
   padding:0px 16px;
   cursor: pointer;
@@ -26,7 +27,8 @@ const LinkContainer = styled.a`
   ${borderColor}
   text-decoration: none;
   display:flex;
-  border: 2px solid;
+  border-width: 2px;
+  border-style: solid;
   align-self: center;
   justify-content:center;
   padding:0px 16px;
