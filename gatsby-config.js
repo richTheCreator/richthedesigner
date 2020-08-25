@@ -68,6 +68,13 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        path: `${__dirname}/src/pages/products`,
+        name: 'products'
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         path: `${__dirname}/src/img`,
         name: 'images'
       }
@@ -90,12 +97,7 @@ module.exports = {
             }
           },
           'gatsby-remark-images-grid',
-          {
-            resolve: 'gatsby-remark-relative-images',
-            options: {
-              name: 'uploads'
-            }
-          },
+          'gatsby-remark-relative-images',
           // {
           //   resolve: 'gatsby-remark-copy-linked-files',
           //   options: {
