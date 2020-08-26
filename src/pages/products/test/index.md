@@ -16,6 +16,4 @@ coa_link: uxo_certificate_2020_77.pdf
 
 What’s the difference between CBD distillate and CBD isolate? CBD isolate is highly refined to contain only CBD. CBD distillate is a whole plant extract that includes a wide range of beneficial cannabinoids. Mile High Labs uses a proprietary process to remove nearly all of the THC present in our CBD distillate. The result is a THC-free, broad-spectrum CBD oil that manufacturers and their consumers can trust.
 
-![](tr_w-480.jpeg)
-
 ![](rouge_valley_hemp.jpg)
