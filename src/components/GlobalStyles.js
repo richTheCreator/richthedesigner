@@ -32,7 +32,7 @@ export const GlobalStyle = createGlobalStyle`
     color: ${theme.colors.black};
     line-height: ${theme.lineHeights[9]};
     letter-spacing: ${theme.letterSpacings[0]};
-    font-family: ${theme.fonts.accent}
+    font-family: ${theme.fonts.sans}
   }
   h2 {
     font-size: ${theme.fontSizes[11]};
@@ -40,7 +40,7 @@ export const GlobalStyle = createGlobalStyle`
     color: ${theme.colors.black};
     line-height: ${theme.lineHeights[8]};
     letter-spacing: ${theme.letterSpacings[1]};
-    font-family: ${theme.fonts.accent}
+    font-family: ${theme.fonts.sans}
   }
   h3 {
     font-size: ${theme.fontSizes[10]};
@@ -48,7 +48,7 @@ export const GlobalStyle = createGlobalStyle`
     color: ${theme.colors.black};
     line-height: ${theme.lineHeights[7]};
     letter-spacing: ${theme.letterSpacings[0]};
-    font-family: ${theme.fonts.accent}
+    font-family: ${theme.fonts.sans}
   }
   h4 {
     font-size: ${theme.fontSizes[9]};
@@ -56,7 +56,8 @@ export const GlobalStyle = createGlobalStyle`
     color: ${theme.colors.black};
     line-height: ${theme.lineHeights[6]};
     letter-spacing: ${theme.letterSpacings[5]};
-    font-family: ${theme.fonts.accent}
+    font-family: ${theme.fonts.sans};
+    margin: 16px 0px;
   }
   h5 {
     font-size: ${theme.fontSizes[8]};
@@ -75,10 +76,10 @@ export const GlobalStyle = createGlobalStyle`
     margin: 8px 0px;
   }
   p {
-    font-size: ${theme.fontSizes[7]};
+    font-size: ${theme.fontSizes[6]};
     font-weight: 300;
     color: ${theme.colors.darkGrey};
-    line-height: ${theme.lineHeights[5]};
+    line-height: ${theme.lineHeights[4]};
     letter-spacing: ${theme.letterSpacings[7]};
     margin: 8px 0px;
   }
@@ -116,5 +117,9 @@ export const GlobalStyle = createGlobalStyle`
   .row {
     margin-left: 0px;
     margin-right: 0px;
+  }
+
+  .PDP-Description p, h4, h3, h2, h1, li{
+    color: ${theme.colors.ivory}
   }
 `

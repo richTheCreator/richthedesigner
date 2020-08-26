@@ -1,6 +1,6 @@
 ---
 date: 2020-08-24T23:03:58.633Z
-meta_description: "Elevated Trading CBG Hemp Flower: White CBG"
+meta_description: 'Elevated Trading CBG Hemp Flower: White CBG'
 templateKey: product-details
 product_image: et-signature-logo-linkedin.png
 title: White CBG
@@ -11,8 +11,6 @@ weights:
   - metric: lb
     value: 1
 coa_link: cbg-flower-coa.pdf
-featured:
-  isFeatured: false
-  text: Cilantro | Gas | Sleep
 ---
+
 Cilantro | Gas | Sleep

@@ -96,21 +96,21 @@ module.exports = {
               maxWidth: 2048
             }
           },
+          {
+            resolve: 'gatsby-remark-images-medium-zoom', // Important!
+            options: {
+              background: 'rgba(0, 0, 0, 0.90)'
+            }
+          },
           'gatsby-remark-images-grid',
-          'gatsby-remark-relative-images',
+          '@pauliescanlon/gatsby-remark-grid-system',
+          'gatsby-remark-relative-images'
           // {
           //   resolve: 'gatsby-remark-copy-linked-files',
           //   options: {
           //     destinationDir: 'static'
           //   }
           // },
-          {
-            resolve: 'gatsby-remark-images-medium-zoom', // Important!
-            options: {
-              background: 'rgba(0, 0, 0, 0.90)',
-              container: 'body'
-            }
-          }
         ]
       }
     },

@@ -1,6 +1,6 @@
 ---
 date: 2020-08-24T23:07:59.226Z
-meta_description: "Elevated Trading CBD Hemp Flower: Bubba Kush"
+meta_description: 'Elevated Trading CBD Hemp Flower: Bubba Kush'
 templateKey: product-details
 product_image: et-signature-logo-linkedin.png
 title: Bubba Kush
@@ -11,8 +11,6 @@ weights:
   - metric: lb
     value: 1
 coa_link: bubba-kush-shipping-coa.pdf
-featured:
-  isFeatured: false
-  text: Peppery | Citrus | Herbal
 ---
+
 Peppery | Citrus | Herbal

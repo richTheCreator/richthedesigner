@@ -11,8 +11,6 @@ weights:
   - metric: lb
     value: 1
 coa_link: ssc-shipping-coa.pdf
-featured:
-  isFeatured: false
-  text: Herbal | Pepper | Energizing
 ---
+
 Testing Herbal | Pepper | Energizing

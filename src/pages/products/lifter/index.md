@@ -1,6 +1,6 @@
 ---
 date: 2020-08-24T18:25:04.678Z
-meta_description: "Elevated Trading CBD Hemp Flower: Lifter"
+meta_description: 'Elevated Trading CBD Hemp Flower: Lifter'
 templateKey: product-details
 product_image: et-signature-logo-linkedin.png
 title: Lifter
@@ -13,9 +13,6 @@ weights:
   - metric: lb
     value: 5
 coa_link: coa-catalog.pdf
-featured:
-  isFeatured: false
-  text: Pine | Mint | Uplift
 ---
 
 Testing image grid layout

@@ -11,8 +11,6 @@ weights:
   - metric: kg
     value: 1
 coa_link: distillatecoa.pdf
-featured:
-  isFeatured: false
-  text: Full Spectrum CBD Distillate
 ---
+
 CBD | Full-Spectrum Distillate

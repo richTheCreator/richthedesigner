@@ -147,10 +147,6 @@ export default () => (
                     }
                   }
                 }
-                featured {
-                  isFeatured
-                  text
-                }
                 date(formatString: "MMMM DD, YYYY")
               }
             }
