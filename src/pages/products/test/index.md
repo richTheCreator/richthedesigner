@@ -2,7 +2,7 @@
 date: 2020-08-25T08:10:59.775Z
 meta_description: Test
 templateKey: product-details
-product_image: 07.jpg
+product_image: dsc07391.jpg
 title: Test
 category: Flower
 thc: 1
