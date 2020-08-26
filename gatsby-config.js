@@ -103,7 +103,7 @@ module.exports = {
             }
           },
           'gatsby-remark-images-grid',
-          '@pauliescanlon/gatsby-remark-grid-system',
+          // '@pauliescanlon/gatsby-remark-grid-system',
           'gatsby-remark-relative-images'
           // {
           //   resolve: 'gatsby-remark-copy-linked-files',
