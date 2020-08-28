@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 hero:
-  heading: Better Wholesale Hemp
+  heading: Site Build In Progress - Stay Tuned
   backgroundImg:
     alt: Testing alt
     image: /media/FlowerBG.jpg
