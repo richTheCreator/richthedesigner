@@ -124,7 +124,7 @@ export default () => (
     query={graphql`
       query ProductResultsQuery {
         allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___date] }
+          sort: { order: DESC, fields: [frontmatter___category] }
           filter: { frontmatter: { templateKey: { eq: "product-details" } } }
         ) {
           edges {

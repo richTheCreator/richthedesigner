@@ -11,6 +11,7 @@ const Container = styled.button`
   ${height}
   ${border}
   border-style: solid;
+  border-width: 2px;
   align-self: center;
   padding:0px 16px;
   cursor: pointer;

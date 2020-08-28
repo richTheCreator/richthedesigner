@@ -80,7 +80,7 @@ const Hero = ({
             <BaseBorder xs={3} borderWidth='2px 0px 2px 0px'>
               <ButtonText textAlign='right' fontSize={7} color='black'>
                 {thc}% <br />
-                <span style={{ fontSize: '11.85px' }}>THC</span>
+                <span style={{ fontSize: '11.85px' }}>∆9-THC</span>
               </ButtonText>
             </BaseBorder>
           </Row>

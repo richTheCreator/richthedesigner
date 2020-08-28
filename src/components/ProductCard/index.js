@@ -55,7 +55,7 @@ const ProductCard = ({
                   >
                     {thc}%
                     <br />
-                    <span style={{ fontSize: '11.85px' }}>THC</span>
+                    <span style={{ fontSize: '11.85px' }}>∆9-THC</span>
                   </BaseBorder>
                 </Col>
               </Row>

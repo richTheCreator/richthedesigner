@@ -122,4 +122,7 @@ export const GlobalStyle = createGlobalStyle`
   .PDP-Description p, h4, h3, h2, h1, li{
     color: ${theme.colors.ivory}
   }
+  .PDP-Description p{
+    margin: 24px 0px
+  }
 `
