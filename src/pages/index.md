@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 hero:
-  heading: Site Build In Progress - Stay Tuned
+  heading: Site Build In Progress...
   backgroundImg:
     alt: Testing alt
     image: /media/FlowerBG.jpg
