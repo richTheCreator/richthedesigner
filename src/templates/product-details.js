@@ -12,6 +12,7 @@ export const ProductPageTemplate = ({
   metaDescription,
   productImage,
   category,
+  details,
   cbd,
   thc,
   html,
@@ -36,17 +37,17 @@ export const ProductPageTemplate = ({
         thc={thc}
         weights={weights}
       />
-      <Description content={html} />
+      <Description content={html} details={details} />
     </>
   )
 }
 
 const ProductPage = ({ data, location }) => {
-  console.log('siteData!', data)
   const { frontmatter, html } = data.products
   return (
     <ProductPageTemplate
       pathname={location.pathname}
+      details={frontmatter.details}
       title={frontmatter.title}
       metaDescription={frontmatter.meta_description}
       productImage={frontmatter.product_image}
@@ -74,6 +75,15 @@ export const pageQuery = graphql`
           value
           metric
         }
+        details {
+          description
+          info {
+            label
+            items {
+              item
+            }
+          }
+        }
         coa_link {
           name
           extension
@@ -92,13 +102,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-// details {
-//   description
-//   info {
-//     label
-//     items {
-//       item
-//     }
-//   }
-// }

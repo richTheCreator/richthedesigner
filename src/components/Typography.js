@@ -52,7 +52,7 @@ export const Heading3 = system(
     color: 'black',
     lineHeight: [6, 7],
     letterSpacing: 9,
-    fontFamily: 'heading'
+    fontFamily: 'sans'
   },
   ...textStyles
 )
@@ -65,7 +65,7 @@ export const Heading4 = system(
     color: 'black',
     lineHeight: 6,
     letterSpacing: 5,
-    fontFamily: 'heading'
+    fontFamily: 'sans'
   },
   ...textStyles
 )

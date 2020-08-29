@@ -5,16 +5,15 @@ import { space, borderRadius, height } from 'styled-system'
 import BackgroundImage from 'gatsby-background-image'
 import {
   Body2,
-  Heading3,
+  Heading4,
   Caption,
   Overline,
   Button as ButtonText,
   Heading6
 } from '../../../components/Typography'
 import { Button, LinkButton } from '../../../components'
-import { SectionMax } from '../../../components/Containers'
+import { SectionMax, SectionWrapper } from '../../../components/Containers'
 import {
-  HeroContainer,
   ProductImg,
   TextContainer,
   ImageWrapper,
@@ -52,33 +51,55 @@ const Hero = ({
   }
 
   return (
-    <HeroContainer pb={4} pt={4}>
-      <SectionMax m='auto!important' p={[2, 4]}>
-        <ImageWrapper lg={7} md={6} sm={12}>
-          <ProductImg
-            fluid={productImage}
-            height={['250px', '460px']}
-            lg={12}
-          />
-        </ImageWrapper>
-        <TextContainer lg={5} md={6} sm={12}>
-          <Heading3 mb={2} mt={2} textAlign='center' color='ivory'>
+    <SectionWrapper
+      bg='black'
+      pl={[0, 0, 5, 6]}
+      pr={[0, 0, 5, 6]}
+      pt={[0, 0, 5, 6]}
+      pb={[0, 0, 5, 6]}
+    >
+      <SectionMax
+        style={{ position: 'relative' }}
+        justifyContent={['center', 'center', 'flex-end', 'flex-end']}
+        m='auto!important'
+        p={[0, 4]}
+      >
+        <ProductImg
+          fluid={productImage}
+          height={['300px', '300px', '460px', '460px']}
+          position={[
+            'relative',
+            'relative',
+            'absolute !important',
+            'absolute !important'
+          ]}
+          width={['100%', '100%', '80%', '80%']}
+        />
+        <TextContainer
+          bg={'ivory'}
+          lg={5}
+          md={6}
+          xs={11}
+          p={4}
+          mt={['-50px', '-50px', 0, 0]}
+        >
+          <Heading4 mb={2} mt={2} textAlign='center' color='black'>
             {title}
-          </Heading3>
+          </Heading4>
           <Row style={{ width: '100%' }}>
             <BaseBorder xs={3} borderWidth='2px 2px 2px 0px'>
-              <ButtonText textAlign='left' fontSize={7} color='ivory'>
+              <ButtonText textAlign='left' fontSize={7} color='black'>
                 {cbd}% <br />
                 <span style={{ fontSize: '11.85px' }}>CBD</span>
               </ButtonText>
             </BaseBorder>
             <BaseBorder xs={6} borderWidth='2px 2px 2px 0px'>
-              <ButtonText fontSize={6} textAlign='center' color='ivory'>
+              <ButtonText fontSize={6} textAlign='center' color='black'>
                 {category}
               </ButtonText>
             </BaseBorder>
             <BaseBorder xs={3} borderWidth='2px 0px 2px 0px'>
-              <ButtonText textAlign='right' fontSize={7} color='ivory'>
+              <ButtonText textAlign='right' fontSize={7} color='black'>
                 {thc}% <br />
                 <span style={{ fontSize: '11.85px' }}>∆9-THC</span>
               </ButtonText>
@@ -86,7 +107,7 @@ const Hero = ({
           </Row>
           <Row style={{ width: '100%' }}>
             <BaseBorder xs={12} borderWidth='0px 0px 2px 0px'>
-              <ButtonText textAlign='center' color='ivory' fontSize={6}>
+              <ButtonText textAlign='center' color='black' fontSize={6}>
                 LAB CERTIFIED HEMP
               </ButtonText>
             </BaseBorder>
@@ -140,8 +161,8 @@ const Hero = ({
                 bg={'sage'}
                 width='100%'
                 height='100%'
-                color='black'
-                bg='ivory'
+                color='ivory'
+                bg='black'
                 onClick={(e) => sendEmail(e)}
               >
                 REQUEST PRICE
@@ -149,13 +170,13 @@ const Hero = ({
             </Col>
             <Col xs={4} style={{ paddingRight: '0px' }}>
               <LinkButton
-                color='ivory'
+                color='black'
                 display='flex'
                 width='100%'
                 height='100%'
                 justifyItems='center'
                 alignItems='center'
-                borderColor='ivory'
+                borderColor='black'
                 href={coa_link.publicURL}
               >
                 <StyledFileIcon pr={2} /> COA
@@ -164,7 +185,7 @@ const Hero = ({
           </Row>
         </TextContainer>
       </SectionMax>
-    </HeroContainer>
+    </SectionWrapper>
   )
 }
 

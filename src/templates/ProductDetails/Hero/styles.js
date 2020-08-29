@@ -1,6 +1,14 @@
 import styled from 'styled-components'
 import { Row, Col } from 'react-flexbox-grid'
-import { space, borderWidth, color, borderRadius, height } from 'styled-system'
+import {
+  space,
+  borderWidth,
+  color,
+  borderRadius,
+  height,
+  width,
+  position
+} from 'styled-system'
 import BackgroundImage from 'gatsby-background-image'
 import Select from 'react-select'
 import { Body1, Overline } from '../../../components/Typography'
@@ -14,25 +22,31 @@ export const StyledFileIcon = styled(FileIcon)`
 export const HeroContainer = styled(Row)`
   ${space}
   position: relative;
-  background-position: center center;
-  background-size: cover;
-  justify-content: space-between;
   background-color: ${(props) => props.theme.colors.black};
 `
 export const ProductImg = styled(BackgroundImage)`
   ${borderRadius}
   ${height}
-  background-size:cover;
-  width: 100%;
+  ${position}
+  ${width}
+  top: 0;
+  left: 0;
+  background-size: cover;
   box-shadow: ${(props) => props.theme.shadows.md};
 `
-
+// export const TextContainer = styled.div`
+//     position: absolute;
+//     right: 0;
+//     bottom: 0;
+// `
 export const TextContainer = styled(Col)`
   ${space}
+  ${color}
+  justify-self:center;
   align-self: center;
   z-index: 1;
 `
-export const ImageWrapper = styled(Col)`
+export const ImageWrapper = styled.div`
   ${space}
 `
 export const SelectWrapper = styled(Select)`
@@ -50,5 +64,5 @@ export const BaseBorder = styled(Col)`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-color: ${(props) => props.theme.colors.ivory};
+  border-color: ${(props) => props.theme.colors.black};
 `
