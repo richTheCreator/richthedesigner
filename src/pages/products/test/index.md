@@ -11,6 +11,24 @@ weights:
   - metric: lb
     value: 1
 coa_link: uxo_certificate_2020_77.pdf
+details:
+  description: Testing the description area for additional text about the product.
+  info:
+    - label: Common Effects
+      items:
+        - item: Relaxed
+        - item: Calm
+        - item: Controlled
+    - label: Flavor Profile
+      items:
+        - item: Citrus
+        - item: Sweet
+        - item: Skunky
+    - label: Dominant Terpenes
+      items:
+        - item: Myrcene
+        - item: Caryophyllene
+        - item: Pinene
 ---
 #### CBD Isolate Vs. CBD Distillate
 
