@@ -154,9 +154,10 @@ export const Button = system(
     is: 'p',
     fontSize: 4,
     fontWeight: 2,
-    color: 'blackU',
+    color: 'black',
     lineHeight: 0,
-    letterSpacing: 8
+    letterSpacing: 8,
+    fontFamily: 'sans'
   },
   ...textStyles,
   {

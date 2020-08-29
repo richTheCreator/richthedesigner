@@ -62,23 +62,23 @@ const Hero = ({
           />
         </ImageWrapper>
         <TextContainer lg={5} md={6} sm={12}>
-          <Heading3 mb={2} mt={2} textAlign='center' color='black'>
+          <Heading3 mb={2} mt={2} textAlign='center' color='ivory'>
             {title}
           </Heading3>
           <Row style={{ width: '100%' }}>
             <BaseBorder xs={3} borderWidth='2px 2px 2px 0px'>
-              <ButtonText textAlign='left' fontSize={7} color='black'>
+              <ButtonText textAlign='left' fontSize={7} color='ivory'>
                 {cbd}% <br />
                 <span style={{ fontSize: '11.85px' }}>CBD</span>
               </ButtonText>
             </BaseBorder>
             <BaseBorder xs={6} borderWidth='2px 2px 2px 0px'>
-              <ButtonText fontSize={6} textAlign='center' color='black'>
+              <ButtonText fontSize={6} textAlign='center' color='ivory'>
                 {category}
               </ButtonText>
             </BaseBorder>
             <BaseBorder xs={3} borderWidth='2px 0px 2px 0px'>
-              <ButtonText textAlign='right' fontSize={7} color='black'>
+              <ButtonText textAlign='right' fontSize={7} color='ivory'>
                 {thc}% <br />
                 <span style={{ fontSize: '11.85px' }}>∆9-THC</span>
               </ButtonText>
@@ -86,7 +86,7 @@ const Hero = ({
           </Row>
           <Row style={{ width: '100%' }}>
             <BaseBorder xs={12} borderWidth='0px 0px 2px 0px'>
-              <ButtonText textAlign='center' color='black' fontSize={6}>
+              <ButtonText textAlign='center' color='ivory' fontSize={6}>
                 LAB CERTIFIED HEMP
               </ButtonText>
             </BaseBorder>
@@ -140,8 +140,8 @@ const Hero = ({
                 bg={'sage'}
                 width='100%'
                 height='100%'
-                color='ivory'
-                bg='black'
+                color='black'
+                bg='ivory'
                 onClick={(e) => sendEmail(e)}
               >
                 REQUEST PRICE
@@ -149,13 +149,13 @@ const Hero = ({
             </Col>
             <Col xs={4} style={{ paddingRight: '0px' }}>
               <LinkButton
-                color='black'
+                color='ivory'
                 display='flex'
                 width='100%'
                 height='100%'
                 justifyItems='center'
                 alignItems='center'
-                borderColor='black'
+                borderColor='ivory'
                 href={coa_link.publicURL}
               >
                 <StyledFileIcon pr={2} /> COA

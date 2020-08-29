@@ -119,10 +119,7 @@ export const GlobalStyle = createGlobalStyle`
     margin-right: 0px;
   }
 
-  .PDP-Description p, h4, h3, h2, h1, li{
-    color: ${theme.colors.ivory}
-  }
   .PDP-Description p{
-    margin: 24px 0px
+    margin: 16px 0px
   }
 `

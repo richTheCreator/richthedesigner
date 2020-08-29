@@ -42,7 +42,8 @@ export const ProductPageTemplate = ({
 }
 
 const ProductPage = ({ data, location }) => {
-  const { frontmatter, html } = data.markdownRemark
+  console.log('siteData!', data)
+  const { frontmatter, html } = data.products
   return (
     <ProductPageTemplate
       pathname={location.pathname}
@@ -63,7 +64,7 @@ export default ProductPage
 
 export const pageQuery = graphql`
   query ProductPageTemplate($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+    products: markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         title
@@ -91,3 +92,13 @@ export const pageQuery = graphql`
     }
   }
 `
+
+// details {
+//   description
+//   info {
+//     label
+//     items {
+//       item
+//     }
+//   }
+// }
