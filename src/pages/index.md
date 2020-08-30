@@ -92,4 +92,23 @@ footer:
   blurb: "All Elevated Trading products displayed for sale are federally legal and
     sourced from industrial hemp plants which contain less than 0.3% Delta-9
     THC. "
+subscription:
+  backgroundImg:
+    image: /media/hemp-delivery.jpg
+    alt: Test
+  callouts:
+    - value: Substantial Savings
+      description: Most of our customers take advantage of this option to lock in low
+        pricing for up to 12 months and guarantee delivery at a fixed cost.
+    - value: Predictable Projections
+      description: Most of our customers take advantage of this option to lock in low
+        pricing for up to 12 months and guarantee delivery at a fixed cost.
+    - description: Most of our customers take advantage of this option to lock in low
+        pricing for up to 12 months and guarantee delivery at a fixed cost.
+      value: Less Volatile Prices
+shipping:
+  description: Orders are shipped within 24-48 hours of payment, and we ship
+    everything via USPS Priority Mail (with tracking). We can expedite, if
+    needed, so please speak to your account manager if we need to expedite
+    shipping.
 ---
