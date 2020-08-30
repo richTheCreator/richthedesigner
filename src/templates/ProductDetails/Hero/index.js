@@ -3,7 +3,7 @@ import { Row, Col } from 'react-flexbox-grid'
 import {
   Heading4,
   Button as ButtonText,
-  Body2
+  Caption
 } from '../../../components/Typography'
 import { Button, LinkButton } from '../../../components'
 import { SectionMax, SectionWrapper } from '../../../components/Containers'
@@ -74,21 +74,21 @@ const Hero = ({
           lg={5}
           md={6}
           xs={11}
-          pt={5}
+          pt={4}
           pb={4}
           pl={[2, 2, 4, 4]}
           pr={[2, 2, 4, 4]}
           mt={['-50px', '-50px', 0, 0]}
         >
           <Banner bg='sage'>
-            <ButtonText
+            <Caption
               textAlign='center'
               color='ivory'
               p={'0px !important'}
-              mt={'8px !important'}
+              mt={'6px !important'}
             >
               Save with a subscription
-            </ButtonText>
+            </Caption>
           </Banner>
           <Heading4 mb={2} mt={2} textAlign='center' color='black'>
             {title}

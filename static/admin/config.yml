@@ -52,7 +52,7 @@ collections:
           default: "Flower",
         }
       - {
-          label: "THC %",
+          label: "∆9-THC %",
           name: "thc",
           widget: "number",
           valueType: "float",
@@ -130,7 +130,7 @@ collections:
     label: "Pages"
     files:
       - file: "src/pages/index.md"
-        label: "Landing Page"
+        label: "Home Page"
         name: "index"
         fields:
           - {
@@ -243,3 +243,125 @@ collections:
                   { label: "Legal", name: "legal", widget: "text" },
                 ],
             }
+          - {
+              label: "Subscription info",
+              name: "subscription",
+              widget: "object",
+              fields:
+                [
+                  {
+                    label: "Background Image",
+                    name: "backgroundImg",
+                    widget: "object",
+                    fields:
+                      [
+                        { label: "Image", name: "image", widget: "image" },
+                        { label: "Alt", name: "alt", widget: "string" },
+                      ],
+                  },
+                  {
+                    label: "Callouts",
+                    name: "callouts",
+                    widget: "list",
+                    fields:
+                      [
+                        { label: "Title", name: "value", widget: "string" },
+                        {
+                          label: "Description",
+                          name: "description",
+                          widget: "text",
+                        },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: "Shipping info",
+              name: "shipping",
+              widget: "object",
+              fields:
+                [{ label: "Description", name: "description", widget: "text" }],
+            }
+      - file: "src/pages/starter-kid.md"
+        label: "Starter Kit"
+        name: "starter-kit"
+        fields:
+          - { label: "Publish Date", name: "date", widget: "datetime" }
+          - {
+              label: "Meta Description",
+              name: "meta_description",
+              widget: "string",
+              required: true,
+            }
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "starter-kit",
+            }
+          - {
+              label: "Product Image",
+              name: "product_image",
+              widget: "image",
+              required: true,
+            }
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - {
+              label: "Quantity",
+              name: "quantities",
+              widget: "list",
+              fields: [{ label: "Value", name: "value", widget: "number" }],
+            }
+          - {
+              label: "Included items",
+              name: "included",
+              widget: "list",
+              fields:
+                [
+                  { label: "Title", name: "title", widget: "string" },
+                  { label: "Description", name: "description", widget: "text" },
+                  {
+                    label: "Background Image",
+                    name: "backgroundImg",
+                    widget: "object",
+                    fields:
+                      [
+                        { label: "Image", name: "image", widget: "image" },
+                        { label: "Alt", name: "alt", widget: "string" },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: "Kit Value",
+              name: "kitValue",
+              widget: "object",
+              fields:
+                [
+                  {
+                    label: "Background Image",
+                    name: "backgroundImg",
+                    widget: "object",
+                    fields:
+                      [
+                        { label: "Image", name: "image", widget: "image" },
+                        { label: "Alt", name: "alt", widget: "string" },
+                      ],
+                  },
+                  {
+                    label: "Callouts",
+                    name: "callouts",
+                    widget: "list",
+                    fields:
+                      [
+                        { label: "Title", name: "value", widget: "string" },
+                        {
+                          label: "Description",
+                          name: "description",
+                          widget: "text",
+                        },
+                      ],
+                  },
+                ],
+            }
+          - { label: "Body", name: "body", widget: "markdown" }

@@ -11,7 +11,7 @@ import {
 } from 'styled-system'
 import BackgroundImage from 'gatsby-background-image'
 import Select from 'react-select'
-import { Body1, Overline } from '../../../components/Typography'
+import { Body1, Overline } from '../Typography'
 import { FileIcon } from '../../../components/SVG/File'
 
 export const StyledFileIcon = styled(FileIcon)`
