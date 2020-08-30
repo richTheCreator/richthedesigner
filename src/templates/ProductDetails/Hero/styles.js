@@ -42,7 +42,8 @@ export const ProductImg = styled(BackgroundImage)`
 export const TextContainer = styled(Col)`
   ${space}
   ${color}
-  justify-self:center;
+  position:relative;
+  justify-self: center;
   align-self: center;
   z-index: 1;
 `
@@ -65,4 +66,15 @@ export const BaseBorder = styled(Col)`
   justify-content: center;
   align-items: center;
   border-color: ${(props) => props.theme.colors.black};
+`
+
+export const Banner = styled.div`
+  ${color}
+  ${space}
+  top:0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  width: 100%;
+  height: 30px;
 `

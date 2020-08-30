@@ -37,7 +37,6 @@ const IconContainer = styled(Col)``
 const CTAcontaienr = styled(Row)`
   ${space}
   ${width}
-  border-radius: ${(props) => props.theme.borderRadius.sm}px;
   border: 1px solid white;
 `
 const ContactCTA = (props) => {
@@ -71,9 +70,9 @@ const Footer = ({ footer }) => {
   const { menuLinks } = useSiteMetadata()
 
   return (
-    <SectionWrapper justifyContent='center' bg='black'>
+    <SectionWrapper justifyContent='center' bg='midnight'>
       <SectionMax>
-        <Legal center='xs' bg='#373434' p={4} mb={4} width='100%'>
+        <Legal center='xs' bg='black' p={4} mb={4} width='100%'>
           <Body2 textAlign='center' color='white'>
             {footer.legal}
           </Body2>

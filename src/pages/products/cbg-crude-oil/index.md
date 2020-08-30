@@ -11,9 +11,6 @@ weights:
   - metric: kg
     value: 1
 coa_link: coa-placeholder.pdf
-featured:
-  isFeatured: true
-  text: Testing
 ---
 
 CBG | Crude Oil

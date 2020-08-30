@@ -1,22 +1,16 @@
-import React, { Component, useState, useEffect } from 'react'
-import styled from 'styled-components'
+import React, { useState } from 'react'
 import { Row, Col } from 'react-flexbox-grid'
-import { space, borderRadius, height } from 'styled-system'
-import BackgroundImage from 'gatsby-background-image'
 import {
-  Body2,
   Heading4,
-  Caption,
-  Overline,
   Button as ButtonText,
-  Heading6
+  Body2
 } from '../../../components/Typography'
 import { Button, LinkButton } from '../../../components'
 import { SectionMax, SectionWrapper } from '../../../components/Containers'
 import {
   ProductImg,
   TextContainer,
-  ImageWrapper,
+  Banner,
   StyledFileIcon,
   BaseBorder,
   SelectWrapper
@@ -80,9 +74,22 @@ const Hero = ({
           lg={5}
           md={6}
           xs={11}
-          p={4}
+          pt={5}
+          pb={4}
+          pl={[2, 2, 4, 4]}
+          pr={[2, 2, 4, 4]}
           mt={['-50px', '-50px', 0, 0]}
         >
+          <Banner bg='sage'>
+            <ButtonText
+              textAlign='center'
+              color='ivory'
+              p={'0px !important'}
+              mt={'8px !important'}
+            >
+              Save with a subscription
+            </ButtonText>
+          </Banner>
           <Heading4 mb={2} mt={2} textAlign='center' color='black'>
             {title}
           </Heading4>

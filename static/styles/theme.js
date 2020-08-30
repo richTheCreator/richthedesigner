@@ -72,6 +72,7 @@ const colors = {
   ivory: '#F0E9E2',
   accent: '#FF5353',
   black: '#2D2926',
+  midnight: '#1a1a1a',
   blackBlue: '#222529',
   black70: 'rgba(0,0,0,.7)',
   darkGrey: '#4e4e4e',

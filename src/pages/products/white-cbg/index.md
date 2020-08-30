@@ -11,9 +11,6 @@ weights:
   - metric: lb
     value: 1
 coa_link: cbg-flower-coa.pdf
-featured:
-  isFeatured: true
-  text: Testing
 ---
 
 Cilantro | Gas | Sleep
