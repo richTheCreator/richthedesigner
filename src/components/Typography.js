@@ -174,7 +174,7 @@ export const Caption = system(
     fontSize: 2,
     fontWeight: 0,
     color: 'darkGrey',
-    lineHeight: 0,
+    lineHeight: 1,
     letterSpacing: 6
   },
   ...textStyles

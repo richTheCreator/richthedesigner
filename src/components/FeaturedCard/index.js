@@ -16,21 +16,14 @@ const FeaturedCard = ({ children }) => {
   const {
     markdownRemark: {
       fields: { slug },
-      frontmatter: {
-        starter_img: { alt, image },
-        title,
-        meta_description,
-        includes
-      }
+      frontmatter: { product_image, title, meta_description, included }
     }
   } = useStaticQuery(query)
-
-  console.log('featured--card', slug)
 
   return (
     <Row>
       <Col lg={6} xs={12} style={{ padding: '0px' }}>
-        <ProductImage fluid={image.childImageSharp.fluid} />
+        <ProductImage fluid={product_image.childImageSharp.fluid} />
       </Col>
       <Wrapper lg={6} xs={12} bg={'ivory'} p={[2, 4]}>
         <div style={{ maxWidth: '500px', margin: 'auto' }}>
@@ -42,24 +35,24 @@ const FeaturedCard = ({ children }) => {
             <Row>
               <Col xs={-1}>
                 <BaseBorder color='black' borderWidth='0px 2px 0px 0px'>
-                  {includes[0].item}
+                  {included[0].title}
                 </BaseBorder>
               </Col>
               <Col xs={-1}>
                 <BaseBorder color='black' borderWidth='0px 0px 0px 0px'>
-                  {includes[1].item}
+                  {included[1].title}
                 </BaseBorder>
               </Col>
             </Row>
             <MiddleDivider>
               <Col xs={-1}>
                 <BaseBorder color='black' borderWidth='0px 2px 0px 0px'>
-                  {includes[2].item}
+                  {included[2].title}
                 </BaseBorder>
               </Col>
               <Col xs={-1}>
                 <BaseBorder color='black' borderWidth='0px 0px 0px 0px'>
-                  {includes[3].item}
+                  {included[3].title}
                 </BaseBorder>
               </Col>
             </MiddleDivider>
@@ -89,21 +82,28 @@ const query = graphql`
         slug
       }
       frontmatter {
-        starter_img {
-          alt
-          image {
-            childImageSharp {
-              fluid(maxWidth: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
+        product_image {
+          childImageSharp {
+            fluid(maxWidth: 800, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
-        title
         meta_description
-        includes {
-          item
+        title
+        included {
+          title
           description
+          backgroundImg {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 800, quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+          }
         }
       }
     }

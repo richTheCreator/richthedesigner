@@ -85,7 +85,7 @@ const Hero = ({
               textAlign='center'
               color='ivory'
               p={'0px !important'}
-              mt={'6px !important'}
+              mt={'4px !important'}
             >
               Save with a subscription
             </Caption>

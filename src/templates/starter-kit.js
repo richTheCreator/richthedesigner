@@ -22,7 +22,7 @@ const StarterKit = ({ data, location }) => {
         pathname={location.pathname}
         title={frontmatter.title}
         desc={frontmatter.metaDescription}
-        banner={frontmatter.starter_img.image.childImageSharp.fluid.src}
+        banner={frontmatter.product_image.childImageSharp.fluid.src}
       />
       <Body1>{frontmatter.title}</Body1>
     </>
@@ -36,21 +36,28 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "starter-kit" } }) {
       html
       frontmatter {
-        starter_img {
-          alt
-          image {
-            childImageSharp {
-              fluid(maxWidth: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
+        product_image {
+          childImageSharp {
+            fluid(maxWidth: 800, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
-        title
         meta_description
-        includes {
-          item
+        title
+        included {
+          title
           description
+          backgroundImg {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 800, quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+          }
         }
       }
     }

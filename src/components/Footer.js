@@ -72,11 +72,6 @@ const Footer = ({ footer }) => {
   return (
     <SectionWrapper justifyContent='center' bg='midnight'>
       <SectionMax>
-        <Legal center='xs' bg='black' p={4} mb={4} width='100%'>
-          <Body2 textAlign='center' color='white'>
-            {footer.legal}
-          </Body2>
-        </Legal>
         <Row between='xs' start='xs' style={{ width: '100%' }}>
           <Col xs={12} md={5}>
             <Row middle='xs'>
@@ -138,6 +133,11 @@ const Footer = ({ footer }) => {
         <Row>
           <Caption color='mdGrey'>© 2020 Elevated Trading Company LLC</Caption>
         </Row>
+        <Legal center='xs' p={0} width='100%'>
+          <Caption textAlign='left' color='mdGrey'>
+            {footer.legal}
+          </Caption>
+        </Legal>
       </SectionMax>
     </SectionWrapper>
   )

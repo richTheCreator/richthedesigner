@@ -39,6 +39,7 @@ etcValues:
 
     As an Elevated customer, you can focus on growing your customer base knowing we’re hard at work ensuring the highest quality and reliability of every product that we supply for your business.
   peeksImage: /media/mountain_peeks.png
+  backgroundImg: /media/Rouge_Valley_Hemp.jpg
   values:
     - value: Quality
       description: All of our products are 3rd party tested multiple times throughout

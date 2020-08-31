@@ -9,7 +9,7 @@ const Description = ({ program, content, contentComponent, details }) => {
   const PostContent = HTMLContent || Content
 
   return (
-    <SectionWrapper bg={'black'} className='PDP-Description'>
+    <SectionWrapper bg={'black'} className='PDP-Description' pt={[4, 4, 0, 0]}>
       <SectionMax style={{ justifyContent: 'center', margin: 'auto' }}>
         <Col xs>
           <Title mb={3} mt={0}>

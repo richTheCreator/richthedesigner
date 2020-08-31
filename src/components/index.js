@@ -6,6 +6,9 @@ import { InfoItem } from './InfoItem'
 import { PriceItem } from './PriceItem'
 import { Checkout } from './Checkout'
 import { ProductCard } from './ProductCard'
+import { Subscription } from './Subscription'
+import { Shipping } from './Shipping'
+import { Values } from './Values'
 
 export {
   Badge,
@@ -16,5 +19,8 @@ export {
   InfoItem,
   PriceItem,
   Checkout,
-  ProductCard
+  ProductCard,
+  Subscription,
+  Shipping,
+  Values
 }
