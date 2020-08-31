@@ -1,6 +1,7 @@
 import React from 'react'
 import { Row, Col } from 'react-flexbox-grid'
 import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import { Body1, formattedDescription, Heading5 } from '../Typography'
 import {
   ProductImage,
@@ -20,7 +21,13 @@ const ProductCard = ({
 }) => {
   return (
     <Col>
-      <Link to={fields.slug} style={{ textDecoration: 'none' }}>
+      <AniLink
+        cover
+        bg='#727A68'
+        direction='down'
+        to={fields.slug}
+        style={{ textDecoration: 'none' }}
+      >
         <ProductImage fluid={product_image.childImageSharp.fluid} />
         <Wrapper bg='ivory' p={2}>
           <Heading5 pl={0} pr={0} pt={2} pb={2} m={0}>
@@ -65,7 +72,7 @@ const ProductCard = ({
             </LogoContainer>
           </InfoContainer>
         </Wrapper>
-      </Link>
+      </AniLink>
     </Col>
   )
 }

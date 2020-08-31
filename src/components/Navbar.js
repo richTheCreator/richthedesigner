@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react'
 import { Link, navigate } from 'gatsby'
 import { Row, Col } from 'react-flexbox-grid'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import { useSpring, useTransition, useChain, animated } from 'react-spring'
 import { justifyContent, fontSize, fontWeight } from 'styled-system'
 import { Body2 } from '../components/Typography'
@@ -34,7 +35,7 @@ const InfoBanner = styled.div`
   overflow-y: hidden;
   white-space: nowrap;
 `
-const LinkStyle = styled(Link)`
+const LinkStyle = styled(AniLink)`
   ${fontSize}
   ${fontWeight}
   vertical-align: middle;
@@ -100,16 +101,23 @@ const NavbarLG = ({ menuLinks, theme }) => (
     }}
   >
     <Col xs={1} style={{ alignItems: 'center' }}>
-      <Link to='/' title='Logo'>
+      <AniLink cover bg='#727A68' direction='up' to='/' title='Logo'>
         <StyledLogo />
-      </Link>
+      </AniLink>
     </Col>
     <Col xs={11} style={{ padding: '0px 16px' }}>
       <Row middle='xs' center='xs'>
         {menuLinks.map((navItems) =>
           navItems.name !== 'Home' ? (
             <Row style={{ display: 'table' }}>
-              <LinkStyle fontSize={2} fontWeight={2} to={navItems.link}>
+              <LinkStyle
+                cover
+                bg='#727A68'
+                direction='up'
+                fontSize={2}
+                fontWeight={2}
+                to={navItems.link}
+              >
                 {navItems.name}
               </LinkStyle>
             </Row>
@@ -153,9 +161,9 @@ const NavbarSM = ({ menuLinks, toggleMenu }) => (
       }}
       xs={10}
     >
-      <Link to='/' title='Logo'>
+      <AniLink cover bg='#727A68' direction='up' to='/' title='Logo'>
         <StyledLogo />
-      </Link>
+      </AniLink>
     </Col>
   </Row>
 )
@@ -168,8 +176,9 @@ const Navbar = ({ menuLinks }) => {
 
   const menuClick = (e, to) => {
     e.preventDefault()
-    navigate(to)
-    toggleMenu()
+    setTimeout(() => {
+      toggleMenu()
+    }, 500)
   }
   // Animation helpers
   const menuRef = useRef()
@@ -219,10 +228,14 @@ const Navbar = ({ menuLinks }) => {
         {transitions.map(({ item, key, props }) => (
           <Row style={{ display: 'table', margin: '24px 0' }}>
             <AnimatedLink
+              cover
+              bg='#727A68'
+              direction='up'
               fontSize={8}
               fontWeight={3}
               key={key}
               style={props}
+              to={item.link}
               onClick={(e) => menuClick(e, item.link)}
             >
               {item.name}

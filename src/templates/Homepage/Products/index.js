@@ -1,7 +1,7 @@
 import React from 'react'
 import { SectionWrapper, SectionMax } from '../../../components/Containers'
 import { Button } from '../../../components'
-import { Heading2, Body2 } from '../../../components/Typography'
+import { Heading2, Body1 } from '../../../components/Typography'
 import useSiteMetadata from '../../../components/SiteMetadata'
 import { categoryStyles } from './styles'
 import PreviewCompatibleImage from '../../../components/PreviewCompatibleImage'
@@ -17,9 +17,9 @@ const Products = ({ products: { heading, description, productImages } }) => {
           <Heading2 mt={0} mb={3} textAlign={['left', 'center']}>
             {heading}
           </Heading2>
-          <Body2 textAlign={['left', 'center']} maxWidth={'1000px'} m='auto'>
+          <Body1 textAlign={['left', 'center']} maxWidth={'1000px'} m='auto'>
             {description}
-          </Body2>
+          </Body1>
           <Button
             bg={'transparent'}
             hasBorder
