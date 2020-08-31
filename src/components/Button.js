@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { space, width, color, border, height, borderColor } from 'styled-system'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import { Link } from 'gatsby'
 import { Button as ButtonText } from '../components/Typography'
 
@@ -40,7 +41,7 @@ const LinkContainer = styled.a`
 `
 
 const Button = (props) => (
-  <Link to={props.url}>
+  <AniLink cover bg='#727A68' direction='up' to={props.url}>
     <Container {...props}>
       <ButtonText
         display={props.display}
@@ -51,7 +52,7 @@ const Button = (props) => (
         {props.children}
       </ButtonText>
     </Container>
-  </Link>
+  </AniLink>
 )
 const LinkButton = (props) => (
   <LinkContainer href={props.href} borderColor={props.borderColor}>
