@@ -57,8 +57,9 @@ export const SelectWrapper = styled(Select)`
 export const BaseBorder = styled(Col)`
   ${borderWidth}
   ${space}
+  padding-top:8px;
+  padding-bottom: 8px;
   margin: 0px;
-  padding: 8px;
   height: fit-content;
   border-style: solid;
   height: auto;

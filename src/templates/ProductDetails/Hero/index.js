@@ -74,7 +74,7 @@ const Hero = ({
           lg={5}
           md={6}
           xs={11}
-          pt={4}
+          pt={5}
           pb={4}
           pl={[2, 2, 4, 4]}
           pr={[2, 2, 4, 4]}
@@ -83,6 +83,7 @@ const Hero = ({
           <Banner bg='sage'>
             <Caption
               textAlign='center'
+              fontWeight={2}
               color='ivory'
               p={'0px !important'}
               mt={'4px !important'}
@@ -94,8 +95,8 @@ const Hero = ({
             {title}
           </Heading4>
           <Row style={{ width: '100%' }}>
-            <BaseBorder xs={3} borderWidth='2px 2px 2px 0px'>
-              <ButtonText textAlign='left' fontSize={7} color='black'>
+            <BaseBorder xs={3} borderWidth='2px 2px 2px 0px' pl={0}>
+              <ButtonText textAlign='left' fontSize={'18px'} color='black'>
                 {cbd}% <br />
                 <span style={{ fontSize: '11.85px' }}>CBD</span>
               </ButtonText>
@@ -105,8 +106,8 @@ const Hero = ({
                 {category}
               </ButtonText>
             </BaseBorder>
-            <BaseBorder xs={3} borderWidth='2px 0px 2px 0px'>
-              <ButtonText textAlign='right' fontSize={7} color='black'>
+            <BaseBorder xs={3} borderWidth='2px 0px 2px 0px' pr={0}>
+              <ButtonText textAlign='right' fontSize={'18px'} color='black'>
                 {thc}% <br />
                 <span style={{ fontSize: '11.85px' }}>∆9-THC</span>
               </ButtonText>
@@ -169,7 +170,7 @@ const Hero = ({
                 width='100%'
                 height='100%'
                 color='ivory'
-                bg='black'
+                bg='sage'
                 onClick={(e) => sendEmail(e)}
               >
                 REQUEST PRICE

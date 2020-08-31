@@ -30,7 +30,7 @@ const InfoBanner = styled.div`
   width: auto;
   display: flex;
   padding: 0px 32px;
-  background: ${(props) => props.theme.colors.sage};
+  background: ${(props) => props.theme.colors.midnight};
   align-items: center;
   overflow-y: hidden;
   white-space: nowrap;

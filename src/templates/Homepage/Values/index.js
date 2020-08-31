@@ -30,7 +30,7 @@ const Values = ({
         </Col>
         <Col lg={6} xs={12}>
           {values.map((value) => (
-            <ValueContainer>
+            <ValueContainer mb={3} p={0}>
               <ValueText maxWidth='fit-content' mb='0'>
                 {value.value}
               </ValueText>

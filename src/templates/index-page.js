@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Footer from '../components/Footer'
 import {
   Hero,
   Products,

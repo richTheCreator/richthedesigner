@@ -9,11 +9,9 @@ export const BackgroundContainer = styled(BackgroundImage)`
   ${height}
   display:flex;
   flex-direction: column;
-  background-size: cover;
-  background-position: center;
   justify-content: flex-start;
   align-items: center;
   position: relative;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto;s
 `
