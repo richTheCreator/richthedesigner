@@ -9,364 +9,364 @@ logo_url: https://www.elevatedtrading.com/media/apple-touch-icon.png
 publish_mode: editorial_workflow
 
 collections:
-  - name: "products"
-    label: "Products"
-    folder: "src/pages/products"
-    label_singular: "Product"
+  - name: 'products'
+    label: 'Products'
+    folder: 'src/pages/products'
+    label_singular: 'Product'
     create: true
     editor:
       preview: false
-    slug: "{{slug}}"
-    path: "{{slug}}/index"
-    media_folder: ""
-    public_folder: ""
-    preview_path: "products/{{slug}}/index"
+    slug: '{{slug}}'
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
+    preview_path: 'products/{{slug}}/index'
     fields:
-      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - {
-          label: "Meta Description",
-          name: "meta_description",
-          widget: "string",
+          label: 'Meta Description',
+          name: 'meta_description',
+          widget: 'string',
           required: true,
         }
       - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "product-details",
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'product-details',
         }
       - {
-          label: "Product Image",
-          name: "product_image",
-          widget: "image",
+          label: 'Product Image',
+          name: 'product_image',
+          widget: 'image',
           required: true,
         }
-      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
       - {
-          label: "Category",
-          name: "category",
-          widget: "select",
+          label: 'Category',
+          name: 'category',
+          widget: 'select',
           multiple: false,
-          options: ["Flower", "Concentrate"],
+          options: ['Flower', 'Concentrate'],
           required: true,
-          default: "Flower",
+          default: 'Flower',
         }
       - {
-          label: "∆9-THC %",
-          name: "thc",
-          widget: "number",
-          valueType: "float",
-          required: true,
-        }
-      - {
-          label: "CBD %",
-          name: "cbd",
-          widget: "number",
-          valueType: "float",
+          label: '∆9-THC %',
+          name: 'thc',
+          widget: 'number',
+          valueType: 'float',
           required: true,
         }
       - {
-          label: "Weight",
-          name: "weights",
-          widget: "list",
+          label: 'CBD %',
+          name: 'cbd',
+          widget: 'number',
+          valueType: 'float',
+          required: true,
+        }
+      - {
+          label: 'Weight',
+          name: 'weights',
+          widget: 'list',
           fields:
             [
-              { label: "Value", name: "value", widget: "number" },
+              { label: 'Value', name: 'value', widget: 'number' },
               {
-                label: "Metric",
-                name: "metric",
-                widget: "select",
+                label: 'Metric',
+                name: 'metric',
+                widget: 'select',
                 multiple: false,
-                options: ["lb", "kg"],
-                default: "lb",
+                options: ['lb', 'kg'],
+                default: 'lb',
                 required: true,
               },
             ],
         }
-      - { label: "COA Upload", name: "coa_link", widget: "file" }
+      - { label: 'COA Upload', name: 'coa_link', widget: 'file' }
       - {
-          label: "Details",
-          name: "details",
-          widget: "object",
+          label: 'Details',
+          name: 'details',
+          widget: 'object',
           fields:
             [
-              { label: "Description", name: "description", widget: "text" },
+              { label: 'Description', name: 'description', widget: 'text' },
               {
-                label: "Info",
-                name: "info",
-                widget: "list",
+                label: 'Info',
+                name: 'info',
+                widget: 'list',
                 fields:
                   [
-                    { label: "Label", name: "label", widget: "string" },
+                    { label: 'Label', name: 'label', widget: 'string' },
                     {
-                      label: "Items",
-                      name: "items",
-                      widget: "list",
+                      label: 'Items',
+                      name: 'items',
+                      widget: 'list',
                       fields:
-                        [{ label: "Item", name: "item", widget: "string" }],
+                        [{ label: 'Item', name: 'item', widget: 'string' }],
                     },
                   ],
               },
             ],
         }
-      - { label: "Body", name: "body", widget: "markdown" }
-  - name: "blog"
-    label: "Blog"
-    folder: "src/pages/blog"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'src/pages/blog'
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
       - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "blog-post",
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'blog-post',
         }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Tags", name: "tags", widget: "list" }
-  - name: "pages"
-    label: "Pages"
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
+  - name: 'pages'
+    label: 'Pages'
     files:
-      - file: "src/pages/index.md"
-        label: "Home Page"
-        name: "index"
+      - file: 'src/pages/index.md'
+        label: 'Home Page'
+        name: 'index'
         fields:
           - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "index-page",
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'index-page',
             }
           - {
-              label: "Hero",
-              name: "hero",
-              widget: "object",
+              label: 'Hero',
+              name: 'hero',
+              widget: 'object',
               fields:
                 [
-                  { label: "Heading", name: "heading", widget: "string" },
+                  { label: 'Heading', name: 'heading', widget: 'string' },
                   {
-                    label: "Background Image",
-                    name: "backgroundImg",
-                    widget: "object",
+                    label: 'Background Image',
+                    name: 'backgroundImg',
+                    widget: 'object',
                     fields:
                       [
-                        { label: "Image", name: "image", widget: "image" },
-                        { label: "Alt", name: "alt", widget: "string" },
+                        { label: 'Image', name: 'image', widget: 'image' },
+                        { label: 'Alt', name: 'alt', widget: 'string' },
                       ],
                   },
                 ],
             }
           - {
-              label: "Product Section",
-              name: "products",
-              widget: "object",
+              label: 'Product Section',
+              name: 'products',
+              widget: 'object',
               fields:
                 [
-                  { label: "Heading", name: "heading", widget: "string" },
-                  { label: "Description", name: "description", widget: "text" },
+                  { label: 'Heading', name: 'heading', widget: 'string' },
+                  { label: 'Description', name: 'description', widget: 'text' },
                 ],
             }
           - {
-              label: "Rogue Valley Section",
-              name: "rogueValley",
-              widget: "object",
+              label: 'Rogue Valley Section',
+              name: 'rogueValley',
+              widget: 'object',
               fields:
                 [
-                  { label: "Heading", name: "heading", widget: "string" },
-                  { label: "Description", name: "description", widget: "text" },
+                  { label: 'Heading', name: 'heading', widget: 'string' },
+                  { label: 'Description', name: 'description', widget: 'text' },
                 ],
             }
           - {
-              label: "ETC Values Section",
-              name: "etcValues",
-              widget: "object",
+              label: 'ETC Values Section',
+              name: 'etcValues',
+              widget: 'object',
               fields:
                 [
-                  { label: "Heading", name: "heading", widget: "string" },
-                  { label: "Description", name: "description", widget: "text" },
+                  { label: 'Heading', name: 'heading', widget: 'string' },
+                  { label: 'Description', name: 'description', widget: 'text' },
                   {
-                    label: "Background Image",
-                    name: "backgroundImg",
-                    widget: "image",
+                    label: 'Background Image',
+                    name: 'backgroundImg',
+                    widget: 'image',
                   },
                   {
-                    label: "Values",
-                    name: "values",
-                    widget: "list",
-                    allow_add: "false",
+                    label: 'Values',
+                    name: 'values',
+                    widget: 'list',
+                    allow_add: 'false',
                     fields:
                       [
-                        { label: "Value", name: "value", widget: "string" },
+                        { label: 'Value', name: 'value', widget: 'string' },
                         {
-                          label: "Description",
-                          name: "description",
-                          widget: "text",
+                          label: 'Description',
+                          name: 'description',
+                          widget: 'text',
                         },
                       ],
                   },
                 ],
             }
           - {
-              label: "Farm Section",
-              name: "farming",
-              widget: "object",
+              label: 'Farm Section',
+              name: 'farming',
+              widget: 'object',
               fields:
                 [
-                  { label: "Heading", name: "heading", widget: "string" },
-                  { label: "Description", name: "description", widget: "text" },
+                  { label: 'Heading', name: 'heading', widget: 'string' },
+                  { label: 'Description', name: 'description', widget: 'text' },
                   {
-                    label: "Background Image",
-                    name: "backgroundImg",
-                    widget: "object",
+                    label: 'Background Image',
+                    name: 'backgroundImg',
+                    widget: 'object',
                     fields:
                       [
-                        { label: "Image", name: "image", widget: "image" },
-                        { label: "Alt", name: "alt", widget: "string" },
+                        { label: 'Image', name: 'image', widget: 'image' },
+                        { label: 'Alt', name: 'alt', widget: 'string' },
                       ],
                   },
                 ],
             }
           - {
-              label: "Supply Chain Section",
-              name: "supplyChain",
-              widget: "object",
+              label: 'Supply Chain Section',
+              name: 'supplyChain',
+              widget: 'object',
               fields:
                 [
-                  { label: "Heading", name: "heading", widget: "string" },
-                  { label: "Description", name: "description", widget: "text" },
+                  { label: 'Heading', name: 'heading', widget: 'string' },
+                  { label: 'Description', name: 'description', widget: 'text' },
                 ],
             }
           - {
-              label: "Footer",
-              name: "footer",
-              widget: "object",
+              label: 'Footer',
+              name: 'footer',
+              widget: 'object',
               fields:
                 [
-                  { label: "Blurb", name: "blurb", widget: "text" },
-                  { label: "Legal", name: "legal", widget: "text" },
+                  { label: 'Blurb', name: 'blurb', widget: 'text' },
+                  { label: 'Legal', name: 'legal', widget: 'text' },
                 ],
             }
           - {
-              label: "Subscription info",
-              name: "subscription",
-              widget: "object",
+              label: 'Subscription info',
+              name: 'subscription',
+              widget: 'object',
               fields:
                 [
                   {
-                    label: "Background Image",
-                    name: "backgroundImg",
-                    widget: "object",
+                    label: 'Background Image',
+                    name: 'backgroundImg',
+                    widget: 'object',
                     fields:
                       [
-                        { label: "Image", name: "image", widget: "image" },
-                        { label: "Alt", name: "alt", widget: "string" },
+                        { label: 'Image', name: 'image', widget: 'image' },
+                        { label: 'Alt', name: 'alt', widget: 'string' },
                       ],
                   },
                   {
-                    label: "Callouts",
-                    name: "callouts",
-                    widget: "list",
+                    label: 'Callouts',
+                    name: 'callouts',
+                    widget: 'list',
                     fields:
                       [
-                        { label: "Title", name: "value", widget: "string" },
+                        { label: 'Title', name: 'value', widget: 'string' },
                         {
-                          label: "Description",
-                          name: "description",
-                          widget: "text",
+                          label: 'Description',
+                          name: 'description',
+                          widget: 'text',
                         },
                       ],
                   },
                 ],
             }
           - {
-              label: "Shipping info",
-              name: "shipping",
-              widget: "object",
+              label: 'Shipping info',
+              name: 'shipping',
+              widget: 'object',
               fields:
-                [{ label: "Description", name: "description", widget: "text" }],
+                [{ label: 'Description', name: 'description', widget: 'text' }],
             }
-      - file: "src/pages/starter-ki.md"
-        label: "Starter Kit"
-        name: "starter-kit"
+      - file: 'src/pages/starter-kit.md'
+        label: 'Starter Kit'
+        name: 'starter-kit'
         fields:
-          - { label: "Publish Date", name: "date", widget: "datetime" }
+          - { label: 'Publish Date', name: 'date', widget: 'datetime' }
           - {
-              label: "Meta Description",
-              name: "meta_description",
-              widget: "string",
+              label: 'Meta Description',
+              name: 'meta_description',
+              widget: 'string',
               required: true,
             }
           - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "starter-kit",
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'starter-kit',
             }
           - {
-              label: "Product Image",
-              name: "product_image",
-              widget: "image",
+              label: 'Product Image',
+              name: 'product_image',
+              widget: 'image',
               required: true,
             }
-          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: 'Title', name: 'title', widget: 'string', required: true }
           - {
-              label: "Quantity",
-              name: "quantities",
-              widget: "list",
-              fields: [{ label: "Value", name: "value", widget: "number" }],
+              label: 'Quantity',
+              name: 'quantities',
+              widget: 'list',
+              fields: [{ label: 'Value', name: 'value', widget: 'number' }],
             }
           - {
-              label: "Included items",
-              name: "included",
-              widget: "list",
+              label: 'Included items',
+              name: 'included',
+              widget: 'list',
               fields:
                 [
-                  { label: "Title", name: "title", widget: "string" },
-                  { label: "Description", name: "description", widget: "text" },
+                  { label: 'Title', name: 'title', widget: 'string' },
+                  { label: 'Description', name: 'description', widget: 'text' },
                   {
-                    label: "Background Image",
-                    name: "backgroundImg",
-                    widget: "object",
+                    label: 'Background Image',
+                    name: 'backgroundImg',
+                    widget: 'object',
                     fields:
                       [
-                        { label: "Image", name: "image", widget: "image" },
-                        { label: "Alt", name: "alt", widget: "string" },
+                        { label: 'Image', name: 'image', widget: 'image' },
+                        { label: 'Alt', name: 'alt', widget: 'string' },
                       ],
                   },
                 ],
             }
           - {
-              label: "Kit Value",
-              name: "kitValue",
-              widget: "object",
+              label: 'Kit Value',
+              name: 'kitValue',
+              widget: 'object',
               fields:
                 [
                   {
-                    label: "Background Image",
-                    name: "backgroundImg",
-                    widget: "object",
+                    label: 'Background Image',
+                    name: 'backgroundImg',
+                    widget: 'object',
                     fields:
                       [
-                        { label: "Image", name: "image", widget: "image" },
-                        { label: "Alt", name: "alt", widget: "string" },
+                        { label: 'Image', name: 'image', widget: 'image' },
+                        { label: 'Alt', name: 'alt', widget: 'string' },
                       ],
                   },
                   {
-                    label: "Callouts",
-                    name: "callouts",
-                    widget: "list",
+                    label: 'Callouts',
+                    name: 'callouts',
+                    widget: 'list',
                     fields:
                       [
-                        { label: "Title", name: "value", widget: "string" },
+                        { label: 'Title', name: 'value', widget: 'string' },
                         {
-                          label: "Description",
-                          name: "description",
-                          widget: "text",
+                          label: 'Description',
+                          name: 'description',
+                          widget: 'text',
                         },
                       ],
                   },
                 ],
             }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: 'Body', name: 'body', widget: 'markdown' }

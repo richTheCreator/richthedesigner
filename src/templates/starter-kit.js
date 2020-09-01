@@ -1,30 +1,41 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Footer from '../components/Footer'
-import {
-  Hero,
-  Products,
-  RogueValley,
-  Values,
-  Farm,
-  SupplyChain
-} from './Homepage'
+import { Hero, Description, KitValue } from './StarterKit'
 import SEO from '../components/SEO/SEO'
-import { Body1 } from '../components/Typography'
+import { Shipping } from '../components'
 const StarterKit = ({ data, location }) => {
-  const { frontmatter, html } = data.markdownRemark
-
-  console.log('starter-kit', frontmatter)
+  const {
+    frontmatter: {
+      title,
+      product_image,
+      meta_description,
+      quantities,
+      included,
+      kitValue: {
+        backgroundImg: { image, alt },
+        callouts
+      }
+    },
+    html
+  } = data.markdownRemark
 
   return (
     <>
       <SEO
         pathname={location.pathname}
-        title={frontmatter.title}
-        desc={frontmatter.metaDescription}
-        banner={frontmatter.product_image.childImageSharp.fluid.src}
+        title={title}
+        desc={meta_description}
+        banner={product_image.childImageSharp.fluid.src}
       />
-      <Body1>{frontmatter.title}</Body1>
+      <Hero
+        title={title}
+        product_image={product_image}
+        meta_description={meta_description}
+        quantities={quantities}
+      />
+      <Description included={included} />
+      <KitValue image={image} callouts={callouts} />
+      <Shipping />
     </>
   )
 }
@@ -43,6 +54,9 @@ export const pageQuery = graphql`
             }
           }
         }
+        quantities {
+          value
+        }
         meta_description
         title
         included {
@@ -57,6 +71,22 @@ export const pageQuery = graphql`
                 }
               }
             }
+          }
+        }
+        kitValue {
+          backgroundImg {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 800, quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+          }
+          callouts {
+            value
+            description
           }
         }
       }
