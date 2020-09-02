@@ -1,40 +1,50 @@
 ---
 date: 2020-08-30T19:52:01.923Z
+meta_description: The starter kit is the easiest way to offer your customers
+  premium components in an all-in-one package to ensure a positive hemp
+  experience.
 templateKey: starter-kit
-meta_description: Your most convient way to offer customers an all-in-one hemp
-  experience with premium goods, with out having to be a headshop.
 product_image: /media/hemp-starter-kit.jpg
 title: Hemp Starter Kit
 quantities:
   - value: 20
 included:
-  - title: Stainless Steel Grinder
-    description: Most of our customers take advantage of this option to lock in low
-      pricing for up to 12 months and guarantee delivery at a fixed cost.
+  - title: Aluminum Grinder
+    description: "High quality, 3-piece grinder. This grinder is machined out of
+      aluminum and has a durable, black silicone finish with textured sides
+      making the experience effortless. The teeth are precision cut and
+      extremely sharp to deliver a precision grind every time. "
     backgroundImg:
       image: /media/stainless-steel-grinders-3_007-web.jpg
       alt: Hemp grinder
   - title: Glass Jar
-    description: Most of our customers take advantage of this option to lock in low
-      pricing for up to 12 months and guarantee delivery at a fixed cost.
+    description: "Glass jar is sized to store 1/8oz of hemp flower and includes a
+      childproof lid to ensure security. The smell proof lid seals tightly, and
+      you can drop in one of our humidity control packs to maintain freshness
+      for future smokes. "
     backgroundImg:
       image: /media/glass-jar-bamboo-cap-1-1.jpg
       alt: Glass jar
   - title: Glass Pipe
-    description: Most of our customers take advantage of this option to lock in low
-      pricing for up to 12 months and guarantee delivery at a fixed cost.
+    description: 'The 4" pipe included in the Elevated Essentials kit is made from
+      borosilicate glass which is unmatched in terms of quality and durability.
+      The pipe has a silicone cover for grip and protection to ensure this pipe
+      is always ready for a smoke. '
     backgroundImg:
       image: /media/miniblackglasspipewmarbleweedbowlsforsalefreeshipping_1_480x480.jpg
       alt: Glass pipe
   - title: Lighter
-    description: Most of our customers take advantage of this option to lock in low
-      pricing for up to 12 months and guarantee delivery at a fixed cost.
+    description: "A lighter is included in the kit so your customers can walk out of
+      the store with everything they need to experience and enjoy their hemp
+      flower purchase. "
     backgroundImg:
       image: /media/white-lighter-shutterstock_1557340776.jpg
       alt: Lighter
   - title: Premium Packaging
-    description: Most of our customers take advantage of this option to lock in low
-      pricing for up to 12 months and guarantee delivery at a fixed cost.
+    description: "The Elevated Essentials kit is a comprehensive, all-in-one
+      solution that will consolidate SKUs in your store and provide a convenient
+      way for your customers to experience the wonderful effects of premium hemp
+      flower. "
     backgroundImg:
       image: /media/hemp-starter-kit.jpg
       alt: Hemp starter kit
@@ -43,14 +53,23 @@ kitValue:
     image: /media/dispensary_manager.jpg
     alt: Cannabis store manager
   callouts:
-    - value: Capture first time buyers
-      description: Most of our customers take advantage of this option to lock in low
-        pricing for up to 12 months and guarantee delivery at a fixed cost.
+    - value: Perfect solution for novice smokers
+      description: "Hemp flower is quickly gaining popularity among CBD customers, and
+        the Elevated Essentials kit is perfect for the novice smoker. With
+        detailed instructions and everything your customers need included in the
+        kit, it's the perfect solution to give your customers the confidence and
+        tools needed to truly enjoy the hemp smoking experience. "
     - value: SKU Consolidation
-      description: Most of our customers take advantage of this option to lock in low
-        pricing for up to 12 months and guarantee delivery at a fixed cost.
-    - value: Benefits of a headshop
-      description: Most of our customers take advantage of this option to lock in low
-        pricing for up to 12 months and guarantee delivery at a fixed cost.
+      description: "Maintaining multiple inventory SKUs on glassware, grinders,
+        lighters, etc for your customers to smoke hemp flower is a thing of the
+        past when you introduce the starter kit to your inventory. The Elevated
+        Essentials kit delivers an easy add-on to the flower purchase and
+        increases your transaction value. "
+    - value: Remove the stigma
+      description: 'A lot of our CBD retail customers are wary of introducing a
+        selection of glassware and smoking accessories to their inventory based
+        on the negative stigma associated with "head shops". The discreet
+        starter kit provides everything needed to enjoy hemp flower all wrapped
+        in a single, professional package. '
 ---
 Testing more area for description and content.
