@@ -18,7 +18,7 @@ products:
     - image: /media/hemp_concentrate.jpg
       alt: test
 rogueValley:
-  heading: Rogue Valley Grown & Made
+  heading: Experience Oregon Quality
   description: >
     Elevated Trading sources our hemp products exclusively from the Rogue Valley
     of Southern Oregon. Rogue Valley is commonly referred to as the “Napa Valley
@@ -99,14 +99,22 @@ subscription:
     alt: Test
   callouts:
     - value: Substantial Savings
-      description: Most of our customers take advantage of this option to lock in low
-        pricing for up to 12 months and guarantee delivery at a fixed cost.
-    - value: Predictable Projections
-      description: Most of our customers take advantage of this option to lock in low
-        pricing for up to 12 months and guarantee delivery at a fixed cost.
-    - description: Most of our customers take advantage of this option to lock in low
-        pricing for up to 12 months and guarantee delivery at a fixed cost.
-      value: Less Volatile Prices
+      description: 'Most of our customers take advantage of our "Subscribe and Save"
+        option to lock in heavily discounted pricing for up to 12 months and
+        guarantee delivery at a fixed cost throughout the entire term of the
+        contract. '
+    - value: Guaranteed Consistency
+      description: "Your repeat customers expect consistency across your product lines
+        which has historically been difficult to deliver in the growing CBD
+        industry (especially with hemp flower). By partnering with Elevated
+        Trading, we can ensure that you receive the same quality, consistency,
+        and strains on products throughout the term of your contract. "
+    - description: Market volatility in the rapidly growing hemp industry causes real
+        challenges for CBD business owners. By subscribing to our program and
+        insulating your business from the volatile supply/demand curves, you're
+        able to accurately forecast your cost of goods and deliver more
+        predictable profit margins.
+      value: Predictable Projections
 shipping:
   description: Orders are shipped within 24-48 hours of payment, and we ship
     everything via USPS Priority Mail (with tracking). We can expedite, if
