@@ -41,10 +41,9 @@ included:
       image: /media/white-lighter-shutterstock_1557340776.jpg
       alt: Lighter
   - title: Premium Packaging
-    description: "The Elevated Essentials kit is a comprehensive, all-in-one
-      solution that will consolidate SKUs in your store and provide a convenient
-      way for your customers to experience the wonderful effects of premium hemp
-      flower. "
+    description: "The Elevated Essentials kit is a discreet, all-in-one solution
+      that will consolidate SKUs in your store and provide a convenient way for
+      your customers to experience the effects of premium hemp flower. "
     backgroundImg:
       image: /media/hemp-starter-kit.jpg
       alt: Hemp starter kit
