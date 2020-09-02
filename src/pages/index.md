@@ -1,10 +1,10 @@
 ---
 templateKey: index-page
 hero:
-  heading: Site Build In Progress...
+  heading: Better Wholesale Hemp
   backgroundImg:
     alt: Testing alt
-    image: /media/FlowerBG.jpg
+    image: /media/hemp-delivery.jpg
 products:
   heading: High Value, Fair Price
   description: Elevated Trading is focused on delivering the highest quality,
@@ -42,13 +42,16 @@ etcValues:
   backgroundImg: /media/Rouge_Valley_Hemp.jpg
   values:
     - value: Quality
-      description: All of our products are 3rd party tested multiple times throughout
+      description:
+        All of our products are 3rd party tested multiple times throughout
         the supply chain, and we supply documentation with every order.
     - value: Reliability
-      description: Orders are shipped within 24-48 hours of payment, and we stand
+      description:
+        Orders are shipped within 24-48 hours of payment, and we stand
         behind every product that we sell. If you’re not happy, we fix it
     - value: Integrity
-      description: If we tell you that we can deliver a product or service for your
+      description:
+        If we tell you that we can deliver a product or service for your
         business, we will make it happen. Period.
 farming:
   heading: Equity Driven Farms
@@ -72,7 +75,7 @@ supplyChain:
 
     We’re removing the friction from the buying process for our customers that want high value products but don’t have the time and/or staff to form strategic partnerships directly at the source.
 
-    We also offer full-service consulting at the retail level to find a profitable product mix that will satisfy your customers while maintaining the unique essence of your retail brand. We don’t just sell products, we solve problems.  
+    We also offer full-service consulting at the retail level to find a profitable product mix that will satisfy your customers while maintaining the unique essence of your retail brand. We don’t just sell products, we solve problems.
   backgroundImg:
     alt: Testing alt
     image: /media/hemp_supplychain_cultivation.png
@@ -84,27 +87,32 @@ supplyChain:
     - image: /media/hemp_supplychain_retail.png
       alt: test
 footer:
-  legal: "These products are intended for persons age 21+. All products should be
+  legal:
+    'These products are intended for persons age 21+. All products should be
     used only as directed on the label, and you should always consult with a
     physician before use. These statements have not been evaluated by the FDA.
     These products are not intended to diagnose, treat, cure or prevent any
     disease. By using this site, you agree to follow the Privacy Policy and all
-    Terms & Conditions printed on this site. Void where prohibited by law. "
-  blurb: "All Elevated Trading products displayed for sale are federally legal and
+    Terms & Conditions printed on this site. Void where prohibited by law. '
+  blurb:
+    'All Elevated Trading products displayed for sale are federally legal and
     sourced from industrial hemp plants which contain less than 0.3% Delta-9
-    THC. "
+    THC. '
 subscription:
   backgroundImg:
     image: /media/hemp-delivery.jpg
     alt: Test
   callouts:
     - value: Substantial Savings
-      description: Most of our customers take advantage of this option to lock in low
+      description:
+        Most of our customers take advantage of this option to lock in low
         pricing for up to 12 months and guarantee delivery at a fixed cost.
     - value: Predictable Projections
-      description: Most of our customers take advantage of this option to lock in low
+      description:
+        Most of our customers take advantage of this option to lock in low
         pricing for up to 12 months and guarantee delivery at a fixed cost.
-    - description: Most of our customers take advantage of this option to lock in low
+    - description:
+        Most of our customers take advantage of this option to lock in low
         pricing for up to 12 months and guarantee delivery at a fixed cost.
       value: Less Volatile Prices
 shipping:

@@ -1,28 +1,38 @@
 import styled from 'styled-components'
-import { Row, Col } from 'react-flexbox-grid'
-import { space, gridArea, flexbox } from 'styled-system'
+import { height, position, width, space, color } from 'styled-system'
 import BackgroundImage from 'gatsby-background-image'
-import { Heading1, Outlined } from '../../../components/Typography'
+import { Heading1 } from '../../../components/Typography'
+import { Col } from 'react-flexbox-grid'
 
-export const HeroImage = styled(BackgroundImage)`
-  ${space}
-  ${gridArea}
+export const ProductImg = styled(BackgroundImage)`
+  ${height}
+  ${position}
+  ${width}
+  top: 0;
+  right: 0;
   background-size: cover;
-  overflow: hidden;
-  align-self: normal;
+  box-shadow: ${(props) => props.theme.shadows.md};
 `
-export const ImageGridArea = ['1 / 1 / 9 / 5', '1 / 6 / 9 / 13;']
 
-export const HeroTextContainer = styled.div`
-  ${gridArea}
-  ${space}
-  align-self: center;
-  z-index: 2;
+export const HeroText = styled(Heading1)`
+  line-height: 100%;
 `
-export const TextGridArea = ['1 / 1 / 9 / 5', '2 / 4 / 8 / 9']
-
-export const HeroText = styled(Heading1)``
 export const HeroTextOutline = styled(Heading1)`
+  line-height: 100%;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: ${(props) => props.theme.colors.white};
+`
+
+export const TextContainer = styled(Col)`
+  ${space}
+  ${color}
+  ${height}
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  position:relative;
+  justify-self: center;
+  align-self: center;
+  justify-content:center;
+  z-index: 1;
 `
