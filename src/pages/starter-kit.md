@@ -1,7 +1,8 @@
 ---
 date: 2020-08-30T19:52:01.923Z
-meta_description: The starter kit is the easiest way to offer your customers an
-  all-in-one hemp smoking experience with premium components.
+meta_description: The starter kit is the easiest way to offer your customers
+  premium components in an all-in-one package to ensure a positive hemp
+  experience.
 templateKey: starter-kit
 product_image: /media/hemp-starter-kit.jpg
 title: Hemp Starter Kit
