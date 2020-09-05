@@ -1,6 +1,7 @@
 import { Badge } from './Badge'
 import { Button, LinkButton } from './Button'
 import { ProductCard } from './ProductCard'
+import { CertificateCard } from './CertificateCard'
 import { Subscription } from './Subscription'
 import { Shipping } from './Shipping'
 import { Values } from './Values'
@@ -12,5 +13,6 @@ export {
   ProductCard,
   Subscription,
   Shipping,
-  Values
+  Values,
+  CertificateCard
 }

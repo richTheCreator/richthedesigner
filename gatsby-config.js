@@ -35,7 +35,7 @@ module.exports = {
       },
       {
         name: 'LAB RESULTS',
-        link: '/'
+        link: '/lab-results'
       }
     ]
   },

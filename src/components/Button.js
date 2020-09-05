@@ -55,7 +55,11 @@ const Button = (props) => (
   </AniLink>
 )
 const LinkButton = (props) => (
-  <LinkContainer href={props.href} borderColor={props.borderColor}>
+  <LinkContainer
+    href={props.href}
+    borderColor={props.borderColor}
+    bg={props.bg}
+  >
     <ButtonText {...props}>{props.children}</ButtonText>
   </LinkContainer>
 )
