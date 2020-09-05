@@ -27,7 +27,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   }
   h1 {
-    font-size: ${theme.fontSizes[12]};
+    font-size: ${theme.fontSizes[11]};
     font-weight: ${theme.fontWeights[2]};
     color: ${theme.colors.black};
     line-height: ${theme.lineHeights[9]};
@@ -35,7 +35,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${theme.fonts.sans}
   }
   h2 {
-    font-size: ${theme.fontSizes[11]};
+    font-size: ${theme.fontSizes[10]};
     font-weight: ${theme.fontWeights[2]};
     color: ${theme.colors.black};
     line-height: ${theme.lineHeights[8]};
@@ -43,15 +43,17 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${theme.fonts.sans}
   }
   h3 {
-    font-size: ${theme.fontSizes[10]};
+    font-size: ${theme.fontSizes[9]};
     font-weight: ${theme.fontWeights[2]};
     color: ${theme.colors.black};
     line-height: ${theme.lineHeights[7]};
     letter-spacing: ${theme.letterSpacings[0]};
-    font-family: ${theme.fonts.sans}
+    font-family: ${theme.fonts.sans};
+    margin-bottom: ${theme.space[1]}
+
   }
   h4 {
-    font-size: ${theme.fontSizes[9]};
+    font-size: ${theme.fontSizes[8]};
     font-weight: ${theme.fontWeights[2]};
     color: ${theme.colors.black};
     line-height: ${theme.lineHeights[6]};
