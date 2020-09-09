@@ -33,7 +33,10 @@ const SEO = ({ title, desc, banner, pathname, node }) => {
         <html lang={siteLanguage} />
         <meta name='description' content={seo.description} />
         <meta name='image' content={seo.image} />
-        <meta name='Elevated Trading LLC' content='Better wholesale hemp.' />
+        <meta
+          name='Richard Morales Designs'
+          content='Designing meaningful experiences that have measurable outcomes.'
+        />
         <link
           rel='apple-touch-icon'
           sizes='180x180'

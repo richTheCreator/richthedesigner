@@ -1,6 +1,13 @@
 // Typography
 const fonts = {
-  heading: 'Fortika',
+  heading: `Horizon, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif`,
+  headingOutline: `HorizonOL, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif`,
   sans: `Poppins, -apple-system, BlinkMacSystemFont,
     "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans",
@@ -71,7 +78,7 @@ const colors = {
   burntSienna: '#E76F51',
   ivory: '#F0E9E2',
   accent: '#FF5353',
-  black: '#2D2926',
+  black: '#000000',
   midnight: '#242221',
   blackBlue: '#222529',
   black70: 'rgba(0,0,0,.7)',

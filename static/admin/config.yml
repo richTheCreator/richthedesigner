@@ -3,10 +3,10 @@ backend:
   branch: master
 media_folder: static/media
 public_folder: /media
-site_url: https://www.elevatedtrading.com/
-display_url: https://www.elevatedtrading.com/
-logo_url: https://www.elevatedtrading.com/media/apple-touch-icon.png
-publish_mode: editorial_workflow
+site_url: https://www.rmoralesdesigns.com/
+display_url: https://www.rmoralesdesigns.com/
+# logo_url: https://www.elevatedtrading.com/media/apple-touch-icon.png
+show_preview_links: false
 
 collections:
   - name: 'products'

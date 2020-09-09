@@ -1,8 +1,13 @@
 @font-face {
-    font-family: 'Fortika';
-    src: url('fortika-regular-webfont.woff2') format('woff2'),
-         url('fortika-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: 'Horizon';
+  src: url('horizon.woff2') format('woff2'), url('horizon.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HorizonOL';
+  src: url('horizon_outlined.woff2') format('woff2'),
+    url('horizon_outlined.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }

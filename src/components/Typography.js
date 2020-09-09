@@ -15,17 +15,18 @@ const textStyles = [
   'maxWidth',
   'alignItems',
   'display',
-  'justifyItems'
+  'justifyItems',
+  'opacity'
 ]
 
 export const Heading1 = system(
   {
     is: 'h1',
-    fontSize: [11, 12],
-    fontWeight: 2,
+    fontSize: '96px',
+    fontWeight: 700,
     color: 'black',
-    lineHeight: [7, 8],
-    letterSpacing: 8,
+    lineHeight: '110px',
+    letterSpacing: '-1.5px',
     fontFamily: 'heading'
   },
   ...textStyles
@@ -34,11 +35,11 @@ export const Heading1 = system(
 export const Heading2 = system(
   {
     is: 'H2',
-    fontSize: [10, 11],
-    fontWeight: 2,
+    fontSize: '60px',
+    fontWeight: 700,
     color: 'black',
-    lineHeight: [6, 7],
-    letterSpacing: 9,
+    lineHeight: '69px',
+    letterSpacing: '5.5px',
     fontFamily: 'heading'
   },
   ...textStyles
@@ -47,12 +48,12 @@ export const Heading2 = system(
 export const Heading3 = system(
   {
     is: 'H3',
-    fontSize: [9, 10],
-    fontWeight: 2,
+    fontSize: ['40px', '48px'],
+    fontWeight: 700,
     color: 'black',
-    lineHeight: [6, 7],
-    letterSpacing: 9,
-    fontFamily: 'sans'
+    lineHeight: '55px',
+    letterSpacing: '4px',
+    fontFamily: 'heading'
   },
   ...textStyles
 )
@@ -60,12 +61,12 @@ export const Heading3 = system(
 export const Heading4 = system(
   {
     is: 'H4',
-    fontSize: 8,
-    fontWeight: 2,
+    fontSize: '34px',
+    fontWeight: 700,
     color: 'black',
-    lineHeight: 6,
-    letterSpacing: 5,
-    fontFamily: 'sans'
+    lineHeight: '39px',
+    letterSpacing: '1.25px',
+    fontFamily: 'heading'
   },
   ...textStyles
 )
@@ -73,11 +74,10 @@ export const Heading4 = system(
 export const Heading5 = system(
   {
     is: 'H5',
-    fontSize: 7,
-    fontWeight: 2,
+    fontSize: '24px',
+    fontWeight: 700,
     color: 'black',
-    lineHeight: 5,
-    letterSpacing: 5
+    lineHeight: '28px'
   },
   ...textStyles
 )
@@ -85,26 +85,26 @@ export const Heading5 = system(
 export const Heading6 = system(
   {
     is: 'H6',
-    fontSize: 6,
-    fontWeight: 2,
+    fontSize: '20px',
+    fontWeight: 700,
     color: 'black',
-    lineHeight: 3,
-    letterSpacing: 5
+    lineHeight: '23px',
+    letterSpacing: '0.15px'
   },
-  ...textStyles,
-  {
-    textTransform: 'uppercase'
-  }
+  ...textStyles
+  // {
+  //   textTransform: 'uppercase'
+  // }
 )
 
 export const Body1 = system(
   {
     is: 'p',
-    fontSize: [6, 7],
-    fontWeight: 0,
+    fontSize: '21px',
+    fontWeight: 400,
     color: 'darkGrey',
-    lineHeight: [4, 5],
-    letterSpacing: 7
+    lineHeight: '32px',
+    letterSpacing: '0.5px'
   },
   ...textStyles
 )
@@ -112,11 +112,11 @@ export const Body1 = system(
 export const Body2 = system(
   {
     is: 'p',
-    fontSize: 6,
-    fontWeight: 0,
+    fontSize: '16px',
+    fontWeight: 400,
     color: 'darkGrey',
-    lineHeight: 4,
-    letterSpacing: 5
+    lineHeight: '26px',
+    letterSpacing: '0.25px'
   },
   ...textStyles
 )
@@ -124,17 +124,13 @@ export const Body2 = system(
 export const Subtitle1 = system(
   {
     is: 'p',
-    fontSize: 5,
-    fontWeight: 3,
-    fontStyle: 'italic',
+    fontSize: '32px',
+    fontWeight: 400,
     color: 'black',
-    lineHeight: 2,
-    letterSpacing: 8
+    lineHeight: '38px',
+    letterSpacing: '0.15px'
   },
-  ...textStyles,
-  {
-    textTransform: 'uppercase'
-  }
+  ...textStyles
 )
 
 export const Subtitle2 = system(
@@ -152,12 +148,12 @@ export const Subtitle2 = system(
 export const Button = system(
   {
     is: 'p',
-    fontSize: 4,
-    fontWeight: 2,
+    fontSize: '14px',
+    fontWeight: 700,
     color: 'black',
-    lineHeight: 0,
-    letterSpacing: 8,
-    fontFamily: 'sans'
+    lineHeight: '16px',
+    letterSpacing: '0.75px',
+    fontFamily: 'heading'
   },
   ...textStyles,
   {
@@ -171,11 +167,11 @@ export const Button = system(
 export const Caption = system(
   {
     is: 'p',
-    fontSize: 2,
-    fontWeight: 0,
+    fontSize: '10px',
+    fontWeight: 400,
     color: 'darkGrey',
-    lineHeight: 1,
-    letterSpacing: 6
+    lineHeight: '16px',
+    letterSpacing: '0.4px'
   },
   ...textStyles
 )

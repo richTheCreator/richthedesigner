@@ -18,11 +18,11 @@ const IndexPage = ({ data }) => {
     <>
       <SEO />
       <Hero hero={frontmatter.hero} />
-      <Products products={frontmatter.products} />
+      {/* <Products products={frontmatter.products} />
       <RogueValley rogueValley={frontmatter.rogueValley} />
       <Values etcValues={frontmatter.etcValues} />
       <Farm farm={frontmatter.farming} />
-      <SupplyChain supplyChain={frontmatter.supplyChain} />
+      <SupplyChain supplyChain={frontmatter.supplyChain} /> */}
     </>
   )
 }

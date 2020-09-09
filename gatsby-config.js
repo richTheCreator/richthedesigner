@@ -5,7 +5,7 @@ var website = require('./src/components/SEO/config')
 const {
   NODE_ENV,
   GOOGLE_ANALYTICS_TRACKING_ID,
-  URL: NETLIFY_SITE_URL = 'https://www.elevatedtrading.com/',
+  URL: NETLIFY_SITE_URL = 'https://www.rmoralesdesigns.com/',
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
   CONTEXT: NETLIFY_ENV = NODE_ENV
 } = process.env
@@ -45,15 +45,6 @@ module.exports = {
   },
   plugins: [
     // Make sure this plugin is first in the array of plugins
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: GOOGLE_ANALYTICS_TRACKING_ID || 'none',
-        // this option places the tracking script into the head of the DOM
-        head: true
-        // other options
-      }
-    },
     'gatsby-plugin-transition-link',
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
@@ -146,7 +137,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         custom: {
-          families: ['Fortika'],
+          families: ['Horizon', 'HorizonOL'],
           urls: ['/fonts/fonts.css']
         },
         google: {

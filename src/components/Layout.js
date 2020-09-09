@@ -43,7 +43,7 @@ const TemplateWrapper = ({ children }) => {
 
   return (
     <div>
-      <Modal
+      {/* <Modal
         open={open}
         closeOnOverlayClick={false}
         closeOnEsc={false}
@@ -77,8 +77,8 @@ const TemplateWrapper = ({ children }) => {
         </Button>
       </Modal>
       <Navbar menuLinks={menuLinks} />
-      <div style={{ paddingTop: '119px' }}>{children}</div>
-      <Footer footer={footer} />
+    <Footer footer={footer} /> */}
+      <div>{children}</div>
     </div>
   )
 }
