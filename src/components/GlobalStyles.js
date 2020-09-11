@@ -124,4 +124,7 @@ export const GlobalStyle = createGlobalStyle`
   .PDP-Description p{
     margin: 16px 0px
   }
+  .PDP-Description img{
+    width: 100%
+  }
 `

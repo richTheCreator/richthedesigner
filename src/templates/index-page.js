@@ -10,7 +10,7 @@ import {
 } from './Homepage'
 import SEO from '../components/SEO/SEO'
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter } = data.mdx
 
   console.log(frontmatter.farming)
 
@@ -31,7 +31,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query HomePage {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    mdx(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         hero {
           heading

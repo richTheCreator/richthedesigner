@@ -16,8 +16,8 @@ const StarterKit = ({ data, location }) => {
         callouts
       }
     },
-    html
-  } = data.markdownRemark
+    body
+  } = data.mdx
 
   return (
     <>
@@ -44,8 +44,8 @@ export default StarterKit
 
 export const pageQuery = graphql`
   query StarterKit {
-    markdownRemark(frontmatter: { templateKey: { eq: "starter-kit" } }) {
-      html
+    mdx(frontmatter: { templateKey: { eq: "starter-kit" } }) {
+      body
       frontmatter {
         product_image {
           childImageSharp {

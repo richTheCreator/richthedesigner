@@ -13,7 +13,7 @@ import useSiteMetadata from './SiteMetadata'
 
 const TemplateWrapper = ({ children }) => {
   const {
-    markdownRemark: {
+    mdx: {
       frontmatter: { footer }
     }
   } = useStaticQuery(query)
@@ -87,7 +87,7 @@ export default TemplateWrapper
 
 const query = graphql`
   query global {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    mdx(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         footer {
           legal

@@ -20,7 +20,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query LabResults {
-    page: markdownRemark(frontmatter: { templateKey: { eq: "lab-results" } }) {
+    page: mdx(frontmatter: { templateKey: { eq: "lab-results" } }) {
       frontmatter {
         hero {
           heading
@@ -38,7 +38,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    products: allMarkdownRemark(
+    products: allMdx(
       sort: { order: DESC, fields: [frontmatter___category] }
       filter: { frontmatter: { templateKey: { eq: "product-details" } } }
     ) {

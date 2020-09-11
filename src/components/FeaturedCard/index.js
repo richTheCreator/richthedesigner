@@ -14,7 +14,7 @@ import {
 
 const FeaturedCard = ({ children }) => {
   const {
-    markdownRemark: {
+    mdx: {
       fields: { slug },
       frontmatter: { product_image, title, meta_description, included }
     }
@@ -77,7 +77,7 @@ export default FeaturedCard
 
 const query = graphql`
   query featured {
-    markdownRemark(frontmatter: { templateKey: { eq: "starter-kit" } }) {
+    mdx(frontmatter: { templateKey: { eq: "starter-kit" } }) {
       fields {
         slug
       }

@@ -1,9 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
+
 import { Row, Col } from 'react-flexbox-grid'
 
 export const HTMLContent = ({ content, className }) => (
-  <div dangerouslySetInnerHTML={{ __html: content }} />
+  <MDXRenderer>{content}</MDXRenderer>
 )
 
 const Content = ({ content, className }) => (

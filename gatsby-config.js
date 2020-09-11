@@ -57,14 +57,14 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages'
+        path: `${__dirname}/src/content`,
+        name: 'content'
       }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/pages/products`,
+        path: `${__dirname}/src/content/products`,
         name: 'products'
       }
     },
@@ -78,29 +78,42 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: 'gatsby-plugin-mdx',
       options: {
+        extensions: ['.mdx', '.md'],
+        // root: __dirname,
         plugins: [
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
-              // withWebp: true,
-              linkImagesToOriginal: false, // Important!
-              maxWidth: 2048
-            }
-          },
+          'gatsby-remark-images'
+          // {
+          //   resolve: 'gatsby-remark-images',
+          //   options: {
+          //     // It's important to specify the maxWidth (in pixels) of
+          //     // the content container as this plugin uses this as the
+          //     // base for generating different widths of each image.
+          //     withWebp: true,
+          //     linkImagesToOriginal: false, // Important!
+          //     maxWidth: 2048
+          //   }
+          // }
+        ],
+        gatsbyRemarkPlugins: [
           {
             resolve: 'gatsby-remark-images-medium-zoom', // Important!
             options: {
               background: 'rgba(0, 0, 0, 0.90)'
             }
           },
-          'gatsby-remark-images-grid',
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              withWebp: true,
+              maxWidth: 2048,
+              linkImagesToOriginal: false
+            }
+          },
+          'gatsby-remark-images-grid'
           // '@pauliescanlon/gatsby-remark-grid-system',
-          'gatsby-remark-relative-images'
+          // 'gatsby-remark-relative-images'
           // {
           //   resolve: 'gatsby-remark-copy-linked-files',
           //   options: {
