@@ -22,7 +22,7 @@ import {
 
 const Subscription = ({ children }) => {
   const {
-    markdownRemark: {
+    mdx: {
       frontmatter: {
         subscription: {
           backgroundImg: { alt, image },
@@ -102,7 +102,7 @@ export { Subscription }
 
 const query = graphql`
   query subscriptionInfo {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    mdx(frontmatter: { templateKey: { eq: "index-page" } }) {
       fields {
         slug
       }

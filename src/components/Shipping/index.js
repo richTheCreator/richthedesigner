@@ -7,7 +7,7 @@ import { Title } from './styles'
 
 const Shipping = ({ children }) => {
   const {
-    markdownRemark: {
+    mdx: {
       frontmatter: {
         shipping: { description }
       }
@@ -32,7 +32,7 @@ export { Shipping }
 
 const query = graphql`
   query shippingInfo {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    mdx(frontmatter: { templateKey: { eq: "index-page" } }) {
       fields {
         slug
       }

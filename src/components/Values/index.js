@@ -14,7 +14,7 @@ import { ProductImg, TextContainer, Title, TitleContainer } from './styles'
 
 const Values = ({ children }) => {
   const {
-    markdownRemark: {
+    mdx: {
       frontmatter: {
         etcValues: { values, backgroundImg }
       }
@@ -71,7 +71,7 @@ export { Values }
 
 const query = graphql`
   query valuesInfo {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    mdx(frontmatter: { templateKey: { eq: "index-page" } }) {
       fields {
         slug
       }

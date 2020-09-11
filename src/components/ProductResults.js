@@ -17,7 +17,7 @@ const RowWrapper = styled(Row)`
   }
 `
 const ProductResults = ({ data }) => {
-  const { edges: posts } = data.allMarkdownRemark
+  const { edges: posts } = data.allMdx
 
   // array of unique categories in current products & an All option
   const defaultCat = 'all'
@@ -113,7 +113,7 @@ const ProductResults = ({ data }) => {
 
 ProductResults.propTypes = {
   data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
+    allMdx: PropTypes.shape({
       edges: PropTypes.array
     })
   })
@@ -123,7 +123,7 @@ export default () => (
   <StaticQuery
     query={graphql`
       query ProductResultsQuery {
-        allMarkdownRemark(
+        allMdx(
           sort: { order: DESC, fields: [frontmatter___category] }
           filter: { frontmatter: { templateKey: { eq: "product-details" } } }
         ) {
