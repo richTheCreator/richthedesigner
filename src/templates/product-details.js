@@ -45,7 +45,7 @@ export const ProductPageTemplate = ({
   )
 }
 
-const ProductPage = ({ data, location }) => {
+const ProductPage = ({ data, location, pageContext }) => {
   const { frontmatter, body } = data.products
   return (
     <ProductPageTemplate
