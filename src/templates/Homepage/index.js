@@ -1,8 +1,4 @@
 import { Hero } from './Hero'
-import { Products } from './Products'
-import { RogueValley } from './RogueValley'
-import { Values } from './Values'
-import { Farm } from './Farm'
-import { SupplyChain } from './SupplyChain'
+import { Work } from './Work'
 
-export { Hero, Products, RogueValley, Values, Farm, SupplyChain }
+export { Hero, Work }

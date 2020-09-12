@@ -141,7 +141,7 @@ const Hero = ({
             >
               {(item, k) => (props) => {
                 const Page = items[k]
-                console.log('page', Page)
+                // console.log('page', Page)
                 return <Page style={props} />
               }}
             </Trail>

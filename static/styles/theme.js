@@ -74,6 +74,7 @@ const maxWidths = ['1200px', '1800px']
 const colors = {
   sage: '#727A68',
   beige: '#DCDFC5',
+  tan: '#bb8d6a',
   slateGray: '#DCDFC5',
   burntSienna: '#E76F51',
   ivory: '#F0E9E2',

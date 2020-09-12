@@ -1,28 +1,17 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import {
-  Hero,
-  Products,
-  RogueValley,
-  Values,
-  Farm,
-  SupplyChain
-} from './Homepage'
+import { Hero, Work } from './Homepage'
 import SEO from '../components/SEO/SEO'
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.mdx
+  const { frontmatter } = data.page
+  const { edges: companies } = data.companies
 
-  console.log(frontmatter.farming)
-
+  console.log('companies', companies)
   return (
     <>
       <SEO />
       <Hero hero={frontmatter.hero} />
-      {/* <Products products={frontmatter.products} />
-      <RogueValley rogueValley={frontmatter.rogueValley} />
-      <Values etcValues={frontmatter.etcValues} />
-      <Farm farm={frontmatter.farming} />
-      <SupplyChain supplyChain={frontmatter.supplyChain} /> */}
+      <Work companies={companies} />
     </>
   )
 }
@@ -31,7 +20,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query HomePage {
-    mdx(frontmatter: { templateKey: { eq: "index-page" } }) {
+    page: mdx(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         hero {
           heading
@@ -46,85 +35,23 @@ export const pageQuery = graphql`
             }
           }
         }
-        products {
-          heading
-          description
-          productImages {
-            image {
+      }
+    }
+    companies: allMdx(
+      sort: { order: DESC, fields: [frontmatter___category] }
+      filter: { frontmatter: { templateKey: { eq: "company-profile" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            company
+            cover_img {
               childImageSharp {
                 fluid(maxWidth: 800, quality: 100) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
-            alt
-          }
-        }
-        rogueValley {
-          heading
-          description
-          backgroundImg {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 800, quality: 100) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
-          }
-        }
-        etcValues {
-          heading
-          description
-          values {
-            value
-            description
-          }
-          peeksImage {
-            childImageSharp {
-              fluid(maxWidth: 600, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-        }
-        farming {
-          heading
-          description
-          backgroundImg {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 800, quality: 100) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
-          }
-        }
-        supplyChain {
-          heading
-          description
-          backgroundImg {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 800, quality: 100) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
-          }
-          supplyImages {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 800, quality: 100) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
-            alt
           }
         }
       }
