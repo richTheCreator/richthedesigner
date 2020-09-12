@@ -26,8 +26,8 @@ module.exports = {
     // facebook: website.facebook,
     menuLinks: [
       {
-        name: 'PRODUCTS',
-        link: '/products'
+        name: 'Work',
+        link: '/work'
       },
       {
         name: 'HEMP STARTER KIT',
@@ -64,8 +64,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/content/products`,
-        name: 'products'
+        path: `${__dirname}/src/content/work`,
+        name: 'work'
       }
     },
     {

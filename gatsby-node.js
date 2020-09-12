@@ -21,7 +21,7 @@ exports.createPages = ({ actions, graphql }) => {
             }
             frontmatter {
               templateKey
-              tags
+              company_ref
             }
           }
         }
@@ -38,7 +38,7 @@ exports.createPages = ({ actions, graphql }) => {
       const id = edge.node.id
       createPage({
         path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
+        // company: edge.node.frontmatter.company,
         component: path.resolve(
           `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
         ),
@@ -50,26 +50,26 @@ exports.createPages = ({ actions, graphql }) => {
     })
 
     // Tag pages:
-    let tags = []
-    // Iterate through each post, putting all found tags into `tags`
+    let company = []
+    // Iterate through each post, putting all found company into `company`
     posts.forEach((edge) => {
-      if (_.get(edge, 'node.frontmatter.tags')) {
-        tags = tags.concat(edge.node.frontmatter.tags)
-        console.log('if-------tags-', tags)
+      if (_.get(edge, 'node.frontmatter.company_ref')) {
+        company = company.concat(edge.node.frontmatter.company_ref)
+        console.log('if-------company-', company)
       }
     })
-    // Eliminate duplicate tags
-    tags = _.uniq(tags)
+    // Eliminate duplicate company
+    company = _.uniq(company)
 
+    console.log('nodeContext------', company)
     // Make tag pages
-    tags.forEach((tag) => {
-      const tagPath = `/tags/${_.kebabCase(tag)}/`
-      console.log('tag------node-', tagPath)
+    company.forEach((company) => {
+      const companyPath = `/work/${_.kebabCase(company)}/`
       createPage({
-        path: tagPath,
-        component: path.resolve('src/templates/tags.js'),
+        path: companyPath,
+        component: path.resolve('src/templates/company-profile.js'),
         context: {
-          tag
+          company
         }
       })
     })
