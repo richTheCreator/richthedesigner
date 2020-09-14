@@ -15,7 +15,8 @@ const containerStyles = [
   'gridTemplateRows',
   'gridColumnGap',
   'gridRowGap',
-  'display'
+  'display',
+  'zIndex'
 ]
 
 const FlexRow = styled(Row)``
@@ -43,7 +44,8 @@ export const SectionWrapper = system(
     pr: [3, 4, 5, 6],
     pt: [5, 6],
     pb: [5, 6],
-    height: 0
+    height: 0,
+    zIndex: '5'
   },
   ...containerStyles
 )

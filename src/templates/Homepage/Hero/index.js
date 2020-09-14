@@ -113,7 +113,7 @@ const Hero = ({
 
   return (
     <SectionWrapper
-      bg='black'
+      bg='transparent'
       pl={[2, 0, 0, 6]}
       pr={[2, 0, 0, 6]}
       pt={[0, 0, 0, 6]}

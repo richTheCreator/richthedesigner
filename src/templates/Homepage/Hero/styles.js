@@ -28,7 +28,7 @@ export const TextContainer = styled(Col)`
   flex-direction: column;
   justify-content: center;
   display: flex;
-  z-index: 1;
+  z-index: 6;
 `
 export const InfoContainer = styled(Col)`
   ${order}

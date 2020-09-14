@@ -1,6 +1,13 @@
 import styled from 'styled-components'
 import { Row, Col } from 'react-flexbox-grid'
-import { space, height, color, borderWidth } from 'styled-system'
+import {
+  space,
+  height,
+  width,
+  color,
+  borderWidth,
+  opacity
+} from 'styled-system'
 import BackgroundImage from 'gatsby-background-image'
 import { Overline, Body2 } from '../Typography'
 
@@ -16,11 +23,12 @@ export const Container = styled(Col)`
 export const ProductImage = styled(BackgroundImage)`
   ${space}
   ${height}
+  ${width}
+  ${opacity}
   display:flex;
   flex-direction: row;
-  width: 100%;
   background-position: center center;
   background-size: cover;
-  position: relative;
+  position: absolute!important;
   overflow: hidden;
 `

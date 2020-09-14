@@ -47,8 +47,20 @@ export const pageQuery = graphql`
             company
             cover_img {
               childImageSharp {
-                fluid(maxWidth: 800, quality: 100) {
-                  ...GatsbyImageSharpFluid_withWebp
+                fluid(
+                  duotone: {
+                    highlight: "#2a74d4"
+                    shadow: "#111111"
+                    opacity: 75
+                  }
+                  traceSVG: {
+                    color: "#2a74d4"
+                    turnPolicy: TURNPOLICY_MINORITY
+                    blackOnWhite: false
+                  }
+                  toFormat: PNG
+                ) {
+                  ...GatsbyImageSharpFluid_tracedSVG
                 }
               }
             }

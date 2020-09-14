@@ -8,10 +8,18 @@ const fonts = {
     "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif`,
-  sans: `Poppins, -apple-system, BlinkMacSystemFont,
+  sans: `NeueMontreal, -apple-system, BlinkMacSystemFont,
     "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif`
+  // NM_reg: `NeueMontreal-Regular, -apple-system, BlinkMacSystemFont,
+  //   "Segoe UI", "Roboto", "Oxygen",
+  //   "Ubuntu", "Cantarell", "Fira Sans",
+  //   "Droid Sans", "Helvetica Neue", sans-serif`,
+  // sans: `Poppins, -apple-system, BlinkMacSystemFont,
+  //   "Segoe UI", "Roboto", "Oxygen",
+  //   "Ubuntu", "Cantarell", "Fira Sans",
+  //   "Droid Sans", "Helvetica Neue", sans-serif`
 }
 
 const fontSizes = [
@@ -79,7 +87,7 @@ const colors = {
   burntSienna: '#E76F51',
   ivory: '#F0E9E2',
   accent: '#FF5353',
-  black: '#000000',
+  black: '#252422',
   midnight: '#242221',
   blackBlue: '#222529',
   black70: 'rgba(0,0,0,.7)',

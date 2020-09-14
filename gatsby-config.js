@@ -150,12 +150,12 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         custom: {
-          families: ['Horizon', 'HorizonOL'],
+          families: ['Horizon', 'HorizonOL', 'NeueMontreal'],
           urls: ['/fonts/fonts.css']
-        },
-        google: {
-          families: ['Poppins:400,400i,700,700i']
         }
+        // google: {
+        //   families: ['Poppins:400,400i,700,700i']
+        // }
       }
     },
     {
