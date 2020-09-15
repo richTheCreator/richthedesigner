@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import useInView from 'react-cool-inview'
 import { SectionWrapper, SectionMax } from '../../../components/Containers'
 import { Button } from '../../../components'
 import {
@@ -15,92 +16,11 @@ import {
   Subtitle1
 } from '../../../components/Typography'
 import { Col } from 'react-flexbox-grid'
-import { useTheme } from '../../../../static/styles/theme-context'
-// import { Trail } from 'react-spring/renderprops'
-// import { useTransition, animated } from 'react-spring'
+import { theme, useTheme } from '../../../../static/styles/theme-context'
 
-// const AnimatedName = animated(Heading3)
-// const AnimatedBody = animated(Body1)
-// const items = [
-//   ({ style }) => (
-//     <AnimatedName
-//       mb={2}
-//       mt={2}
-//       color='ivory'
-//       lineHeight='70%'
-//       fontFamily='headingOutline'
-//       opacity='30%!important'
-//       style={{ ...style }}
-//     >
-//       Richard
-//     </AnimatedName>
-//   ),
-//   ({ style }) => (
-//     <AnimatedName
-//       mb={2}
-//       mt={2}
-//       color='ivory'
-//       lineHeight='70%'
-//       fontFamily='headingOutline'
-//       opacity='50%!important'
-//       style={{ ...style }}
-//     >
-//       Richard
-//     </AnimatedName>
-//   ),
-//   ({ style }) => (
-//     <AnimatedName
-//       mb={2}
-//       mt={2}
-//       color='ivory'
-//       lineHeight='70%'
-//       fontFamily='headingOutline'
-//       opacity='70%!important'
-//       style={{ ...style }}
-//     >
-//       Richard
-//     </AnimatedName>
-//   ),
-//   ({ style }) => (
-//     <AnimatedName
-//       mb={2}
-//       mt={2}
-//       color='ivory'
-//       lineHeight='70%'
-//       fontFamily='headingOutline'
-//       opacity='90%!important'
-//       style={{ ...style }}
-//     >
-//       Richard
-//     </AnimatedName>
-//   ),
-//   ({ style }) => (
-//     <AnimatedName
-//       mb={2}
-//       mt={2}
-//       ml={4}
-//       color='ivory'
-//       lineHeight='70%'
-//       fontFamily='heading'
-//       style={{ ...style }}
-//     >
-//       Richard
-//     </AnimatedName>
-//   ),
-//   ({ style }) => (
-//     <AnimatedName
-//       mb={4}
-//       mt={2}
-//       ml={6}
-//       color='ivory'
-//       lineHeight='70%'
-//       fontFamily='heading'
-//       style={{ ...style }}
-//     >
-//       Morales
-//     </AnimatedName>
-//   )
-// ]
+// const Wrapper = React.forwardRef(({ style, ...props }, ref) => {
+//   return <SectionWrapper ref={ref} style={{ ...style }} {...props} />
+// })
 
 const Hero = ({
   hero: {
@@ -109,44 +29,35 @@ const Hero = ({
   }
 }) => {
   // const [isLoaded, show] = useState(false)
+  const { toggleTheme } = useTheme()
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     show(true)
-  //   }, 300)
-  // }, [])
+  const { ref, inView, scrollDirection, entry, observe, unobserve } = useInView(
+    {
+      threshold: 0.5, // Default is 0
+      onChange: ({ inView, scrollDirection, entry, observe, unobserve }) => {
+        inView ? toggleTheme('light') : toggleTheme('dark')
+
+        // Triggered whenever the target meets a threshold, e.g. [0.25, 0.5, ...]
+      },
+      onEnter: ({ scrollDirection, entry, observe, unobserve }) => {
+        // Triggered when the target enters the viewport
+      },
+      onLeave: ({ scrollDirection, entry, observe, unobserve }) => {
+        // Triggered when the target leaves the viewport
+      }
+      // More useful options...
+    }
+  )
 
   return (
-    <SectionWrapper
-      bg='transparent'
-      pl={[2, 0, 0, 6]}
-      pr={[2, 0, 0, 6]}
-      pt={[0, 0, 0, 6]}
-      pb={[2, 0, 0, 6]}
-    >
+    <SectionWrapper bg='transparent' ref={ref}>
       <SectionMax
         height={['100%', '100%', '800px', '800px']}
         style={{ position: 'relative', borderBottom: '1px solid white' }}
         m='auto!important'
-        p={[0, 0, 4, 4]}
-        maxWidth='1800px'
-        between='xs'
+        justifyContent='space-between'
       >
-        <TextContainer md={6} xs={12} mt={5}>
-          {/* {isLoaded && (
-            <Trail
-              items={items}
-              keys={(item) => item.key}
-              from={{ opacity: 0, transform: 'translate3d(0,-50px,0)' }}
-              to={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
-            >
-              {(item, k) => (props) => {
-                const Page = items[k]
-                // console.log('page', Page)
-                return <Page style={props} />
-              }}
-            </Trail>
-          )} */}
+        <TextContainer mt={5} width={[1, 1, 1 / 2]}>
           <Heading1
             fontFamily='sans'
             fontWeight={'500'}
@@ -170,7 +81,7 @@ const Hero = ({
             opportunities and collaborations.
           </Subtitle1>
         </TextContainer>
-        <ImgContainer xl={4} lg={5} md={6} xs={12} mb={4} order={[1, 2, 2]}>
+        <ImgContainer mb={4} order={[1, 2, 2]} width={[1, 1, 1 / 3]}>
           <ProfileImg
             fluid={image.childImageSharp.fluid}
             height={['600px', '500px', '100%', '100%']}

@@ -1,74 +1,32 @@
-import system from '@rebass/components'
-import styled from 'styled-components'
-import { Row } from 'react-flexbox-grid'
+import React from 'react'
 
-const containerStyles = [
-  'color',
-  'space',
-  'height',
-  'justifyContent',
-  'maxWidth',
-  'maxHeight',
-  'width',
-  'minHeight',
-  'gridTemplateColumns',
-  'gridTemplateRows',
-  'gridColumnGap',
-  'gridRowGap',
-  'display',
-  'zIndex'
-]
+import { Flex } from 'reflexbox/styled-components'
 
-const FlexRow = styled(Row)``
+export const SectionWrapper = React.forwardRef(({ ...props }, ref) => (
+  <Flex
+    {...props}
+    ref={ref}
+    sx={{
+      pl: [3, 4, 5, 6],
+      pr: [3, 4, 5, 6],
+      pt: [5, 6],
+      pb: [5, 6],
+      height: 0,
+      zIndex: '5',
+      flexDirection: 'row'
+    }}
+  />
+))
 
-export const FourCol = 'repeat(4, 1fr)'
-export const TwelveCol = 'repeat(12, 1fr)'
-
-export const GridParent = system(
-  {
-    display: 'grid',
-    gridTemplateColumns: [FourCol, TwelveCol],
-    // gridAutoColumns: 'minmax(min-content, max-content)',
-    // gridTemplateRows: 'repeat(8,1fr)',
-    gridAutoRows: 'minmax(min-content, max-content)',
-    gridColumnGap: '0px',
-    gridRowGap: '0px'
-  },
-  ...containerStyles
-)
-
-export const SectionWrapper = system(
-  {
-    extend: FlexRow,
-    pl: [3, 4, 5, 6],
-    pr: [3, 4, 5, 6],
-    pt: [5, 6],
-    pb: [5, 6],
-    height: 0,
-    zIndex: '5'
-  },
-  ...containerStyles
-)
-
-export const SectionMax = system(
-  {
-    extend: FlexRow,
-    maxWidth: 0,
-    mt: 5,
-    mb: 5
-  },
-  ...containerStyles,
-  {
-    width: '100%'
-  }
-)
-
-export const Overlay = system(
-  {
-    extend: FlexRow,
-    minHeight: 0,
-    width: '100%',
-    bg: 'black70'
-  },
-  ...containerStyles
+export const SectionMax = (props) => (
+  <Flex
+    {...props}
+    sx={{
+      maxWidth: 2,
+      flexWrap: 'wrap',
+      mt: 5,
+      mb: 5,
+      flexDirection: 'row'
+    }}
+  />
 )

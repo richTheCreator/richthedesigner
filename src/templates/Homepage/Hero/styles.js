@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 import {
   height,
@@ -11,6 +12,7 @@ import {
 import BackgroundImage from 'gatsby-background-image'
 import { Heading1 } from '../../../components/Typography'
 import { Col } from 'react-flexbox-grid'
+import { Flex } from 'reflexbox/styled-components'
 
 export const ProfileImg = styled(BackgroundImage)`
   ${height}
@@ -22,14 +24,37 @@ export const ProfileImg = styled(BackgroundImage)`
   background-size: cover;
   box-shadow: ${(props) => props.theme.shadows.md};
 `
-export const TextContainer = styled(Col)`
-  ${order}
-  ${space}
-  flex-direction: column;
-  justify-content: center;
-  display: flex;
-  z-index: 6;
-`
+
+export const ImgContainer = (props) => (
+  <Flex
+    {...props}
+    sx={{
+      position: 'relative',
+      flexDirection: 'column',
+      height: 0
+    }}
+  />
+)
+export const TextContainer = (props) => (
+  <Flex
+    {...props}
+    sx={{
+      flexDirection: 'column',
+      justifyContent: 'center',
+      display: 'flex',
+      zIndex: 6
+    }}
+  />
+)
+
+// export const TextContainer = styled(Col)`
+//   ${order}
+//   ${space}
+//   flex-direction: column;
+//   justify-content: center;
+//   display: flex;
+//   z-index: 6;
+// `
 export const InfoContainer = styled(Col)`
   ${order}
   ${space}
@@ -40,9 +65,4 @@ export const InfoContainer = styled(Col)`
   display: flex;
   bottom:24px;
   right:24px;
-`
-export const ImgContainer = styled(Col)`
-  ${order}
-  ${space}
-  position: relative
 `

@@ -16,6 +16,8 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.colors.black}
     color:#191c1f
     -webkit-font-smoothing: antialiased;
+    transition: color 1s cubic-bezier(0.72,0,0.28,1),background-color .65s cubic-bezier(0.72,0,0.28,1);
+    will-change: background-color,color;
   }
   blockquote {
     border-left: 5px solid ${theme.colors.lightGrey};

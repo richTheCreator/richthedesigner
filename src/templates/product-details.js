@@ -6,7 +6,6 @@ import {
 import { Description, Hero } from './ProductDetails/'
 import Footer from '../components/Footer'
 import SEO from '../components/SEO/SEO'
-import { Subscription, Shipping, Values } from '../components'
 export const ProductPageTemplate = ({
   title,
   metaDescription,
@@ -38,9 +37,6 @@ export const ProductPageTemplate = ({
         weights={weights}
       />
       <Description content={body} details={details} />
-      <Shipping />
-      <Subscription />
-      <Values />
     </>
   )
 }

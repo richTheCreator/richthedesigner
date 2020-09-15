@@ -4,9 +4,8 @@ import { useSpring, animated } from 'react-spring'
 import { SectionWrapper, SectionMax } from '../../../components/Containers'
 import { FeaturedWork } from '../../../components'
 import { Heading4 } from '../../../components/Typography'
-import { backgroundSize } from 'styled-system'
 
-const AnimWork = animated(FeaturedWork)
+// const AnimWork = animated(FeaturedWork)
 
 const Work = ({ companies }) => {
   const [state, setState] = useState({
@@ -16,6 +15,7 @@ const Work = ({ companies }) => {
   })
 
   const ref = useRef()
+
   const [animatedProps, setAnimatedProps] = useSpring(() => {
     return {
       // Array containing [rotateX, rotateY, and scale] values.
@@ -28,7 +28,6 @@ const Work = ({ companies }) => {
     }
   })
 
-  console.log('state---------', state)
   return (
     <SectionWrapper bg='transparent'>
       <SectionMax maxWidth='1800px' style={{ margin: 'auto', lang: 'en' }}>
@@ -72,8 +71,6 @@ const Work = ({ companies }) => {
             }
           }}
           onMouseLeave={() => {
-            console.log('leftHover------')
-
             setState({ ...state, isHovered: false })
             // Set xys back to original
             setAnimatedProps({ x: 0, y: 0 })
