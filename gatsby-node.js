@@ -54,7 +54,7 @@ exports.createPages = ({ actions, graphql }) => {
     // Iterate through each post, putting all found company into `company`
     posts.forEach((edge) => {
       if (_.get(edge, 'node.frontmatter.company_ref')) {
-        company = company.concat(edge.node.frontmatter.company_ref)
+        company = [...company, edge.node.frontmatter.company_ref]
         console.log('if-------company-', company)
       }
     })

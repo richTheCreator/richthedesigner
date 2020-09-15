@@ -22,10 +22,10 @@ const textStyles = [
 export const Heading1 = system(
   {
     is: 'h1',
-    fontSize: '96px',
+    fontSize: ['72px', '96px'],
     fontWeight: 700,
     color: 'black',
-    lineHeight: '110px',
+    lineHeight: ['84px', '110px'],
     letterSpacing: '-1.5px',
     fontFamily: 'heading'
   },
@@ -100,7 +100,7 @@ export const Heading6 = system(
 export const Body1 = system(
   {
     is: 'p',
-    fontSize: '21px',
+    fontSize: ['21px'],
     fontWeight: 400,
     color: 'darkGrey',
     lineHeight: '32px',
@@ -124,10 +124,10 @@ export const Body2 = system(
 export const Subtitle1 = system(
   {
     is: 'p',
-    fontSize: '32px',
-    fontWeight: 400,
+    fontSize: ['22px', '32px'],
+    fontWeight: 500,
     color: 'black',
-    lineHeight: '38px',
+    lineHeight: ['30px', '38px'],
     letterSpacing: '0.15px'
   },
   ...textStyles

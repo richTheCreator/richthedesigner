@@ -1,17 +1,15 @@
-
 import React from 'react'
-import { ThemeProvider } from 'styled-components'
 import { HelmetProvider } from 'react-helmet-async'
-import theme from './static/styles/theme'
 import Layout from './src/components/Layout'
 import { GlobalStyle } from './src/components/GlobalStyles'
+import { ThemeProvider } from './static/styles/theme-context'
 
 export const wrapRootElement = ({ element }) => {
   const helmetContext = {}
 
   return (
     <HelmetProvider context={helmetContext}>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider>
         <GlobalStyle />
         {element}
       </ThemeProvider>

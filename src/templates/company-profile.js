@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import { useTheme } from '../../static/styles/theme-context'
 
 const CompanyProfile = ({ data, pageContext }) => {
+  const { theme, toggleTheme } = useTheme()
   const { edges: posts, totalCount } = data.posts
   const { frontmatter } = data.page
 
-  console.log('data', data)
+  console.log('pageContext', frontmatter.theme)
+
+  useEffect(() => {
+    toggleTheme(frontmatter.theme)
+  }, [])
+
   const postLinks = posts.map((post) => (
     <li key={post.node.fields.slug}>
       <Link to={post.node.fields.slug}>
@@ -18,7 +25,7 @@ const CompanyProfile = ({ data, pageContext }) => {
 
   const companyHeader = `${totalCount} post${
     totalCount === 1 ? '' : 's'
-  } tagged with “${pageContext.company}”`
+  } tagged with “${pageContext.name}”`
 
   return (
     <Layout>
@@ -27,7 +34,9 @@ const CompanyProfile = ({ data, pageContext }) => {
           <div className='columns'>
             <div
               className='column is-10 is-offset-1'
-              style={{ marginBottom: '6rem' }}
+              style={{
+                marginBottom: '6rem'
+              }}
             >
               <h3 className='title is-size-4 is-bold-light'>{companyHeader}</h3>
               <h4>for the company {frontmatter.company}</h4>
@@ -50,6 +59,7 @@ export const tagPageQuery = graphql`
     page: mdx(frontmatter: { company: { eq: $company } }) {
       frontmatter {
         company
+        theme
       }
     }
     posts: allMdx(

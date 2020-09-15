@@ -44,4 +44,5 @@ export const InfoContainer = styled(Col)`
 export const ImgContainer = styled(Col)`
   ${order}
   ${space}
+  position: relative
 `

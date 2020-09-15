@@ -12,6 +12,7 @@ const IndexPage = ({ data }) => {
       <SEO />
       <Hero hero={frontmatter.hero} />
       <Work companies={companies} />
+      <div style={{ height: '100vh' }}> placeholder </div>
     </>
   )
 }
@@ -45,28 +46,10 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             company
-            cover_img {
-              childImageSharp {
-                fluid(
-                  duotone: {
-                    highlight: "#2a74d4"
-                    shadow: "#111111"
-                    opacity: 75
-                  }
-                  traceSVG: {
-                    color: "#2a74d4"
-                    turnPolicy: TURNPOLICY_MINORITY
-                    blackOnWhite: false
-                  }
-                  toFormat: PNG
-                ) {
-                  ...GatsbyImageSharpFluid_tracedSVG
-                }
-              }
-            }
           }
         }
       }
     }
   }
 `
+// 3147b4

@@ -31,9 +31,11 @@ const Work = ({ companies }) => {
   console.log('state---------', state)
   return (
     <SectionWrapper bg='transparent'>
-      <SectionMax maxWidth='1800px' style={{ margin: 'auto' }}>
-        <Row style={{ width: '100%' }} center='xs'>
-          <Heading4 color='white'>Case studies</Heading4>
+      <SectionMax maxWidth='1800px' style={{ margin: 'auto', lang: 'en' }}>
+        <Row style={{ width: '100%' }}>
+          <Heading4 fontFamily={'HorizonOL'} color='white'>
+            Case studies
+          </Heading4>
         </Row>
         <animated.div
           ref={ref}

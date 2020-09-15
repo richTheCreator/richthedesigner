@@ -82,7 +82,8 @@ const maxWidths = ['1200px', '1800px']
 const colors = {
   sage: '#727A68',
   beige: '#DCDFC5',
-  tan: '#bb8d6a',
+  // tan: '#bb8d6a',
+  tan: '#ffcfa2',
   slateGray: '#DCDFC5',
   burntSienna: '#E76F51',
   ivory: '#F0E9E2',
@@ -97,8 +98,12 @@ const colors = {
   greyBlue: '#F5F7F9',
   red: '#F05D5E',
   teal: '#629E9D',
-  white: '#FFF',
-  disabled: '#DADEDF' // or opacity .3 of greyBlue
+  white: '#cdf0f9',
+  modes: {
+    dark: {
+      black: '#FF5353'
+    }
+  }
 }
 
 const minHeights = ['100%', '100vh', '85vh']

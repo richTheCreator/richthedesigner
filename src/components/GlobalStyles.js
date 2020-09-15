@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 import theme from '../../static/styles/theme'
+// import { useTheme } from '../../static/styles/theme-context'
+// const { theme, toggleTheme } = useTheme()
 
 export const GlobalStyle = createGlobalStyle`
   #___gatsby {
@@ -11,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
     margin: auto;
-    background-color: ${theme.colors.black}
+    background-color: ${({ theme }) => theme.colors.black}
     color:#191c1f
     -webkit-font-smoothing: antialiased;
   }
