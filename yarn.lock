@@ -14666,6 +14666,11 @@ react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-marquee-slider@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/react-marquee-slider/-/react-marquee-slider-1.1.2.tgz#a3df0201d17ee7b20627944c7efd8af78522bc6d"
+  integrity sha512-Fjkwphr+vYqR4yJ9adv0rJgFsKeb5/kx35lA5gVdPFiBDno6r/nHVRg/gdGVLp/SF4dHwoJwZBwa4mKTOpHnqQ==
+
 react-masonry-css@^1.0.14:
   version "1.0.14"
   resolved "https://registry.yarnpkg.com/react-masonry-css/-/react-masonry-css-1.0.14.tgz#2ac1ca7bb2c7e96826f7da3accc9e95ae12b2f65"
@@ -14854,6 +14859,14 @@ react-side-effect@^1.1.0:
   dependencies:
     shallowequal "^1.0.1"
 
+react-simple-marquee@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/react-simple-marquee/-/react-simple-marquee-1.2.1.tgz#27967df20fd0da4d16dffa20b015edbe23281c28"
+  integrity sha512-+wa4bM+mRJJCVU9c1W/YMcazg04OSuDIjlip+Se5Jvfizfdh984czzTj9cc+Lsn4+tUMx4EInFuitAcIyqnplw==
+  dependencies:
+    prop-types "^15.7.2"
+    react "^16.13.1"
+
 react-sortable-hoc@^1.0.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/react-sortable-hoc/-/react-sortable-hoc-1.11.0.tgz#fe4022362bbafc4b836f5104b9676608a40a278f"
@@ -14969,7 +14982,7 @@ react-window@^1.8.5:
     "@babel/runtime" "^7.0.0"
     memoize-one ">=3.1.1 <6"
 
-react@^16.8.0, react@^16.8.4:
+react@^16.13.1, react@^16.8.0, react@^16.8.4:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
   integrity sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==

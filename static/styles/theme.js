@@ -79,7 +79,27 @@ const sizes = ['100%', '100vh', '1400px']
 const maxWidths = ['1200px', '1800px']
 
 // Colors
+const black = '#252422'
+const maroon = '#630f0f'
+const homeBlue = '#2b3495'
+const offWhite = '#f4f4f4'
+const lightBlue = '#cdf0f9'
+
 const colors = {
+  background: offWhite,
+  text: black,
+  modes: {
+    dark: {
+      text: offWhite,
+      background: black
+    },
+    homeBlue: {
+      text: offWhite,
+      background: homeBlue
+    }
+  },
+
+  // ------ old style ------- ///
   sage: '#727A68',
   beige: '#DCDFC5',
   // tan: '#bb8d6a',
@@ -98,12 +118,7 @@ const colors = {
   greyBlue: '#F5F7F9',
   red: '#F05D5E',
   teal: '#629E9D',
-  white: '#cdf0f9',
-  modes: {
-    dark: {
-      black: '#f4f4f4'
-    }
-  }
+  white: '#cdf0f9'
 }
 
 const minHeights = ['100%', '100vh', '85vh']

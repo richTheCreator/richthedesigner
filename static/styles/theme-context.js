@@ -23,8 +23,6 @@ const ThemeProvider = ({ children }) => {
   //   const themeObject = themeString === 'dark' ? darkTheme : lightTheme
   const theme = getTheme(mode)
 
-  console.log('appliedTheme---------', theme)
-
   return (
     <ThemeContext.Provider value={{ mode, setMode }}>
       <BaseThemeProvider theme={theme}>{children}</BaseThemeProvider>

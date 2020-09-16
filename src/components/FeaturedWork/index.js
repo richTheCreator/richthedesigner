@@ -14,7 +14,6 @@ const FeaturedWork = ({
       <Heading2
         mb={4}
         mt={4}
-        color='white'
         fontFamily='sans'
         fontSize={['46px', '66px', '96px']}
         fontWeight={500}

@@ -35,7 +35,7 @@ const Hero = ({
     {
       threshold: 0.5, // Default is 0
       onChange: ({ inView, scrollDirection, entry, observe, unobserve }) => {
-        inView ? toggleTheme('light') : toggleTheme('dark')
+        inView ? toggleTheme('homeBlue') : toggleTheme('light')
 
         // Triggered whenever the target meets a threshold, e.g. [0.25, 0.5, ...]
       },
@@ -53,11 +53,30 @@ const Hero = ({
     <SectionWrapper bg='transparent' ref={ref}>
       <SectionMax
         height={['100%', '100%', '800px', '800px']}
-        style={{ position: 'relative', borderBottom: '1px solid white' }}
         m='auto!important'
         justifyContent='space-between'
+        style={{
+          borderBottom: '1px solid white',
+          position: 'relative'
+        }}
       >
-        <TextContainer mt={5} width={[1, 1, 1 / 2]}>
+        <ImgContainer
+          px={1}
+          mb={4}
+          width={[1, 1, 2 / 4, 1 / 2]}
+          maxWidth={'600px'}
+        >
+          <ProfileImg
+            fluid={image.childImageSharp.fluid}
+            height={['600px', '500px', '95%', '95%']}
+            width={'100%'}
+          />
+        </ImgContainer>
+        <TextContainer
+          px={2}
+          mt={['-200px', '-200px', 0, 0]}
+          width={[1, 1, 2 / 4, 2 / 4]}
+        >
           <Heading1
             fontFamily='sans'
             fontWeight={'500'}
@@ -71,7 +90,6 @@ const Hero = ({
             Richard Morales
           </Heading1>
           <Subtitle1
-            color='white'
             mb={4}
             // fontSize={['32px', '46px']}
             // lineHeight={'100%'}
@@ -81,29 +99,6 @@ const Hero = ({
             opportunities and collaborations.
           </Subtitle1>
         </TextContainer>
-        <ImgContainer mb={4} order={[1, 2, 2]} width={[1, 1, 1 / 3]}>
-          <ProfileImg
-            fluid={image.childImageSharp.fluid}
-            height={['600px', '500px', '100%', '100%']}
-            width={'100%'}
-          />
-          <div style={{ position: 'absolute', bottom: '0px', left: '16px' }}>
-            {/* {isLoaded && (
-              <Trail
-                items={items}
-                keys={(item) => item.key}
-                from={{ opacity: 0, transform: 'translate3d(0,-50px,0)' }}
-                to={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
-              >
-                {(item, k) => (props) => {
-                  const Page = items[k]
-                  // console.log('page', Page)
-                  return <Page style={props} />
-                }}
-              </Trail>
-            )} */}
-          </div>
-        </ImgContainer>
 
         {/* <InfoContainer
           display={['none']}

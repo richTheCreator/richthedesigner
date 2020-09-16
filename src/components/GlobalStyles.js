@@ -13,8 +13,8 @@ export const GlobalStyle = createGlobalStyle`
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
     margin: auto;
-    background-color: ${({ theme }) => theme.colors.black}
-    color:#191c1f
+    background-color: ${({ theme }) => theme.colors.background}
+    color: ${({ theme }) => theme.colors.text}
     -webkit-font-smoothing: antialiased;
     transition: color 1s cubic-bezier(0.72,0,0.28,1),background-color .65s cubic-bezier(0.72,0,0.28,1);
     will-change: background-color,color;
@@ -34,7 +34,6 @@ export const GlobalStyle = createGlobalStyle`
   h1 {
     font-size: ${theme.fontSizes[11]};
     font-weight: ${theme.fontWeights[2]};
-    color: ${theme.colors.black};
     line-height: ${theme.lineHeights[9]};
     letter-spacing: ${theme.letterSpacings[0]};
     font-family: ${theme.fonts.sans}
@@ -42,7 +41,6 @@ export const GlobalStyle = createGlobalStyle`
   h2 {
     font-size: ${theme.fontSizes[10]};
     font-weight: ${theme.fontWeights[2]};
-    color: ${theme.colors.black};
     line-height: ${theme.lineHeights[8]};
     letter-spacing: ${theme.letterSpacings[1]};
     font-family: ${theme.fonts.sans}
@@ -50,7 +48,6 @@ export const GlobalStyle = createGlobalStyle`
   h3 {
     font-size: ${theme.fontSizes[9]};
     font-weight: ${theme.fontWeights[2]};
-    color: ${theme.colors.black};
     line-height: ${theme.lineHeights[7]};
     letter-spacing: ${theme.letterSpacings[0]};
     font-family: ${theme.fonts.sans};
@@ -60,7 +57,6 @@ export const GlobalStyle = createGlobalStyle`
   h4 {
     font-size: ${theme.fontSizes[8]};
     font-weight: ${theme.fontWeights[2]};
-    color: ${theme.colors.black};
     line-height: ${theme.lineHeights[6]};
     letter-spacing: ${theme.letterSpacings[5]};
     font-family: ${theme.fonts.sans};
@@ -69,7 +65,6 @@ export const GlobalStyle = createGlobalStyle`
   h5 {
     font-size: ${theme.fontSizes[8]};
     font-weight: ${theme.fontWeights[2]};
-    color: ${theme.colors.black};
     line-height: ${theme.lineHeights[5]};
     letter-spacing: ${theme.letterSpacings[5]};
     margin: 16px 0px;
@@ -77,7 +72,6 @@ export const GlobalStyle = createGlobalStyle`
   h6 {
     font-size: ${theme.fontSizes[7]};
     font-weight: ${theme.fontWeights[2]};
-    color: ${theme.colors.black};
     line-height: ${theme.lineHeights[3]};
     letter-spacing: ${theme.letterSpacings[5]};
     margin: 8px 0px;
@@ -85,7 +79,6 @@ export const GlobalStyle = createGlobalStyle`
   p {
     font-size: ${theme.fontSizes[6]};
     font-weight: 300;
-    color: ${theme.colors.darkGrey};
     line-height: ${theme.lineHeights[4]};
     letter-spacing: ${theme.letterSpacings[7]};
     margin: 8px 0px;
@@ -94,7 +87,6 @@ export const GlobalStyle = createGlobalStyle`
     padding: 8px 0px;
     font-size: ${theme.fontSizes[6]};
     font-weight: 300;
-    color: ${theme.colors.darkGrey};
     line-height: ${theme.lineHeights[4]};
     letter-spacing: ${theme.letterSpacings[7]};
   }
@@ -250,5 +242,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 }
 
+.hkoyos {
+  overflow: visible!important;
+}
   
 `

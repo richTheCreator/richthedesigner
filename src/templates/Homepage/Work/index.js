@@ -1,9 +1,13 @@
 import React, { useState, useRef } from 'react'
-import { Row, Col } from 'react-flexbox-grid'
+import { Flex } from 'reflexbox/styled-components'
 import { useSpring, animated } from 'react-spring'
 import { SectionWrapper, SectionMax } from '../../../components/Containers'
 import { FeaturedWork } from '../../../components'
-import { Heading4 } from '../../../components/Typography'
+// import Marquee from 'react-simple-marquee'
+import Marquee from 'react-marquee-slider'
+import times from 'lodash/times'
+
+import { MarqueeText, Subtitle1 } from '../../../components/Typography'
 
 // const AnimWork = animated(FeaturedWork)
 
@@ -29,13 +33,32 @@ const Work = ({ companies }) => {
   })
 
   return (
-    <SectionWrapper bg='transparent'>
-      <SectionMax maxWidth='1800px' style={{ margin: 'auto', lang: 'en' }}>
-        <Row style={{ width: '100%' }}>
-          <Heading4 fontFamily={'HorizonOL'} color='white'>
-            Case studies
-          </Heading4>
-        </Row>
+    <SectionWrapper bg='transparent' pt={0}>
+      <SectionMax style={{ margin: 'auto' }}>
+        <Flex width='100%' height='100%' flexDirection='row'>
+          <Marquee
+            className='testingMarq'
+            velocity={5} // Speed of the marquee (Optional)
+            style={{
+              height: '100%', // Your own styling (Optional)
+              overflow: 'visible',
+              pointerEvents: 'none'
+            }}
+          >
+            {times(3, Number).map((id) => (
+              <MarqueeText fontSize={['72px', '140px']}>
+                {' '}
+                WORK WORK WORK WORK WORK WORK WORK WORK WORK WORK{' '}
+              </MarqueeText>
+            ))}
+          </Marquee>
+        </Flex>
+        <Flex width={1 / 2} my={5} flexDirection='row'>
+          <Subtitle1>
+            I’ve had the pleasure of working with some really talented folks
+            over the years. Here’s a few things we made together.
+          </Subtitle1>
+        </Flex>
         <animated.div
           ref={ref}
           onMouseEnter={(e) => {
@@ -59,7 +82,7 @@ const Work = ({ companies }) => {
                   (window.scrollY ||
                     window.pageYOffset ||
                     document.body.scrollTop)) -
-                700
+                800
 
               // Set animated values based on mouse position and card dimensions
               const xy = [
@@ -101,7 +124,8 @@ const Work = ({ companies }) => {
                 (x, y) => `matrix(1, 0, 0, 1, ${y}, ${x})`
               ),
               visibility: state.isHovered ? 'visible' : 'hidden',
-              width: '30vw',
+              minWidth: '320px',
+              width: '40vw',
               height: '40vh',
               position: 'absolute',
               pointerEvents: 'none',
@@ -115,6 +139,7 @@ const Work = ({ companies }) => {
                   : 'wm'
               }_cover.jpg)`,
               backgroundSize: 'cover',
+              backgroundPosition: 'center',
               zIndex: 5
             }}
           />
