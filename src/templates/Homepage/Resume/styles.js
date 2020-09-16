@@ -33,18 +33,19 @@ export const ResumeItem = ({ res: { company, title, year, description } }) => {
       </Subtitle2>
       <Flex
         width='100%'
+        flexWrap='wrap'
         flexDirection='row'
         justifyContent={'space-between'}
         py={4}
         css={`
-          border-top: 2px solid ${({ theme }) => theme.colors.text};
+          border-top: 3px solid ${({ theme }) => theme.colors.text};
         `}
       >
-        <Flex width={[1 / 2, 1 / 3]} flexDirection='column'>
+        <Flex width={[1, 1 / 2, 1 / 4]} mb={4} flexDirection='column' px={2}>
           <Heading4
             style={{
-              textTransform: 'uppercase',
-              hyphens: 'auto'
+              hyphens: 'auto',
+              textTransform: 'uppercase'
             }}
           >
             {title}
@@ -54,7 +55,7 @@ export const ResumeItem = ({ res: { company, title, year, description } }) => {
             {company}{' '}
           </Subtitle2>
         </Flex>
-        <Flex width={[1 / 2, 1 / 3]} flexDirection='column'>
+        <Flex width={[1, 1 / 2, 1 / 3]} flexDirection='column' px={2}>
           <Body1>{description}</Body1>
         </Flex>
       </Flex>

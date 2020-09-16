@@ -36,7 +36,8 @@ const Work = ({ companies }) => {
     <SectionWrapper bg='transparent' pt={0}>
       <SectionMax
         style={{ margin: 'auto' }}
-        py={['50px', '100px']}
+        pt={['25px', '50px']}
+        pb={['50px', '100px']}
         css={`
           border-bottom: 1px solid ${({ theme }) => theme.colors.text};
         `}

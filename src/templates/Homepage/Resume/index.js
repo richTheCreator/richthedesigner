@@ -4,7 +4,7 @@ import { Flex } from 'reflexbox/styled-components'
 
 import { SectionWrapper, SectionMax } from '../../../components/Containers'
 import { ProfileImg, ResumeItem } from './styles'
-import { Heading1 } from '../../../components/Typography'
+import { Heading2 } from '../../../components/Typography'
 
 import { theme, useTheme } from '../../../../static/styles/theme-context'
 
@@ -39,23 +39,23 @@ const Resume = ({ resume }) => {
       <SectionMax
         height={'100%'}
         m='auto!important'
-        py={['50px', '100px']}
         css={`
           border-bottom: 1px solid ${({ theme }) => theme.colors.text};
         `}
       >
-        <Heading1
+        <Heading2
           mb={5}
           fontWeight={700}
           color='transparent'
           css={`
             -webkit-text-stroke-color: ${({ theme }) => theme.colors.text};
             -webkit-text-stroke-width: 1px;
+            hyphens: auto;
           `}
         >
           {' '}
           EXPERIENCE{' '}
-        </Heading1>
+        </Heading2>
         {resume.map((res) => {
           return <ResumeItem res={res} />
         })}
