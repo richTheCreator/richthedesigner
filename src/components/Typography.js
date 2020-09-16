@@ -44,7 +44,7 @@ export const Heading3 = (props) => (
     sx={{
       fontSize: ['40px', '48px'],
       fontWeight: 500,
-      lineHeight: '55px',
+      lineHeight: ['46px', '52px'],
       letterSpacing: '4px',
       fontFamily: 'sans'
     }}
@@ -136,10 +136,10 @@ export const Subtitle2 = (props) => (
     {...props}
     as='p'
     sx={{
-      fontSize: 3,
-      fontWeight: 1,
-      lineHeight: 2,
-      letterSpacing: 2,
+      fontSize: ['14px', '18px'],
+      fontWeight: 400,
+      lineHeight: ['21px', '32px'],
+      letterSpacing: '0.15px',
       fontFamily: 'sans'
     }}
   />

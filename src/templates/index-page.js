@@ -1,18 +1,18 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Hero, Work } from './Homepage'
+import { Hero, Work, Resume } from './Homepage'
 import SEO from '../components/SEO/SEO'
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.page
   const { edges: companies } = data.companies
 
-  console.log('companies', companies)
+  console.log('resume', frontmatter.resume)
   return (
     <>
       <SEO />
       <Hero hero={frontmatter.hero} />
       <Work companies={companies} />
-      <div style={{ height: '100vh' }}> placeholder </div>
+      <Resume resume={frontmatter.resume} />
     </>
   )
 }
@@ -35,6 +35,12 @@ export const pageQuery = graphql`
               }
             }
           }
+        }
+        resume {
+          company
+          year
+          title
+          description
         }
       }
     }

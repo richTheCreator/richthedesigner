@@ -34,7 +34,13 @@ const Work = ({ companies }) => {
 
   return (
     <SectionWrapper bg='transparent' pt={0}>
-      <SectionMax style={{ margin: 'auto' }}>
+      <SectionMax
+        style={{ margin: 'auto' }}
+        py={['50px', '100px']}
+        css={`
+          border-bottom: 1px solid ${({ theme }) => theme.colors.text};
+        `}
+      >
         <Flex width='100%' height='100%' flexDirection='row'>
           <Marquee
             velocity={5} // Speed of the marquee (Optional)
@@ -54,6 +60,9 @@ const Work = ({ companies }) => {
           </Subtitle1>
         </Flex>
         <animated.div
+          css={`
+            margin-bottom: ${({ theme }) => theme.space[5]};
+          `}
           ref={ref}
           onMouseEnter={(e) => {
             e.stopPropagation()
