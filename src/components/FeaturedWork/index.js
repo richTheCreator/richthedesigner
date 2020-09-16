@@ -16,14 +16,15 @@ const FeaturedWork = ({
         mt={4}
         fontFamily='sans'
         fontSize={['46px', '66px', '96px']}
-        fontWeight={500}
+        letterSpacing={'0px'}
+        fontWeight={700}
         lineHeight='100%'
         style={{
           textTransform: 'uppercase',
           hyphens: 'auto'
         }}
       >
-        {company}
+        {company} {'→'}
       </Heading2>
     </div>
   )

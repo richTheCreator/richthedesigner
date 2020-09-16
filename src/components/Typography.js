@@ -9,7 +9,7 @@ export const Heading1 = (props) => (
     sx={{
       fontSize: ['72px', '96px'],
       fontWeight: 500,
-      lineHeight: ['84px', '110px'],
+      lineHeight: ['84px', '96px'],
       letterSpacing: '-1.5px',
       fontFamily: 'sans'
     }}
@@ -18,7 +18,7 @@ export const Heading1 = (props) => (
 
 export const MarqueeText = styled(Heading1)`
   color: transparent;
-  font-weight: 500;
+  font-weight: 700;
   -webkit-text-stroke-color: ${({ theme }) => theme.colors.text};
   -webkit-text-stroke-width: 1px;
 `

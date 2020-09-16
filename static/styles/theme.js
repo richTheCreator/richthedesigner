@@ -118,7 +118,7 @@ const colors = {
   greyBlue: '#F5F7F9',
   red: '#F05D5E',
   teal: '#629E9D',
-  white: '#cdf0f9'
+  white: '#fff'
 }
 
 const minHeights = ['100%', '100vh', '85vh']

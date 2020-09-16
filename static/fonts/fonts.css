@@ -14,6 +14,14 @@
 
 @font-face {
   font-family: 'NeueMontreal';
+  src: url('NeueMontreal-Bold.woff2') format('woff2'),
+    url('NeueMontreal-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueMontreal';
   src: url('NeueMontreal-Medium.woff2') format('woff2'),
     url('NeueMontreal-Medium.woff') format('woff');
   font-weight: 500;

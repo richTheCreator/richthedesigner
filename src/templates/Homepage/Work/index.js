@@ -37,13 +37,7 @@ const Work = ({ companies }) => {
       <SectionMax style={{ margin: 'auto' }}>
         <Flex width='100%' height='100%' flexDirection='row'>
           <Marquee
-            className='testingMarq'
             velocity={5} // Speed of the marquee (Optional)
-            style={{
-              height: '100%', // Your own styling (Optional)
-              overflow: 'visible',
-              pointerEvents: 'none'
-            }}
           >
             {times(3, Number).map((id) => (
               <MarqueeText fontSize={['72px', '140px']}>
@@ -126,7 +120,7 @@ const Work = ({ companies }) => {
               visibility: state.isHovered ? 'visible' : 'hidden',
               minWidth: '320px',
               width: '40vw',
-              height: '40vh',
+              height: '50vh',
               position: 'absolute',
               pointerEvents: 'none',
               backgroundImage: `url(/media/${

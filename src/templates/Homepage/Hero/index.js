@@ -33,9 +33,9 @@ const Hero = ({
 
   const { ref, inView, scrollDirection, entry, observe, unobserve } = useInView(
     {
-      threshold: 0.5, // Default is 0
+      threshold: 0.3, // Default is 0
       onChange: ({ inView, scrollDirection, entry, observe, unobserve }) => {
-        inView ? toggleTheme('homeBlue') : toggleTheme('light')
+        inView ? toggleTheme('light') : toggleTheme('dark')
 
         // Triggered whenever the target meets a threshold, e.g. [0.25, 0.5, ...]
       },
@@ -55,10 +55,9 @@ const Hero = ({
         height={['100%', '100%', '800px', '800px']}
         m='auto!important'
         justifyContent='space-between'
-        style={{
-          borderBottom: '1px solid white',
-          position: 'relative'
-        }}
+        css={`
+          border-bottom: 1px solid ${({ theme }) => theme.colors.text};
+        `}
       >
         <ImgContainer
           px={1}
@@ -78,14 +77,13 @@ const Hero = ({
           width={[1, 1, 2 / 4, 2 / 4]}
         >
           <Heading1
-            fontFamily='sans'
-            fontWeight={'500'}
+            fontWeight='500'
+            color={['white', 'text', 'text', 'text']}
             mb={4}
             mt={2}
-            color='#FFF'
-            style={{
-              borderBottom: '5px solid white'
-            }}
+            css={`
+              border-bottom: 5px solid ${({ theme }) => theme.colors.text};
+            `}
           >
             Richard Morales
           </Heading1>
