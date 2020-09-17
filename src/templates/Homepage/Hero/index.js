@@ -77,7 +77,7 @@ const Hero = ({
           width={[1, 1, 2 / 4, 2 / 4]}
         >
           <Heading1
-            fontWeight='500'
+            fontWeight='700'
             color={['white', 'text', 'text', 'text']}
             mb={4}
             mt={2}
@@ -85,7 +85,7 @@ const Hero = ({
               border-bottom: 5px solid ${({ theme }) => theme.colors.text};
             `}
           >
-            Richard Morales
+            RICHARD MORALES
           </Heading1>
           <Subtitle1
             mb={4}

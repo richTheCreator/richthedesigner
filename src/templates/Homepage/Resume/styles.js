@@ -26,7 +26,7 @@ export const TextContainer = (props) => (
 
 export const ResumeItem = ({ res: { company, title, year, description } }) => {
   return (
-    <Flex width='100%' height='100%' flexDirection='column'>
+    <Flex width='100%' height='100%' flexDirection='column' mb={4}>
       <Subtitle2 style={{ textTransform: 'uppercase' }} pb={2}>
         {' '}
         {year}{' '}

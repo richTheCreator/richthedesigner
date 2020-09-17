@@ -54,7 +54,7 @@ const Work = ({ companies }) => {
             ))}
           </Marquee>
         </Flex>
-        <Flex width={1 / 2} my={5} flexDirection='row'>
+        <Flex width={[1, 1 / 2]} my={5} flexDirection='row'>
           <Subtitle1>
             I’ve had the pleasure of working with some really talented folks
             over the years. Here’s a few things we made together.

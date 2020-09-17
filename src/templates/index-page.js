@@ -13,6 +13,7 @@ const IndexPage = ({ data }) => {
       <Hero hero={frontmatter.hero} />
       <Work companies={companies} />
       <Resume resume={frontmatter.resume} />
+      <div className='noise'></div>
     </>
   )
 }
@@ -45,7 +46,6 @@ export const pageQuery = graphql`
       }
     }
     companies: allMdx(
-      sort: { order: DESC, fields: [frontmatter___category] }
       filter: { frontmatter: { templateKey: { eq: "company-profile" } } }
     ) {
       edges {

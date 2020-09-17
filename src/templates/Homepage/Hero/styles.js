@@ -31,7 +31,8 @@ export const ImgContainer = (props) => (
     sx={{
       position: 'relative',
       flexDirection: 'column',
-      height: 0
+      height: 0,
+      zIndex: 6
     }}
   />
 )

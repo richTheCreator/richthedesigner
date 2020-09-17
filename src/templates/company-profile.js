@@ -63,8 +63,7 @@ export const tagPageQuery = graphql`
       }
     }
     posts: allMdx(
-      limit: 1000
-      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 10
       filter: { frontmatter: { company_ref: { in: [$company] } } }
     ) {
       totalCount
