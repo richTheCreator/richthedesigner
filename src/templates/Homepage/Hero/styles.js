@@ -13,15 +13,14 @@ import BackgroundImage from 'gatsby-background-image'
 import { Heading1 } from '../../../components/Typography'
 import { Col } from 'react-flexbox-grid'
 import { Flex } from 'reflexbox/styled-components'
+import PreviewCompatibleImage from '../../../components/PreviewCompatibleImage'
 
-export const ProfileImg = styled(BackgroundImage)`
+export const ProfileImg = styled(PreviewCompatibleImage)`
   ${height}
   ${position}
   ${width}
   ${order}
-  top: 0;
-  right: 0;
-  background-size: cover;
+  ${space}
   box-shadow: ${(props) => props.theme.shadows.md};
 `
 
@@ -47,23 +46,3 @@ export const TextContainer = (props) => (
     }}
   />
 )
-
-// export const TextContainer = styled(Col)`
-//   ${order}
-//   ${space}
-//   flex-direction: column;
-//   justify-content: center;
-//   display: flex;
-//   z-index: 6;
-// `
-export const InfoContainer = styled(Col)`
-  ${order}
-  ${space}
-  ${position}
-  ${display}
-  flex-direction: column;
-  justify-content: flex-end;
-  display: flex;
-  bottom:24px;
-  right:24px;
-`

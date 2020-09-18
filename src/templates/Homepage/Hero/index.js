@@ -1,22 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import useInView from 'react-cool-inview'
 import { SectionWrapper, SectionMax } from '../../../components/Containers'
-import { Button } from '../../../components'
+import { ProfileImg, TextContainer, imageStyle } from './styles'
 import {
-  ProfileImg,
-  TextContainer,
-  InfoContainer,
-  ImgContainer
-} from './styles'
-import {
-  Heading1,
-  Heading3,
+  Heading2,
+  Heading4,
   Body1,
   Body2,
   Subtitle1
 } from '../../../components/Typography'
-import { Col } from 'react-flexbox-grid'
+
+import { Box, Flex } from 'reflexbox/styled-components'
 import { theme, useTheme } from '../../../../static/styles/theme-context'
+import PreviewCompatibleImage from '../../../components/PreviewCompatibleImage'
 
 // const Wrapper = React.forwardRef(({ style, ...props }, ref) => {
 //   return <SectionWrapper ref={ref} style={{ ...style }} {...props} />
@@ -52,33 +48,45 @@ const Hero = ({
   return (
     <SectionWrapper bg='transparent' ref={ref}>
       <SectionMax
-        height={['100%', '100%', '800px', '800px']}
         m='auto!important'
-        justifyContent='space-between'
+        pb={4}
         css={`
           border-bottom: 1px solid ${({ theme }) => theme.colors.text};
+          position: relative;
         `}
       >
-        <ImgContainer
-          px={1}
-          mb={4}
-          width={[1, 1, 2 / 4, 1 / 2]}
-          maxWidth={'600px'}
+        <Flex
+          width={['100%', '75%', '45%', '35%']}
+          sx={{
+            position: 'relative'
+          }}
         >
-          <ProfileImg
-            fluid={image.childImageSharp.fluid}
-            height={['600px', '500px', '95%', '95%']}
+          <PreviewCompatibleImage
+            imageInfo={image}
             width={'100%'}
-          />
-        </ImgContainer>
-        <TextContainer
-          px={2}
-          mt={['-200px', '-200px', 0, 0]}
-          width={[1, 1, 2 / 4, 2 / 4]}
-        >
-          <Heading1
+            ml={['-50px', 'auto', 'auto', 'auto']}
+            position='relative'
+          ></PreviewCompatibleImage>
+          <Heading4
             fontWeight='700'
-            color={['white', 'text', 'text', 'text']}
+            fontSize={'42px'}
+            display={['block', 'block', 'none', 'none']}
+            css={`
+              writing-mode: vertical-rl;
+              text-orientation: mixed;
+              position: absolute;
+              right: 0px;
+              top: 0px;
+              white-space: nowrap;
+            `}
+          >
+            RICHARD MORALES
+          </Heading4>
+        </Flex>
+        <TextContainer px={[0, 4, 4, 4]} mt={4} width={[0, 0, 2 / 4, 2 / 4]}>
+          <Heading2
+            fontWeight='700'
+            display={['none', 'none', 'block', 'block']}
             mb={4}
             mt={2}
             css={`
@@ -86,33 +94,13 @@ const Hero = ({
             `}
           >
             RICHARD MORALES
-          </Heading1>
-          <Subtitle1
-            mb={4}
-            // fontSize={['32px', '46px']}
-            // lineHeight={'100%'}
-          >
+          </Heading2>
+          <Subtitle1>
             A seasoned Designer located in Irvine, California. Creating
             meaningful moments with measurable outcomes. Open to new
             opportunities and collaborations.
           </Subtitle1>
         </TextContainer>
-
-        {/* <InfoContainer
-          display={['none']}
-          position={['initial', 'initial', 'absolute', 'relative']}
-          order={[3]}
-          xs={12}
-          md={12}
-          lg={3}
-          mt={[4, 4, 0, 0]}
-          mb={[4, 4, 0, 0]}
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center'
-          }}
-        ></InfoContainer> */}
       </SectionMax>
     </SectionWrapper>
   )

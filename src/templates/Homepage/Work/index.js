@@ -36,14 +36,23 @@ const Work = ({ companies }) => {
     <SectionWrapper bg='transparent' pt={0}>
       <SectionMax
         style={{ margin: 'auto' }}
-        pt={['25px', '50px']}
         pb={['50px', '100px']}
         css={`
           border-bottom: 1px solid ${({ theme }) => theme.colors.text};
         `}
       >
-        <Flex width='100%' height='100%' flexDirection='row'>
+        <Flex
+          width='100%'
+          height='100%'
+          flexDirection='row'
+          sx={{
+            div: {
+              overflow: 'visible'
+            }
+          }}
+        >
           <Marquee
+            className='testing-marq'
             velocity={5} // Speed of the marquee (Optional)
           >
             {times(3, Number).map((id) => (

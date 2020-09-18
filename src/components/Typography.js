@@ -31,7 +31,7 @@ export const Heading2 = (props) => (
       fontSize: '60px',
       fontWeight: 500,
       lineHeight: '69px',
-      letterSpacing: '5.5px',
+      letterSpacing: '1px',
       fontFamily: 'sans'
     }}
   />
@@ -123,9 +123,9 @@ export const Subtitle1 = (props) => (
     {...props}
     as='p'
     sx={{
-      fontSize: ['22px', '32px'],
+      fontSize: ['22px', '22px', '32px', '32px'],
       fontWeight: 500,
-      lineHeight: ['30px', '38px'],
+      lineHeight: ['30px', '30px', '38px', '38px'],
       letterSpacing: '0.15px',
       fontFamily: 'sans'
     }}
