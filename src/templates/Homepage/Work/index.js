@@ -3,19 +3,14 @@ import { Flex } from 'reflexbox/styled-components'
 import { useSpring, animated } from 'react-spring'
 import { SectionWrapper, SectionMax } from '../../../components/Containers'
 import { FeaturedWork } from '../../../components'
-// import Marquee from 'react-simple-marquee'
 import Marquee from 'react-marquee-slider'
 import times from 'lodash/times'
-
 import { MarqueeText, Subtitle1 } from '../../../components/Typography'
-
-// const AnimWork = animated(FeaturedWork)
 
 const Work = ({ companies }) => {
   const [state, setState] = useState({
     itemHovered: companies[0].node.frontmatter.company,
     isHovered: false
-    //  categories: uniqueCategories
   })
 
   const ref = useRef()

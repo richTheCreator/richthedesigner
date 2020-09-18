@@ -96,6 +96,10 @@ const colors = {
     homeBlue: {
       text: offWhite,
       background: homeBlue
+    },
+    weedmaps: {
+      background: '#00a8a3',
+      text: black
     }
   },
 

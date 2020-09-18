@@ -1,17 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {
-  height,
-  position,
-  width,
-  space,
-  color,
-  order,
-  display
-} from 'styled-system'
-import BackgroundImage from 'gatsby-background-image'
-import { Heading1 } from '../../../components/Typography'
-import { Col } from 'react-flexbox-grid'
+import { height, position, width, space, order } from 'styled-system'
 import { Flex } from 'reflexbox/styled-components'
 import PreviewCompatibleImage from '../../../components/PreviewCompatibleImage'
 

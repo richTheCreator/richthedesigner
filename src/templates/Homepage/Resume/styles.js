@@ -2,28 +2,6 @@ import React from 'react'
 import { Body1, Heading4, Subtitle2 } from '../../../components/Typography'
 import { Flex } from 'reflexbox/styled-components'
 
-export const ImgContainer = (props) => (
-  <Flex
-    {...props}
-    sx={{
-      position: 'relative',
-      flexDirection: 'column',
-      height: 0
-    }}
-  />
-)
-export const TextContainer = (props) => (
-  <Flex
-    {...props}
-    sx={{
-      flexDirection: 'column',
-      justifyContent: 'center',
-      display: 'flex',
-      zIndex: 6
-    }}
-  />
-)
-
 export const ResumeItem = ({ res: { company, title, year, description } }) => {
   return (
     <Flex width='100%' height='100%' flexDirection='column' mb={4}>
