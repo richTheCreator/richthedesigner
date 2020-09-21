@@ -86,7 +86,7 @@ export const GlobalStyle = createGlobalStyle`
   li {
     padding: 8px 0px;
     font-size: ${theme.fontSizes[6]};
-    font-weight: 300;
+    font-weight: 500;
     line-height: ${theme.lineHeights[4]};
     letter-spacing: ${theme.letterSpacings[7]};
   }
@@ -242,8 +242,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 }
 
-.hkoyos {
-  overflow: visible!important;
+code {
+  color: #2d31db
 }
   
 `

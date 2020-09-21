@@ -16,4 +16,426 @@ project:
     - skill: Multi Variate
     - skill: Multi Variate
     - skill: Multi Variate
+  blogImages:
+    - image: ./navigation_tree.jpg
+      alt: testing
+    - image: ./datachart.jpg
+      alt: testing
+    - image: ./sub_nav_mock.jpg
+      alt: testing
 ---
+
+import data from './pageData'
+
+<SectionWrapper pt={0}>
+  <SectionMax>
+    <Flex mt={0} mb={5} flexDirection='column' width={0} flexWrap='wrap'>
+      <Heading2
+        mb={4}
+        fontWeight={700}
+        css={`
+          hyphens: auto;
+          text-transform: uppercase;
+        `}
+      >
+        {data.results.label}
+      </Heading2>
+      <Body1>{data.results.description}</Body1>
+    </Flex>
+    <Flex flexDirection='row' width={0} flexWrap='wrap'>
+      {data.results.metrics.map(({ label, value }) => (
+        <Flex
+          flexDirection={['row', 'column']}
+          justifyContent='space-between'
+          alignItems={['center', 'flex-start']}
+          width={[0, 1 / 3]}
+          mb={7}
+        >
+          <Heading5 width={[2 / 4, 0]} order={[1, 0]} mb={[0, 2]} px={[3, 0]}>
+            {' '}
+            {label}{' '}
+          </Heading5>
+          <Heading1
+            width={[1 / 4, 0]}
+            order={[0, 1]}
+            lineHeight={'100%'}
+            fontSize={['42px', '96px']}
+          >
+            {' '}
+            {value}{' '}
+          </Heading1>
+        </Flex>
+      ))}
+    </Flex>
+  </SectionMax>
+</SectionWrapper>
+
+<SectionWrapper pt={0}>
+  <SectionMax>
+    <Flex
+      width={0}
+      flexDirection='row'
+      flexWrap='wrap'
+      justifyContent='space-between'
+      mb={6}
+    >
+      <Flex width={0} flexDirection='column' mb={4} width={[0, 1 / 2, 1 / 3]}>
+        <Heading2
+          fontWeight={700}
+          css={`
+            hyphens: auto;
+            text-transform: uppercase;
+          `}
+          mb={4}
+        >
+          {data.strategy.label}
+        </Heading2>
+        {data.strategy.skills.map((skill) => (
+          <Body2
+            css={`
+              text-transform: uppercase;
+            `}
+          >
+            {skill}
+          </Body2>
+        ))}
+      </Flex>
+      <Flex width={0} flexDirection='column' width={[0, 1 / 2, 2 / 3]}>
+        <Subtitle1 mt={2}> {data.strategy.goal.description}</Subtitle1>
+      </Flex>
+    </Flex>
+    <Flex width='100%' flexDirection='column'>
+      <BGImage
+        fluid={props.blogImages[0].image.childImageSharp.fluid}
+        height={['30vh', '40vh', '600px']}
+        width={'100%'}
+        my={4}
+      />
+      <Flex
+        width='100%'
+        flexWrap='wrap'
+        flexDirection='row'
+        pt={4}
+        sx={{
+          borderBottomWidth: '0px',
+          borderTopWidth: '3px',
+          borderLeftWidth: '0px',
+          borderRightWidth: '0px',
+          borderStyle: 'solid',
+          borderColor: 'text'
+        }}
+      >
+        <Flex width={[0, 1 / 2, 1 / 3]} mb={4} flexDirection='column'>
+          <Heading5 width={0} my={4}>
+            ● {data.strategy.methodOne.label}
+          </Heading5>
+          <Subtitle1>
+            Removing the interface to deeply understand how people make a
+            decision based on categorization of content.
+          </Subtitle1>
+        </Flex>
+        <Body2
+          width={0}
+          my={4}
+          sx={{
+            columnCount: [0, 3],
+            hr: {
+              borderColor: 'transparent'
+            }
+          }}
+        >
+          This was a first at Weedmaps. I've had experience conducting these
+          tests before so I was able to share some learnings with team and
+          eventually provide enough rationale to get stakeholder buy in. I
+          mention this because it required a bit of patience and advocacy to
+          adopt this tool, as with most things research. Once that hurdle had
+          been crossed we were up and running.
+          <hr />
+          <strong> A BRIEF HISTORY OF NAVIGATION AT WEEDMAPS </strong> <br />
+          <Box
+            my={3}
+            py={2}
+            sx={{
+              borderBottomWidth: '1px',
+              borderTopWidth: '1px',
+              borderLeftWidth: '0px',
+              borderRightWidth: '0px',
+              borderStyle: 'solid',
+              borderColor: 'text'
+            }}
+          >
+            <Body1 fontStyle={'italic'}>
+              10+ years of evolving the product and navigation to support user
+              needs.
+            </Body1>
+          </Box>
+          Weedmaps has been around for 10+ years and during that time it has
+          created new surfaces (pages) to satisfy user needs. This meant we had
+          very similar labels in our navigation that directed folks to the same
+          place, just filtered differently. I'm not going to say redundancy is
+          always a bad thing, a lot of navigations have success with
+          poly-parenting of items, but that's usually at the subcategory level
+          and not at the top of the heirarchy, so I had my concerns.
+          <hr />
+          <strong> COLLECTING A BASELINE </strong> <br />
+          In my experience, writing unbiased and non-leading tasks are both the hardest
+          part to this method and the easiest to get wrong. I leaned on SME's within
+          the org across different functions to help draft tasks for the test. Afterwards,
+          I paired down the list of tasks based on stakeholder feedback and would
+          be ready to launch the test.
+          <hr />
+          I would then release the first test to 50 participants. The sample size
+          was larger since this is a quantitative method. The larger sample size
+          also helped with the initial skepticism some folks had for this method.
+          <hr />
+          <Box
+            my={3}
+            py={2}
+            sx={{
+              borderBottomWidth: '1px',
+              borderTopWidth: '1px',
+              borderLeftWidth: '0px',
+              borderRightWidth: '0px',
+              borderStyle: 'solid',
+              borderColor: 'text'
+            }}
+          >
+            <Body1 fontStyle={'italic'}>
+              The similarity in labels caused hesitation and confusion.
+            </Body1>
+          </Box>
+          The baseline test highlighted what we all kinda knew but never really
+          knew how to quantify. We now had a clearer sense of which labels were
+          causing the most confusion and could move to making a proposal.
+          <hr />
+        </Body2>
+      </Flex>
+    </Flex>
+    <Flex width='100%' flexDirection='column'>
+      <BGImage
+        fluid={props.blogImages[1].image.childImageSharp.fluid}
+        height={['30vh', '40vh', '600px']}
+        width={'100%'}
+        my={4}
+      />
+      <Flex
+        width='100%'
+        flexWrap='wrap'
+        flexDirection='row'
+        pt={4}
+        sx={{
+          borderBottomWidth: '0px',
+          borderTopWidth: '3px',
+          borderLeftWidth: '0px',
+          borderRightWidth: '0px',
+          borderStyle: 'solid',
+          borderColor: 'text'
+        }}
+      >
+        <Flex width={[0, 1 / 2, 1 / 3]} mb={4} flexDirection='column'>
+          <Heading5 width={0} my={4}>
+            ● {data.strategy.methodTwo.label}
+          </Heading5>
+          <Subtitle1>{data.strategy.methodTwo.description}</Subtitle1>
+        </Flex>
+        <Body2
+          width={0}
+          my={4}
+          sx={{
+            columnCount: [0, 3],
+            hr: {
+              borderColor: 'transparent'
+            }
+          }}
+        >
+          The team at WM has a very sophisticated data stack and I would only be
+          scratching the surface of it. My goal was to go wide and look for
+          anything that supported the confusion observed in the tree test.
+          <hr />
+          <strong> PROJECTING TRAFFIC DISTRIBUTION </strong> <br />
+          <Box
+            my={3}
+            py={2}
+            sx={{
+              borderBottomWidth: '1px',
+              borderTopWidth: '1px',
+              borderLeftWidth: '0px',
+              borderRightWidth: '0px',
+              borderStyle: 'solid',
+              borderColor: 'text'
+            }}
+          >
+            <Body1 fontStyle={'italic'}>
+              What happens if we direct more traffic to a particular
+              destination?
+            </Body1>
+          </Box>
+          The new proposed tree would be doing just this, but what would that
+          actually mean for the business? I set out to try and understand the
+          implications of redistributing traffic from one destination on the
+          site to the other. I partnered with data to check my logic and ended
+          up using a simple formula of:
+          <br />
+          <code>
+            % change in traffic = current nav clicks + (% change in tree test *
+            current nav clicks)
+          </code>
+          <hr />
+          <strong> IDENTIFYING A BIG BET </strong>
+          <br />
+          This was a great conversation starter and reminder of how valuable
+          wayfinding is. I would share these insights in various meetings and
+          channels until we aligned on a path forward. That path forward would
+          be consolidation of certain pages. This was the "big bet" and would
+          require several more months of planning before we could test.
+          <hr />
+          <strong> MOVING ON A SMALL WIN </strong>
+          <br />
+          The consolidation effort wouldn't yeild any returns for awhile since
+          folks had to align on a few business goals before making a decision. I
+          was still eager to demonstrate how valuable navigation can be and
+          proposed a smaller quicker experiment. There was one point of data
+          that stuck out to me.
+          <br />
+          <Box
+            my={3}
+            py={2}
+            sx={{
+              borderBottomWidth: '1px',
+              borderTopWidth: '1px',
+              borderLeftWidth: '0px',
+              borderRightWidth: '0px',
+              borderStyle: 'solid',
+              borderColor: 'text'
+            }}
+          >
+            <Body1 fontStyle={'italic'}>
+              Desktop navigation engagement rates and mobile navigation rates
+              were very similar.
+            </Body1>
+          </Box>
+          This seemed very odd given that mobile sees about 90% of our traffic volume
+          (9m-11m) and desktop only accounts for about 10% of traffic volume. Yet
+          both had around 600k in navigation engagements per month. This suggested
+          to me that navigation was valuable when exposed and not hidden away in
+          a hamburger menu. The interaction cost of a hamburger menu was too high
+          for people on mobile devices and I would aim to test it.
+        </Body2>
+      </Flex>
+    </Flex>
+    <Flex width='100%' flexDirection='column'>
+      <BGImage
+        fluid={props.blogImages[2].image.childImageSharp.fluid}
+        height={['30vh', '40vh', '600px']}
+        width={'100%'}
+        my={4}
+      />
+      <Flex
+        width='100%'
+        flexWrap='wrap'
+        flexDirection='row'
+        pt={4}
+        sx={{
+          borderBottomWidth: '0px',
+          borderTopWidth: '3px',
+          borderLeftWidth: '0px',
+          borderRightWidth: '0px',
+          borderStyle: 'solid',
+          borderColor: 'text'
+        }}
+      >
+        <Flex width={[0, 1 / 2, 1 / 3]} mb={4} flexDirection='column'>
+          <Heading5 width={0} my={4}>
+            ● {data.strategy.methodThree.label}
+          </Heading5>
+          <Subtitle1>{data.strategy.methodThree.description}</Subtitle1>
+        </Flex>
+        <Body2
+          width={0}
+          my={4}
+          sx={{
+            columnCount: [0, 3],
+            hr: {
+              borderColor: 'transparent'
+            }
+          }}
+        >
+          <strong> MEASURING SUCCESS</strong>
+          <br />
+          Navigation plays such a profound role in almost in every journey that
+          people take on the site and app that we had to scope what we would
+          measure. We decided to keep it high level and then look to conduct an
+          impact analysis after. For the experiment we would measure:
+          <ul>
+            <li> Navigation CTR </li>
+            <li> Listing Page View </li>
+            <li> Engagement Rate </li>
+            <li> Promoted Engagements </li>
+          </ul>
+          <strong> EXPERIMENT RESULTS </strong>
+          <br />
+          Due to a hiccup in our data stack we had to pull the test after only 2
+          days. We thought of relaunching the test test but our Data team
+          determined we had enough data to make a decision.
+          <ul>
+            <li> +41% Navigation CTR </li>
+            <li> +20% Listing page views </li>
+            <li> +8% Engagement Rate </li>
+            <li> +7% Promoted Engagements </li>
+          </ul>
+          The results were positive and supported the initial hypothesis. This
+          gave us enough confidence to roll the feauture out to 100% of our
+          audience on web. Once ramped to 100% is when we really started to
+          observe how impactful this change was. The post impact analysis is
+          shared above in the "Outcomes" section.
+          <hr />
+          <Box
+            my={3}
+            py={2}
+            sx={{
+              borderBottomWidth: '1px',
+              borderTopWidth: '1px',
+              borderLeftWidth: '0px',
+              borderRightWidth: '0px',
+              borderStyle: 'solid',
+              borderColor: 'text'
+            }}
+          >
+            <Body1 fontStyle={'italic'}>
+              It wasn't till we released to 100% that we could measure true
+              impact{' '}
+            </Body1>
+          </Box>
+        </Body2>
+      </Flex>
+    </Flex>
+  </SectionMax>
+</SectionWrapper>
+
+<SectionWrapper pt={0}>
+  <SectionMax>
+    <Flex
+      width={0}
+      flexDirection='row'
+      flexWrap='wrap'
+      justifyContent='space-between'
+      mb={6}
+    >
+      <Flex width={0} flexDirection='column' mb={4} width={[0, 1 / 2, 1 / 3]}>
+        <Heading2
+          fontWeight={700}
+          css={`
+            hyphens: auto;
+            text-transform: uppercase;
+          `}
+          mb={4}
+        >
+          {data.finalThoughts.label}
+        </Heading2>
+      </Flex>
+      <Flex width={0} flexDirection='column' width={[0, 1 / 2, 2 / 3]}>
+        <Subtitle1 mt={2}> {data.finalThoughts.description}</Subtitle1>
+      </Flex>
+    </Flex>
+  </SectionMax>
+</SectionWrapper>

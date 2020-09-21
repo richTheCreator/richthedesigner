@@ -26,10 +26,7 @@ const Hero = ({
   return (
     <SectionWrapper bg='transparent' ref={ref}>
       <SectionMax
-        m='auto!important'
-        pb={4}
         css={`
-          border-bottom: 1px solid ${({ theme }) => theme.colors.text};
           position: relative;
         `}
       >

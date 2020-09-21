@@ -4,7 +4,6 @@ import styled from 'styled-components'
 
 export const Heading1 = (props) => (
   <Heading
-    {...props}
     as='h1'
     sx={{
       fontSize: ['72px', '96px'],
@@ -13,6 +12,7 @@ export const Heading1 = (props) => (
       letterSpacing: '-1.5px',
       fontFamily: 'sans'
     }}
+    {...props}
   />
 )
 
@@ -25,15 +25,16 @@ export const MarqueeText = styled(Heading1)`
 
 export const Heading2 = (props) => (
   <Heading
-    {...props}
     as='h2'
     sx={{
-      fontSize: '60px',
+      fontSize: ['50px', '60px'],
       fontWeight: 500,
-      lineHeight: '69px',
+      lineHeight: ['59px', '69px'],
       letterSpacing: '1px',
-      fontFamily: 'sans'
+      fontFamily: 'sans',
+      hyphens: 'auto'
     }}
+    {...props}
   />
 )
 
@@ -45,7 +46,7 @@ export const Heading3 = (props) => (
       fontSize: ['40px', '48px'],
       fontWeight: 500,
       lineHeight: ['46px', '52px'],
-      letterSpacing: '4px',
+      letterSpacing: '1px',
       fontFamily: 'sans'
     }}
   />
@@ -71,9 +72,10 @@ export const Heading5 = (props) => (
     as='h5'
     sx={{
       fontSize: '24px',
-      fontWeight: 500,
+      fontWeight: 700,
       lineHeight: '28px',
-      fontFamily: 'sans'
+      fontFamily: 'sans',
+      textTransform: 'uppercase'
     }}
   />
 )
@@ -93,21 +95,18 @@ export const Heading6 = (props) => (
 )
 export const Body1 = (props) => (
   <Text
-    {...props}
     as='p'
-    sx={{
-      fontSize: ['21px'],
-      fontWeight: 400,
-      lineHeight: '32px',
-      letterSpacing: '0.5px',
-      fontFamily: 'sans'
-    }}
+    fontSize={['18px', '21px']}
+    fontWeight={500}
+    lineHeight={['24px', '32px']}
+    letterSpacing={'0.5px'}
+    fontFamily='sans'
+    {...props}
   />
 )
 
 export const Body2 = (props) => (
   <Text
-    {...props}
     as='p'
     sx={{
       fontSize: '16px',
@@ -116,6 +115,7 @@ export const Body2 = (props) => (
       letterSpacing: '0.25px',
       fontFamily: 'sans'
     }}
+    {...props}
   />
 )
 export const Subtitle1 = (props) => (

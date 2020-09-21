@@ -31,15 +31,24 @@ const Hero = ({
 }) => {
   const { toggleTheme } = useTheme()
   const { ref } = useInView({
-    threshold: 0.3, // Default is 0
+    threshold: 0.5, // Default is 0
     onChange: ({ inView, scrollDirection, entry, observe, unobserve }) => {
-      inView ? toggleTheme(theme) : toggleTheme('dark')
+      inView ? toggleTheme(theme) : toggleTheme('light')
       // Triggered whenever the target meets a threshold, e.g. [0.25, 0.5, ...]
     }
   })
   return (
     <SectionWrapper ref={ref}>
-      <SectionMax m='auto!important' width={'100%'}>
+      <SectionMax
+        pt={4}
+        sx={{
+          borderBottomWidth: '0px',
+          borderTopWidth: '0px',
+          borderLeftWidth: '0px',
+          borderRightWidth: '0px',
+          borderStyle: 'solid'
+        }}
+      >
         <TextContainer width={0}>
           <Heading1
             css={`
@@ -69,7 +78,7 @@ const Hero = ({
         </TextContainer>
         <ProductImg
           fluid={cover_image.childImageSharp.fluid}
-          height={['350px', '350px', '500px']}
+          height={['50vh', '50vh', '600px']}
           my={4}
         />
         <Flex

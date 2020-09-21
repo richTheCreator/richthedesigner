@@ -2,31 +2,35 @@ import React from 'react'
 
 import { Flex } from 'reflexbox/styled-components'
 
-export const SectionWrapper = React.forwardRef(({ ...props }, ref) => (
+export const SectionWrapper = React.forwardRef((props, ref) => (
   <Flex
-    {...props}
     ref={ref}
-    sx={{
-      pl: [3, 4, 5, 6],
-      pr: [3, 4, 5, 6],
-      pt: [5, 6],
-      pb: [5, 6],
-      height: 0,
-      zIndex: '5',
-      flexDirection: 'row'
-    }}
+    px={[3, 4, 5, 6]}
+    py={0}
+    height={0}
+    zIndex={5}
+    flexDirection={'row'}
+    {...props}
   />
 ))
 
 export const SectionMax = (props) => (
   <Flex
-    {...props}
+    maxWidth={2}
+    flexWrap='wrap'
+    width={0}
+    mx='auto'
+    pt={9}
+    mb={5}
+    flexDirection='row'
     sx={{
-      maxWidth: 2,
-      flexWrap: 'wrap',
-      mt: 5,
-      mb: 5,
-      flexDirection: 'row'
+      borderBottomWidth: '0px',
+      borderTopWidth: '1px',
+      borderLeftWidth: '0px',
+      borderRightWidth: '0px',
+      borderStyle: 'solid',
+      borderColor: 'text'
     }}
+    {...props}
   />
 )

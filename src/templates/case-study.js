@@ -7,11 +7,24 @@ import { Description, Hero } from './CaseStudy/'
 import SEO from '../components/SEO/SEO'
 
 const ProductPage = ({ data, location, pageContext }) => {
-  const { frontmatter, body } = data.products
+  const { frontmatter, body } = data.mdx
+  const desc = `A case study for ${frontmatter.title} by Richard Morales`
+  const title = `${frontmatter.title} -- A Case Study`
   return (
     <>
-      <SEO />
+      <SEO
+        pathname={location.pathname}
+        title={title}
+        desc={desc}
+        banner={frontmatter.cover_image.childImageSharp.fluid.src}
+      />
+      />
       <Hero frontmatter={frontmatter} />
+      <Description
+        pageContext={pageContext}
+        blogImages={frontmatter.project.blogImages}
+        content={body}
+      />
       <div className='noise'></div>
     </>
   )
@@ -20,8 +33,8 @@ const ProductPage = ({ data, location, pageContext }) => {
 export default ProductPage
 
 export const pageQuery = graphql`
-  query ProductPageTemplate($id: String!) {
-    products: mdx(id: { eq: $id }) {
+  query CasetudyTemplate($id: String!) {
+    mdx(id: { eq: $id }) {
       body
       frontmatter {
         cover_image {
@@ -42,6 +55,16 @@ export const pageQuery = graphql`
           }
           skills {
             skill
+          }
+          blogImages {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 800, quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+            alt
           }
         }
       }
