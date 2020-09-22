@@ -118,7 +118,7 @@ export const Body2 = (props) => (
     {...props}
   />
 )
-export const Subtitle1 = (props) => (
+export const Subtitle2 = (props) => (
   <Text
     {...props}
     as='p'
@@ -131,14 +131,14 @@ export const Subtitle1 = (props) => (
     }}
   />
 )
-export const Subtitle2 = (props) => (
+export const Subtitle1 = (props) => (
   <Text
     {...props}
     as='p'
     sx={{
-      fontSize: ['14px', '18px'],
-      fontWeight: 400,
-      lineHeight: ['21px', '32px'],
+      fontSize: ['26px', '26px', '42px', '42px'],
+      fontWeight: 500,
+      lineHeight: ['32px', '32px', '54px', '54px'],
       letterSpacing: '0.15px',
       fontFamily: 'sans'
     }}

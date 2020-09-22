@@ -53,9 +53,9 @@ const data = {
         'Armed with newly found insights from our users I looked to the data to add another signal to the research. I wanted to understand how people navigate across platforms and surfaces.'
     },
     methodThree: {
-      label: 'Experimentation',
+      label: 'EXECUTION',
       description:
-        'By exposing the navigation on mobile web, we believe wayfinding will drastically improve and lead to more people finding what they want on Weedmaps.'
+        'By exposing the navigation on mobile web, we believe wayfinding will drastically improve and lead to more people finding what they want on Weedmaps. We will know this is true if we see a lift in Navigation CTR, Listing Page Views, Engagement Rates, and Promoted Engagements.'
     }
   },
   finalThoughts: {

@@ -18,7 +18,6 @@ const ProductPage = ({ data, location, pageContext }) => {
         desc={desc}
         banner={frontmatter.cover_image.childImageSharp.fluid.src}
       />
-      />
       <Hero frontmatter={frontmatter} />
       <Description
         pageContext={pageContext}

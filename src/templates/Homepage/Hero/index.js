@@ -41,24 +41,10 @@ const Hero = ({
             width={'100%'}
             ml={['-50px', 'auto', 'auto', 'auto']}
             position='relative'
-          ></PreviewCompatibleImage>
-          <Heading4
-            fontWeight='700'
-            fontSize={'42px'}
-            display={['block', 'block', 'none', 'none']}
-            css={`
-              writing-mode: vertical-rl;
-              text-orientation: mixed;
-              position: absolute;
-              right: 0px;
-              top: 0px;
-              white-space: nowrap;
-            `}
-          >
-            RICHARD MORALES
-          </Heading4>
+            zIndex={6}
+          />
         </Flex>
-        <TextContainer px={[0, 4, 4, 4]} mt={4} width={[0, 0, 2 / 4, 2 / 4]}>
+        <TextContainer px={[0, 4, 4, 4]} mt={4} width={[0, 0, 2 / 4, '65%']}>
           <Heading2
             fontWeight='700'
             display={['none', 'none', 'block', 'block']}

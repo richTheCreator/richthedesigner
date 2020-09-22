@@ -1,14 +1,14 @@
 import React from 'react'
-import { Body1, Heading4, Subtitle2 } from '../../../components/Typography'
+import { Body1, Heading4, Body2 } from '../../../components/Typography'
 import { Flex } from 'reflexbox/styled-components'
 
 export const ResumeItem = ({ res: { company, title, year, description } }) => {
   return (
     <Flex width='100%' height='100%' flexDirection='column' mb={4}>
-      <Subtitle2 style={{ textTransform: 'uppercase' }} pb={2}>
+      <Body2 style={{ textTransform: 'uppercase' }} pb={2}>
         {' '}
         {year}{' '}
-      </Subtitle2>
+      </Body2>
       <Flex
         width='100%'
         flexWrap='wrap'
@@ -28,10 +28,10 @@ export const ResumeItem = ({ res: { company, title, year, description } }) => {
           >
             {title}
           </Heading4>
-          <Subtitle2 style={{ textTransform: 'uppercase' }} pt={2}>
+          <Body2 style={{ textTransform: 'uppercase' }} pt={2}>
             {' '}
             {company}{' '}
-          </Subtitle2>
+          </Body2>
         </Flex>
         <Flex width={[1, 1 / 2, 1 / 3]} flexDirection='column' px={2}>
           <Body1>{description}</Body1>

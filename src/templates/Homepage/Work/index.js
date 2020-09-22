@@ -5,7 +5,7 @@ import { SectionWrapper, SectionMax } from '../../../components/Containers'
 import { FeaturedWork } from '../../../components'
 import Marquee from 'react-marquee-slider'
 import times from 'lodash/times'
-import { MarqueeText, Subtitle1 } from '../../../components/Typography'
+import { MarqueeText, Subtitle2 } from '../../../components/Typography'
 
 const Work = ({ companies }) => {
   const [state, setState] = useState({
@@ -59,10 +59,10 @@ const Work = ({ companies }) => {
           </Marquee>
         </Flex>
         <Flex width={[1, 1 / 2]} my={5} flexDirection='row'>
-          <Subtitle1>
+          <Subtitle2>
             I’ve had the pleasure of working with some really talented folks
             over the years. Here’s a few things we made together.
-          </Subtitle1>
+          </Subtitle2>
         </Flex>
         <animated.div
           css={`

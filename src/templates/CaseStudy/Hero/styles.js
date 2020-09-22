@@ -7,6 +7,7 @@ import { Flex } from 'reflexbox/styled-components'
 export const ProductImg = styled(BackgroundImage)`
   ${height}
   ${space}
+  z-index: 6;
   width: 100%;
   background-size: cover;
   background-position: center;

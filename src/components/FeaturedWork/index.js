@@ -12,8 +12,8 @@ const FeaturedWork = ({
   return (
     <div>
       <Heading2
-        mb={4}
-        mt={4}
+        pb={5}
+        pt={5}
         fontFamily='sans'
         fontSize={['46px', '66px', '96px']}
         letterSpacing={'0px'}

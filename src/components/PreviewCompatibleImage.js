@@ -1,12 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
-import { height, position, width, space } from 'styled-system'
+import { zIndex, height, position, width, space } from 'styled-system'
 import styled from 'styled-components'
 
 const StyledImg = styled(Img)`
   ${width}
   ${space}
+  ${position}
+  ${height}
+  ${zIndex}
 `
 
 export const WrappedImg = (props) => <StyledImg {...props} />

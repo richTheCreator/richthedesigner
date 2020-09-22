@@ -10,4 +10,5 @@ export const BGImage = styled(BackgroundImage)`
   background-position: center center;
   background-size: cover;
   overflow: hidden;
+  z-index: 6;
 `

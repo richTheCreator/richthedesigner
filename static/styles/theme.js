@@ -90,7 +90,7 @@ const colors = {
   text: black,
   modes: {
     dark: {
-      text: lightBlue,
+      text: offWhite,
       background: black
     },
     homeBlue: {
