@@ -51,11 +51,38 @@ const data = {
       label: 'Data Analysis',
       description:
         'Armed with newly found insights from our users I looked to the data to add another signal to the research. I wanted to understand how people navigate across platforms and surfaces.'
+    }
+  },
+  execution: {
+    label: 'EXECUTION',
+    description:
+      'By exposing the navigation on mobile web, we believe wayfinding will drastically improve and lead to more people finding what they want on Weedmaps. We will know this is true if we see a lift in Navigation CTR, Listing Page Views, Engagement Rates, and Promoted Engagements.',
+    methodOne: {
+      label: 'PROTOTYPE',
+      description: 'A simple solution to a sophisticated problem.'
     },
-    methodThree: {
-      label: 'EXECUTION',
+    methodTwo: {
+      label: 'EXPERIMENTATION',
       description:
-        'By exposing the navigation on mobile web, we believe wayfinding will drastically improve and lead to more people finding what they want on Weedmaps. We will know this is true if we see a lift in Navigation CTR, Listing Page Views, Engagement Rates, and Promoted Engagements.'
+        'Quantifying the value of wayfinding with a hypothesis grounded in research and supported by data.',
+      metrics: [
+        {
+          label: 'Navigation CTR',
+          value: '+41%'
+        },
+        {
+          label: 'Listing Page Views',
+          value: '+20%'
+        },
+        {
+          label: 'Engagement Rate',
+          value: '+8%'
+        },
+        {
+          label: 'Promoted Engagements',
+          value: '+7%'
+        }
+      ]
     }
   },
   finalThoughts: {

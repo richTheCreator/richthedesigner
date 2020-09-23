@@ -6,6 +6,7 @@ import * as Typography from '../components/Typography'
 import { Flex, Box } from 'reflexbox/styled-components'
 import { SectionWrapper, SectionMax } from '../components/Containers'
 import { BGImage } from '../components/Images'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 const components = {
   ...Typography,
@@ -13,7 +14,8 @@ const components = {
   Box,
   SectionWrapper,
   SectionMax,
-  BGImage
+  BGImage,
+  PreviewCompatibleImage
 }
 
 export const HTMLContent = ({ content, className, blogImages }) => {

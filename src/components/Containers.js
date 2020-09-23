@@ -9,6 +9,8 @@ export const SectionWrapper = React.forwardRef((props, ref) => (
     py={0}
     height={0}
     zIndex={5}
+    mt={[3, 9]}
+    mb={[3, 9]}
     flexDirection={'row'}
     {...props}
   />

@@ -6,7 +6,7 @@ export const Heading1 = (props) => (
   <Heading
     as='h1'
     sx={{
-      fontSize: ['72px', '96px'],
+      fontSize: ['62px', '96px'],
       fontWeight: 500,
       lineHeight: ['84px', '96px'],
       letterSpacing: '-1.5px',

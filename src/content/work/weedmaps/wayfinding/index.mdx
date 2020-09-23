@@ -12,10 +12,10 @@ project:
     label: Challenge
     description: Understand how folks are navigating the site to complete top tasks. Then identify areas of opportunity for both small wins and big bets.  Measure these new experiences via A/B testing against company identified metrics of success.
   skills:
-    - skill: Multi Variate
-    - skill: Multi Variate
-    - skill: Multi Variate
-    - skill: Multi Variate
+    - skill: Generative research
+    - skill: Multivariate experiment
+    - skill: Data analysis
+    - skill: End-to-end design
   blogImages:
     - image: ./navigation_tree.jpg
       alt: testing
@@ -23,11 +23,13 @@ project:
       alt: testing
     - image: ./sub_nav_mock.jpg
       alt: testing
+    - image: ./sub_nav_iphone_mock.png
+      alt: testing
 ---
 
 import data from './pageData'
 
-<SectionWrapper pt={0}>
+<SectionWrapper>
   <SectionMax>
     <Flex mt={0} mb={5} flexDirection='column' width={0} flexWrap='wrap'>
       <Heading2
@@ -138,6 +140,7 @@ import data from './pageData'
           <BGImage
             fluid={props.blogImages[0].image.childImageSharp.fluid}
             height={'50vh'}
+            minHeight={['auto', '550px']}
             px={[0.3]}
           />
         </Flex>
@@ -250,6 +253,7 @@ import data from './pageData'
           <BGImage
             fluid={props.blogImages[1].image.childImageSharp.fluid}
             height={'50vh'}
+            minHeight={['auto', '550px']}
             px={[0, 3]}
           />
         </Flex>
@@ -334,15 +338,14 @@ import data from './pageData'
           (9m-11m) and desktop only accounts for about 10% of traffic volume. Yet
           both had around 600k in navigation engagements per month. This suggested
           to me that navigation was valuable when exposed and not hidden away in
-          a hamburger menu. The interaction cost of a hamburger menu was too high
-          for people on mobile devices and I would aim to test it.
+          a hamburger menu.
         </Body2>
       </Flex>
     </Flex>
   </SectionMax>
 </SectionWrapper>
 
-<SectionWrapper pt={0}>
+<SectionWrapper mb={0} pt={0}>
   <SectionMax>
     <Flex
       width={0}
@@ -360,30 +363,159 @@ import data from './pageData'
           `}
           mb={4}
         >
-          {data.strategy.methodThree.label}
+          {data.execution.label}
         </Heading2>
       </Flex>
       <Flex width={0} flexDirection='column' width={[0, 1 / 2, 2 / 3]}>
-        <Subtitle1 mt={2}>{data.strategy.methodThree.description}</Subtitle1>
+        <Subtitle1 mt={2}>{data.execution.description}</Subtitle1>
       </Flex>
-      <BGImage
-        fluid={props.blogImages[2].image.childImageSharp.fluid}
-        height={['30vh', '40vh', '600px']}
-        width={'100%'}
-        my={9}
-      />
+    </Flex>
+    <Flex width='100%' flexDirection='column'>
+      <Flex
+        width='100%'
+        flexWrap='wrap'
+        flexDirection='row'
+        py={8}
+        sx={{
+          borderBottomWidth: '0px',
+          borderTopWidth: '3px',
+          borderLeftWidth: '0px',
+          borderRightWidth: '0px',
+          borderStyle: 'solid',
+          borderColor: 'text'
+        }}
+      >
+        <Flex
+          width={[0, 1 / 2, 1 / 3]}
+          mb={4}
+          px={[0, 3]}
+          flexDirection='column'
+          justifyContent='center'
+        >
+          <Heading5 width={0} my={4}>
+            ● {data.execution.methodOne.label}
+          </Heading5>
+          <Subtitle2>{data.execution.methodOne.description}</Subtitle2>
+          <Body2 width={0} my={6}>
+            <strong> MEGA MENUS, DROP-DOWNS, AND MORE </strong> <br />
+            Several treatments were explored from simple drop-downs to mega menus.
+            The mega-menu was something that sales really liked the idea of since
+            it could also provide a new surface to monetize. Drop-down navigation
+            had never been implemented at Weedmaps and could compliment the new proposed
+            navigation tree.
+            <br />
+            <br />
+            <strong>EXPOSING THE NAVIGATION </strong> <br />
+            What would happen if we place critical navigation items from the hamburger
+            menu in a horizontal row near the top of the site? This was attractive
+            for a few reasons. First, the interaction cost was lowered versus being
+            hidden behind a menu. Second, it would provide a clear signpost for people
+            to use during their journey on the site. Lastly, we could move on this
+            almost immediately.
+          </Body2>
+        </Flex>
+        <Flex
+          width={[0, 1 / 2, 2 / 3]}
+          flexDirection='column'
+          alignItems='center'
+        >
+          <PreviewCompatibleImage
+            imageInfo={props.blogImages[3].image}
+            width={['80%', '380px']}
+            zIndex={6}
+          />
+        </Flex>
+      </Flex>
+    </Flex>
+    <Flex width='100%' flexDirection='column'>
+      <Flex
+        width='100%'
+        flexWrap='wrap'
+        flexDirection='row'
+        justifyContent='space-between'
+        py={8}
+        sx={{
+          borderBottomWidth: '0px',
+          borderTopWidth: '3px',
+          borderLeftWidth: '0px',
+          borderRightWidth: '0px',
+          borderStyle: 'solid',
+          borderColor: 'text'
+        }}
+      >
+        <Flex
+          width={[0, 1 / 2, 1 / 3]}
+          mb={4}
+          px={[0, 3]}
+          flexDirection='column'
+          justifyContent='center'
+        >
+          <Heading5 width={0} my={4}>
+            ● {data.execution.methodTwo.label}
+          </Heading5>
+          <Subtitle2>{data.execution.methodTwo.description}</Subtitle2>
+          <Body2 width={0} my={6}>
+            <strong> MEASURING SUCCESS </strong> <br />
+            Navigation plays such a profound role in almost in every journey that
+            people take on the site and app that we had to scope what we would measure.
+            We decided to keep it high level and then look to conduct an impact analysis
+            after.
+            <br />
+            <br />
+            <strong>EXPERIMENT RESULTS </strong> <br />
+            Due to a hiccup in our data stack we had to pull the test after only
+            2 days. We thought of relaunching the test test but our Data team determined
+            we had enough data to reach statistical significance.
+            <br />
+            <br />
+            The results were positive and supported the initial hypothesis. This
+            gave us enough confidence to roll the feauture out to 100% of our
+            audience on web. Once ramped to 100% is when we really started to
+            observe how impactful this change was. The post impact analysis is
+            shared above in the "Outcomes" section.
+          </Body2>
+        </Flex>
+        <Flex width={[0, 1 / 2, 1 / 2]} flexDirection='column'>
+          <Flex flexDirection='row' justifyContent='space-between' width={0}>
+            <Body2 style={{ textTransform: 'uppercase' }} pb={2}>
+              METRIC
+            </Body2>
+            <Body2 style={{ textTransform: 'uppercase' }} pb={2}>
+              RESULT
+            </Body2>
+          </Flex>
+          {data.execution.methodTwo.metrics.map((metric) => (
+            <Flex
+              flexDirection='row'
+              width={0}
+              py={4}
+              justifyContent='space-between'
+              sx={{
+                borderBottomWidth: '0px',
+                borderTopWidth: '3px',
+                borderLeftWidth: '0px',
+                borderRightWidth: '0px',
+                borderStyle: 'solid',
+                borderColor: 'text'
+              }}
+            >
+              <Subtitle1> {metric.label} </Subtitle1>
+              <Subtitle1> {metric.value} </Subtitle1>
+            </Flex>
+          ))}
+        </Flex>
+      </Flex>
     </Flex>
   </SectionMax>
 </SectionWrapper>
 
-<SectionWrapper pt={0} bg='black'>
-  <SectionMax>
+<SectionWrapper bg='black' mb={'0px'}>
+  <SectionMax py={9}>
     <Flex
       width={0}
       flexDirection='row'
       flexWrap='wrap'
       justifyContent='space-between'
-      mb={6}
     >
       <Flex width={0} flexDirection='column' mb={4} width={[0, 1 / 2, 1 / 3]}>
         <Heading2

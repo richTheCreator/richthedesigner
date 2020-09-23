@@ -24,7 +24,7 @@ const Hero = ({
   })
 
   return (
-    <SectionWrapper bg='transparent' ref={ref}>
+    <SectionWrapper bg='transparent' ref={ref} mt={0}>
       <SectionMax
         css={`
           position: relative;
@@ -43,6 +43,21 @@ const Hero = ({
             position='relative'
             zIndex={6}
           />
+          <Heading4
+            fontWeight='700'
+            fontSize={'42px'}
+            display={['block', 'block', 'none', 'none']}
+            css={`
+              writing-mode: vertical-rl;
+              text-orientation: mixed;
+              position: absolute;
+              right: 0px;
+              top: 0px;
+              white-space: nowrap;
+            `}
+          >
+            RICHARD MORALES
+          </Heading4>
         </Flex>
         <TextContainer px={[0, 4, 4, 4]} mt={4} width={[0, 0, 2 / 4, '65%']}>
           <Heading2

@@ -38,7 +38,7 @@ const Hero = ({
     }
   })
   return (
-    <SectionWrapper ref={ref}>
+    <SectionWrapper ref={ref} mt={0}>
       <SectionMax
         pt={4}
         sx={{

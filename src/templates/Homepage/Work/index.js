@@ -29,13 +29,7 @@ const Work = ({ companies }) => {
 
   return (
     <SectionWrapper bg='transparent' pt={0}>
-      <SectionMax
-        style={{ margin: 'auto' }}
-        pb={['50px', '100px']}
-        css={`
-          border-bottom: 1px solid ${({ theme }) => theme.colors.text};
-        `}
-      >
+      <SectionMax style={{ margin: 'auto' }}>
         <Flex
           width='100%'
           height='100%'

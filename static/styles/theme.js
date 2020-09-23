@@ -98,8 +98,8 @@ const colors = {
       background: homeBlue
     },
     weedmaps: {
-      background: '#00a8a3',
-      text: black
+      background: '#144240',
+      text: offWhite
     }
   },
 
