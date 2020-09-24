@@ -21,7 +21,8 @@ const FeaturedWork = ({
         lineHeight='100%'
         style={{
           textTransform: 'uppercase',
-          hyphens: 'auto'
+          hyphens: 'auto',
+          cursor: 'pointer'
         }}
       >
         {company} {'→'}

@@ -19,65 +19,12 @@ const TemplateWrapper = ({ children }) => {
   } = useStaticQuery(query)
 
   const { menuLinks } = useSiteMetadata()
-  const [open, setOpen] = useState()
-  const [verified, setVerify] = useState()
-
-  useEffect(() => {
-    const checkVerify = localStorage.getItem('age_verified')
-
-    if (!checkVerify) {
-      // open Modal
-      setOpen(true)
-    }
-  }, [])
-
-  const verifiedAge = (bool) => {
-    if (bool) {
-      localStorage.setItem('age_verified', true)
-      setOpen(false)
-    } else {
-      window.location.href = 'http://www.google.com'
-    }
-  }
 
   return (
     <div>
-      {/* <Modal
-        open={open}
-        closeOnOverlayClick={false}
-        closeOnEsc={false}
-        showCloseIcon={false}
-        focusTrapped={false}
-        onClose={() => setOpen(false)}
-        center
-        classNames={{
-          overlay: 'customOverlay',
-          modal: 'customModal'
-        }}
-      >
-        <p>Are you 21 years of age or older?</p>
-        <Button
-          width={'100%'}
-          bg={'black'}
-          color={'white'}
-          onClick={() => verifiedAge(true)}
-        >
-          {' '}
-          Yes{' '}
-        </Button>
-        <Button
-          width={'100%'}
-          bg={'white'}
-          color={'black'}
-          onClick={() => verifiedAge(false)}
-        >
-          {' '}
-          No{' '}
-        </Button>
-      </Modal>
       <Navbar menuLinks={menuLinks} />
-    <Footer footer={footer} /> */}
       <div>{children}</div>
+      <Footer footer={footer} />
       {/* <div className='noise'></div> */}
     </div>
   )

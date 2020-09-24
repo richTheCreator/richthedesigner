@@ -27,19 +27,11 @@ module.exports = {
     menuLinks: [
       {
         name: 'Work',
-        link: '/work'
+        link: '/work/weedmaps/wayfinding/'
       },
       {
-        name: 'HEMP STARTER KIT',
-        link: '/starter-kit'
-      },
-      {
-        name: 'LAB RESULTS',
-        link: '/lab-results'
-      },
-      {
-        name: 'POLICIES',
-        link: '/policies'
+        name: 'Resume',
+        link: '/#resume'
       }
     ]
   },

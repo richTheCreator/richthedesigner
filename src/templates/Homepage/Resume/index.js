@@ -5,7 +5,7 @@ import { Heading5 } from '../../../components/Typography'
 
 const Resume = ({ resume }) => {
   return (
-    <SectionWrapper bg='transparent'>
+    <SectionWrapper bg='transparent' id='resume'>
       <SectionMax height={'100%'}>
         <Heading5 mb={5} fontWeight={700}>
           {' '}

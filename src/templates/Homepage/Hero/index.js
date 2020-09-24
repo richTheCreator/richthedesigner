@@ -2,7 +2,7 @@ import React from 'react'
 import useInView from 'react-cool-inview'
 import { SectionWrapper, SectionMax } from '../../../components/Containers'
 import { TextContainer } from './styles'
-import { Heading2, Heading4, Subtitle1 } from '../../../components/Typography'
+import { Heading2, Heading5, Subtitle1 } from '../../../components/Typography'
 import { Flex } from 'reflexbox/styled-components'
 import { useTheme } from '../../../../static/styles/theme-context'
 import PreviewCompatibleImage from '../../../components/PreviewCompatibleImage'
@@ -26,6 +26,12 @@ const Hero = ({
   return (
     <SectionWrapper bg='transparent' ref={ref} mt={0}>
       <SectionMax
+        sx={{
+          borderBottomWidth: '0px',
+          borderTopWidth: '0px',
+          borderLeftWidth: '0px',
+          borderRightWidth: '0px'
+        }}
         css={`
           position: relative;
         `}
@@ -43,9 +49,7 @@ const Hero = ({
             position='relative'
             zIndex={6}
           />
-          <Heading4
-            fontWeight='700'
-            fontSize={'42px'}
+          <Heading5
             display={['block', 'block', 'none', 'none']}
             css={`
               writing-mode: vertical-rl;
@@ -56,21 +60,18 @@ const Hero = ({
               white-space: nowrap;
             `}
           >
-            RICHARD MORALES
-          </Heading4>
+            ● Richard Morales
+          </Heading5>
         </Flex>
-        <TextContainer px={[0, 4, 4, 4]} mt={4} width={[0, 0, 2 / 4, '65%']}>
-          <Heading2
+        <TextContainer px={[0, 4, 4, 4]} mt={4} width={[0, 0, 0, 1 / 2]}>
+          <Heading5
             fontWeight='700'
             display={['none', 'none', 'block', 'block']}
             mb={4}
             mt={2}
-            css={`
-              border-bottom: 5px solid ${({ theme }) => theme.colors.text};
-            `}
           >
-            RICHARD MORALES
-          </Heading2>
+            ● Richard Morales
+          </Heading5>
           <Subtitle1>
             A seasoned Designer located in Irvine, California. Creating
             meaningful moments with measurable outcomes. Open to new

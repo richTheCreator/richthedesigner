@@ -81,7 +81,9 @@ const maxWidths = ['1200px', '1800px']
 // Colors
 const black = '#252422'
 const maroon = '#630f0f'
-const homeBlue = '#2b3495'
+const homeBlue = '#3B72CD'
+const lightPink = '#e8c5c5'
+const deepTeal = '#144240'
 const offWhite = '#f4f4f4'
 const lightBlue = '#cdf0f9'
 
@@ -94,12 +96,12 @@ const colors = {
       background: black
     },
     homeBlue: {
-      text: offWhite,
+      text: black,
       background: homeBlue
     },
     weedmaps: {
-      background: '#144240',
-      text: offWhite
+      background: deepTeal,
+      text: lightPink
     }
   },
 
