@@ -21,6 +21,7 @@ const StyledLogo = styled(RMLogo)`
   height: 45px;
 `
 const StyledMenu = styled(Menu)`
+  cursor: pointer;
   height: 25px;
 `
 const NavWrapper = styled(SectionWrapper)`
@@ -152,8 +153,8 @@ const NavbarSM = ({ menuLinks, toggleMenu }) => (
     >
       <AniLink
         cover
-        bg='#727A68'
-        direction='up'
+        bg='#fff'
+        direction='down'
         to='/'
         title='Logo'
         style={{ textDecoration: 'none' }}
@@ -170,7 +171,7 @@ const NavbarSM = ({ menuLinks, toggleMenu }) => (
 const Navbar = ({ menuLinks }) => {
   const { theme } = useTheme()
 
-  console.log('theme', theme)
+  console.log('theme----navBar', theme)
 
   const [expanded, setMenu] = useState(false)
   const toggleMenu = () => {
@@ -250,7 +251,7 @@ const Navbar = ({ menuLinks }) => {
           {transitions.map(({ item, key, props }) => (
             <AnimatedLink
               cover
-              bg='#fff'
+              bg='red'
               direction='down'
               fontSize={['62px', '92px']}
               lineHeight={['52px', '80px']}

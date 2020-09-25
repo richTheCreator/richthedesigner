@@ -86,6 +86,8 @@ const lightPink = '#e8c5c5'
 const deepTeal = '#144240'
 const offWhite = '#f4f4f4'
 const lightBlue = '#cdf0f9'
+const wikaBlue = '#142f42'
+const bhPurple = '#552248'
 
 const colors = {
   background: offWhite,
@@ -102,6 +104,14 @@ const colors = {
     weedmaps: {
       background: deepTeal,
       text: lightPink
+    },
+    gaugebox: {
+      background: wikaBlue,
+      text: offWhite
+    },
+    berkshire: {
+      background: bhPurple,
+      text: offWhite
     }
   },
 

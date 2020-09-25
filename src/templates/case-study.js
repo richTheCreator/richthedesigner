@@ -9,7 +9,7 @@ import SEO from '../components/SEO/SEO'
 const ProductPage = ({ data, location, pageContext }) => {
   const { frontmatter, body } = data.mdx
   const desc = `A case study for ${frontmatter.title} by Richard Morales`
-  const title = `${frontmatter.title} -- A Case Study`
+  const title = `${frontmatter.title} - A Case Study`
   return (
     <>
       <SEO

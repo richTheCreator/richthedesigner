@@ -2,31 +2,27 @@ const data = {
   results: {
     label: 'Outcomes',
     description:
-      'Post analysis, 1 month after launch. Looking at adopter vs non-adopter.',
+      'Impact analysis, 1 month after launch. Looking at adopters vs non-adopters.',
     metrics: [
       {
-        label: 'Metric 1',
-        value: '100%'
+        label: 'Nav engagements',
+        value: '+1.3M'
       },
       {
-        label: 'Metric 2',
-        value: '200%'
+        label: 'Order Completed',
+        value: '+200%'
       },
       {
-        label: 'Metric 1',
-        value: '100%'
+        label: 'Traffic to surfaces',
+        value: '+238%'
       },
       {
-        label: 'Metric 2',
-        value: '200%'
+        label: 'Listings clicked',
+        value: '+280%'
       },
       {
-        label: 'Metric 1',
-        value: '100%'
-      },
-      {
-        label: 'Metric 2',
-        value: '200%'
+        label: 'Product item clicked',
+        value: '+256%'
       }
     ]
   },
@@ -88,7 +84,7 @@ const data = {
   finalThoughts: {
     label: 'Final Thoughts',
     description:
-      "This is a glimpse into an ongoing effort to improve wayfinding for our users. It's inspired new ideas and harder conversations around all things navigation. Additionally, it has helped to mature the design teams research efforts and provided us a measurable outcome to speak to."
+      "This is a glimpse into an ongoing effort to improve wayfinding for our users. It's inspired new ideas and harder conversations around all things navigation. Additionally, it has helped to mature the design team's research efforts and provided us a measurable outcome to speak to."
   }
 }
 

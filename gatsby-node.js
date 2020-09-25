@@ -55,13 +55,10 @@ exports.createPages = ({ actions, graphql }) => {
     posts.forEach((edge) => {
       if (_.get(edge, 'node.frontmatter.company_ref')) {
         company = [...company, edge.node.frontmatter.company_ref]
-        console.log('if-------company-', company)
       }
     })
     // Eliminate duplicate company
     company = _.uniq(company)
-
-    console.log('nodeContext------', company)
     // Make tag pages
     company.forEach((company) => {
       const companyPath = `/work/${_.kebabCase(company)}/`

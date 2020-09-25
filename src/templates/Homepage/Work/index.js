@@ -9,8 +9,9 @@ import { MarqueeText, Subtitle2 } from '../../../components/Typography'
 
 const Work = ({ companies }) => {
   const [state, setState] = useState({
-    itemHovered: companies[0].node.frontmatter.company,
-    isHovered: false
+    itemHovered: null,
+    isHovered: false,
+    imgUrl: 'none'
   })
 
   const ref = useRef()
@@ -55,7 +56,7 @@ const Work = ({ companies }) => {
         <Flex width={[1, 1 / 2]} my={5} flexDirection='row'>
           <Subtitle2>
             I’ve had the pleasure of working with some really talented folks
-            over the years. Here’s a few things we made together.
+            over the years. Here are a few things we made together.
           </Subtitle2>
         </Flex>
         <animated.div
@@ -64,7 +65,6 @@ const Work = ({ companies }) => {
           `}
           ref={ref}
           onMouseEnter={(e) => {
-            e.stopPropagation()
             setState({ ...state, isHovered: true })
           }}
           onMouseMove={({ clientX, clientY }) => {
@@ -96,7 +96,6 @@ const Work = ({ companies }) => {
             }
           }}
           onMouseLeave={() => {
-            setState({ ...state, isHovered: false })
             // Set xys back to original
             setAnimatedProps({ x: 0, y: 0 })
           }}
@@ -106,10 +105,55 @@ const Work = ({ companies }) => {
               <animated.div
                 onMouseEnter={(e) => {
                   e.stopPropagation()
+                  switch (node.frontmatter.company) {
+                    case 'Berkshire':
+                      setState({
+                        ...state,
+                        imgUrl: 'url(/media/bh_cover.jpg)',
+                        itemHovered: node.frontmatter.company,
+                        isHovered: true
+                      })
+                      break
+                    case 'design studio':
+                      setState({
+                        ...state,
+                        imgUrl: 'url(/media/ds_cover.jpg)',
+                        itemHovered: node.frontmatter.company,
+                        isHovered: true
+                      })
+                      break
+                    case 'Gaugebox':
+                      setState({
+                        ...state,
+                        imgUrl: 'url(/media/gb_cover.jpg)',
+                        itemHovered: node.frontmatter.company,
+                        isHovered: true
+                      })
+                      break
+                    case 'Weedmaps':
+                      setState({
+                        ...state,
+                        imgUrl: 'url(/media/wm_cover.jpg)',
+                        itemHovered: node.frontmatter.company,
+                        isHovered: true
+                      })
+                      break
+                    default:
+                      setState({
+                        ...state,
+                        imgUrl: 'none'
+                      })
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  console.log('nestedMouseLeave-----text-')
+                  e.stopPropagation()
                   setState({
                     ...state,
-                    itemHovered: node.frontmatter.company
+                    isHovered: false,
+                    imgUrl: 'none'
                   })
+                  // Set xys back to original
                 }}
                 style={{
                   zIndex:
@@ -127,19 +171,11 @@ const Work = ({ companies }) => {
               ),
               visibility: state.isHovered ? 'visible' : 'hidden',
               minWidth: '320px',
-              width: '40vw',
-              height: '50vh',
+              width: '55vw',
+              height: '600px',
               position: 'absolute',
               pointerEvents: 'none',
-              backgroundImage: `url(/media/${
-                state.itemHovered === 'Berkshire'
-                  ? 'bh'
-                  : state.itemHovered === 'design studio'
-                  ? 'ds'
-                  : state.itemHovered === 'Gaugebox'
-                  ? 'gb'
-                  : 'wm'
-              }_cover.jpg)`,
+              backgroundImage: `${state.imgUrl}`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               zIndex: 5

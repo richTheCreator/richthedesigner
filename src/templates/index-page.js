@@ -1,18 +1,18 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Hero, Work, Resume } from './Homepage'
+import { Hero, Work, Resume, Contact } from './Homepage'
 import SEO from '../components/SEO/SEO'
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.page
   const { edges: companies } = data.companies
 
-  console.log('resume', frontmatter.resume)
   return (
     <>
       <SEO />
       <Hero hero={frontmatter.hero} />
       <Work companies={companies} />
       <Resume resume={frontmatter.resume} />
+      <Contact contact={frontmatter.contact} />
       <div className='noise'></div>
     </>
   )
@@ -25,7 +25,6 @@ export const pageQuery = graphql`
     page: mdx(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         hero {
-          heading
           backgroundImg {
             alt
             image {
@@ -43,10 +42,15 @@ export const pageQuery = graphql`
           title
           description
         }
+        contact {
+          heading
+          description
+        }
       }
     }
     companies: allMdx(
       filter: { frontmatter: { templateKey: { eq: "company-profile" } } }
+      sort: { order: ASC, fields: [frontmatter___order] }
     ) {
       edges {
         node {

@@ -41,7 +41,7 @@ function useTheme() {
   // callback that uses the state fn to set theeme
   const toggleTheme = useCallback(
     (themeOption) => {
-      console.log('passedVar----', themeOption)
+      console.log('themeContext----toggleTheme-', themeOption)
       //   if (mode === 'light') setMode('dark')
       //   else if (mode === 'dark') setMode('light')
       setMode(themeOption)

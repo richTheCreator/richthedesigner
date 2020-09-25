@@ -31,7 +31,7 @@ const Hero = ({
 }) => {
   const { toggleTheme } = useTheme()
   const { ref } = useInView({
-    threshold: 0.5, // Default is 0
+    threshold: 0.3, // Default is 0
     onChange: ({ inView, scrollDirection, entry, observe, unobserve }) => {
       inView ? toggleTheme(theme) : toggleTheme('light')
       // Triggered whenever the target meets a threshold, e.g. [0.25, 0.5, ...]

@@ -24,7 +24,7 @@ const TemplateWrapper = ({ children }) => {
     <div>
       <Navbar menuLinks={menuLinks} />
       <div>{children}</div>
-      <Footer footer={footer} />
+      {/* <Footer footer={footer} /> */}
       {/* <div className='noise'></div> */}
     </div>
   )

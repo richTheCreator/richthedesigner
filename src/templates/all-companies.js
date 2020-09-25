@@ -9,7 +9,6 @@ const TagsPage = ({ data }) => {
     allMdx: { edges }
   } = data
 
-  console.log('company-----', edges)
   return (
     <Layout>
       <section className='section'>

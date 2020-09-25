@@ -32,6 +32,10 @@ module.exports = {
       {
         name: 'Resume',
         link: '/#resume'
+      },
+      {
+        name: 'Contact',
+        link: '/#contact'
       }
     ]
   },

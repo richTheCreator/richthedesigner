@@ -8,7 +8,6 @@ export const SectionWrapper = React.forwardRef((props, ref) => (
     px={[3, 4, 5, 6]}
     py={0}
     height={0}
-    zIndex={5}
     mt={[3, 9]}
     mb={[3, 9]}
     flexDirection={'row'}
@@ -33,6 +32,9 @@ export const SectionMax = (props) => (
       borderStyle: 'solid',
       borderColor: 'text'
     }}
+    css={`
+      z-index: 6;
+    `}
     {...props}
   />
 )

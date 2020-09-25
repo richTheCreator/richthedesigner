@@ -18,7 +18,10 @@ const Hero = ({
   const { ref } = useInView({
     threshold: 0.3, // Default is 0
     onChange: ({ inView, scrollDirection, entry, observe, unobserve }) => {
-      inView ? toggleTheme('light') : toggleTheme('dark')
+      const url = typeof window !== 'undefined' ? window.location.pathname : ''
+      if (url === '/') {
+        inView ? toggleTheme('light') : toggleTheme('dark')
+      }
       // Triggered whenever the target meets a threshold, e.g. [0.25, 0.5, ...]
     }
   })

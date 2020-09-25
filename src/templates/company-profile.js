@@ -9,8 +9,6 @@ const CompanyProfile = ({ data, pageContext }) => {
   const { edges: posts, totalCount } = data.posts
   const { frontmatter } = data.page
 
-  console.log('pageContext', frontmatter.theme)
-
   useEffect(() => {
     toggleTheme(frontmatter.theme)
   }, [])
