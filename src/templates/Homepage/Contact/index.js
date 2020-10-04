@@ -70,28 +70,28 @@ const Contact = ({ contact: { heading, description } }) => {
               {description}
             </Subtitle1>
             <Flex flexDirection='row' width={0}>
-              <Flex flexDirection='column' width={1 / 4}>
+              <Flex mx={3} flexDirection='column'>
                 <StyledLink href='https://www.linkedin.com/in/moralesrichard1/'>
                   <Styled_LI />
-                  <Body2 mt={2}>LinkedIn</Body2>
+                  <Body2 mt={2}>LINKEDIN</Body2>
                 </StyledLink>
               </Flex>
-              <Flex flexDirection='column' width={1 / 4}>
+              <Flex mx={3} flexDirection='column'>
                 <StyledLink href='https://github.com/richTheCreator'>
                   <Styled_GH />
-                  <Body2 mt={2}>Github</Body2>
+                  <Body2 mt={2}>GITHUB</Body2>
                 </StyledLink>
               </Flex>
-              <Flex flexDirection='column' width={1 / 4}>
+              <Flex mx={3} flexDirection='column'>
                 <StyledLink href='https://standardresume.co/r/richardmorales'>
                   <Styled_Resume />
-                  <Body2 mt={2}>Resume</Body2>
+                  <Body2 mt={2}>RESUME</Body2>
                 </StyledLink>
               </Flex>
-              <Flex flexDirection='column' width={1 / 4}>
+              <Flex mx={3} flexDirection='column'>
                 <StyledLink href='mailto:rmoralesdesigns@gmail.com'>
                   <Styled_Email />
-                  <Body2 mt={2}>Email</Body2>
+                  <Body2 mt={2}>EMAIL</Body2>
                 </StyledLink>
               </Flex>
             </Flex>

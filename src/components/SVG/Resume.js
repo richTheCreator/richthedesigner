@@ -5,6 +5,7 @@ import theme from '../../../static/styles/theme'
 
 const Svg = styled(Icon)`
   stroke: ${({ theme }) => theme.colors.text};
+  fill: transparent;
 `
 
 export const Resume = ({ className, fillColor }) => (

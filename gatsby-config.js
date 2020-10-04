@@ -79,7 +79,9 @@ module.exports = {
         extensions: ['.mdx', '.md'],
         // root: __dirname,
         plugins: [
-          'gatsby-remark-images'
+          'gatsby-remark-images',
+          'gatsby-remark-images-medium-zoom' // Important!
+
           // {
           //   resolve: 'gatsby-remark-images',
           //   options: {
@@ -94,17 +96,17 @@ module.exports = {
         ],
         gatsbyRemarkPlugins: [
           {
-            resolve: 'gatsby-remark-images-medium-zoom', // Important!
-            options: {
-              background: 'rgba(0, 0, 0, 0.90)'
-            }
-          },
-          {
             resolve: 'gatsby-remark-images',
             options: {
               withWebp: true,
               maxWidth: 2048,
               linkImagesToOriginal: false
+            }
+          },
+          {
+            resolve: 'gatsby-remark-images-medium-zoom', // Important!
+            options: {
+              background: 'rgba(0, 0, 0, 0.90)'
             }
           },
           'gatsby-remark-images-grid'

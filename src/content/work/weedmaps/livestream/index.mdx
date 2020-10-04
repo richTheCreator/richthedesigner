@@ -1,0 +1,491 @@
+---
+company_ref: 'Weedmaps'
+theme: weedmaps
+meta_description: 'A case study for a livestream experience.'
+templateKey: case-study
+cover_image: ls_cover.png
+title: Livestream
+project:
+  focus: ECOMMERCE + STREAMING + ADVERTISING
+  blurb: Hosting the largest digital cannabis event ever.
+  challenge:
+    label: Challenge
+    description: Deliver a world class streaming experience... in  under a month. Own the design experience while partnering closely with sales, marketing, legal, lifestyle & culture, and engineering to deliver against company identified measures of success.
+  skills:
+    - skill: Rapid iteration
+    - skill: Hyper collaboration
+    - skill: Facilitation
+  blogImages:
+    - image: ./wireframe_initial_concept_sales.jpg
+      alt: testing
+    - image: ./user-flows.jpg
+      alt: testing
+    - image: ./wireframe_videplayer_higher_together.jpg
+      alt: testing
+    - image: ./wireframe_ads_higher_together.jpg
+      alt: testing
+    - image: ./wireframe_tabs_higher_together.jpg
+      alt: testing
+    - image: ./higher_together_stitch.jpg
+      alt: testing
+    - image: ./higher_together_desktop1.jpg
+      alt: testing
+    - image: ./higher_together_mobile1.jpg
+      alt: testing
+    - image: ./higher_together_desktop2.jpg
+      alt: testing
+    - image: ./higher_together_desktop3.jpg
+      alt: testing
+    - image: ./higher_together_mobile2.jpg
+      alt: testing
+    - image: ./higher_together_desktop4.jpg
+      alt: testing
+---
+
+import data_ from './pageData'
+
+<SectionWrapper>
+  <SectionMax>
+    <Flex mt={0} mb={5} flexDirection='column' width={0} flexWrap='wrap'>
+      <Heading2
+        mb={4}
+        fontWeight={700}
+        css={`
+          hyphens: auto;
+          text-transform: uppercase;
+        `}
+      >
+        {data_.results.label}
+      </Heading2>
+      <Subtitle2 mb={4}>{data_.results.description}</Subtitle2>
+    </Flex>
+    <Flex flexDirection='row' width={0} flexWrap='wrap'>
+      {data_.results.metrics.map(({ label, value }) => (
+        <Flex
+          flexDirection={['row', 'column']}
+          justifyContent='space-between'
+          alignItems={['center', 'flex-start']}
+          width={[0, 1 / 3]}
+          mb={7}
+        >
+          <Heading5
+            width={[2 / 4, 0]}
+            order={[1, 0]}
+            mb={[0, 2]}
+            px={[3, 0]}
+            css={`
+              hyphens: auto;
+            `}
+          >
+            {' '}
+            {label}{' '}
+          </Heading5>
+          <Heading1
+            width={[1 / 4, 0]}
+            order={[0, 1]}
+            lineHeight={'100%'}
+            fontSize={['42px', '96px']}
+          >
+            {' '}
+            {value}{' '}
+          </Heading1>
+        </Flex>
+      ))}
+    </Flex>
+  </SectionMax>
+</SectionWrapper>
+
+<SectionWrapper mb={0} pt={0}>
+  <SectionMax>
+    <Flex
+      width={0}
+      flexDirection='row'
+      flexWrap='wrap'
+      justifyContent='space-between'
+      mb={6}
+    >
+      <Flex width={0} flexDirection='column' mb={4} width={[0, 1 / 2, 1 / 3]}>
+        <Heading2
+          fontWeight={700}
+          css={`
+            hyphens: auto;
+            text-transform: uppercase;
+          `}
+          mb={4}
+        >
+          {data_.background.label}
+        </Heading2>
+      </Flex>
+      <Flex width={0} flexDirection='column' width={[0, 1 / 2, 2 / 3]}>
+        <Subtitle1 mt={2}>{data_.background.description}</Subtitle1>
+      </Flex>
+    </Flex>
+    <Flex width='100%' flexDirection='column'>
+      <Flex
+        width='100%'
+        flexWrap='wrap'
+        flexDirection='row'
+        py={8}
+        sx={{
+          borderBottomWidth: '0px',
+          borderTopWidth: '3px',
+          borderLeftWidth: '0px',
+          borderRightWidth: '0px',
+          borderStyle: 'solid',
+          borderColor: 'text'
+        }}
+      >
+        <Flex
+          width={[0, 1 / 2, 1 / 3]}
+          mb={4}
+          px={[0, 3]}
+          flexDirection='column'
+        >
+          <Subtitle2>{data_.background.methodOne.description}</Subtitle2>
+          <Body2 width={0} my={6}>
+            This might have operationally been a bit easier if 4/20 wasn't
+            already our biggest day of the year. We saw the largest volume in
+            traffic and sales on this day. Unknown to us at the time was the
+            growth we would experience this year as well.
+            <br />
+            <br />
+            <strong> TALK FAST, SELL FASTER </strong> <br />
+            That's how our sales team operates. They had already created an
+            initial concept and started to circulate the design with exec's and
+            a few potential sponsors. Engineers quickly developed that concept
+            into a prototype on our site.
+            <br />
+            <br />
+            <strong>PART OF A TACTICAL TEAM </strong> <br />
+            Once I saw the prototype, pictured here, I quickly volunteered to
+            lead the design efforts for the livestream. The prototype felt off
+            brand and bare. It also banked on ad positions that would only work
+            for desktop. There was some simple yet significant changes we could
+            make here. I would join a team of about 15 that would meet day and
+            night over the next 4 weeks. None of us had built an experience like
+            this before.
+          </Body2>
+        </Flex>
+        <Flex px={3} width={0} flexDirection='column' alignItems='center'>
+          <PreviewCompatibleImage
+            imageInfo={props.blogImages[0].image}
+            width={1}
+            zIndex={6}
+          />
+        </Flex>
+      </Flex>
+    </Flex>
+  </SectionMax>
+</SectionWrapper>
+
+<SectionWrapper mb={0} pt={0}>
+  <SectionMax>
+    <Flex
+      width={0}
+      flexDirection='row'
+      flexWrap='wrap'
+      justifyContent='space-between'
+      mb={6}
+    >
+      <Flex width={0} flexDirection='column' mb={4} width={[0, 1 / 2, 1 / 3]}>
+        <Heading2
+          fontWeight={700}
+          css={`
+            hyphens: auto;
+            text-transform: uppercase;
+          `}
+          mb={4}
+        >
+          {data_.strategy.label}
+        </Heading2>
+      </Flex>
+      <Flex width={0} flexDirection='column' width={[0, 1 / 2, 2 / 3]}>
+        <Subtitle1 mt={2}>{data_.strategy.description}</Subtitle1>
+      </Flex>
+    </Flex>
+    <Flex width='100%' flexDirection='column'>
+      <Flex
+        width='100%'
+        flexWrap='wrap'
+        flexDirection='row'
+        py={8}
+        sx={{
+          borderBottomWidth: '0px',
+          borderTopWidth: '3px',
+          borderLeftWidth: '0px',
+          borderRightWidth: '0px',
+          borderStyle: 'solid',
+          borderColor: 'text'
+        }}
+      >
+        <Flex
+          width={[0, 1 / 2, 1 / 3]}
+          mb={4}
+          px={[0, 3]}
+          flexDirection='column'
+        >
+          <Heading5 width={0} my={4}>
+            ● {data_.strategy.methodOne.label}
+          </Heading5>
+          <Subtitle2>{data_.strategy.methodOne.description}</Subtitle2>
+          <Body2 width={0} my={6}>
+            We switched hosting vendors about three times during the first two
+            weeks. I was involved in all meetings with these vendors and had a
+            deep understanding of what each vendor could and could not deliver
+            on for the streaming experience. This along with other unknowns
+            meant that while I had an ideal design experience in my head, it
+            would have to flex in the coming weeks.
+            <ul>
+              <li> Brand Awareness - Page Views, Avg time on page</li>
+              <li> Growth - New Accounts, DAU </li>
+              <li> Order volume & key engagements - AOV, GMV </li>
+              <li> Advertising - Revenue, Engagements</li>
+            </ul>
+          </Body2>
+        </Flex>
+        <Flex px={3} width={0} flexDirection='column' alignItems='center'>
+          <PreviewCompatibleImage
+            imageInfo={props.blogImages[1].image}
+            width={1}
+            zIndex={6}
+          />
+        </Flex>
+      </Flex>
+    </Flex>
+  </SectionMax>
+</SectionWrapper>
+
+<SectionWrapper mb={0} pt={0}>
+  <SectionMax>
+    <Flex
+      width={0}
+      flexDirection='row'
+      flexWrap='wrap'
+      justifyContent='space-between'
+      mb={6}
+    >
+      <Flex width={0} flexDirection='column' mb={4} width={[0, 1 / 2, 1 / 3]}>
+        <Heading2
+          fontWeight={700}
+          css={`
+            hyphens: auto;
+            text-transform: uppercase;
+          `}
+          mb={4}
+        >
+          {data_.execution.label}
+        </Heading2>
+      </Flex>
+      <Flex width={0} flexDirection='column' width={[0, 1 / 2, 2 / 3]}>
+        <Subtitle1 mt={2}>{data_.execution.description}</Subtitle1>
+      </Flex>
+    </Flex>
+    <Flex width='100%' flexDirection='column'>
+      <Flex
+        width='100%'
+        flexWrap='wrap'
+        flexDirection='row'
+        py={8}
+        sx={{
+          borderBottomWidth: '0px',
+          borderTopWidth: '3px',
+          borderLeftWidth: '0px',
+          borderRightWidth: '0px',
+          borderStyle: 'solid',
+          borderColor: 'text'
+        }}
+      >
+        <Flex
+          width={[0, 1 / 2, 1 / 3]}
+          mb={4}
+          px={[0, 3]}
+          flexDirection='column'
+        >
+          <Heading5 width={0} my={4}>
+            ● {data_.execution.methodOne.label}
+          </Heading5>
+          <Subtitle2>{data_.execution.methodOne.description}</Subtitle2>
+          <Body2 width={0} my={6}>
+            We wanted folks to stay and enjoy the stream. To do this I scaled
+            the size of the player and let it occupy the left and center
+            position of our site, on desktop. The mobile experience was a unique
+            challenge in that our vendor could not support native full screen.
+            This meant we had to do some clever css to grow when in landscape
+            mode.
+            <br />
+            <br />
+            <strong> BRAND AWARENESS </strong> <br />
+            One of the first changes I made was the theme. Knowing that our
+            audience would be at home a light theme felt wrong. So, I created a
+            dark theme to compliment the environment of our viewers.
+            Additionally, I added subtle brand touches to compliment the theme
+            of the event our marketing team designed.
+          </Body2>
+        </Flex>
+        <Flex
+          px={3}
+          width={0}
+          flexDirection='column'
+          alignItems='center'
+          justifyContent='center'
+        >
+          <PreviewCompatibleImage
+            imageInfo={props.blogImages[2].image}
+            width={1}
+            zIndex={6}
+          />
+        </Flex>
+      </Flex>
+    </Flex>
+    <Flex width='100%' flexDirection='column'>
+      <Flex
+        width='100%'
+        flexWrap='wrap'
+        flexDirection='row'
+        py={8}
+        sx={{
+          borderBottomWidth: '0px',
+          borderTopWidth: '3px',
+          borderLeftWidth: '0px',
+          borderRightWidth: '0px',
+          borderStyle: 'solid',
+          borderColor: 'text'
+        }}
+      >
+        <Flex
+          width={[0, 1 / 2, 1 / 3]}
+          mb={4}
+          px={[0, 3]}
+          flexDirection='column'
+        >
+          <Heading5 width={0} my={4}>
+            ● {data_.execution.methodTwo.label}
+          </Heading5>
+          <Subtitle2>{data_.execution.methodTwo.description}</Subtitle2>
+          <Body2 width={0} my={6}>
+            The initial ads were flanking the player. This was distracting and
+            scale awkwardly across screen sizes. Instead there would be two
+            display ads, the top ad unit would be above the player on mobile and
+            at the top right on desktop. The second ad was positioned below the
+            fold at the end of a content scroll area.
+          </Body2>
+        </Flex>
+        <Flex
+          px={3}
+          width={0}
+          flexDirection='column'
+          alignItems='center'
+          justifyContent='center'
+        >
+          <PreviewCompatibleImage
+            imageInfo={props.blogImages[3].image}
+            width={1}
+            zIndex={6}
+          />
+        </Flex>
+      </Flex>
+    </Flex>
+    <Flex width='100%' flexDirection='column'>
+      <Flex
+        width='100%'
+        flexWrap='wrap'
+        flexDirection='row'
+        py={8}
+        sx={{
+          borderBottomWidth: '0px',
+          borderTopWidth: '3px',
+          borderLeftWidth: '0px',
+          borderRightWidth: '0px',
+          borderStyle: 'solid',
+          borderColor: 'text'
+        }}
+      >
+        <Flex
+          width={[0, 1 / 2, 1 / 3]}
+          mb={4}
+          px={[0, 3]}
+          flexDirection='column'
+        >
+          <Heading5 width={0} my={4}>
+            ● {data_.execution.methodThree.label}
+          </Heading5>
+          <Subtitle2>{data_.execution.methodThree.description}</Subtitle2>
+          <Body2 width={0} my={6}>
+            This would house all the interactive content. I moved this up from
+            below the video player and to the right of the player on desktop.
+            This made it so people could engage with our content while still
+            enjoying the stream. Several tabs were also created to house the
+            various types of content that the business wanted to promote. The
+            "promotions" tab was a last minute addition after several
+            sponsors/talent expressed a desire to continue promoting after their
+            set was over.
+          </Body2>
+        </Flex>
+        <Flex
+          px={3}
+          width={0}
+          flexDirection='column'
+          alignItems='center'
+          justifyContent='center'
+        >
+          <PreviewCompatibleImage
+            imageInfo={props.blogImages[4].image}
+            width={1}
+            zIndex={6}
+          />
+        </Flex>
+      </Flex>
+    </Flex>
+  </SectionMax>
+</SectionWrapper>
+
+<SectionWrapper mb={0} pt={0}>
+  <SectionMax>
+    <Flex
+      width={0}
+      flexDirection='row'
+      flexWrap='wrap'
+      justifyContent='space-between'
+      mb={6}
+    >
+      <Flex width={0} flexDirection='column' mb={4} width={[0, 1 / 2, 1 / 3]}>
+        <Heading2
+          fontWeight={700}
+          css={`
+            hyphens: auto;
+            text-transform: uppercase;
+          `}
+          mb={4}
+        >
+          {data_.theEvent.label}
+        </Heading2>
+      </Flex>
+      <Flex width={0} flexDirection='column' width={[0, 1 / 2, 2 / 3]}>
+        <Subtitle1 mt={2}>{data_.theEvent.description}</Subtitle1>
+      </Flex>
+    </Flex>
+  </SectionMax>
+</SectionWrapper>
+<Flex width='100%' flexDirection='column'>
+  <Flex
+    width='100%'
+    flexWrap='wrap'
+    flexDirection='row'
+    sx={{
+      borderBottomWidth: '0px',
+      borderTopWidth: '3px',
+      borderLeftWidth: '0px',
+      borderRightWidth: '0px',
+      borderStyle: 'solid',
+      borderColor: 'text'
+    }}
+  >
+    <Flex width={0} flexDirection='column' alignItems='center'>
+      <PreviewCompatibleImage
+        imageInfo={props.blogImages[5].image}
+        width={1}
+        zIndex={6}
+      />
+    </Flex>
+  </Flex>
+</Flex>

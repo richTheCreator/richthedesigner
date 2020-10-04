@@ -4,7 +4,11 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { MDXProvider } from '@mdx-js/react'
 import * as Typography from '../components/Typography'
 import { Flex, Box } from 'reflexbox/styled-components'
-import { SectionWrapper, SectionMax } from '../components/Containers'
+import {
+  SectionWrapper,
+  SectionMax,
+  ThemeSection
+} from '../components/Containers'
 import { BGImage } from '../components/Images'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
@@ -14,6 +18,7 @@ const components = {
   Box,
   SectionWrapper,
   SectionMax,
+  ThemeSection,
   BGImage,
   PreviewCompatibleImage
 }

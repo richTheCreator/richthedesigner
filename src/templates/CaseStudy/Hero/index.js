@@ -31,11 +31,21 @@ const Hero = ({
 }) => {
   const { toggleTheme } = useTheme()
   const { ref } = useInView({
-    threshold: 0.3, // Default is 0
-    onChange: ({ inView, scrollDirection, entry, observe, unobserve }) => {
-      inView ? toggleTheme(theme) : toggleTheme('light')
-      // Triggered whenever the target meets a threshold, e.g. [0.25, 0.5, ...]
+    threshold: 0.3, // Default is 0,
+    onEnter: ({ unobserve, observe }) => {
+      console.log('onEnter-------')
+
+      toggleTheme(theme)
+    },
+    onLeave: ({ unobserve, observe }) => {
+      console.log('onExit-------')
+
+      toggleTheme('light')
     }
+    // onChange: ({ inView, scrollDirection, entry, observe, unobserve }) => {
+    //   inView ? toggleTheme(theme) : toggleTheme('light')
+    //   // Triggered whenever the target meets a threshold, e.g. [0.25, 0.5, ...]
+    // }
   })
   return (
     <SectionWrapper ref={ref} mt={8}>

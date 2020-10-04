@@ -1,4 +1,6 @@
 import React from 'react'
+import useInView from 'react-cool-inview'
+import { useTheme } from '../../static/styles/theme-context'
 
 import { Flex } from 'reflexbox/styled-components'
 
@@ -38,3 +40,31 @@ export const SectionMax = (props) => (
     {...props}
   />
 )
+
+export const ThemeSection = ({ theme, children }) => {
+  const { toggleTheme } = useTheme()
+  const { ref } = useInView({
+    threshold: 0.3, // Default is 0
+    onChange: ({ inView, scrollDirection, entry, observe, unobserve }) => {
+      console.log('inview-------ThemeSection', theme)
+      inView ? toggleTheme(theme) : toggleTheme('light')
+      // Triggered whenever the target meets a threshold, e.g. [0.25, 0.5, ...]
+    }
+  })
+  return (
+    <SectionWrapper ref={ref} mt={8}>
+      <SectionMax
+        pt={4}
+        sx={{
+          borderBottomWidth: '0px',
+          borderTopWidth: '0px',
+          borderLeftWidth: '0px',
+          borderRightWidth: '0px',
+          borderStyle: 'solid'
+        }}
+      >
+        {children}
+      </SectionMax>
+    </SectionWrapper>
+  )
+}
