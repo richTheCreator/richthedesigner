@@ -19,7 +19,7 @@ const FeaturedWork = ({
       dest = '/work/gaugebox/designing-a-startup/'
       break
     case 'Weedmaps':
-      dest = '/work/weedmaps/wayfinding/'
+      dest = '/work/weedmaps/'
       break
     case 'design studio':
       dest = '/work/design-studio/design-agency-life/'

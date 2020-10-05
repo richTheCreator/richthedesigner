@@ -27,7 +27,7 @@ module.exports = {
     menuLinks: [
       {
         name: 'Work',
-        link: '/work/weedmaps/wayfinding/'
+        link: '/work/weedmaps/'
       },
       {
         name: 'Resume',

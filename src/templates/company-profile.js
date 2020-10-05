@@ -2,13 +2,14 @@ import React, { useEffect } from 'react'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import Studies from '../templates/CompanyProfile'
 import { useTheme } from '../../static/styles/theme-context'
 
 const CompanyProfile = ({ data, pageContext }) => {
-  const { theme, toggleTheme } = useTheme()
+  const { toggleTheme } = useTheme()
   const { edges: posts, totalCount } = data.posts
   const { frontmatter } = data.page
-
+  console.log('posts', posts)
   useEffect(() => {
     toggleTheme(frontmatter.theme)
   }, [])
@@ -25,29 +26,7 @@ const CompanyProfile = ({ data, pageContext }) => {
     totalCount === 1 ? '' : 's'
   } tagged with “${pageContext.name}”`
 
-  return (
-    <Layout>
-      <section className='section'>
-        <div className='container content'>
-          <div className='columns'>
-            <div
-              className='column is-10 is-offset-1'
-              style={{
-                marginBottom: '6rem'
-              }}
-            >
-              <h3 className='title is-size-4 is-bold-light'>{companyHeader}</h3>
-              <h4>for the company {frontmatter.company}</h4>
-              <ul className='taglist'>{postLinks}</ul>
-              <p>
-                <Link to='/work/'>Browse all tags</Link>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </Layout>
-  )
+  return <Studies name={frontmatter.company} caseStudies={posts} />
 }
 
 export default CompanyProfile
@@ -72,6 +51,17 @@ export const tagPageQuery = graphql`
           }
           frontmatter {
             title
+            cover_image {
+              childImageSharp {
+                fluid(maxWidth: 1200, quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+            project {
+              blurb
+              focus
+            }
           }
         }
       }
