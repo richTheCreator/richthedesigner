@@ -88,6 +88,7 @@ const offWhite = '#f4f4f4'
 const lightBlue = '#cdf0f9'
 const wikaBlue = '#142f42'
 const bhPurple = '#552248'
+const bhCoral = '#f99f9f'
 
 const colors = {
   background: offWhite,
@@ -111,7 +112,7 @@ const colors = {
     },
     berkshire: {
       background: bhPurple,
-      text: offWhite
+      text: bhCoral
     }
   },
 

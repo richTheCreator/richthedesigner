@@ -4,16 +4,727 @@ theme: berkshire
 meta_description: Making home purchasing delightful and simple.
 templateKey: case-study
 cover_image: ../../../../../static/media/bh_cover.jpg
-title: Coming soon...
+title: The Road to MVP
 project:
   focus: PropTech + CRM + CMS + B2C
-  blurb: Berkshire Hathaway HomeServices - Integrating all pieces of the real estate transaction puzzle into a suite of services that work together.
+  blurb: Empowering real estate agents with modern technology
   challenge:
     label: Challenge
-    description: Create a world class experience that empowers the 10,000+ real estate agents with technology to better serve their clients.
+    description: Create a unified platform (Website, CRM, CMS) that empowers the 10,000+ real estate agents, across 43 brokerages, with the technology to better serve their clients.
   skills:
     - skill: Generative Research
-    - skill: Design Systems
-    - skill: Personas
+    - skill: Design Thinking
     - skill: Lean UX
+    - skill: Facilitation
+  blogImages:
+    - image: ./Persona_Agent.jpg
+      alt: testing
+    - image: ./Persona_Broker.jpg
+      alt: testing
+    - image: ./Persona_Seller.jpg
+      alt: testing
+    - image: ./Persona_Buyer.jpg
+      alt: testing
+    - image: ./workshop2.jpg
+      alt: testing
+    - image: ./workshop1.jpeg
+      alt: testing
+    - image: ./research1.jpg
+      alt: testing
+    - image: ./research2.jpg
+      alt: testing
+    - image: ./research3.jpg
+      alt: testing
+    - image: ./research4.jpg
+      alt: testing
+    - image: ./design-language1.jpg
+      alt: testing
+    - image: ./design-language2.jpg
+      alt: testing
+    - image: ./design-language3.png
+      alt: testing
+    - image: ./Agent_Profile.jpg
+      alt: testing
+    - image: ./CMS_Agent2.jpg
+      alt: testing
+    - image: ./CMS_Agent.jpg
+      alt: testing
+    - image: ./CMS_Listing.jpg
+      alt: testing
 ---
+
+import bh_data from './pageData'
+
+<SectionWrapper>
+  <SectionMax>
+    <Flex mt={0} mb={5} flexDirection='column' width={0} flexWrap='wrap'>
+      <Heading2
+        mb={4}
+        fontWeight={700}
+        css={`
+          hyphens: auto;
+          text-transform: uppercase;
+        `}
+      >
+        {bh_data.results.label}
+      </Heading2>
+      <Subtitle2 mb={4}>{bh_data.results.description}</Subtitle2>
+    </Flex>
+    <Flex flexDirection='row' width={0} flexWrap='wrap'>
+      {bh_data.results.metrics.map(({ label, value }) => (
+        <Flex
+          flexDirection={['row', 'column']}
+          justifyContent='space-between'
+          alignItems={['center', 'flex-start']}
+          width={[0, 1 / 3]}
+          mb={7}
+        >
+          <Heading5
+            width={[2 / 4, 0]}
+            order={[1, 0]}
+            mb={[0, 2]}
+            px={[3, 0]}
+            css={`
+              hyphens: auto;
+            `}
+          >
+            {' '}
+            {label}{' '}
+          </Heading5>
+          <Heading1
+            width={[1 / 4, 0]}
+            order={[0, 1]}
+            lineHeight={'100%'}
+            fontSize={['42px', '96px']}
+          >
+            {' '}
+            {value}{' '}
+          </Heading1>
+        </Flex>
+      ))}
+    </Flex>
+  </SectionMax>
+</SectionWrapper>
+
+<SectionWrapper mb={0} pt={0}>
+  <SectionMax>
+    <Flex
+      width={0}
+      flexDirection='row'
+      flexWrap='wrap'
+      justifyContent='space-between'
+      mb={6}
+    >
+      <Flex width={0} flexDirection='column' mb={4} width={[0, 1 / 2, 1 / 3]}>
+        <Heading2
+          fontWeight={700}
+          css={`
+            hyphens: auto;
+            text-transform: uppercase;
+          `}
+          mb={4}
+        >
+          {bh_data.background.label}
+        </Heading2>
+      </Flex>
+      <Flex width={0} flexDirection='column' width={[0, 1 / 2, 2 / 3]}>
+        <Subtitle1 mt={2}>{bh_data.background.description}</Subtitle1>
+      </Flex>
+    </Flex>
+    <Flex width='100%' flexDirection='column'>
+      <Flex
+        width='100%'
+        flexWrap='wrap'
+        flexDirection='row'
+        pt={8}
+        sx={{
+          borderBottomWidth: '0px',
+          borderTopWidth: '3px',
+          borderLeftWidth: '0px',
+          borderRightWidth: '0px',
+          borderStyle: 'solid',
+          borderColor: 'text'
+        }}
+      >
+        <Flex width={0} mb={4} px={[0, 3]} flexDirection='column'>
+          <Heading5 width={0} my={4}>
+            ● {bh_data.background.methodOne.label}
+          </Heading5>
+          <Subtitle2>{bh_data.background.methodOne.description}</Subtitle2>
+          <Body2
+            width={0}
+            my={6}
+            sx={{
+              columnCount: [0, 3],
+              hr: {
+                borderColor: 'transparent'
+              }
+            }}
+          >
+            <strong> THE PROBLEM </strong> <br />
+            The competition in real estate has gotten fierce over the last few years.
+            Big disruptors, new business models, emerging technologies, and a new
+            kid on the block, millennials. Not to mention the crash of 2008 which
+            reshaped how a lot of people approach homeownership. These variables
+            have all contributed to where we are today, savvier buyers and sellers,
+            iBuyers — companies that use tech to make instant offers on homes, real
+            estate agents fighting for their position in the transaction, and brokerages
+            making bold moves. There's a lot to consider here, and it took me some
+            time to really understand the landscape, trends, and forecasts for this
+            market. But as designers, this fundamental understanding is critical
+            to making meaningful contributions and adding value as quickly as we
+            can.
+            <br />
+            <br />
+            <strong> THE VISION </strong> <br />
+            <Box
+              my={3}
+              py={2}
+              sx={{
+                borderBottomWidth: '1px',
+                borderTopWidth: '1px',
+                borderLeftWidth: '0px',
+                borderRightWidth: '0px',
+                borderStyle: 'solid',
+                borderColor: 'text'
+              }}
+            >
+              <Body1 fontStyle={'italic'}>
+                Create a platform that empowers real estate agents with modern
+                technology that makes buying or selling a home delightful and
+                simple for consumers.
+              </Body1>
+            </Box>
+            Each brokerage had a specific system in place that they accredited
+            to their success. These systems are complex and composed of
+            third-party vendors, in-house tech, refined processes, marketing
+            teams and much more.
+            <br />
+            <br />
+            Additionally, the systems varied among real estate agents, real estate
+            teams, and at the cornerstone of all this was the homeowner or seller.
+            The number of inter-dependencies and overarching goals among the personas
+            was incredible, we had a magnitude of work ahead of us.
+            <br />
+          </Body2>
+        </Flex>
+      </Flex>
+    </Flex>
+    <Flex flexDirection='row' width={0} flexWrap='wrap'>
+      <Flex flexDirection='column' px={3} py={3} width={[0, 1 / 2]}>
+        <PreviewCompatibleImage
+          imageInfo={props.blogImages[0].image}
+          width={1}
+          zIndex={6}
+        />
+      </Flex>
+      <Flex flexDirection='column' px={3} py={3} width={[0, 1 / 2]}>
+        <PreviewCompatibleImage
+          imageInfo={props.blogImages[1].image}
+          width={1}
+          zIndex={6}
+        />
+      </Flex>
+      <Flex flexDirection='column' px={3} py={3} width={[0, 1 / 2]}>
+        <PreviewCompatibleImage
+          imageInfo={props.blogImages[2].image}
+          width={1}
+          zIndex={6}
+        />
+      </Flex>
+      <Flex flexDirection='column' px={3} py={3} width={[0, 1 / 2]}>
+        <PreviewCompatibleImage
+          imageInfo={props.blogImages[3].image}
+          width={1}
+          zIndex={6}
+        />
+      </Flex>
+    </Flex>
+  </SectionMax>
+</SectionWrapper>
+
+<SectionWrapper mb={0} pt={0}>
+  <SectionMax>
+    <Flex
+      width={0}
+      flexDirection='row'
+      flexWrap='wrap'
+      justifyContent='space-between'
+      mb={6}
+    >
+      <Flex width={0} flexDirection='column' mb={4} width={[0, 1 / 2, 1 / 3]}>
+        <Heading2
+          fontWeight={700}
+          css={`
+            hyphens: auto;
+            text-transform: uppercase;
+          `}
+          mb={4}
+        >
+          {bh_data.strategy.label}
+        </Heading2>
+      </Flex>
+      <Flex width={0} flexDirection='column' width={[0, 1 / 2, 2 / 3]}>
+        <Subtitle1 mt={2}>{bh_data.strategy.description}</Subtitle1>
+      </Flex>
+    </Flex>
+    <Flex width='100%' flexDirection='column'>
+      <Flex
+        width='100%'
+        flexWrap='wrap'
+        flexDirection='row'
+        justifyContent='space-between'
+        pt={8}
+        sx={{
+          borderBottomWidth: '0px',
+          borderTopWidth: '3px',
+          borderLeftWidth: '0px',
+          borderRightWidth: '0px',
+          borderStyle: 'solid',
+          borderColor: 'text'
+        }}
+      >
+        <Flex
+          width={[0, 1 / 2, 1 / 3]}
+          mb={4}
+          px={[0, 3]}
+          flexDirection='column'
+        >
+          <Heading5 width={0} my={4}>
+            ● {bh_data.strategy.methodOne.label}
+          </Heading5>
+          <Subtitle2>{bh_data.strategy.methodOne.description}</Subtitle2>
+          <Body2 width={0} mt={6}>
+            After several months of participating in our established sprint
+            cycle, I identified an opportunity to increase velocity, alignment,
+            and collaboration. While creating this proposal I drew inspiration
+            from Google Design Sprints, LEAN UX design studios, and Invisions
+            design sprints. Something to note is that this workshop was created
+            to fill a gap in our product cycle, not as a replacement of a
+            typical design sprint. The workshop aided in:
+            <ul>
+              <li>
+                {' '}
+                Contributing to the shared understanding of the design problem
+                and the solution
+              </li>
+              <li>
+                {' '}
+                Identifying assumptions, constraints, and unknowns that could
+                impact the success of the sprint
+              </li>
+              <li> Rallying teams around a design direction</li>
+              <li> Creating high-level design artifacts</li>
+              <li> Increasing the feeling of ownership across the team</li>
+            </ul>
+            After my team was successful in creating notable change in the areas
+            above the workshops were adopted across other teams.
+          </Body2>
+        </Flex>
+        <Flex
+          width={[0, 1 / 2, 1 / 2]}
+          mb={4}
+          px={[0, 3]}
+          alignItems='center'
+          flexDirection='column'
+        >
+          <PreviewCompatibleImage
+            imageInfo={props.blogImages[4].image}
+            width={1}
+            zIndex={6}
+          />
+          <br />
+          <PreviewCompatibleImage
+            imageInfo={props.blogImages[5].image}
+            width={1}
+            zIndex={6}
+          />
+        </Flex>
+      </Flex>
+    </Flex>
+    <Flex width='100%' flexDirection='column'>
+      <Flex
+        width='100%'
+        flexWrap='wrap'
+        flexDirection='row'
+        justifyContent='space-between'
+        pt={8}
+        sx={{
+          borderBottomWidth: '0px',
+          borderTopWidth: '3px',
+          borderLeftWidth: '0px',
+          borderRightWidth: '0px',
+          borderStyle: 'solid',
+          borderColor: 'text'
+        }}
+      >
+        <Flex
+          width={[0, 1 / 2, 1 / 3]}
+          mb={4}
+          px={[0, 3]}
+          flexDirection='column'
+        >
+          <Heading5 width={0} my={4}>
+            ● {bh_data.strategy.methodTwo.label}
+          </Heading5>
+          <Subtitle2>{bh_data.strategy.methodTwo.description}</Subtitle2>
+          <Body2 width={0} mt={6}>
+            Our entire process was organized around the LEAN methodology and
+            validated learnings. This constant loop of user feedback would shape
+            the product into something that was not only usable but also
+            valuable. I conducted countless sessions that included:
+            <ul>
+              <li> Tree Testing to audit the information architecture</li>
+              <li> Card Sorting to to pair with tree testing results</li>
+              <li>
+                {' '}
+                Stakeholder Interviews to understand business objectives{' '}
+              </li>
+              <li>
+                {' '}
+                Subject Matter Expert Interviews to understand real estate
+                agents needs{' '}
+              </li>
+              <li>
+                {' '}
+                Usability Testing to evaluate my designs with real users{' '}
+              </li>
+            </ul>
+            The amount of research being conducted was a forcing function for a
+            few tools and processes I would instrument to help with analysis
+            such as:
+            <ul>
+              <li>
+                {' '}
+                Google script to create data visualization from usertesting
+                results{' '}
+              </li>
+              <li>
+                {' '}
+                Custom node scripts to parse user feedback and return a
+                sentiment analysis score{' '}
+              </li>
+            </ul>
+          </Body2>
+        </Flex>
+        <Flex
+          width={[0, 1 / 2, 1 / 2]}
+          mb={4}
+          px={[0, 3]}
+          alignItems='center'
+          flexDirection='column'
+        >
+          <PreviewCompatibleImage
+            imageInfo={props.blogImages[6].image}
+            width={1}
+            zIndex={6}
+          />
+          <br />
+          <PreviewCompatibleImage
+            imageInfo={props.blogImages[7].image}
+            width={1}
+            zIndex={6}
+          />
+          <br />
+          <PreviewCompatibleImage
+            imageInfo={props.blogImages[8].image}
+            width={1}
+            zIndex={6}
+          />
+          <br />
+          <PreviewCompatibleImage
+            imageInfo={props.blogImages[9].image}
+            width={1}
+            zIndex={6}
+          />
+        </Flex>
+      </Flex>
+    </Flex>
+  </SectionMax>
+</SectionWrapper>
+
+<SectionWrapper mb={0} pt={0}>
+  <SectionMax>
+    <Flex
+      width={0}
+      flexDirection='row'
+      flexWrap='wrap'
+      justifyContent='space-between'
+      mb={6}
+    >
+      <Flex width={0} flexDirection='column' mb={4} width={[0, 1 / 2, 1 / 3]}>
+        <Heading2
+          fontWeight={700}
+          css={`
+            hyphens: auto;
+            text-transform: uppercase;
+          `}
+          mb={4}
+        >
+          {bh_data.execution.label}
+        </Heading2>
+      </Flex>
+      <Flex width={0} flexDirection='column' width={[0, 1 / 2, 2 / 3]}>
+        <Subtitle1 mt={2}>{bh_data.execution.description}</Subtitle1>
+      </Flex>
+    </Flex>
+    <Flex width='100%' flexDirection='column'>
+      <Flex
+        width='100%'
+        flexWrap='wrap'
+        flexDirection='row'
+        justifyContent='space-between'
+        pt={8}
+        sx={{
+          borderBottomWidth: '0px',
+          borderTopWidth: '3px',
+          borderLeftWidth: '0px',
+          borderRightWidth: '0px',
+          borderStyle: 'solid',
+          borderColor: 'text'
+        }}
+      >
+        <Flex
+          width={[0, 1 / 2, 1 / 3]}
+          mb={4}
+          px={[0, 3]}
+          flexDirection='column'
+        >
+          <Heading5 width={0} my={4}>
+            ● {bh_data.execution.methodOne.label}
+          </Heading5>
+          <Subtitle2>{bh_data.execution.methodOne.description}</Subtitle2>
+          <Body2 width={0} mt={6}>
+            <strong> AUDITING THE CURRENT DESIGN LIBRARY </strong>
+            <br />
+            I had experience architecting a design library from my previous role
+            at Gaugebox and would lead the efforts. This allowed me to quickly
+            segment components and identify patterns in our design files. After
+            a comprehensive audit, I was able to surface what our design
+            language looked like across the site. The usual culprits were found
+            such as color variants, excessive fonts, similar but different
+            components, range CTA's, and others. From this high level view we
+            identified a path forward for the design language.
+            <br />
+            <br />
+            <strong> THE RIGHT TOOL FOR THE JOB </strong>
+            <br />
+            Axure was our tool of choice initially. It served us well for creating
+            highly interactive prototypes which we used for user testing but it came
+            at a high cost. Propagation. Changes made in one file would not propagate
+            to files shared by the team. This immediately introduced fragmentation
+            into our designs. I had worked exclusively with sketch up till point
+            in my career so when I first noticed the lack of symbols, text styles,
+            and palettes I was concerned. After a few presentations to the team we
+            began testing several tools to replace Axure. Ultimately we landed on
+            Figma.
+          </Body2>
+        </Flex>
+        <Flex
+          width={[0, 1 / 2, 1 / 2]}
+          mb={4}
+          px={[0, 3]}
+          alignItems='center'
+          flexDirection='column'
+        >
+          <PreviewCompatibleImage
+            imageInfo={props.blogImages[10].image}
+            width={1}
+            zIndex={6}
+          />
+          <br />
+          <PreviewCompatibleImage
+            imageInfo={props.blogImages[11].image}
+            width={1}
+            zIndex={6}
+          />
+          <br />
+          <PreviewCompatibleImage
+            imageInfo={props.blogImages[12].image}
+            width={1}
+            zIndex={6}
+          />
+          <br />
+        </Flex>
+      </Flex>
+    </Flex>
+    <Flex width='100%' flexDirection='column'>
+      <Flex
+        width='100%'
+        flexWrap='wrap'
+        flexDirection='row'
+        py={8}
+        sx={{
+          borderBottomWidth: '0px',
+          borderTopWidth: '3px',
+          borderLeftWidth: '0px',
+          borderRightWidth: '0px',
+          borderStyle: 'solid',
+          borderColor: 'text'
+        }}
+      >
+        <Flex width={0} mb={4} px={[0, 3]} flexDirection='column'>
+          <Heading5 width={0} my={4}>
+            ● {bh_data.execution.methodTwo.label}
+          </Heading5>
+          <Subtitle2>{bh_data.execution.methodTwo.description}</Subtitle2>
+          <Body2
+            width={0}
+            my={6}
+            sx={{
+              columnCount: [0, 3],
+              hr: {
+                borderColor: 'transparent'
+              }
+            }}
+          >
+            Initially this was intended to be an agent website. The website
+            would mimic the functionality of the main brokerage site with
+            opportunities for Agents to customize certain content. This got
+            complicated fast from not a tech perspective but from the users
+            experience. This was validated when we looked at the data, which
+            showed that few agents were actually maintaining their websites, and
+            usability tests with low success rates and NPS scores.
+            <hr />
+            After I conducted interviews with a number of Real Estate Agents to
+            understand what the value of a website was. This turned out to be
+            more of a percieved value though. Each brokerage offered it's agents
+            a websites as a value prop to join their team. The agents would then
+            be 100% responsible for maintaing that website with quality content,
+            compelling calls to action, and lead management.
+            <hr />I would then propose a portfolio solution. That would put their
+            online presenece on auto pilot and free them to do more meaningful work.
+            The beauty of the portfolio was that not only was a better solution for
+            the agent but it also lowered tech overhead signficantly and allowed
+            to focus and optimize one portfolio for all agents.
+          </Body2>
+        </Flex>
+        <Flex
+          px={3}
+          width={0}
+          flexDirection='column'
+          alignItems='center'
+          justifyContent='center'
+        >
+          <PreviewCompatibleImage
+            imageInfo={props.blogImages[13].image}
+            width={1}
+            zIndex={6}
+          />
+        </Flex>
+      </Flex>
+    </Flex>
+    <Flex width='100%' flexDirection='column'>
+      <Flex
+        width='100%'
+        flexWrap='wrap'
+        flexDirection='row'
+        py={8}
+        sx={{
+          borderBottomWidth: '0px',
+          borderTopWidth: '3px',
+          borderLeftWidth: '0px',
+          borderRightWidth: '0px',
+          borderStyle: 'solid',
+          borderColor: 'text'
+        }}
+      >
+        <Flex width={0} mb={4} px={[0, 3]} flexDirection='column'>
+          <Heading5 width={0} my={4}>
+            ● {bh_data.execution.methodThree.label}
+          </Heading5>
+          <Subtitle2>{bh_data.execution.methodThree.description}</Subtitle2>
+          <Body2
+            width={0}
+            my={6}
+            sx={{
+              columnCount: [0, 3],
+              hr: {
+                borderColor: 'transparent'
+              }
+            }}
+          >
+            Their would be wide range of content, roles, and permissions this
+            needed to support. Additionally, we were allowing for multiple ways
+            of editing content via a Live-editor or text editor. These multiple
+            ways of editing was to support the two types of users that would use
+            the CMS.
+            <hr />
+            <strong> TYPES OF EDITORS </strong> <br />
+            We had the The "power user" persona, which was a Broker Admin who would
+            be creating and managing all agents. The quick edit form would be ideal
+            for this type of batch work.
+            <hr />
+            Then we had the Agents, who would want to make finer updates and test
+            different types of images and text to optimize their profile. The Live-Editor
+            gave them the opportunity to view these changes in real-time.
+            <hr />
+            <strong> INTERFACING WITH THE MLS </strong> <br />
+            Their was one huge tech limitation in place. The fact that all the
+            data we recieved for listings would be read only from each MLS. This
+            meant that we would be able to fetch updates from the MLS but we
+            couldn't write to it. That would get in the way of content
+            syndication and require redundant updates in our CMS to update the
+            new website content. I worked closely with engineering to understand
+            how the MLS sync would work and then design around it.
+          </Body2>
+        </Flex>
+        <Flex
+          px={3}
+          width={0}
+          flexDirection='column'
+          alignItems='center'
+          justifyContent='center'
+        >
+          <PreviewCompatibleImage
+            imageInfo={props.blogImages[14].image}
+            width={1}
+            zIndex={6}
+          />
+          <br />
+          <PreviewCompatibleImage
+            imageInfo={props.blogImages[15].image}
+            width={1}
+            zIndex={6}
+          />
+          <br />
+          <PreviewCompatibleImage
+            imageInfo={props.blogImages[16].image}
+            width={1}
+            zIndex={6}
+          />
+        </Flex>
+      </Flex>
+    </Flex>
+  </SectionMax>
+</SectionWrapper>
+
+<SectionWrapper bg='#552248' mb={'0px'}>
+  <SectionMax py={9}>
+    <Flex
+      width={0}
+      flexDirection='row'
+      flexWrap='wrap'
+      justifyContent='space-between'
+    >
+      <Flex width={0} flexDirection='column' mb={4} width={[0, 1 / 2, 1 / 3]}>
+        <Heading2
+          fontWeight={700}
+          css={`
+            hyphens: auto;
+            text-transform: uppercase;
+          `}
+          color='#f99f9f'
+          mb={4}
+        >
+          {bh_data.finalThoughts.label}
+        </Heading2>
+      </Flex>
+      <Flex width={0} flexDirection='column' width={[0, 1 / 2, 2 / 3]}>
+        <Subtitle1 color='#f99f9f' mt={2}>
+          {bh_data.finalThoughts.description}
+        </Subtitle1>
+      </Flex>
+    </Flex>
+  </SectionMax>
+</SectionWrapper>

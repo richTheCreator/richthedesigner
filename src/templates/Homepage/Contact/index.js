@@ -16,16 +16,16 @@ import { Resume } from '../../../components/SVG/Resume'
 import { Email } from '../../../components/SVG/Email'
 
 const Styled_GH = styled(Github)`
-  height: 45px;
+  height: 32px;
 `
 const Styled_LI = styled(LinkedIn)`
-  height: 45px;
+  height: 32px;
 `
 const Styled_Resume = styled(Resume)`
-  height: 45px;
+  height: 32px;
 `
 const Styled_Email = styled(Email)`
-  height: 45px;
+  height: 32px;
 `
 
 const StyledLink = (props) => (
@@ -66,12 +66,12 @@ const Contact = ({ contact: { heading, description } }) => {
             </Heading2>
           </Flex>
           <Flex width={0} flexDirection='column' width={[0, 1 / 2, 2 / 3]}>
-            <Subtitle1 color='white' mt={2} mb={8}>
+            <Subtitle1 color='white' mt={2} mb={6}>
               {description}
             </Subtitle1>
-            <Flex flexDirection='row' width={0}>
+            <Flex flexDirection='row' width={0} mb={6}>
               <Flex mx={3} flexDirection='column'>
-                <StyledLink href='https://www.linkedin.com/in/moralesrichard1/'>
+                <StyledLink href='https://www.linkedin.com/in/rmoralesdesigns/'>
                   <Styled_LI />
                   <Body2 mt={2}>LINKEDIN</Body2>
                 </StyledLink>
